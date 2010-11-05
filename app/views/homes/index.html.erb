@@ -1,0 +1,193 @@
+  <div class="main">
+    <div class="left">
+      <div class="banner">
+        <div align="center">
+          <!-- 焦点图切换开始 更多请访问懒人图库 -->
+          <DIV id=nav>
+            <UL>
+              <LI><IMG src="images/01.jpg" text="健全的法律制度是现代社会的基石|陆欣律师事务所" pic="1">
+                <DIV>一个海岛</DIV>
+              </LI>
+              <LI><IMG src="images/02.jpg" text="美景如画的海景|天蓝海蓝" pic="2">
+                <DIV>一片麦穗</DIV>
+              </LI>
+              <LI><IMG src="images/03.jpg" text="郁郁葱葱的生命|生生不息的生命" pic="3">
+                <DIV>一树绿叶</DIV>
+              </LI>
+              <LI><IMG src="images/04.jpg" text="孤独的一棵老树|等谁呢？" pic="4">
+                <DIV>一棵大树</DIV>
+              </LI>
+              <LI><IMG src="images/05.jpg" text="明媚的向日葵花|生生不息的生命" pic="5">
+                <DIV>一地葵花</DIV>
+              </LI>
+            </UL>
+            <DIV id=BG></DIV>
+            <DIV id=mask></DIV>
+            <DIV id=back><IMG height=255 src="" width=685></DIV>
+          </DIV>
+          <p>
+            <SCRIPT type=text/javascript>
+ <!--
+ var num = 0;
+ $("#nav").hide();
+	$("li img").load(function(){
+		num++;
+		if (num==4)
+		{
+			$("#nav").show();
+		}
+	})
+		.click(function(){
+		
+		//如果已经处于active状态，return
+		if (this.className.indexOf("active")!=-1) return;
+		
+		//正文文字渐隐
+		$("#frontText").fadeOut();
+		$("#frontTextBack").fadeOut();
+		$("#frontTextSub").fadeOut();
+
+		//active状态的图片恢复原样
+		$("li img.active").fadeTo(200,0.6)
+		.removeClass("active")
+		.animate({top:5,width:70,left:1},300)
+		.parent().css({"color":"#aaa"});  //
+		
+		//获取数据
+		var i = $(this).attr("pic");
+		var t = $(this).attr("text").split("|");
+		
+		//当前
+		$(this).animate({top:-5,width:70,height:40,left:1},100)
+		.addClass("active")
+		.fadeTo(200,1)
+		.parent().css({"color":"white"});
+
+		$("#back").children().addClass("gray").end()
+					.fadeTo(500,0.1,function(){
+										//var IMG = new Image();
+										//IMG.s
+										$(this).children("img").attr("src","images/"+i+".jpg").removeClass("gray");	  //更改图片
+										$(this).fadeTo(500,1,function(){
+																$("#frontText").html(t[0]).fadeIn(200);	//更改正文文字
+																$("#frontTextBack").html(t[0]).fadeIn(200);	//阴影文字
+																$("#frontTextSub").html(t[1]).fadeIn(200)}	//副标题
+																);
+										})
+		})
+
+	//初始第一张图片
+	
+	var i =0;
+
+	show();
+
+	function show(){
+		if (i==$("li img").size()) i = 0
+		$("li img").eq(i).click();
+		i++;
+		//setTimeout(show(),1000);
+	}
+
+	document.oncontextmenu   =  function(e){return false}
+	
+	if (self.location.search!=""){
+		var V = self.location.search;
+		V = V.substr(1,V.length);
+		eval(V);
+		var json ="{";
+		if (option.skin==0)
+			$("#mask").hide();
+		if (option.animate == 0){
+		$("#nav ul").hide();
+		}
+		$("#nav").width(option.width?option.width:685);
+		$("#nav").height(option.height?option.height:255);
+		$("#back img").width($("#nav").width());
+		$("#back img").height($("#nav").height());
+		$(self.parent.document.getElementById("splash")).children().height($("#nav").height()).width($("#nav").width());
+	}
+		
+ //-->
+  </SCRIPT>
+            <!-- 焦点图切换结束-->
+        </div>
+      </div>
+      <div class="zaixian" style="margin-top:269px;">
+        <div class="title_top">
+          <div class="title">在线法律资讯</div>
+          <a href="http://www.865171.cn"><img src="images/more2.gif" border="0"></a>
+          <div class="clear"></div>
+        </div>
+        <div class="zaixian_nr">
+          <ul>
+            <li><span>问</span>：浅议网络侵权责任之归属</li>
+            <li>答：不动产登记与不动产物权变动的关系</li>
+            <li><span>问</span>：对完善我国表见代理制度的思考 </li>
+            <li>答：产品侵权责任归责原则略论 </li>
+            <li><span>问</span>：浅谈离婚纠纷中按揭财产的分割 </li>
+            <li style="border:none;">答：离婚诉讼中如何认定夫妻分居 </li>
+          </ul>
+        </div>
+      </div>
+      <div class="jianjie" style="margin-top:269px;">
+        <div class="title_top">
+          <div class="title">陆欣律师简介</div>
+          <a href="http://www.865171.cn"><img src="images/more2.gif" border="0"></a>
+          <div class="clear"></div>
+        </div>
+        <div class="jianjie_nr">
+          <div class="xuxian_bottom" style="padding:16px 0;"> <img src="images/tu_1.jpg"><span>欲修其身者，先正其心，欲正其心者，先
+            诚其意。意诚而后心正。“健全的法律制度是
+            现代社会的基石”。</span>
+            <div class="clear"></div>
+          </div>
+          <div style=" margin-top:6px;"> 作为一个普通的律师，以为人提供高质、高效的法律服务
+            为自己的事业。我渴望看到当事人感谢的眼神，感谢的声
+            音，都是对自己辛勤劳动的肯定和对自己存在价值的认可。 </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="right">
+      <div class="yewulingyu"><span style="float:left;">业务领域</span><a href="#" style=" float:right; margin-top:4px;"><img src="images/more1.gif" width="28" height="13" border="0"></a></div>
+      <div class="clear"></div>
+      <div class="lingyu_nr">
+        <ul>
+          <li>民商诉讼业务</li>
+          <li>公司业务</li>
+          <li>证券业务</li>
+          <li>国际业务</li>
+          <li>民商诉讼业务</li>
+          <li>民商诉讼业务</li>
+          <li>证券业务</li>
+          <li>国际业务</li>
+          <li>民商诉讼业务</li>
+          <li>民商诉讼业务</li>
+        </ul>
+      </div>
+      <div class="tu_1"><img src="images/tu_1.gif" border="0"> </div>
+      <div class="youqing">
+        <div class="youqinglianjie">友情链接</div>
+        <div class="youqinglianjie_2">
+          <select name="select" class="search">
+            <option value="auction" selected="selected">-------------友情链接------------</option>
+            <option value="shop">搜索店铺</option>
+            <option value="nick">搜索掌柜</option>
+            <option value="info">搜索资讯</option>
+            <option value="web">搜索网页</option>
+          </select>
+        </div>
+        <div class=" clear"></div>
+      </div>
+      <div class="clear"></div>
+      <div class="tu_1"><img src="images/tu_2.gif" width="295" height="51" border="0"></div>
+      <div class="dongtai">
+        <div class="dongtai_top_left">网站动态</div>
+        <div class="dongtai_top_right"><a href="http://www.865171.cn"><img src="images/more2.gif" border="0"></a></div>
+        <div class="clear"></div>
+        <div class="dongtai_nr"> <a href="http://www.865171.cn">京都律师事务所2007年大事记回顾</a><br>
+          <a href="http://www.865171.cn">我所田文昌律师赴澳门科技大学讲学…</a><br>
+          <a href="http://www.865171.cn">陈登富涉嫌贪污行贿、挪用公款一案开庭… </a></div>
+      </div>
+    </div>
