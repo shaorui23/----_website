@@ -247,3 +247,30 @@ ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.
   /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-05 18:09:20) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 18:09:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
