@@ -12,7 +12,7 @@
 <body>
 <div class="juzhong">
   <div class="top">
-    <div class="top_top"><span style="float:left; margin-left:14px;">欢迎访问<b>Wando</b>团队招聘网站</span><span style="float:right; margin-right:6px;">现在时间是:<%= Time.now.strftime("%Y-%m-%d %I:%M%p")%></span>
+    <div class="top_top"><span style="float:left; margin-left:14px;">欢迎访问<b>Wando</b>团队招聘网站</span><span style="float:right; margin-right:6px;">现在时间是:<%= Time.now.strftime("%p") == "AM"? Time.now.strftime("%Y-%m-%d %I:%M 上午") : Time.now.strftime("%Y-%m-%d %I:%M 下午")%></span>
       <div class="clear"></div>
     </div>
     <div class="logo_bg"><img src="images/logo.jpg" style="float:left; margin:18px 0 0 25px;"><img src="images/logo_bg2.gif" width="502" height="100"  style=" float:right;">
@@ -47,9 +47,9 @@
           </li>
           <li  class="one"><a href="anlie.html">个人信息</a>
             <ul>
-              <li><a href="#">我们的法律服务好在哪里</a></li>
-              <li><a href="anlie.html">经典案例</a></li>
-              <li><a href="#">案例详解</a></li>
+              <li><a href="#">我的资料</a></li>
+              <li><a href="#">我的简历</a></li>
+              <li><a href="#">我的职位</a></li>
             </ul>
           </li>
           <li class="one"><a href="manage" target=_blank style="background-image: none;">后台管理</a></li>
