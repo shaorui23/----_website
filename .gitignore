@@ -17,3 +17,5 @@ db/schema.rb
 *.rb~
 vendor/bundler_gems
 log/development.log
+*.swp
+*.swo
