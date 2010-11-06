@@ -486,6 +486,7 @@ ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.
   
 
 Rendering rescues/layout (not_found)
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
@@ -661,6 +662,9 @@ Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/manage]
     /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
     script/server:3
 /!\ FAILSAFE /!\  Fri Nov 05 23:07:56 +0800 2010
+=======
+/!\ FAILSAFE /!\  Fri Nov 05 21:12:33 +0800 2010
+>>>>>>> 更新
   Status: 500 Internal Server Error
   Unknown database 'webSite_development'
     /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
@@ -718,6 +722,7 @@ Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/manage]
     /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
     /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
     script/server:3
+<<<<<<< HEAD
   [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
@@ -727,10 +732,22 @@ Rendering template within layouts/application
 Rendering manage/index
 Completed in 66ms (View: 65, DB: 0) | 200 OK [http://0.0.0.0/manage]
 >>>>>>> Stashed changes
+=======
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (88.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (160.7ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+>>>>>>> 更新
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:14:47) [GET]
 
@@ -750,6 +767,19 @@ ActionController::RoutingError (No route matches "/images/powered.gif" with {:me
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:09:22) [GET]
 
 ActionController::RoutingError (No route matches "/ext2/resources/css/ext-all.css" with {:method=>:get}):
+=======
+Processing HomesController#index (for 127.0.0.1 at 2010-11-05 21:12:56) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 49ms (View: 46, DB: 0) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:12:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -760,6 +790,7 @@ ActionController::RoutingError (No route matches "/ext2/resources/css/ext-all.cs
   /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+<<<<<<< HEAD
 >>>>>>> Stashed changes
 
 Rendering rescues/layout (not_found)
@@ -774,10 +805,23 @@ ActionController::RoutingError (No route matches "/images/s.gif" with {:method=>
   
 
 Rendering rescues/layout (not_found)
+=======
+
+Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+Processing ManageController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+Rendering template within layouts/application
+Rendering manage/index
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/manage]
+>>>>>>> 更新
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+<<<<<<< HEAD
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:14:47) [GET]
 
 ActionController::RoutingError (No route matches "/css/desktop.css" with {:method=>:get}):
@@ -786,6 +830,11 @@ ActionController::RoutingError (No route matches "/css/desktop.css" with {:metho
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:09:22) [GET]
 
 ActionController::RoutingError (No route matches "/ext2/ext-base.js" with {:method=>:get}):
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/ext2/resources/css/ext-all.css" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -799,12 +848,21 @@ ActionController::RoutingError (No route matches "/ext2/ext-base.js" with {:meth
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+<<<<<<< HEAD
   [4;35;1mSQL (0.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:09:22) [GET]
 
 ActionController::RoutingError (No route matches "/ext2/ext-all.js" with {:method=>:get}):
+=======
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/ext2/ext-base.js" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -815,13 +873,17 @@ ActionController::RoutingError (No route matches "/ext2/ext-all.js" with {:metho
   /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> 更新
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:14:47) [GET]
 
@@ -837,12 +899,28 @@ Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:14:47) [G
 
 ActionController::RoutingError (No route matches "/images/s.gif" with {:method=>:get}):
   
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/ext2/ext-all.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+>>>>>>> 更新
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing ManageController#index (for 127.0.0.1 at 2010-11-05 21:14:52) [GET]
 Rendering template within layouts/application
 Rendering manage/index
@@ -857,6 +935,9 @@ ActionController::RoutingError (No route matches "/css/desktop.css" with {:metho
   
 =======
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:09:22) [GET]
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+>>>>>>> 更新
 
 ActionController::RoutingError (No route matches "/js/StartMenu.js" with {:method=>:get}):
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
@@ -871,11 +952,19 @@ ActionController::RoutingError (No route matches "/js/StartMenu.js" with {:metho
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
 
 Rendering rescues/layout (not_found)
+<<<<<<< HEAD
   [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:09:22) [GET]
+=======
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+>>>>>>> 更新
 
 ActionController::RoutingError (No route matches "/js/TaskBar.js" with {:method=>:get}):
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
@@ -888,6 +977,7 @@ ActionController::RoutingError (No route matches "/js/TaskBar.js" with {:method=
   /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+<<<<<<< HEAD
 >>>>>>> Stashed changes
 
 Rendering rescues/layout (not_found)
@@ -902,6 +992,15 @@ ActionController::RoutingError (No route matches "/images/powered.gif" with {:me
   
 =======
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:09:22) [GET]
+=======
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+>>>>>>> 更新
 
 ActionController::RoutingError (No route matches "/js/Desktop.js" with {:method=>:get}):
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
@@ -914,13 +1013,17 @@ ActionController::RoutingError (No route matches "/js/Desktop.js" with {:method=
   /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> 更新
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:14:52) [GET]
 
@@ -928,6 +1031,9 @@ ActionController::RoutingError (No route matches "/images/s.gif" with {:method=>
   
 =======
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:09:22) [GET]
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+>>>>>>> 更新
 
 ActionController::RoutingError (No route matches "/js/App.js" with {:method=>:get}):
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
@@ -940,13 +1046,17 @@ ActionController::RoutingError (No route matches "/js/App.js" with {:method=>:ge
   /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> 更新
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:14:53) [GET]
 
@@ -976,6 +1086,10 @@ ActionController::RoutingError (No route matches "/images/s.gif" with {:method=>
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:09:22) [GET]
 
 ActionController::RoutingError (No route matches "/js/Module.js" with {:method=>:get}):
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/js/Module.js" with {:method=>:get}):
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -986,13 +1100,56 @@ ActionController::RoutingError (No route matches "/js/Module.js" with {:method=>
   /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
->>>>>>> Stashed changes
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/sample.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/css/desktop.css" with {:method=>:get}):
+>>>>>>> 更新
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+=======
+>>>>>>> 更新
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Processing ManageController#index (for 127.0.0.1 at 2010-11-05 21:17:17) [GET]
 Rendering template within layouts/application
@@ -1060,6 +1217,11 @@ ActionController::RoutingError (No route matches "/images/s.gif" with {:method=>
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:09:22) [GET]
 
 ActionController::RoutingError (No route matches "/sample.js" with {:method=>:get}):
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/ext2/resources/css/ext-all.css" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -1070,6 +1232,7 @@ ActionController::RoutingError (No route matches "/sample.js" with {:method=>:ge
   /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+<<<<<<< HEAD
 >>>>>>> Stashed changes
 
 Rendering rescues/layout (not_found)
@@ -1140,6 +1303,17 @@ ActionController::RoutingError (No route matches "/css/desktop.css" with {:metho
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:09:23) [GET]
 
 ActionController::RoutingError (No route matches "/ext2/resources/css/ext-all.css" with {:method=>:get}):
+=======
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/ext2/ext-base.js" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -1150,6 +1324,7 @@ ActionController::RoutingError (No route matches "/ext2/resources/css/ext-all.cs
   /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+<<<<<<< HEAD
 >>>>>>> Stashed changes
 
 Rendering rescues/layout (not_found)
@@ -1162,18 +1337,24 @@ Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:20) [G
 
 ActionController::RoutingError (No route matches "/images/powered.gif" with {:method=>:get}):
   
+=======
+>>>>>>> 更新
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:20) [GET]
 
 ActionController::RoutingError (No route matches "/images/s.gif" with {:method=>:get}):
   
 =======
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:09:23) [GET]
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+>>>>>>> 更新
 
 ActionController::RoutingError (No route matches "/images/powered.gif" with {:method=>:get}):
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
@@ -1186,6 +1367,7 @@ ActionController::RoutingError (No route matches "/images/powered.gif" with {:me
   /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+<<<<<<< HEAD
 >>>>>>> Stashed changes
 
 Rendering rescues/layout (not_found)
@@ -1205,12 +1387,15 @@ Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:21:37) [G
 
 ActionController::RoutingError (No route matches "/css/desktop.css" with {:method=>:get}):
   
+=======
+>>>>>>> 更新
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:21:37) [GET]
 
 ActionController::RoutingError (No route matches "/images/powered.gif" with {:method=>:get}):
@@ -1376,6 +1561,11 @@ Rendering rescues/layout (not_found)
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:09:23) [GET]
 
 ActionController::RoutingError (No route matches "/js/Desktop.js" with {:method=>:get}):
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/images/s.gif" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -1385,6 +1575,7 @@ ActionController::RoutingError (No route matches "/js/Desktop.js" with {:method=
   /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+<<<<<<< HEAD
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
 
 Rendering rescues/layout (not_found)
@@ -3746,12 +3937,16 @@ ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.
   /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
   /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
   /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+=======
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+>>>>>>> 更新
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:43:27) [GET]
 
 ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
@@ -3769,6 +3964,11 @@ ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:metho
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:09:23) [GET]
 
 ActionController::RoutingError (No route matches "/images/s.gif" with {:method=>:get}):
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/ext2/ext-all.js" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -3781,6 +3981,7 @@ ActionController::RoutingError (No route matches "/images/s.gif" with {:method=>
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
 
 Rendering rescues/layout (not_found)
+<<<<<<< HEAD
   [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
@@ -3796,6 +3997,15 @@ Completed in 10ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/homes]
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:10:14) [GET]
 
 ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+=======
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/js/StartMenu.js" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -3812,9 +4022,15 @@ Rendering rescues/layout (not_found)
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:10:17) [GET]
 
 ActionController::RoutingError (No route matches "/lvshijieshao.html" with {:method=>:get}):
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/js/TaskBar.js" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -3825,6 +4041,7 @@ ActionController::RoutingError (No route matches "/lvshijieshao.html" with {:met
   /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+<<<<<<< HEAD
 >>>>>>> Stashed changes
 
 Rendering rescues/layout (not_found)
@@ -3859,6 +4076,17 @@ ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:metho
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:43:06) [GET]
 
 ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+=======
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/js/Desktop.js" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -3869,6 +4097,7 @@ ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:metho
   /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+<<<<<<< HEAD
 >>>>>>> Stashed changes
 
 Rendering rescues/layout (not_found)
@@ -3929,6 +4158,16 @@ Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/manage]
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:43:06) [GET]
 
 ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+=======
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/js/App.js" with {:method=>:get}):
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -3941,6 +4180,27 @@ ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/js/Module.js" with {:method=>:get}):
+>>>>>>> 更新
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+<<<<<<< HEAD
   [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
@@ -4006,10 +4266,32 @@ Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
 Processing ManageController#index (for 127.0.0.1 at 2010-11-06 10:45:42) [GET]
 Rendering manage/index
 Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
+=======
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/sample.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+>>>>>>> 更新
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing ManageController#index (for 127.0.0.1 at 2010-11-06 10:48:44) [GET]
 Rendering manage/index
 Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
@@ -4021,12 +4303,28 @@ Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:50:48) [G
 
 ActionController::RoutingError (No route matches "/shared/icons/fam/user.gif" with {:method=>:get}):
   
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/css/desktop.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+>>>>>>> 更新
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing ManageController#index (for 127.0.0.1 at 2010-11-06 10:51:57) [GET]
 Rendering manage/index
 Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
@@ -4098,6 +4396,11 @@ Completed in 6ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/manage]
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:52:53) [GET]
 
 ActionController::RoutingError (No route matches "/shared/icons/fam/user.gif" with {:method=>:get}):
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/images/powered.gif" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -4111,12 +4414,21 @@ ActionController::RoutingError (No route matches "/shared/icons/fam/user.gif" wi
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+<<<<<<< HEAD
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:53:03) [GET]
 
 ActionController::RoutingError (No route matches "/shared/icons/fam/add.gif" with {:method=>:get}):
+=======
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/images/s.gif" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -4127,13 +4439,17 @@ ActionController::RoutingError (No route matches "/shared/icons/fam/add.gif" wit
   /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> 更新
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Processing ManageController#index (for 127.0.0.1 at 2010-11-06 10:52:30) [GET]
 Rendering manage/index
@@ -4154,12 +4470,36 @@ Processing ApplicationController#index (for 172.17.21.17 at 2010-11-06 10:52:30)
 
 ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
   
+=======
+Processing HomesController#index (for 127.0.0.1 at 2010-11-05 21:18:40) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:18:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+>>>>>>> 更新
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing ApplicationController#index (for 172.17.21.17 at 2010-11-06 10:52:30) [GET]
 
 ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
@@ -4168,6 +4508,11 @@ ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:53:03) [GET]
 
 ActionController::RoutingError (No route matches "/shared/icons/fam/delete.gif" with {:method=>:get}):
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:21:03) [GET]
+
+ActionController::RoutingError (No route matches "/admin" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -4184,9 +4529,15 @@ Rendering rescues/layout (not_found)
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:53:03) [GET]
 
 ActionController::RoutingError (No route matches "/shared/icons/fam/plugin.gif" with {:method=>:get}):
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:21:06) [GET]
+
+ActionController::RoutingError (No route matches "/admin" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -4200,12 +4551,21 @@ ActionController::RoutingError (No route matches "/shared/icons/fam/plugin.gif" 
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+<<<<<<< HEAD
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:53:04) [GET]
 
 ActionController::RoutingError (No route matches "/shared/icons/fam/connect.gif" with {:method=>:get}):
+=======
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:21:08) [GET]
+
+ActionController::RoutingError (No route matches "/admin" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -4216,13 +4576,17 @@ ActionController::RoutingError (No route matches "/shared/icons/fam/connect.gif"
   /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> 更新
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:52:31) [GET]
 
@@ -4232,6 +4596,11 @@ ActionController::RoutingError (No route matches "/shared/icons/fam/user.gif" wi
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:53:04) [GET]
 
 ActionController::RoutingError (No route matches "/shared/icons/fam/user_delete.gif" with {:method=>:get}):
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:21:10) [GET]
+
+ActionController::RoutingError (No route matches "/lvshijieshao.html" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -4242,24 +4611,44 @@ ActionController::RoutingError (No route matches "/shared/icons/fam/user_delete.
   /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> 更新
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:52:51) [GET]
 
 ActionController::RoutingError (No route matches "/shared/icons/fam/add.gif" with {:method=>:get}):
   
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:21:14) [GET]
+
+ActionController::RoutingError (No route matches "/xingfa.html" with {:method=>:get}):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+>>>>>>> 更新
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:52:51) [GET]
 
 ActionController::RoutingError (No route matches "/shared/icons/fam/plugin.gif" with {:method=>:get}):
@@ -4268,6 +4657,11 @@ ActionController::RoutingError (No route matches "/shared/icons/fam/plugin.gif" 
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:53:04) [GET]
 
 ActionController::RoutingError (No route matches "/shared/icons/fam/user_add.gif" with {:method=>:get}):
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:21:15) [GET]
+
+ActionController::RoutingError (No route matches "/jiaonidaguanshi.html" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -4281,12 +4675,21 @@ ActionController::RoutingError (No route matches "/shared/icons/fam/user_add.gif
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+<<<<<<< HEAD
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:53:04) [GET]
 
 ActionController::RoutingError (No route matches "/shared/icons/fam/user_female.gif" with {:method=>:get}):
+=======
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:21:18) [GET]
+
+ActionController::RoutingError (No route matches "/lvshijieshao.html" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -4297,24 +4700,44 @@ ActionController::RoutingError (No route matches "/shared/icons/fam/user_female.
   /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> 更新
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:52:51) [GET]
 
 ActionController::RoutingError (No route matches "/shared/icons/fam/delete.gif" with {:method=>:get}):
   
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:21:20) [GET]
+
+ActionController::RoutingError (No route matches "/index.html" with {:method=>:get}):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+>>>>>>> 更新
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing ManageController#index (for 172.17.21.17 at 2010-11-06 10:52:53) [GET]
 Rendering manage/index
 Completed in 3ms (View: 1, DB: 0) | 200 OK [http://172.17.21.75/manage]
@@ -4322,6 +4745,11 @@ Completed in 3ms (View: 1, DB: 0) | 200 OK [http://172.17.21.75/manage]
 Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:53:04) [GET]
 
 ActionController::RoutingError (No route matches "/shared/icons/fam/user_green.gif" with {:method=>:get}):
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 21:22:21) [GET]
+
+ActionController::RoutingError (No route matches "/index.html" with {:method=>:get}):
+>>>>>>> 更新
   /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
   /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
@@ -4334,6 +4762,7 @@ ActionController::RoutingError (No route matches "/shared/icons/fam/user_green.g
   /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
 
 Rendering rescues/layout (not_found)
+<<<<<<< HEAD
 >>>>>>> Stashed changes
   [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
@@ -4434,3 +4863,5 @@ Migrating to CreateJobs (20101107023520)
   [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
   [4;35;1mSQL (0.5ms)[0m   [0mdescribe `users`[0m
   [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+=======
+>>>>>>> 更新
