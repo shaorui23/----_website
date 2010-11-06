@@ -7,7 +7,8 @@ Manage = new Ext.app.App({
 		return [
             new Manage.QuestionBase(),
             new Manage.PositionManage(),
-            new Manage.PaperCenter()
+            new Manage.PaperCenter(),
+            new Manage.ResumeCenter()
 		];
 	},
 
