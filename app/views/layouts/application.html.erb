@@ -12,8 +12,12 @@
 <body>
 <div class="juzhong">
   <div class="top">
-    <div class="top_top"><span style="float:left; margin-left:14px;">欢迎访问<b>Wando</b>团队招聘网站</span><span style="float:right; margin-right:6px;">现在时间是:<%= Time.now.strftime("%p") == "AM"? Time.now.strftime("%Y-%m-%d %I:%M 上午") : Time.now.strftime("%Y-%m-%d %I:%M 下午")%></span>
-      <div class="clear"></div>
+    <div class="top_top"><span style="float:left; margin-left:14px;">欢迎访问<b>Wando</b>团队招聘网站</span><span id ='clock'style="float:right; margin-right:6px;"> 
+    <SCRIPT type=text/javascript>
+        var clock = new Clock();
+        clock.display(document.getElementById("clock"));
+    </SCRIPT></span>
+    <div class="clear"></div>
     </div>
     <div class="logo_bg"><img src="images/logo.jpg" style="float:left; margin:18px 0 0 25px;"><img src="images/logo_bg2.gif" width="502" height="100"  style=" float:right;">
       <div class="clear"></div>
