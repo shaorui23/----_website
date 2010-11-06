@@ -3205,3 +3205,245 @@ ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:metho
   /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 10:40:33) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 166ms (View: 162, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:40:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:40:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 10:40:37) [GET]
+Rendering manage/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 10:41:21) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 86ms (View: 83, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:41:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:41:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 10:41:24) [GET]
+Rendering manage/index
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 10:43:03) [GET]
+Rendering manage/index
+Completed in 51ms (View: 48, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 10:43:10) [GET]
+Rendering manage/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 10:43:17) [GET]
+Rendering manage/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 10:43:19) [GET]
+Rendering manage/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 10:45:22) [GET]
+Rendering manage/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 10:45:34) [GET]
+Rendering manage/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 10:45:42) [GET]
+Rendering manage/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 10:48:44) [GET]
+Rendering manage/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:50:48) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 10:51:57) [GET]
+Rendering manage/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 10:52:13) [GET]
+Rendering manage/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:52:17) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 10:52:30) [GET]
+Rendering manage/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 172.17.21.17 at 2010-11-06 10:52:30) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 35ms (View: 32, DB: 0) | 200 OK [http://172.17.21.75/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 172.17.21.17 at 2010-11-06 10:52:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 172.17.21.17 at 2010-11-06 10:52:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:52:31) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:52:51) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/add.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:52:51) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/plugin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 10:52:51) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/delete.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 172.17.21.17 at 2010-11-06 10:52:53) [GET]
+Rendering manage/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://172.17.21.75/manage]
