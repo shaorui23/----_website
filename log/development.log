@@ -1096,3 +1096,2112 @@ Rendering rescues/layout (not_found)
 Processing ManageController#index (for 127.0.0.1 at 2010-11-05 23:07:37) [GET]
 Rendering manage/index
 Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:15:14) [GET]
+
+ActionController::RoutingError (No route matches "/admin" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:15:16) [GET]
+
+ActionController::RoutingError (No route matches "/admin" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:15:19) [GET]
+
+ActionController::RoutingError (No route matches "/admin" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:15:23) [GET]
+
+ActionController::RoutingError (No route matches "/admin" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-05 23:20:46) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 190ms (View: 187, DB: 0) | 200 OK [http://localhost/homes]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:20:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-05 23:20:48) [GET]
+Rendering manage/index
+Completed in 33ms (View: 21, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-05 23:20:56) [GET]
+Rendering manage/index
+Completed in 33ms (View: 11, DB: 1) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:21:00) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/connect.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (8.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:21:00) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user_add.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (5.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:21:00) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user_delete.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:21:00) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:21:00) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user_female.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:21:00) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user_green.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:21:04) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/delete.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:21:04) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/plugin.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (9.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:21:04) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/add.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-05 23:22:31) [GET]
+Rendering manage/index
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:22:42) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (13.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (12.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:22:46) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/add.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (10.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (6.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:22:47) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/plugin.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:22:47) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/delete.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:26:09) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/connect.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:26:09) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user_add.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:26:10) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user_delete.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:26:10) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user_female.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 23:26:10) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user_green.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-05 23:40:53) [GET]
+Rendering manage/index
+Completed in 28ms (View: 2, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:25:52) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 555ms (View: 522, DB: 0) | 200 OK [http://localhost/homes]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:25:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 09:25:55) [GET]
+Rendering manage/index
+Completed in 26ms (View: 23, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:25:57) [GET]
+
+ActionController::RoutingError (No route matches "/rs/wallpapers/desktop.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:26:01) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 09:26:25) [GET]
+Rendering manage/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 09:26:35) [GET]
+Rendering manage/index
+Completed in 19ms (View: 2, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 09:27:20) [GET]
+Rendering manage/index
+Completed in 19ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 09:27:24) [GET]
+Rendering manage/index
+Completed in 4ms (View: 1, DB: 1) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 09:27:27) [GET]
+Rendering manage/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 09:28:16) [GET]
+Rendering manage/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 09:29:02) [GET]
+Rendering manage/index
+Completed in 105ms (View: 103, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 09:29:11) [GET]
+Rendering manage/index
+Completed in 77ms (View: 2, DB: 2) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:29:18) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/add.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:29:18) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/delete.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (5.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:29:18) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/plugin.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:29:23) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user_delete.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (22.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:29:23) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user_add.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (6.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:29:23) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/connect.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:29:23) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:29:23) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user_female.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:29:24) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user_green.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 09:30:35) [GET]
+Rendering manage/index
+Completed in 30ms (View: 23, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:32:03) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 59ms (View: 54, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:32:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 09:32:13) [GET]
+Rendering manage/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:32:18) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/connect.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:32:19) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user_add.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:32:19) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user_delete.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:32:19) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:32:19) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user_female.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (25.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:32:19) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user_green.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:32:41) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/add.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (4.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:32:41) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/plugin.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:32:41) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/delete.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-06 09:32:53) [GET]
+Rendering manage/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/manage]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:35:13) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 601ms (View: 575, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:35:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:35:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:35:27) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 111ms (View: 47, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:35:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:35:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:35:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:35:32) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 53ms (View: 50, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:35:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:35:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:35:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:37:21) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 33ms (View: 30, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:37:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:37:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:37:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:38:03) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+
+ActionView::TemplateError (private method `format' called for Sat Nov 06 09:38:03 +0800 2010:Time) on line #15 of app/views/layouts/application.html.erb:
+12: <body>
+13: <div class="juzhong">
+14:   <div class="top">
+15:     <div class="top_top"><span style="float:left; margin-left:14px;">欢迎访问<b>Wando</b>团队招聘网站</span><span style="float:right; margin-right:6px;">今天<%= Time.now.format("yy-mm-dd")%></span>
+16:       <div class="clear"></div>
+17:     </div>
+18:     <div class="logo_bg"><img src="images/logo.jpg" style="float:left; margin:18px 0 0 25px;"><img src="images/logo_bg2.gif" width="502" height="100"  style=" float:right;">
+
+    app/views/layouts/application.html.erb:15
+    /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+    /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+    /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+    /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+    /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+    /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendered rescues/_trace (353.5ms)
+Rendered rescues/_request_and_response (11.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:38:12) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 81ms (View: 57, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:38:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:38:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:38:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:41:16) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 41ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:41:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (12.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:41:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:41:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:41:18) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:41:18) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:41:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:41:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:41:49) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 31ms (View: 28, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:41:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:41:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:41:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:42:37) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 49ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:42:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:42:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:42:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:42:39) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:42:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:42:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:42:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:42:46) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 395ms (View: 359, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:42:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:42:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:42:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:42:56) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 32ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:42:56) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:42:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:42:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:43:13) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 100ms (View: 66, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:43:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:43:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (8.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:43:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:43:15) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 14ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:43:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:43:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:43:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:43:18) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 17ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:43:18) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:43:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:43:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:43:19) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:43:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:43:20) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:43:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-06 09:43:27) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 40ms (View: 35, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:43:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:43:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-06 09:43:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `each'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:285:in `run'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `new'
+  /usr/local/lib/site_ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)

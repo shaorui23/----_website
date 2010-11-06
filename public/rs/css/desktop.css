@@ -15,7 +15,7 @@
  */
 
 html, body {
-	background:#3d71b8 url(../wallpapers/desktop.jpg) no-repeat left top;
+	background:white url(../wallpapers/desktop.jpg) no-repeat left top; /*桌面颜色由原来的 #3d71b8 改变为白色底层*/
     font: normal 12px tahoma, arial, verdana, sans-serif;
 	margin: 0;
 	padding: 0;
@@ -648,7 +648,7 @@ td.ux-taskButtons-edge {
 }
 #x-shortcuts dt div {
     width:100%;
-    color:white;
+    color:black;
     overflow:hidden;
     text-overflow:ellipsis;
     cursor:pointer;
