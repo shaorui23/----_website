@@ -39,7 +39,7 @@ ul{
 	list-style-type: none;
 }
 .subnav ul .one{
-	width:100px;
+	width:120px;
 }
 .subnav ul li{
 	background:#6d7f91;
@@ -99,11 +99,11 @@ ul{
 }
 .subnav{
 	float:left;
-	width:700px;
+	width:800px;
 }
 .sousuo{
 	float:right;
-	padding:3px 18px 0 0;
+	padding:1px 30px 0 0;
 }
 .muen{
 	font-size:14px;
