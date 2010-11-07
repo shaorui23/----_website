@@ -1,2 +1,19 @@
+# == Schema Information
+#
+# Table name: jobs
+#
+#  id           :integer(4)      not null, primary key
+#  jname        :string(255)
+#  jdesc        :string(255)
+#  created_at   :datetime
+#  updated_at   :datetime
+#  created_date :date
+#  closed_date  :date
+#  type         :string(255)
+#  job_number   :date
+#  requirement  :date
+#  state        :string(255)
+#
+
 class Job < ActiveRecord::Base
 end
