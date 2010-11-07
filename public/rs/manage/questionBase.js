@@ -12,6 +12,7 @@ Manage.QuestionBase = Ext.extend(Ext.app.Module, {
     createWindow: function(){
         var manage = this.app.getDesktop();
         var win = manage.getWindow('questionBase');
+        var store = this.createStore();
         if(!win){
             win = manage.createWindow({
                 id: 'questionBase',
@@ -24,42 +25,65 @@ Manage.QuestionBase = Ext.extend(Ext.app.Module, {
                 constrainHeader: true,
 
                 layout: 'border',
-                items: [this.createForm(), this.createGrid()]
+                items: [this.createForm(store), this.createGrid(store)],
+                listeners: { 
+                    'show': function(){ 
+                        store.load();
+                    }
+                }
             });
         }
         win.show();
     },
 
-    createForm: function(){ 
-        return new Ext.form.FormPanel({ 
+    createForm: function(store){ 
+        var form = new Ext.form.FormPanel({ 
             frame: true,
             autoHeight: true,
             region: 'north',
             defaults: { width: 500 },
+            buttonAlign: 'right',
             buttons: [{ 
-                text: '保存'
+                text: '保存',
+                handler: function(){ 
+                    var data = Ext.getCmp('question').getValue();
+                    Ext.Ajax.request({ 
+                        url: '/questions/create',
+                        method: 'POST',
+                        jsonData: { question: { qcon: data } },
+                        success: function(){ 
+                            store.reload();
+                        },
+                        failure: function(){ 
+                            Ext.Msg.alert('Wando团队', '创建失败');
+                        }
+                    })
+                }
             }],
             items: [{ 
                 xtype: 'textfield',
                 fieldLabel: '问题',
-                name: 'question'
-            },{ 
-                xtype: 'textarea',
-                fieldLabel: '问题描述',
-                name: 'description'
+                id: 'question'
             }]
+        });
+        return form;
+    },
+
+    createStore: function(){ 
+        return new Ext.data.JsonStore({ 
+            url: '/questions.json',
+            fields: [
+                'id',
+                'qcon'
+            ]
         });
     },
 
-    createGrid: function(){ 
-        var store = new Ext.data.JsonStore({ 
-            fields: [
-                'question',
-                'description'
-            ]
-        });
-
-        return new Ext.grid.GridPanel({ 
+    createGrid: function(store){ 
+        var deleteRecords = [];
+        var deleteIds = [];
+        var grid = new Ext.grid.GridPanel({ 
+            id: 'questionGrid',
             frame: true,
             viewConfig: { forceFit: true },
             region: 'center',
@@ -69,13 +93,31 @@ Manage.QuestionBase = Ext.extend(Ext.app.Module, {
             },{ 
                 text: '查找'
             }, '-',{ 
-                text: '编辑'
+                text: '删除',
+                handler: function(){ 
+                    deleteRecords = grid.getSelectionModel().getSelections();
+                    for(var i = 0; i < deleteRecords.length; i++){ 
+                        deleteIds.push(deleteRecords[i].get('id'));
+                    }
+                    Ext.Ajax.request({ 
+                        url: '/questions/deletes',
+                        method: 'DELETE',
+                        jsonData: { question_ids: deleteIds },
+                        success: function(){ 
+                            store.reload();
+                        },
+                        failure: function(){ 
+                            Ext.Msg.alert('Wando团队', '删除失败');
+                        }
+                    })
+                }
             }],
             cm: new Ext.grid.ColumnModel([
-                new Ext.grid.RowNumberer(),
-                { header: '问题', dataIndex: 'question' },
-                { header: '描述', dataIndex: 'description' }
+                //new Ext.grid.RowNumberer(),
+                { header: 'ID',   dataIndex: 'id', width: 5 },
+                { header: '问题', dataIndex: 'qcon' }
             ])
         });
+        return grid;
     }
 });
