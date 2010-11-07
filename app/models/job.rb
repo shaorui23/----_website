@@ -17,3 +17,15 @@
 
 class Job < ActiveRecord::Base
 end
+
+
+Job.blueprint do  
+  jname               { Faker::Lorem.words.first }
+  jdesc               { Faker::Lorem.sentence }
+  created_date        { Date.today }
+  closed_date         { rand(100) + 20}
+  type                { /'jingli'|'sdf'/.gen }
+  job_number          { rand(100) + 20} 
+  requirement         { Faker::Lorem.sentence }
+  state               { /'pending'|'closing'|'over'/.gen }
+end

@@ -3,8 +3,8 @@ class AddMoreFieldsToJob < ActiveRecord::Migration
     add_column :jobs, :created_date, :date
     add_column :jobs, :closed_date,  :date
     add_column :jobs, :type,         :string
-    add_column :jobs, :job_number,   :date
-    add_column :jobs, :requirement,  :date
+    add_column :jobs, :job_number,   :integer
+    add_column :jobs, :requirement,  :string
     add_column :jobs, :state      ,  :string
   end
 

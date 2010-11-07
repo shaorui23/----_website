@@ -5,6 +5,12 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
+  private
+
+  def render_json(result = nil , count = 0)
+    render :json => "(#{{ :success => true, :content => result, :total => count }.to_json})"
+  end
+
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 end

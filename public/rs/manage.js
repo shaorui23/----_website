@@ -12,7 +12,7 @@ Manage = new Ext.app.App({
         Manage.decesionCenter = new Manage.DecesionCenter();
 		return [
             Manage.questionBase,
-            Manage.positionManage,
+           // Manage.positionManage,
             Manage.paperCenter,
             Manage.resumeCenter,
             Manage.decesionCenter

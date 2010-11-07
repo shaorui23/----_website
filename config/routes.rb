@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :homes
+  map.resources :jobs
   map.resources :manage
   map.resources :questions, 
                 :collection => { :deletes => :delete }

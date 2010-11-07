@@ -104,8 +104,12 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 'requirement',
                 'jdesc',
                 'state'
-            ]
+            ],
+            url:'/jobs.json',
+            method: 'GET'
         });
+        store.load();
+
         var sm = new Ext.grid.CheckboxSelectionModel();
         var cm = new Ext.grid.ColumnModel([
             sm,

@@ -5153,9 +5153,121 @@ ActionController::RoutingError (No route matches "/shared/icons/fam/user.gif" wi
 
 Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+<<<<<<< HEAD
   [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
   [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
   [4;35;1mSQL (31.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+=======
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mJob Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mJob Create (0.3ms)[0m   [0mINSERT INTO `jobs` (`jname`, `created_at`, `closed_date`, `job_number`, `jdesc`, `updated_at`, `type`, `created_date`, `requirement`, `state`) VALUES(NULL, '2010-11-07 13:23:41', NULL, NULL, NULL, '2010-11-07 13:23:41', NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (36.5ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Delete all (43.4ms)[0m   [0;1mDELETE FROM `jobs` [0m
+  [4;35;1mJob Last ID (0.2ms)[0m   [0mSELECT id FROM `jobs` ORDER BY id DESC[0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJob Populate (35.1ms)[0m   [0mINSERT INTO `jobs` (`id`, `jname`, `jdesc`, `created_at`, `updated_at`, `created_date`, `closed_date`, `type`, `job_number`, `requirement`, `state`) VALUES (1, 'ut', 'Iure dolorum sunt in nihil maxime ut.', '2010-11-07 21:24:48', '2010-11-07 21:24:48', '2010-11-07', 67, '11x3', 93, 'Et saepe deserunt cum eligendi ab numquam aut officiis.', '\'over\''), (2, 'atque', 'Est ut illo eos vel placeat rem quod dolor.', '2010-11-07 21:24:48', '2010-11-07 21:24:48', '2010-11-07', 81, '10x2', 52, 'Eum occaecati maxime asperiores est quia earum ad et.', '\'over\''), (3, 'qui', 'Autem natus et ut est velit quasi soluta.', '2010-11-07 21:24:48', '2010-11-07 21:24:48', '2010-11-07', 108, '11x3', 45, 'Sed ut sequi temporibus explicabo hic qui mollitia illo.', '\'closing\''), (4, 'quia', 'A omnis error quia blanditiis.', '2010-11-07 21:24:48', '2010-11-07 21:24:48', '2010-11-07', 27, '10x2', 110, 'Itaque adipisci numquam voluptatum.', '\'closing\''), (5, 'enim', 'Facilis sit laboriosam voluptas fuga voluptas omnis nam.', '2010-11-07 21:24:48', '2010-11-07 21:24:48', '2010-11-07', 67, '10x2', 82, 'A et rem sit porro.', '\'closing\''), (6, 'ab', 'Nihil id unde voluptatem officiis cumque veritatis.', '2010-11-07 21:24:48', '2010-11-07 21:24:48', '2010-11-07', 113, '10x2', 36, 'Veritatis velit sunt molestiae odit quia earum omnis deserunt.', '\'over\''), (7, 'fugiat', 'Maxime qui dolor repellat perferendis eos vel ea.', '2010-11-07 21:24:48', '2010-11-07 21:24:48', '2010-11-07', 24, '20x4', 33, 'Quibusdam non sapiente quod nostrum earum iste laudantium.', '\'closing\''), (8, 'repudiandae', 'Accusamus nobis et nisi officia.', '2010-11-07 21:24:48', '2010-11-07 21:24:48', '2010-11-07', 35, '11x3', 74, 'Id possimus ipsa est doloribus illo eos porro.', '\'pending\''), (9, 'omnis', 'Est porro aut dolorem sint natus.', '2010-11-07 21:24:48', '2010-11-07 21:24:48', '2010-11-07', 56, '20x4', 69, 'Et ea debitis numquam quod molestias natus ut.', '\'pending\''), (10, 'occaecati', 'Autem architecto ut non iure eos quia.', '2010-11-07 21:24:48', '2010-11-07 21:24:48', '2010-11-07', 112, '11x3', 47, 'Fugit numquam repellendus quo sunt.', '\'closing\'')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Delete all (35.9ms)[0m   [0;1mDELETE FROM `jobs` [0m
+  [4;35;1mJob Last ID (0.1ms)[0m   [0mSELECT id FROM `jobs` ORDER BY id DESC[0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJob Populate (33.5ms)[0m   [0mINSERT INTO `jobs` (`id`, `jname`, `jdesc`, `created_at`, `updated_at`, `created_date`, `closed_date`, `type`, `job_number`, `requirement`, `state`) VALUES (1, 'iste', 'Alias voluptas odit nihil sapiente eaque eum.', '2010-11-07 21:29:30', '2010-11-07 21:29:30', '2010-11-07', 117, '11x3', 91, 'Sed aperiam aliquam ipsa.', '\'over\''), (2, 'dicta', 'Qui iusto qui molestiae quas assumenda temporibus adipisci.', '2010-11-07 21:29:30', '2010-11-07 21:29:30', '2010-11-07', 111, '20x4', 72, 'Maiores tempore assumenda deserunt.', '\'over\''), (3, 'libero', 'Aut et facilis aut rerum qui iste consequatur.', '2010-11-07 21:29:30', '2010-11-07 21:29:30', '2010-11-07', 34, '11x3', 36, 'Eum molestiae facilis itaque et repellat qui culpa.', '\'over\''), (4, 'qui', 'Qui quis optio provident voluptates quia vel illo recusandae.', '2010-11-07 21:29:30', '2010-11-07 21:29:30', '2010-11-07', 101, '20x4', 81, 'Officia dolorem recusandae corporis provident.', '\'pending\''), (5, 'praesentium', 'Iure est officiis voluptas aut consequatur.', '2010-11-07 21:29:30', '2010-11-07 21:29:30', '2010-11-07', 91, '20x4', 60, 'Quos rerum officiis et consequatur eaque et assumenda vero.', '\'over\''), (6, 'et', 'Accusantium numquam deserunt sint vel.', '2010-11-07 21:29:30', '2010-11-07 21:29:30', '2010-11-07', 65, '20x4', 92, 'Facilis voluptatum delectus similique modi quia et.', '\'over\''), (7, 'provident', 'Atque eos neque illo enim.', '2010-11-07 21:29:30', '2010-11-07 21:29:30', '2010-11-07', 46, '10x2', 30, 'Consequatur excepturi sit enim ducimus esse eum soluta.', '\'pending\''), (8, 'nesciunt', 'Et quis id autem in excepturi molestiae et.', '2010-11-07 21:29:30', '2010-11-07 21:29:30', '2010-11-07', 24, '20x4', 95, 'Enim vitae sapiente dolor cum consequatur velit a autem.', '\'closing\''), (9, 'suscipit', 'Et hic praesentium odit qui commodi necessitatibus autem.', '2010-11-07 21:29:30', '2010-11-07 21:29:30', '2010-11-07', 57, '20x4', 28, 'Minima quia inventore reiciendis eos aut harum excepturi.', '\'pending\''), (10, 'maiores', 'Autem aliquam architecto rerum odit praesentium.', '2010-11-07 21:29:30', '2010-11-07 21:29:30', '2010-11-07', 90, '10x2', 42, 'Qui minima sint quia odio temporibus dolorem.', '\'closing\'')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mJob Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Delete all (41.1ms)[0m   [0;1mDELETE FROM `jobs` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Delete all (0.1ms)[0m   [0;1mDELETE FROM `jobs` [0m
+  [4;35;1mJob Last ID (0.1ms)[0m   [0mSELECT id FROM `jobs` ORDER BY id DESC[0m
+  [4;36;1mJob Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJob Populate (37.0ms)[0m   [0mINSERT INTO `jobs` (`id`, `jname`, `jdesc`, `created_at`, `updated_at`, `created_date`, `closed_date`, `type`, `job_number`, `requirement`, `state`) VALUES (1, 'qui', 'Quaerat sit nam quas quos veniam.', '2010-11-07 21:32:08', '2010-11-07 21:32:08', '2010-11-07', '2010-03-02 08:56:24', 'Enid Schmeler II', 24, 'Voluptas numquam est quibusdam.', 'Wayne Zemlak'), (2, 'officiis', 'Et quod non consectetur blanditiis consequatur asperiores voluptas ex.', '2010-11-07 21:32:08', '2010-11-07 21:32:08', '2010-11-07', '2010-09-09 15:43:54', 'Berniece Boyer', 52, 'Velit facere est in.', 'Martine Wintheiser'), (3, 'assumenda', 'At aut repellendus voluptas.', '2010-11-07 21:32:08', '2010-11-07 21:32:08', '2010-11-07', '2009-04-12 23:33:02', 'Guido Powlowski', 1, 'Ab ipsa nihil iure quibusdam at cupiditate.', 'Rhianna Ryan'), (4, 'eveniet', 'Perferendis explicabo et doloremque magni et.', '2010-11-07 21:32:08', '2010-11-07 21:32:08', '2010-11-07', '2009-03-03 03:59:14', 'Kristy Jewess', 1, 'Excepturi consequatur voluptatem alias odio quos reprehenderit est.', 'Pierre Kerluke'), (5, 'ratione', 'Soluta ullam inventore sit.', '2010-11-07 21:32:08', '2010-11-07 21:32:08', '2010-11-07', '2009-11-26 22:19:54', 'Mr. Scotty Swift', 1, 'Porro laboriosam voluptas eos ut ipsam eum quo.', 'Darren Lakin'), (6, 'quis', 'Consequatur quo vitae distinctio libero voluptatem odio quam.', '2010-11-07 21:32:08', '2010-11-07 21:32:08', '2010-11-07', '2009-03-10 23:14:44', 'Reed Smitham', 1, 'Suscipit qui et doloribus distinctio hic aperiam odio.', 'Maida Abbott'), (7, 'dicta', 'Aliquid sit vitae nesciunt est qui voluptate molestiae accusamus.', '2010-11-07 21:32:08', '2010-11-07 21:32:08', '2010-11-07', '2009-08-28 03:13:08', 'Jayme Klein', 52, 'Ipsam enim aut ut aut.', 'Mattie Hamill'), (8, 'repellendus', 'Est non ipsa a.', '2010-11-07 21:32:08', '2010-11-07 21:32:08', '2010-11-07', '2009-07-25 18:30:40', 'Esteban Kihn', 52, 'Rerum excepturi sit expedita dolorum ab magnam.', 'Arjun Jacobi'), (9, 'ipsa', 'Repudiandae fugiat natus enim.', '2010-11-07 21:32:08', '2010-11-07 21:32:08', '2010-11-07', '2010-05-11 02:39:51', 'Stefanie Wyman', 1, 'Odio qui odit fuga.', 'Jimmy Pacocha'), (10, 'ab', 'Vitae quas recusandae corporis deleniti.', '2010-11-07 21:32:08', '2010-11-07 21:32:08', '2010-11-07', '2010-03-25 22:52:07', 'Fiona Brekke', 52, 'Similique delectus ut et et ipsum.', 'Novella Fisher')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 1[0m
+  [4;35;1mJob Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mJob Delete all (33.5ms)[0m   [0mDELETE FROM `jobs` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Delete all (0.1ms)[0m   [0;1mDELETE FROM `jobs` [0m
+  [4;35;1mJob Last ID (0.1ms)[0m   [0mSELECT id FROM `jobs` ORDER BY id DESC[0m
+  [4;36;1mJob Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJob Populate (45.6ms)[0m   [0mINSERT INTO `jobs` (`id`, `jname`, `jdesc`, `created_at`, `updated_at`, `created_date`, `closed_date`, `type`, `job_number`, `requirement`, `state`) VALUES (1, 'culpa', 'Quae possimus amet nihil magni atque.', '2010-11-07 21:34:18', '2010-11-07 21:34:18', '2010-11-07', '2008-11-23 00:47:10', 'quis', 52, 'Aut consequatur rerum ut.', 'Ottilie Jerde'), (2, 'nobis', 'In aliquid autem non sunt necessitatibus.', '2010-11-07 21:34:18', '2010-11-07 21:34:18', '2010-11-07', '2010-10-31 15:58:52', 'repellendus', 1, 'Optio sunt ea a mollitia sit facilis est.', 'Helmer DuBuque'), (3, 'eum', 'In error quod aut hic ut.', '2010-11-07 21:34:18', '2010-11-07 21:34:18', '2010-11-07', '2009-02-20 02:22:36', 'aliquam', 52, 'Molestiae inventore est sequi eveniet deserunt.', 'Santiago Cormier'), (4, 'aut', 'Amet incidunt aperiam qui nostrum quisquam harum nobis.', '2010-11-07 21:34:18', '2010-11-07 21:34:18', '2010-11-07', '2009-07-04 18:25:36', 'nulla', 1, 'Unde est vel ipsa minus facilis voluptatum necessitatibus.', 'Charlie Hauck'), (5, 'aut', 'Nulla nihil voluptas facere dolor.', '2010-11-07 21:34:18', '2010-11-07 21:34:18', '2010-11-07', '2010-07-03 04:02:39', 'a', 24, 'In nam expedita non voluptas et.', 'Waino Wisozk'), (6, 'corporis', 'Non soluta nam repellat error rem maiores.', '2010-11-07 21:34:18', '2010-11-07 21:34:18', '2010-11-07', '2010-10-20 11:29:12', 'voluptas', 1, 'Ut tempore officiis impedit cum repellendus pariatur laudantium non.', 'Betty Ernser'), (7, 'magnam', 'Omnis consequatur et quo laudantium.', '2010-11-07 21:34:18', '2010-11-07 21:34:18', '2010-11-07', '2009-12-30 09:12:50', 'voluptatum', 1, 'Deleniti dolor consectetur qui tempora.', 'Astrid Koss'), (8, 'quod', 'Atque similique totam at.', '2010-11-07 21:34:18', '2010-11-07 21:34:18', '2010-11-07', '2008-12-02 16:10:27', 'fugit', 1, 'Aperiam reiciendis corrupti quia sed necessitatibus dolorum.', 'Annetta Sipes'), (9, 'ratione', 'Quia aperiam corrupti dolores perferendis.', '2010-11-07 21:34:18', '2010-11-07 21:34:18', '2010-11-07', '2009-10-03 08:19:10', 'quisquam', 1, 'Quisquam blanditiis est odit quod in.', 'Duane Carter Sr.'), (10, 'minima', 'Dolores quidem reiciendis pariatur hic corporis ut voluptatem.', '2010-11-07 21:34:18', '2010-11-07 21:34:18', '2010-11-07', '2009-08-12 05:02:19', 'illo', 52, 'Tempore qui et id harum omnis libero.', 'Michael Ankunding')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 1[0m
+  [4;35;1mJob Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mJob Load (0.3ms)[0m   [0mSELECT * FROM `jobs` ORDER BY jobs.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Delete all (40.8ms)[0m   [0;1mDELETE FROM `jobs` [0m
+  [4;35;1mJob Last ID (0.2ms)[0m   [0mSELECT id FROM `jobs` ORDER BY id DESC[0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJob Populate (38.2ms)[0m   [0mINSERT INTO `jobs` (`id`, `jname`, `jdesc`, `created_at`, `updated_at`, `created_date`, `closed_date`, `type`, `job_number`, `requirement`, `state`) VALUES (1, 'temporibus', 'Et vitae eum omnis.', '2010-11-07 21:36:01', '2010-11-07 21:36:01', '2010-11-07', '2009-01-24 05:47:46', 'Job', 52, 'Minus sed quibusdam nihil.', 'Aniyah McDermott'), (2, 'doloribus', 'Necessitatibus nisi laudantium iure.', '2010-11-07 21:36:02', '2010-11-07 21:36:02', '2010-11-07', '2010-03-03 11:26:33', 'Job', 52, 'Est et laudantium distinctio est nesciunt aut.', 'Fletcher Pagac II'), (3, 'omnis', 'Quis est est earum.', '2010-11-07 21:36:02', '2010-11-07 21:36:02', '2010-11-07', '2009-07-26 16:33:53', 'Job', 24, 'Nemo in aut et aliquid sunt sapiente quos.', 'Federico Reynolds'), (4, 'in', 'Omnis tempore ipsa dolorem sint aut sed et.', '2010-11-07 21:36:02', '2010-11-07 21:36:02', '2010-11-07', '2009-04-10 21:01:16', 'Job', 52, 'Alias tempore quisquam eaque.', 'Nannie Romaguera'), (5, 'voluptas', 'Itaque unde quasi eos minima nemo.', '2010-11-07 21:36:02', '2010-11-07 21:36:02', '2010-11-07', '2010-10-28 14:53:37', 'Job', 1, 'Commodi delectus minima dignissimos consequuntur nulla.', 'Retha Ledner'), (6, 'sunt', 'Culpa quisquam assumenda nesciunt quas exercitationem magnam et.', '2010-11-07 21:36:02', '2010-11-07 21:36:02', '2010-11-07', '2010-02-20 20:21:54', 'Job', 1, 'Aut voluptatem et laboriosam ea dolores iusto totam soluta.', 'Estevan Mitchell V'), (7, 'provident', 'Voluptatum veritatis facilis voluptas non qui ut velit.', '2010-11-07 21:36:02', '2010-11-07 21:36:02', '2010-11-07', '2009-01-28 19:38:17', 'Job', 1, 'Sit corporis consequuntur autem cupiditate optio enim.', 'Mrs. Fletcher Gorczany'), (8, 'debitis', 'Accusamus sed deserunt non voluptates.', '2010-11-07 21:36:02', '2010-11-07 21:36:02', '2010-11-07', '2009-03-04 04:18:45', 'Job', 52, 'Temporibus nam suscipit commodi qui odit delectus deserunt culpa.', 'Mr. Ena Lakin'), (9, 'quidem', 'Accusantium ut quia saepe ut dolorem aliquid est tempora.', '2010-11-07 21:36:02', '2010-11-07 21:36:02', '2010-11-07', '2010-01-01 03:08:50', 'Job', 52, 'Adipisci nemo dignissimos excepturi enim ad.', 'Chauncey Homenick'), (10, 'natus', 'Possimus culpa et non ullam.', '2010-11-07 21:36:02', '2010-11-07 21:36:02', '2010-11-07', '2010-01-26 08:27:06', 'Job', 1, 'Dolore voluptas necessitatibus nostrum hic quibusdam illo facilis.', 'Mitchel Hamill')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 1[0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (90.6ms)[0m   [0mCREATE TABLE `group_ans` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `gque_one` varchar(255), `gque_two` varchar(255), `gque_three` varchar(255), `gque_four` varchar(255), `gque_five` varchar(255), `gque_six` varchar(255), `gmark` int(11), `group_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (82.5ms)[0m   [0mCREATE TABLE `group_questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `group_id` int(11), `question_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (90.8ms)[0m   [0mCREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `gque` varchar(255), `job_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (90.3ms)[0m   [0mCREATE TABLE `jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `jname` varchar(255), `jdesc` varchar(255), `created_at` datetime, `updated_at` datetime, `created_date` date, `closed_date` date, `type` varchar(255), `job_number` date, `requirement` date, `state` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (98.9ms)[0m   [0mCREATE TABLE `questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `qcon` varchar(255), `qjug` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (100.0ms)[0m   [0mCREATE TABLE `resume_ans` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `rexp_a` varchar(255), `redu_a` varchar(255), `rskill_a` varchar(255), `reva_a` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (107.2ms)[0m   [0mCREATE TABLE `resumes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `rexp` varchar(255), `redu` varchar(255), `rskill` varchar(255), `reva` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (90.4ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `uname` varchar(255), `upassword` varchar(255), `uage` int(11), `usex` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (82.9ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (142.8ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (23.4ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101107114223')[0m
+  [4;36;1mSQL (33.2ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101107022550')[0m
+  [4;35;1mSQL (24.9ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101107022814')[0m
+  [4;36;1mSQL (25.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101107020507')[0m
+  [4;35;1mSQL (25.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101107021725')[0m
+  [4;36;1mSQL (25.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101107023520')[0m
+  [4;35;1mSQL (24.9ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101107023010')[0m
+  [4;36;1mSQL (25.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101107021111')[0m
+  [4;35;1mSQL (25.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101107021443')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mJob Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+>>>>>>> 添加gem&创建jobs_controller
 Migrating to CreateUsers (20101107020507)
 Migrating to CreateResumes (20101107021111)
 Migrating to CreateResumeAns (20101107021443)
@@ -5164,6 +5276,7 @@ Migrating to CreateQuestions (20101107022550)
 Migrating to CreateGroupQuestions (20101107022814)
 Migrating to CreateGroupAns (20101107023010)
 Migrating to CreateJobs (20101107023520)
+<<<<<<< HEAD
 Migrating to AddDetailToResume (20101107122626)
   [4;36;1mSQL (185.2ms)[0m   [0;1mALTER TABLE `resumes` ADD `rname` varchar(255)[0m
   [4;35;1mSQL (167.8ms)[0m   [0mALTER TABLE `resumes` ADD `rsex` varchar(255)[0m
@@ -5207,3 +5320,285 @@ Migrating to AddDetailToResume (20101107122626)
   [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `users`[0m
   [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `users`[0m
+=======
+Migrating to AddMoreFieldsToJob (20101107114223)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `group_ans`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mdescribe `group_ans`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `group_ans`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW FIELDS FROM `group_questions`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mdescribe `group_questions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `group_questions`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mdescribe `groups`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `groups`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mdescribe `jobs`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `jobs`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW FIELDS FROM `resume_ans`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mdescribe `resume_ans`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `resume_ans`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `resumes`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mdescribe `resumes`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `resumes`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mJob Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (89.4ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (142.8ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101107020507)
+  [4;35;1mSQL (93.4ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `uname` varchar(255), `upassword` varchar(255), `uage` int(11), `usex` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101107020507')[0m
+Migrating to CreateResumes (20101107021111)
+  [4;35;1mSQL (95.9ms)[0m   [0mCREATE TABLE `resumes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `rexp` varchar(255), `redu` varchar(255), `rskill` varchar(255), `reva` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101107021111')[0m
+Migrating to CreateResumeAns (20101107021443)
+  [4;35;1mSQL (97.5ms)[0m   [0mCREATE TABLE `resume_ans` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `rexp_a` varchar(255), `redu_a` varchar(255), `rskill_a` varchar(255), `reva_a` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101107021443')[0m
+Migrating to CreateGroups (20101107021725)
+  [4;35;1mSQL (96.1ms)[0m   [0mCREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `gque` varchar(255), `job_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101107021725')[0m
+Migrating to CreateQuestions (20101107022550)
+  [4;35;1mSQL (89.1ms)[0m   [0mCREATE TABLE `questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `qcon` varchar(255), `qjug` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (24.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101107022550')[0m
+Migrating to CreateGroupQuestions (20101107022814)
+  [4;35;1mSQL (95.9ms)[0m   [0mCREATE TABLE `group_questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `group_id` int(11), `question_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (24.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101107022814')[0m
+Migrating to CreateGroupAns (20101107023010)
+  [4;35;1mSQL (70.7ms)[0m   [0mCREATE TABLE `group_ans` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `gque_one` varchar(255), `gque_two` varchar(255), `gque_three` varchar(255), `gque_four` varchar(255), `gque_five` varchar(255), `gque_six` varchar(255), `gmark` int(11), `group_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (24.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101107023010')[0m
+Migrating to CreateJobs (20101107023520)
+  [4;35;1mSQL (69.3ms)[0m   [0mCREATE TABLE `jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `jname` varchar(255), `jdesc` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (25.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101107023520')[0m
+Migrating to AddMoreFieldsToJob (20101107114223)
+  [4;35;1mSQL (206.7ms)[0m   [0mALTER TABLE `jobs` ADD `created_date` date[0m
+  [4;36;1mSQL (184.7ms)[0m   [0;1mALTER TABLE `jobs` ADD `closed_date` date[0m
+  [4;35;1mSQL (267.6ms)[0m   [0mALTER TABLE `jobs` ADD `type` varchar(255)[0m
+  [4;36;1mSQL (235.6ms)[0m   [0;1mALTER TABLE `jobs` ADD `job_number` int(11)[0m
+  [4;35;1mSQL (159.2ms)[0m   [0mALTER TABLE `jobs` ADD `requirement` varchar(255)[0m
+  [4;36;1mSQL (167.6ms)[0m   [0;1mALTER TABLE `jobs` ADD `state` varchar(255)[0m
+  [4;35;1mSQL (32.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101107114223')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `group_ans`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `group_ans`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `group_ans`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW FIELDS FROM `group_questions`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mdescribe `group_questions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `group_questions`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mdescribe `groups`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `groups`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mdescribe `jobs`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `jobs`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW FIELDS FROM `resume_ans`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `resume_ans`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `resume_ans`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `resumes`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mdescribe `resumes`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `resumes`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mJob Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Delete all (0.1ms)[0m   [0;1mDELETE FROM `jobs` [0m
+  [4;35;1mJob Last ID (0.1ms)[0m   [0mSELECT id FROM `jobs` ORDER BY id DESC[0m
+  [4;36;1mJob Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJob Populate (45.0ms)[0m   [0mINSERT INTO `jobs` (`id`, `jname`, `jdesc`, `created_at`, `updated_at`, `created_date`, `closed_date`, `type`, `job_number`, `requirement`, `state`) VALUES (1, 'id', 'Ex minima non fugiat neque nisi id quisquam.', '2010-11-07 21:41:04', '2010-11-07 21:41:04', '2010-11-07', '2009-11-16 06:05:38', 'incidunt', 24, 'Expedita corporis omnis consequatur et est placeat enim.', 'Abdiel Kuhic'), (2, 'fuga', 'Deserunt expedita saepe eius pariatur.', '2010-11-07 21:41:04', '2010-11-07 21:41:04', '2010-11-07', '2009-11-15 02:47:15', 'et', 24, 'Sed adipisci quaerat blanditiis culpa doloribus.', 'Cecil Hoppe'), (3, 'maxime', 'Officiis fugit minima vero.', '2010-11-07 21:41:04', '2010-11-07 21:41:04', '2010-11-07', '2009-05-17 05:23:05', 'laudantium', 24, 'Vel culpa natus alias deleniti qui nihil.', 'Alberta Denesik'), (4, 'aliquid', 'Omnis in ratione nam cupiditate dignissimos iste voluptatem.', '2010-11-07 21:41:04', '2010-11-07 21:41:04', '2010-11-07', '2009-07-23 02:01:32', 'soluta', 24, 'Sed quisquam fuga cumque natus porro magnam et.', 'Estrella Casper'), (5, 'eum', 'Laboriosam et placeat sit.', '2010-11-07 21:41:04', '2010-11-07 21:41:04', '2010-11-07', '2010-02-26 17:01:00', 'a', 52, 'Nihil aut voluptas enim ut.', 'Dr. Mariane Cole'), (6, 'dicta', 'Reprehenderit et pariatur aliquam magni eaque.', '2010-11-07 21:41:04', '2010-11-07 21:41:04', '2010-11-07', '2010-05-30 08:11:34', 'quaerat', 52, 'Laboriosam omnis quis maxime delectus et aut in.', 'Mrs. Joana Stanton'), (7, 'voluptatibus', 'Placeat laboriosam perspiciatis voluptatem et nihil dolore et nulla.', '2010-11-07 21:41:04', '2010-11-07 21:41:04', '2010-11-07', '2009-03-20 05:10:37', 'sunt', 52, 'Beatae voluptatem sint reiciendis.', 'Alexandrea Weissnat'), (8, 'reiciendis', 'Non et est error aperiam facilis magni consequatur aut.', '2010-11-07 21:41:04', '2010-11-07 21:41:04', '2010-11-07', '2010-03-18 13:33:49', 'dolorum', 24, 'Omnis laboriosam sunt non veritatis maiores quod quo.', 'Ellie Nienow'), (9, 'voluptatem', 'Dolor iure excepturi facilis cumque.', '2010-11-07 21:41:04', '2010-11-07 21:41:04', '2010-11-07', '2010-01-29 05:22:13', 'nam', 24, 'Nam corporis natus optio et.', 'Joshuah Nitzsche'), (10, 'fugiat', 'Iure blanditiis ipsum et quisquam.', '2010-11-07 21:41:04', '2010-11-07 21:41:04', '2010-11-07', '2010-06-09 06:45:17', 'aliquid', 1, 'Qui facere iusto ipsa.', 'Audie Murray II')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mJob Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Delete all (93.7ms)[0m   [0;1mDELETE FROM `jobs` [0m
+  [4;35;1mJob Last ID (0.2ms)[0m   [0mSELECT id FROM `jobs` ORDER BY id DESC[0m
+  [4;36;1mJob Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJob Populate (26.0ms)[0m   [0mINSERT INTO `jobs` (`id`, `jname`, `jdesc`, `created_at`, `updated_at`, `created_date`, `closed_date`, `type`, `job_number`, `requirement`, `state`) VALUES (1, 'qui', 'Mollitia voluptas culpa nisi nobis adipisci quam magni exercitationem.', '2010-11-07 21:41:40', '2010-11-07 21:41:40', '2010-11-07', '2009-06-27 12:45:12', 'Job', 52, 'Officiis ut quia perferendis voluptas explicabo.', 'Clotilde Pacocha'), (2, 'velit', 'Nam non doloribus cum quas sint.', '2010-11-07 21:41:40', '2010-11-07 21:41:40', '2010-11-07', '2009-12-26 22:57:37', 'Job', 24, 'Possimus optio ut ea ut sint atque deserunt fugiat.', 'Ila Sipes'), (3, 'cum', 'Qui voluptatibus voluptatem explicabo dignissimos.', '2010-11-07 21:41:40', '2010-11-07 21:41:40', '2010-11-07', '2008-12-21 20:51:47', 'Job', 1, 'Suscipit recusandae rerum laborum dolorem sit qui omnis.', 'Dr. Antonette Paucek'), (4, 'sequi', 'Praesentium maxime odio dignissimos.', '2010-11-07 21:41:40', '2010-11-07 21:41:40', '2010-11-07', '2010-01-18 12:21:18', 'Job', 24, 'Quo repudiandae id molestiae.', 'Ashlee Waters'), (5, 'ad', 'At et et itaque velit sunt et maxime.', '2010-11-07 21:41:40', '2010-11-07 21:41:40', '2010-11-07', '2009-02-02 08:25:50', 'Job', 52, 'Aspernatur illo deleniti dolorum rem ipsam.', 'Camila Kris'), (6, 'est', 'Consequatur sequi iusto voluptates et vero unde commodi beatae.', '2010-11-07 21:41:40', '2010-11-07 21:41:40', '2010-11-07', '2009-04-09 12:04:28', 'Job', 1, 'Qui eos officia reiciendis aut temporibus.', 'Ibrahim Lueilwitz'), (7, 'asperiores', 'Iure voluptates maxime eum.', '2010-11-07 21:41:40', '2010-11-07 21:41:40', '2010-11-07', '2010-09-27 14:54:21', 'Job', 24, 'Iste molestias necessitatibus cum pariatur tenetur totam laudantium.', 'Valerie Lubowitz'), (8, 'quibusdam', 'Dolor vitae est numquam et autem iste modi doloremque.', '2010-11-07 21:41:40', '2010-11-07 21:41:40', '2010-11-07', '2010-03-06 14:15:27', 'Job', 1, 'Dicta labore et voluptatem officiis vel magni aut velit.', 'Gaston Grimes'), (9, 'est', 'Quo dolore repellendus soluta deserunt aliquid.', '2010-11-07 21:41:40', '2010-11-07 21:41:40', '2010-11-07', '2009-11-28 18:14:20', 'Job', 24, 'Et iste quo pariatur.', 'Coty Herzog MD'), (10, 'ut', 'Accusantium ut voluptas pariatur animi.', '2010-11-07 21:41:40', '2010-11-07 21:41:40', '2010-11-07', '2008-11-09 16:09:04', 'Job', 52, 'Voluptas sit fugit ratione modi.', 'Callie Botsford')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 1[0m
+  [4;35;1mJob Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Delete all (65.3ms)[0m   [0;1mDELETE FROM `jobs` [0m
+  [4;35;1mJob Last ID (0.2ms)[0m   [0mSELECT id FROM `jobs` ORDER BY id DESC[0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJob Populate (36.5ms)[0m   [0mINSERT INTO `jobs` (`id`, `jname`, `jdesc`, `created_at`, `updated_at`, `created_date`, `closed_date`, `type`, `job_number`, `requirement`, `state`) VALUES (1, 'amet', 'Et eligendi sed deserunt.', '2010-11-07 21:44:11', '2010-11-07 21:44:11', '2010-11-07', '2009-11-22 10:06:07', 'molestiae', 24, 'Fuga nemo ut dolorum ut ipsa.', 'Marcelo Zieme'), (2, 'sint', 'Numquam fugiat cupiditate enim ipsam itaque.', '2010-11-07 21:44:11', '2010-11-07 21:44:11', '2010-11-07', '2010-09-08 10:28:54', 'eum', 1, 'Quas et dignissimos dolor atque.', 'Josh Bashirian'), (3, 'voluptate', 'Aut ducimus exercitationem distinctio vero optio.', '2010-11-07 21:44:11', '2010-11-07 21:44:11', '2010-11-07', '2009-12-06 02:21:52', 'laborum', 24, 'Ut deleniti aspernatur atque ut et minus.', 'Earl Larkin'), (4, 'aspernatur', 'Amet quibusdam unde eaque nobis non quisquam ducimus sunt.', '2010-11-07 21:44:11', '2010-11-07 21:44:11', '2010-11-07', '2010-10-20 00:34:52', 'dolores', 1, 'Aut quo ipsam et maxime voluptatem soluta.', 'Keeley Bode'), (5, 'assumenda', 'Qui error aut nemo explicabo.', '2010-11-07 21:44:11', '2010-11-07 21:44:11', '2010-11-07', '2010-10-12 14:28:06', 'sapiente', 1, 'Incidunt sapiente dolorem assumenda ipsum voluptas est et.', 'Prudence Dickinson'), (6, 'rerum', 'Autem sunt dolores alias consequatur.', '2010-11-07 21:44:11', '2010-11-07 21:44:11', '2010-11-07', '2009-05-28 07:54:15', 'repellendus', 52, 'Non voluptatem repudiandae sunt magni eveniet.', 'Miss Alexandre Reichert'), (7, 'voluptatem', 'Veniam corrupti sed voluptas velit voluptate alias aperiam.', '2010-11-07 21:44:11', '2010-11-07 21:44:11', '2010-11-07', '2009-02-14 12:00:59', 'dolorum', 1, 'Necessitatibus vero reiciendis similique saepe architecto eum magni.', 'Johathan Okuneva'), (8, 'quam', 'Qui qui est at ipsa fuga id.', '2010-11-07 21:44:11', '2010-11-07 21:44:11', '2010-11-07', '2009-07-18 12:15:19', 'amet', 1, 'Incidunt debitis sed eum qui aliquam modi cum explicabo.', 'Stevie Zulauf'), (9, 'deleniti', 'Quia neque aut nam sit sed nesciunt omnis cumque.', '2010-11-07 21:44:11', '2010-11-07 21:44:11', '2010-11-07', '2009-09-25 20:41:13', 'iusto', 52, 'Sunt fuga delectus cumque distinctio.', 'Braeden O\'Conner'), (10, 'non', 'Ipsam non sequi expedita.', '2010-11-07 21:44:11', '2010-11-07 21:44:11', '2010-11-07', '2009-11-21 13:21:43', 'quo', 1, 'Ea corrupti laudantium ex eum ipsa nam blanditiis adipisci.', 'Mr. Retha Nikolaus')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 1[0m
+  [4;35;1mJob Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Delete all (49.7ms)[0m   [0;1mDELETE FROM `jobs` [0m
+  [4;35;1mJob Last ID (0.2ms)[0m   [0mSELECT id FROM `jobs` ORDER BY id DESC[0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJob Populate (28.6ms)[0m   [0mINSERT INTO `jobs` (`id`, `jname`, `jdesc`, `created_at`, `updated_at`, `created_date`, `closed_date`, `type`, `job_number`, `requirement`, `state`) VALUES (1, 'sunt', 'Ut maiores quia sed nihil cum et reprehenderit.', '2010-11-07 21:44:34', '2010-11-07 21:44:34', '2010-11-07', '2009-08-18 12:00:34', 'illo', 1, 'Magni quidem dolores et fugiat qui quo doloribus.', 'Nicholaus Weimann'), (2, 'quidem', 'Alias et et sed quo praesentium commodi unde.', '2010-11-07 21:44:34', '2010-11-07 21:44:34', '2010-11-07', '2009-11-12 22:05:04', 'molestiae', 1, 'Doloribus dignissimos vel laborum corrupti.', 'Elisha Gottlieb'), (3, 'deleniti', 'Reiciendis unde est dolor nihil voluptate distinctio minus.', '2010-11-07 21:44:34', '2010-11-07 21:44:34', '2010-11-07', '2009-10-02 02:10:27', 'ratione', 52, 'Ea qui iure quia et eos harum.', 'Reina Nolan'), (4, 'occaecati', 'Itaque necessitatibus aut quibusdam sed.', '2010-11-07 21:44:34', '2010-11-07 21:44:34', '2010-11-07', '2009-04-04 08:44:31', 'delectus', 1, 'Optio non qui facilis.', 'Laurie Cruickshank'), (5, 'qui', 'Similique reiciendis error voluptatibus.', '2010-11-07 21:44:34', '2010-11-07 21:44:34', '2010-11-07', '2008-11-14 10:23:00', 'debitis', 24, 'Quia deleniti numquam fugiat.', 'Destin Marks DDS'), (6, 'qui', 'Aut dolores ipsa enim.', '2010-11-07 21:44:34', '2010-11-07 21:44:34', '2010-11-07', '2009-11-03 01:09:53', 'atque', 52, 'Reiciendis ut qui est atque velit.', 'Elfrieda Ferry'), (7, 'nulla', 'Est ab cumque quibusdam est reiciendis perferendis.', '2010-11-07 21:44:34', '2010-11-07 21:44:34', '2010-11-07', '2008-12-18 01:07:12', 'minus', 24, 'Corrupti sint aut cupiditate architecto molestiae.', 'Mazie Hoeger IV'), (8, 'sint', 'Est sunt dolor quae hic totam sed accusamus.', '2010-11-07 21:44:34', '2010-11-07 21:44:34', '2010-11-07', '2009-09-27 21:15:34', 'autem', 24, 'Est officiis id fuga atque eos voluptates.', 'Faustino O\'Hara'), (9, 'impedit', 'Labore architecto voluptatem et impedit cumque rem dicta quo.', '2010-11-07 21:44:34', '2010-11-07 21:44:34', '2010-11-07', '2009-12-21 01:13:30', 'labore', 1, 'Consequatur minus sequi iure laborum quo natus.', 'Orin Bogan'), (10, 'aperiam', 'Doloremque qui est natus odio.', '2010-11-07 21:44:34', '2010-11-07 21:44:34', '2010-11-07', '2009-10-24 03:48:40', 'possimus', 1, 'Necessitatibus aperiam ipsum excepturi quia ut.', 'Jenifer Dietrich')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mJob Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mJob Load (0.3ms)[0m   [0mSELECT * FROM `jobs` LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Delete all (38.6ms)[0m   [0;1mDELETE FROM `jobs` [0m
+  [4;35;1mJob Last ID (0.2ms)[0m   [0mSELECT id FROM `jobs` ORDER BY id DESC[0m
+  [4;36;1mJob Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJob Populate (22.2ms)[0m   [0mINSERT INTO `jobs` (`id`, `jname`, `jdesc`, `created_at`, `updated_at`, `created_date`, `closed_date`, `type`, `job_number`, `requirement`, `state`) VALUES (1, 'dolorem', 'Dolores iusto rem odio.', '2010-11-07 21:45:13', '2010-11-07 21:45:13', '2010-11-07', '2008-12-05 10:27:22', 'Job', 1, 'Eligendi labore sed distinctio nihil provident.', 'Aurelio Lesch'), (2, 'aut', 'Nesciunt repellat eaque vel quibusdam vel eius voluptatem recusandae.', '2010-11-07 21:45:13', '2010-11-07 21:45:13', '2010-11-07', '2009-09-23 03:16:24', 'Job', 24, 'Qui odit consequatur ullam sit esse reiciendis.', 'Randy Gerlach'), (3, 'dolores', 'Et ut mollitia rerum assumenda nam ipsa ducimus vero.', '2010-11-07 21:45:13', '2010-11-07 21:45:13', '2010-11-07', '2010-02-22 18:51:38', 'Job', 24, 'Sunt eligendi porro quisquam.', 'Alford Powlowski'), (4, 'et', 'Vitae hic temporibus placeat in veritatis debitis omnis.', '2010-11-07 21:45:13', '2010-11-07 21:45:13', '2010-11-07', '2008-12-19 04:57:08', 'Job', 1, 'Consequuntur culpa pariatur nisi occaecati doloremque voluptatem nam at.', 'Samara Berge'), (5, 'molestiae', 'Nam nihil ipsa quod necessitatibus quam.', '2010-11-07 21:45:13', '2010-11-07 21:45:13', '2010-11-07', '2010-01-28 08:45:46', 'Job', 24, 'Maiores suscipit inventore nihil est sint.', 'Shana Wunsch'), (6, 'odit', 'Pariatur architecto officiis iste magni.', '2010-11-07 21:45:13', '2010-11-07 21:45:13', '2010-11-07', '2009-01-25 03:01:36', 'Job', 1, 'Ipsum ex quis aut qui eaque sunt ut voluptatem.', 'Garret Murray'), (7, 'mollitia', 'Laboriosam labore est dignissimos nulla eos et.', '2010-11-07 21:45:13', '2010-11-07 21:45:13', '2010-11-07', '2009-12-12 04:23:47', 'Job', 24, 'Aliquam dolores ut assumenda sint non ducimus possimus.', 'Mavis Ziemann'), (8, 'eum', 'Ut perferendis molestiae facere atque qui quibusdam.', '2010-11-07 21:45:13', '2010-11-07 21:45:13', '2010-11-07', '2010-02-25 00:51:34', 'Job', 24, 'Eveniet ea quae nam suscipit architecto amet qui.', 'Murray Mills'), (9, 'et', 'In adipisci et distinctio voluptatem non ratione numquam est.', '2010-11-07 21:45:13', '2010-11-07 21:45:13', '2010-11-07', '2009-01-01 06:09:47', 'Job', 1, 'Incidunt quasi dignissimos sed ut aperiam cumque.', 'Cortney Ratke Jr.'), (10, 'perferendis', 'Rerum aspernatur aliquid qui iusto quos sunt cupiditate voluptate.', '2010-11-07 21:45:13', '2010-11-07 21:45:13', '2010-11-07', '2008-11-26 22:39:39', 'Job', 24, 'Reprehenderit autem ea qui.', 'Ila Labadie')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mJob Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 21:54:09) [GET]
+Rendering manage/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 21:57:46) [GET]
+Rendering manage/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 21:59:15) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 22:00:47) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 22:00:57) [GET]
+Rendering manage/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#show to json (for 127.0.0.1 at 2010-11-07 22:01:01) [GET]
+  Parameters: {"id"=>"get_data", "_dc"=>"1289138461235"}
+
+ActionController::UnknownAction (No action responded to show. Actions: get_data and index):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 22:02:06) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 22:02:10) [GET]
+  Parameters: {"_dc"=>"1289138530224"}
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 88ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289138530224]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 22:03:51) [GET]
+Rendering manage/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 22:03:55) [GET]
+  Parameters: {"_dc"=>"1289138635109"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 90ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289138635109]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 22:07:39) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 22:07:44) [GET]
+  Parameters: {"_dc"=>"1289138864109"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289138864109]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 22:12:03) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+>>>>>>> 添加gem&创建jobs_controller
