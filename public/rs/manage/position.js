@@ -16,15 +16,26 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             win = manage.createWindow({
                 id: 'positionManage',
                 title: '职位管理',
-                width: 640,
-                height: 480,
+                width: 940,
+                height: 530,
                 iconCls: 'bogus',
                 shim: false,
                 animCollapse: false,
                 constrainHeader: true,
 
                 layout: 'border',
-                items: [this.createForm(), this.createGrid()]
+                frame: true,
+                //items: [this.createForm(), this.createGrid()]
+                items: [
+                    { 
+                        region: "center",
+                        split: false,
+                        layout: 'anchor',
+                        items: [this.createGrid()]
+                    },
+                    this.createTree()
+                    
+                ]
             });
         }
         win.show();
@@ -50,6 +61,35 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             }]
         });
     },
+    createTree: function() { 
+        var _this = this;
+        var root = new Ext.tree.AsyncTreeNode({ 
+            text: '状态',
+            expanded: true,
+            children: [{ 
+                text: '招聘ing(0)', leaf: true, 
+                listeners: { click: function() { } }
+            },{
+                text: '已招满(0)', leaf: true, 
+                listeners: { click: function() { } } 
+            },{ 
+                text: '已截止(0)', leaf: true, 
+                listeners: { click: function() { } } 
+            },{
+                text: '已删除(0)', leaf: true, 
+                listeners: { click: function() { } } 
+            }]
+        });
+
+        return new Ext.tree.TreePanel({ 
+            root   : root,
+            split  : true,
+            width  : 120,
+            title  : '状态列表',
+            region : 'west',
+            collapsible: true
+        });
+    },
 
     createGrid: function(){ 
         var store = new Ext.data.JsonStore({ 
@@ -58,24 +98,35 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 'description'
             ]
         });
+        var sm = new Ext.grid.CheckboxSelectionModel();
+        var cm = new Ext.grid.ColumnModel([
+            sm,
+            { header: '序号'        , sortable: true, dataIndex: 'id'},
+            { header: '职位名称'    , sortable: true, dataIndex: 'department/number'},
+            { header: '职位类型'    , sortable: true, dataIndex: 'user/name'},
+            { header: '招聘人数'    , sortable: true, dataIndex: 'category/number'},
+            { header: '发布日期'    , sortable: true, dataIndex: 'items_brand' },
+            { header: '截止日期'    , sortable: true, dataIndex: 'created_date'},
+            { header: '职位要求'    , sortable: true, dataIndex: 'state_cn'},
+            { header: '职位描述'    , sortable: true, dataIndex: 'finished_date'},
+            { header: '状态'        , sortable: true, dataIndex: 'remark' },
+            { header: '操作'        , dataIndex: '#' }
+        ]);
+        tbar = [ 
+            { text: '添加职位', handler: function(){  }}, '-',
+            { text: '查询', handler: function(){  }}
+        ];
 
         return new Ext.grid.GridPanel({ 
             frame: true,
             viewConfig: { forceFit: true },
+            title: "职位列表",
             region: 'center',
+            anchor: "100% 90%",
             store: store,
-            tbar: [{ 
-                xtype: 'textfield'
-            },{ 
-                text: '查找'
-            }, '-',{ 
-                text: '编辑'
-            }],
-            cm: new Ext.grid.ColumnModel([
-                new Ext.grid.RowNumberer(),
-                { header: '职位', dataIndex: 'position' },
-                { header: '描述', dataIndex: 'description' }
-            ])
+            tbar: tbar, 
+            cm: cm,
+            sm: sm
         });
     }
 });
