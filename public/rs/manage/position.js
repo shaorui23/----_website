@@ -92,28 +92,36 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
     },
 
     createGrid: function(){ 
+        var _this = this;
         var store = new Ext.data.JsonStore({ 
             fields: [
-                'question',
-                'description'
+                'id',
+                'jname',
+                'type',
+                'job_number',
+                'created_date',
+                'closed_date',
+                'requirement',
+                'jdesc',
+                'state'
             ]
         });
         var sm = new Ext.grid.CheckboxSelectionModel();
         var cm = new Ext.grid.ColumnModel([
             sm,
             { header: '序号'        , sortable: true, dataIndex: 'id'},
-            { header: '职位名称'    , sortable: true, dataIndex: 'department/number'},
-            { header: '职位类型'    , sortable: true, dataIndex: 'user/name'},
-            { header: '招聘人数'    , sortable: true, dataIndex: 'category/number'},
-            { header: '发布日期'    , sortable: true, dataIndex: 'items_brand' },
-            { header: '截止日期'    , sortable: true, dataIndex: 'created_date'},
-            { header: '职位要求'    , sortable: true, dataIndex: 'state_cn'},
-            { header: '职位描述'    , sortable: true, dataIndex: 'finished_date'},
-            { header: '状态'        , sortable: true, dataIndex: 'remark' },
+            { header: '职位名称'    , sortable: true, dataIndex: 'jname'},
+            { header: '职位类型'    , sortable: true, dataIndex: 'type'},
+            { header: '招聘人数'    , sortable: true, dataIndex: 'job_number'},
+            { header: '发布日期'    , sortable: true, dataIndex: 'created_date' },
+            { header: '截止日期'    , sortable: true, dataIndex: 'closed_date'},
+            { header: '职位要求'    , sortable: true, dataIndex: 'requirement'},
+            { header: '职位描述'    , sortable: true, dataIndex: 'jdesc'},
+            { header: '状态'        , sortable: true, dataIndex: 'state' },
             { header: '操作'        , dataIndex: '#' }
         ]);
         tbar = [ 
-            { text: '添加职位', handler: function(){  }}, '-',
+            { text: '添加职位', handler: function(){ _this.createForm() }}, '-',
             { text: '查询', handler: function(){  }}
         ];
 

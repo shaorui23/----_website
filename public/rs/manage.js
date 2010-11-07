@@ -22,14 +22,14 @@ Manage = new Ext.app.App({
     // config for the start menu
     getStartConfig: function(){
         return {
-            title: 'Jack Slocum',
+            title: 'Wando团队',
             iconCls: 'user',
             toolItems: [{
-                text:'Settings',
+                text:'设置',
                 iconCls:'settings',
                 scope:this
             },'-',{
-                text:'Logout',
+                text:'注销',
                 iconCls:'logout',
                 scope:this
             }]
