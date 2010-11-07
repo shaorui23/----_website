@@ -672,3 +672,11 @@ td.ux-taskButtons-edge {
     background-image: url(../images/im48x48.png);
     filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/im48x48.png', sizingMethod='scale');
 }
+
+/*后台管理桌面时间显示*/
+#time-font { 
+    color:white;
+	  float:right;
+    font-weight: bold;
+    padding:14px 0 0 0;
+}

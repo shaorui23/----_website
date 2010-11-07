@@ -25,6 +25,10 @@
     <script type="text/javascript" src="/rs/manage/resume.js"></script>
     <script type="text/javascript" src="/rs/manage/decesion.js"></script>
 
+    <!-- 动态时间 js文件-->
+    <script type="text/javascript" src="../javascripts/muen.js"></script>
+    
+
     <link rel="stylesheet" type="text/css" href="/rs/css/desktop.css" />
 </head>
 <body scroll="no">
@@ -44,7 +48,15 @@
 
 <div id="ux-taskbar">
 	<div id="ux-taskbar-start"></div>
-	<div id="ux-taskbuttons-panel"></div>
+	<div id="ux-taskbuttons-panel">
+  <!-- 时间动态显示  -->
+      <div id="time-font"> 
+          <SCRIPT type=text/javascript>
+              var clock = new Clock();
+              clock.display(document.getElementById("time-font"));
+          </SCRIPT>
+      </div>
+  </div>
 	<div class="x-clear"></div>
 </div>
 
