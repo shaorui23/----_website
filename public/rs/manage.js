@@ -3,13 +3,19 @@ Manage = new Ext.app.App({
 		Ext.QuickTips.init();
 	},
 
+
 	getModules: function(){
+        Manage.questionBase = new Manage.QuestionBase();
+        Manage.positionManage = new Manage.PositionManage();
+        Manage.paperCenter = new Manage.PaperCenter();
+        Manage.resumeCenter = new Manage.ResumeCenter();
+        Manage.decesionCenter = new Manage.DecesionCenter();
 		return [
-            new Manage.QuestionBase(),
-            new Manage.PositionManage(),
-            new Manage.PaperCenter(),
-            new Manage.ResumeCenter(),
-            new Manage.DecesionCenter()
+            Manage.questionBase,
+            Manage.positionManage,
+            Manage.paperCenter,
+            Manage.resumeCenter,
+            Manage.decesionCenter
 		];
 	},
 
