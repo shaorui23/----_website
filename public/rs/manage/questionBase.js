@@ -54,8 +54,9 @@ Manage.QuestionBase = Ext.extend(Ext.app.Module, {
                         success: function(){ 
                             store.reload();
                         },
-                        failure: function(){ 
-                            Ext.Msg.alert('Wando团队', '创建失败');
+                        failure: function(response, opts){ 
+                            message = response;//Ext.decode(response.responseText);
+                            Ext.Msg.alert('Wando团队', 123);
                         }
                     })
                 }

@@ -1,6 +1,6 @@
 class CreateGroupQuestions < ActiveRecord::Migration
   def self.up
-    create_table :group_questions do |t|
+    create_table :groups_questions, :id => false do |t|
         t.column  :group_id,     :integer
         t.column  :question_id,  :integer
       t.timestamps

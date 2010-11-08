@@ -13,6 +13,8 @@ class QuestionsController < ApplicationController
     question = params[:question]
     Question.create!(question)
     render :json => question
+  rescue ActiveRecord::RecordInvalid => error
+    render :json => { :message => error.message }, status => 400
   end
 
   #DELETE: /questions/deletes.format
