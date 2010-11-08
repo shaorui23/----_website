@@ -9,4 +9,14 @@ class JobsController < ApplicationController
     end
   end
 
+#POST /jobs
+  def create
+    job = Job.new(params[:job])
+    if job.save
+      render_json 'sucess'
+    else
+      render_error "failure"
+    end
+  end
+
 end

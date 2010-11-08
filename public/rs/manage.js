@@ -5,14 +5,14 @@ Manage = new Ext.app.App({
 
 
 	getModules: function(){
-        Manage.questionBase = new Manage.QuestionBase();
+        Manage.questionBase   = new Manage.QuestionBase();
         Manage.positionManage = new Manage.PositionManage();
-        Manage.paperCenter = new Manage.PaperCenter();
-        Manage.resumeCenter = new Manage.ResumeCenter();
+        Manage.paperCenter    = new Manage.PaperCenter();
+        Manage.resumeCenter   = new Manage.ResumeCenter();
         Manage.decesionCenter = new Manage.DecesionCenter();
 		return [
             Manage.questionBase,
-           // Manage.positionManage,
+            Manage.positionManage,
             Manage.paperCenter,
             Manage.resumeCenter,
             Manage.decesionCenter

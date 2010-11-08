@@ -5602,3 +5602,1378 @@ Processing ManageController#index (for 127.0.0.1 at 2010-11-07 22:12:03) [GET]
 Rendering manage/index
 Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
 >>>>>>> 添加gem&创建jobs_controller
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 22:23:10) [GET]
+Rendering manage/index
+Completed in 40ms (View: 38, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 22:23:49) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 22:23:51) [GET]
+  Parameters: {"_dc"=>"1289139831621"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 87ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289139831621]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 22:26:21) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-07 22:26:25) [GET]
+
+ActionController::RoutingError (No route matches "/shared/icons/fam/user.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 22:26:27) [GET]
+  Parameters: {"_dc"=>"1289139986986"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 26ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289139986986]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 22:29:37) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 22:29:40) [GET]
+  Parameters: {"_dc"=>"1289140180383"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 62ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289140180383]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 22:47:39) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 22:47:41) [GET]
+  Parameters: {"_dc"=>"1289141261676"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289141261676]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 22:48:14) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 22:48:17) [GET]
+  Parameters: {"_dc"=>"1289141297159"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289141297159]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 22:48:34) [GET]
+Rendering manage/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 22:48:37) [GET]
+  Parameters: {"_dc"=>"1289141317369"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289141317369]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 22:49:35) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 22:49:38) [GET]
+  Parameters: {"_dc"=>"1289141378001"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289141378001]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 22:51:42) [GET]
+Rendering manage/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 22:51:45) [GET]
+  Parameters: {"_dc"=>"1289141505371"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 88ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289141505371]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#index to json (for 127.0.0.1 at 2010-11-07 22:54:15) [GET]
+  Parameters: {"_dc"=>"1289141655618"}
+  [4;36;1mQuestion Load (0.2ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Completed in 6ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/questions.json?_dc=1289141655618]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 22:54:22) [GET]
+  Parameters: {"_dc"=>"1289141662334"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+Completed in 20ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289141662334]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 22:54:30) [GET]
+  Parameters: {"_dc"=>"1289141670550"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+Completed in 19ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289141670550]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 22:57:12) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 22:57:15) [GET]
+  Parameters: {"_dc"=>"1289141835120"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289141835120]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 22:59:10) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 22:59:12) [GET]
+  Parameters: {"_dc"=>"1289141952663"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+Completed in 64ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289141952663]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 23:04:54) [GET]
+Rendering manage/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 23:04:56) [GET]
+  Parameters: {"_dc"=>"1289142296734"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+Completed in 23ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289142296734]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 23:05:15) [GET]
+Rendering manage/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 23:05:17) [GET]
+  Parameters: {"_dc"=>"1289142317659"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+Completed in 23ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289142317659]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 23:05:41) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 23:05:44) [GET]
+  Parameters: {"_dc"=>"1289142344245"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+Completed in 23ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289142344245]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 23:06:14) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 23:06:16) [GET]
+  Parameters: {"_dc"=>"1289142376479"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289142376479]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 23:09:54) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 23:09:56) [GET]
+  Parameters: {"_dc"=>"1289142596261"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+Completed in 59ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289142596261]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 23:10:20) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 23:10:22) [GET]
+  Parameters: {"_dc"=>"1289142622887"}
+  [4;35;1mJob Load (0.2ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289142622887]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 23:22:39) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 23:22:41) [GET]
+  Parameters: {"_dc"=>"1289143361522"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289143361522]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-07 23:26:11) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 50ms (View: 48, DB: 0) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-07 23:26:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-07 23:26:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-07 23:26:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-07 23:26:30) [GET]
+
+ActionController::RoutingError (No route matches "/xingfa.html" with {:method=>:get}):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-07 23:26:32) [GET]
+Rendering manage/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-07 23:26:43) [GET]
+  Parameters: {"_dc"=>"1289143603306"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+Completed in 19ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289143603306]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-08 20:17:20) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 149ms (View: 145, DB: 0) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-08 20:17:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-08 20:17:21) [GET]
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-08 20:17:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loadsmall.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-08 20:17:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/tu_1.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:17:24) [GET]
+Rendering manage/index
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:17:28) [GET]
+  Parameters: {"_dc"=>"1289218648124"}
+  [4;36;1mJob Load (26.0ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 249ms (View: 0, DB: 27) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289218648124]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:29:04) [GET]
+Rendering manage/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:29:55) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:32:42) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:33:22) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:33:25) [GET]
+  Parameters: {"_dc"=>"1289219605571"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289219605571]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:34:36) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:34:39) [GET]
+  Parameters: {"_dc"=>"1289219679053"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289219679053]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:34:53) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:34:56) [GET]
+  Parameters: {"_dc"=>"1289219696284"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289219696284]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:35:18) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:35:20) [GET]
+  Parameters: {"_dc"=>"1289219720456"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 22ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289219720456]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:36:38) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:36:40) [GET]
+  Parameters: {"_dc"=>"1289219800927"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289219800927]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:36:51) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:36:54) [GET]
+  Parameters: {"_dc"=>"1289219814415"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289219814415]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:38:34) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:38:37) [GET]
+  Parameters: {"_dc"=>"1289219916992"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289219916992]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:39:09) [GET]
+Rendering manage/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:39:11) [GET]
+  Parameters: {"_dc"=>"1289219951877"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289219951877]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:39:26) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:39:28) [GET]
+  Parameters: {"_dc"=>"1289219968850"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289219968850]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:41:30) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:41:43) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:41:45) [GET]
+  Parameters: {"_dc"=>"1289220105231"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289220105231]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:42:13) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:42:16) [GET]
+  Parameters: {"_dc"=>"1289220136349"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289220136349]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:43:26) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:43:28) [GET]
+  Parameters: {"_dc"=>"1289220208931"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 23ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289220208931]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:44:47) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:44:50) [GET]
+  Parameters: {"_dc"=>"1289220290126"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289220290126]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:45:57) [GET]
+Rendering manage/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:46:00) [GET]
+  Parameters: {"_dc"=>"1289220360150"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289220360150]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:47:00) [GET]
+Rendering manage/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:47:02) [GET]
+  Parameters: {"_dc"=>"1289220422745"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289220422745]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:47:51) [GET]
+Rendering manage/index
+Completed in 4ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:47:53) [GET]
+  Parameters: {"_dc"=>"1289220473933"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289220473933]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:51:36) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:51:39) [GET]
+  Parameters: {"_dc"=>"1289220699196"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289220699196]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:52:12) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:52:14) [GET]
+  Parameters: {"_dc"=>"1289220734538"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289220734538]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:52:36) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:52:39) [GET]
+  Parameters: {"_dc"=>"1289220759228"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289220759228]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:54:28) [GET]
+Rendering manage/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:54:31) [GET]
+  Parameters: {"_dc"=>"1289220871232"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289220871232]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:54:50) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:54:53) [GET]
+  Parameters: {"_dc"=>"1289220893055"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289220893055]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:55:01) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:55:03) [GET]
+  Parameters: {"_dc"=>"1289220903639"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289220903639]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:58:24) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:58:27) [GET]
+  Parameters: {"_dc"=>"1289221107113"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289221107113]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:58:47) [GET]
+Rendering manage/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:58:49) [GET]
+  Parameters: {"_dc"=>"1289221129505"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289221129505]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 20:59:34) [GET]
+Rendering manage/index
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 20:59:37) [GET]
+  Parameters: {"_dc"=>"1289221177366"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289221177366]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:01:13) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 21:01:15) [GET]
+  Parameters: {"_dc"=>"1289221275658"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289221275658]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:03:32) [GET]
+Rendering manage/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 21:03:34) [GET]
+  Parameters: {"_dc"=>"1289221414344"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289221414344]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:05:22) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 21:05:25) [GET]
+  Parameters: {"_dc"=>"1289221525709"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 26ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289221525709]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 1[0m
+  [4;35;1mJob Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:34:14) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:34:34) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 21:34:37) [GET]
+  Parameters: {"_dc"=>"1289223277056"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289223277056]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:34:54) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:36:30) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 21:36:32) [GET]
+  Parameters: {"_dc"=>"1289223392866"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 58ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289223392866]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:37:56) [GET]
+Rendering manage/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 21:37:58) [GET]
+  Parameters: {"_dc"=>"1289223478736"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 23ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289223478736]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:39:22) [GET]
+Rendering manage/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 21:39:24) [GET]
+  Parameters: {"_dc"=>"1289223564649"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289223564649]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:42:34) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 21:42:37) [GET]
+  Parameters: {"_dc"=>"1289223757234"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289223757234]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:43:14) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 21:43:16) [GET]
+  Parameters: {"_dc"=>"1289223796853"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 26ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289223796853]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:45:23) [GET]
+Rendering manage/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 21:45:26) [GET]
+  Parameters: {"_dc"=>"1289223926555"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289223926555]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:45:55) [GET]
+Rendering manage/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 21:46:00) [GET]
+  Parameters: {"_dc"=>"1289223960011"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 65ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289223960011]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:49:38) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 21:49:41) [GET]
+  Parameters: {"_dc"=>"1289224181230"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 23ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289224181230]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#create to json (for 127.0.0.1 at 2010-11-08 21:49:54) [POST]
+  Parameters: {"job"=>{"closed_date"=>"", "jname"=>"123", "jdesc"=>"", "type"=>"", "created_date"=>"2010-11-08T00:00:00", "requirement"=>"", "jnumber"=>"132"}}
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+WARNING: Can't mass-assign these protected attributes: type
+
+ActiveRecord::UnknownAttributeError (unknown attribute: jnumber):
+  app/controllers/jobs_controller.rb:14:in `new'
+  app/controllers/jobs_controller.rb:14:in `create'
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+
+Rendered rescues/_trace (31.3ms)
+Rendered rescues/_request_and_response (19.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:52:23) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:52:31) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 21:52:33) [GET]
+  Parameters: {"_dc"=>"1289224353895"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289224353895]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:52:48) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 21:52:50) [GET]
+  Parameters: {"_dc"=>"1289224370845"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+Completed in 25ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289224370845]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#create to json (for 127.0.0.1 at 2010-11-08 21:53:07) [POST]
+  Parameters: {"job"=>{"closed_date"=>"2010-11-19T00:00:00", "jname"=>"123", "job_number"=>"123", "jdesc"=>"123", "type"=>"123", "created_date"=>"2010-11-08T00:00:00", "requirement"=>"123"}}
+  [4;35;1mJob Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+WARNING: Can't mass-assign these protected attributes: type
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mJob Create (0.3ms)[0m   [0mINSERT INTO `jobs` (`jname`, `created_at`, `closed_date`, `job_number`, `jdesc`, `updated_at`, `type`, `created_date`, `requirement`, `state`) VALUES('123', '2010-11-08 13:53:07', '2010-11-19', 123, '123', '2010-11-08 13:53:07', NULL, '2010-11-08', '123', NULL)[0m
+  [4;36;1mSQL (77.8ms)[0m   [0;1mCOMMIT[0m
+Completed in 90ms (View: 1, DB: 79) | 200 OK [http://0.0.0.0/jobs.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:53:21) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 21:53:23) [GET]
+  Parameters: {"_dc"=>"1289224403922"}
+  [4;35;1mJob Load (0.3ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+Completed in 27ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289224403922]
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM `jobs` ORDER BY jobs.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 21:58:20) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 21:58:22) [GET]
+  Parameters: {"_dc"=>"1289224702744"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+Completed in 28ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289224702744]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 22:05:10) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 22:05:12) [GET]
+  Parameters: {"_dc"=>"1289225112791"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289225112791]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#create to json (for 127.0.0.1 at 2010-11-08 22:05:21) [POST]
+  Parameters: {"job"=>{"closed_date"=>"", "jname"=>"", "job_number"=>"", "jdesc"=>"", "type"=>"", "created_date"=>"2010-11-08T00:00:00", "requirement"=>""}}
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+WARNING: Can't mass-assign these protected attributes: type
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+
+NoMethodError (undefined method `get_error_msg' for #<JobsController:0xb60b4300>):
+  app/controllers/jobs_controller.rb:18:in `create'
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+
+Rendered rescues/_trace (28.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 22:06:10) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 22:06:13) [GET]
+  Parameters: {"_dc"=>"1289225173067"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+Completed in 26ms (View: 0, DB: 2) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289225173067]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#create to json (for 127.0.0.1 at 2010-11-08 22:06:19) [POST]
+  Parameters: {"job"=>{"closed_date"=>"", "jname"=>"123", "job_number"=>"", "jdesc"=>"", "type"=>"", "created_date"=>"2010-11-08T00:00:00", "requirement"=>""}}
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+WARNING: Can't mass-assign these protected attributes: type
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+
+NoMethodError (undefined method `get_error_msg' for #<JobsController:0xb60134dc>):
+  app/controllers/jobs_controller.rb:18:in `create'
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+
+Rendered rescues/_trace (28.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-08 22:07:11) [GET]
+Rendering manage/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index to json (for 127.0.0.1 at 2010-11-08 22:07:13) [GET]
+  Parameters: {"_dc"=>"1289225233635"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+Completed in 26ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/jobs.json?_dc=1289225233635]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#create to json (for 127.0.0.1 at 2010-11-08 22:07:21) [POST]
+  Parameters: {"job"=>{"closed_date"=>"", "jname"=>"12", "job_number"=>"", "jdesc"=>"", "type"=>"", "created_date"=>"2010-11-08T00:00:00", "requirement"=>""}}
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+WARNING: Can't mass-assign these protected attributes: type
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+============  渲染错误 : "failure" ============
+Completed in 9ms (View: 0, DB: 1) | 400 Bad Request [http://0.0.0.0/jobs.json]

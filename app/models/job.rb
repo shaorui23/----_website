@@ -16,6 +16,19 @@
 #
 
 class Job < ActiveRecord::Base
+
+  validates_presence_of :jname            , :message => "职位名称不能为空" 
+  validates_presence_of :job_number       , :message => "招聘人数不能为空"
+  validates_presence_of :type             , :message => "职位类型不能为空" 
+  validates_presence_of :closed_date      , :message => "截止日期不能为空" 
+  
+  before_validation_on_create :default_state
+
+
+  private
+  def default_state
+    self.state = 'ing'  # 状态待修改
+  end
 end
 
 
