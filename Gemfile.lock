@@ -1,0 +1,44 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    ParseTree (3.0.6)
+      RubyInline (>= 3.7.0)
+      sexp_processor (>= 3.0.0)
+    RubyInline (3.8.6)
+      ZenTest (~> 4.3)
+    ZenTest (4.4.0)
+    actionmailer (2.3.5)
+      actionpack (= 2.3.5)
+    actionpack (2.3.5)
+      activesupport (= 2.3.5)
+      rack (~> 1.0.0)
+    activerecord (2.3.5)
+      activesupport (= 2.3.5)
+    activeresource (2.3.5)
+      activesupport (= 2.3.5)
+    activesupport (2.3.5)
+    faker (0.3.1)
+    mysql (2.8.1)
+    rack (1.0.1)
+    rails (2.3.5)
+      actionmailer (= 2.3.5)
+      actionpack (= 2.3.5)
+      activerecord (= 2.3.5)
+      activeresource (= 2.3.5)
+      activesupport (= 2.3.5)
+      rake (>= 0.8.3)
+    rake (0.8.7)
+    randexp (0.1.5)
+      ParseTree
+    sexp_processor (3.0.5)
+    sqlite3-ruby (1.2.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  faker
+  mysql (= 2.8.1)
+  rails (= 2.3.5)
+  randexp (= 0.1.5)
+  sqlite3-ruby (= 1.2.5)
