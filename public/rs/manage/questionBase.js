@@ -48,15 +48,15 @@ Manage.QuestionBase = Ext.extend(Ext.app.Module, {
                 handler: function(){ 
                     var data = Ext.getCmp('question').getValue();
                     Ext.Ajax.request({ 
-                        url: '/questions/create',
+                        url: '/questions',
                         method: 'POST',
                         jsonData: { question: { qcon: data } },
                         success: function(){ 
                             store.reload();
                         },
                         failure: function(response, opts){ 
-                            message = response;//Ext.decode(response.responseText);
-                            Ext.Msg.alert('Wando团队', 123);
+                            var message = Ext.decode(response.responseText);
+                            Ext.Msg.alert('Wando团队', message.message);
                         }
                     })
                 }
