@@ -9,6 +9,20 @@
 #  reva       :string(255)
 #  created_at :datetime
 #  updated_at :datetime
+#  rname      :string(255)
+#  rsex       :string(255)
+#  rbirth     :date
+#  rmari_sta  :string(255)
+#  rrace      :string(255)
+#  rblood     :string(255)
+#  rhei       :string(255)
+#  rwei       :string(255)
+#  rpoli      :string(255)
+#  riden      :string(255)
+#  rpho       :string(255)
+#  rmail      :string(255)
+#  raddr      :string(255)
+#  rprof      :string(255)
 #
 
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html

@@ -8,6 +8,9 @@
 #  created_at :datetime
 #  updated_at :datetime
 #
+# Associations:
+#  groups     :has_and_belongs [Group(question_id)] 
+#
 
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 

@@ -59,7 +59,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             var job = { 
                 jname        :  Ext.getCmp('jname').getValue(),
                 job_number   :  Ext.getCmp('job_number').getValue(),
-                type         :  Ext.getCmp('type').getValue(),
+                position_type:  Ext.getCmp('position_type').getValue(),
                 requirement  :  Ext.getCmp('requirement').getValue(),
                 created_date :  Ext.getCmp('created_date').getValue(),
                 closed_date  :  Ext.getCmp('closed_date').getValue(),
@@ -106,7 +106,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                     items:[
                         { fieldLabel: '职位名称', id: 'jname' },
                         { fieldLabel: '招聘人数', id: 'job_number' },
-                        { fieldLabel: '职位类型', id: 'type' }
+                        { fieldLabel: '职位类型', id: 'position_type' }
                     ]
                 },{ 
                     columnWidth: .5,
@@ -168,7 +168,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             fields: [
                 'id',
                 'jname',
-                'type',
+                'position_type',
                 'job_number',
                 'created_date',
                 'closed_date',
@@ -187,7 +187,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             sm,
             { header: '序号'        , sortable: true, dataIndex: 'id'},
             { header: '职位名称'    , sortable: true, dataIndex: 'jname'},
-            { header: '职位类型'    , sortable: true, dataIndex: 'type'},
+            { header: '职位类型'    , sortable: true, dataIndex: 'position_type'},
             { header: '招聘人数'    , sortable: true, dataIndex: 'job_number'},
             { header: '发布日期'    , sortable: true, dataIndex: 'created_date' },
             { header: '截止日期'    , sortable: true, dataIndex: 'closed_date'},
