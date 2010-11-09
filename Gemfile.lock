@@ -30,7 +30,10 @@ GEM
     rake (0.8.7)
     randexp (0.1.5)
       ParseTree
+    ruby-gmail (0.0.8)
+      shared-mime-info
     sexp_processor (3.0.5)
+    shared-mime-info (0.1)
     sqlite3-ruby (1.2.5)
 
 PLATFORMS
@@ -41,4 +44,5 @@ DEPENDENCIES
   mysql (= 2.8.1)
   rails (= 2.3.5)
   randexp (= 0.1.5)
+  ruby-gmail (= 0.0.8)
   sqlite3-ruby (= 1.2.5)
