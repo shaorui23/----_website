@@ -19,4 +19,25 @@ class JobsController < ApplicationController
     end
   end
 
+  def update
+    job = Job.find(params[:id])
+    if job.update_attributes(params[:job])
+      render_json 'success' 
+    else
+      render_error 'failure'
+    end
+    rescue => e
+     render_error e.to_s
+  end
+
+#DELETE
+  def destroy
+    @job = Job.find(params[:id])
+    if @job.destroy
+      render_json 'success'    
+    else
+      render_error 'failure'
+    end
+  end
+
 end

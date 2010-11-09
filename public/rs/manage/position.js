@@ -6,7 +6,10 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             iconCls: 'bogus',
             handler: this.createWindow,
             scope: this
-        }
+        };
+        this.grid = this.createGrid();
+        this.form = this.createForm();
+        this.tree = this.createTree();
     },
 
     createWindow: function(){
@@ -19,10 +22,6 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 width: 940,
                 height: 530,
                 iconCls: 'bogus',
-                shim: false,
-                animCollapse: false,
-                constrainHeader: true,
-
                 layout: 'border',
                 frame: true,
                 items: [
@@ -30,9 +29,9 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                         region: "center",
                         split: false,
                         layout: 'anchor',
-                        items: [this.createGrid()]
+                        items: [this.grid]
                     },
-                    this.createTree()
+                    this.tree
                 ]
             });
         }
@@ -48,12 +47,51 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 height: 350,
                 layout: 'fit',
                 frame: true,
-                items: this.createForm()
+                items: this.form
             });
         win.show();
     },
 
-    createPosition: function(){ 
+    editJob: function(id) { 
+        var manage = this.app.getDesktop();
+        var win = manage.getWindow('positionManage');
+            win = manage.createWindow({
+                title: '发布职位',
+                width: 640,
+                height: 350,
+                layout: 'fit',
+                frame: true,
+                items: this.form
+            });
+        win.show();
+    },
+
+    deleteJob: function(id) { 
+        Ext.Msg.confirm("提示", "确认删除此职位？", function(btn) {
+            if (btn == 'yes') {
+                Ext.Ajax.request({ 
+                    url:    '/jobs/' + id,
+                    method: 'DELETE',
+                    success: function(response, opts) { 
+                        var scope = Manage.positionManage;
+                        scope.grid.store.load();
+                        Ext.Msg.alert("提示", "删除成功");
+                    },
+                    failure: function(response, opts) { 
+                        Ext.Msg.alert("提示", "删除失败");
+                    } 
+                });
+            }
+        });
+    },
+
+    addPaper: function(id) { 
+    
+    },
+
+    createPosition: function(action){ 
+        var _this = this;
+        if (action == "edit") this.form;
         Ext.Msg.confirm('提示', "是否添加新职位?", function(button){ 
             if(button == 'no') return false;
             var job = { 
@@ -72,6 +110,8 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 jsonData: { job: job },
                 success: function(){
                     Ext.Msg.alert("提示", "添加成功!");
+                    Manage.positionManage.grid.store.load();
+
                 },
                 failure: function(response, onpts) {
                     Ext.Msg.alert("提示", "添加失败！");
@@ -83,11 +123,13 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
     createForm: function(){ 
         var _this = this;
         return new Ext.form.FormPanel({ 
+            id: 'job_form',
             frame: true,
             autoHeight: true,
             region: 'center',
             width:450,
             height: 220,
+            closeAction:'hide',
             buttons: [{ 
                 text: '保存职位', handler: _this.createPosition
             },{ 
@@ -96,7 +138,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             items: [{ 
                 layout: 'column',
                 xtype: 'fieldset',
-                title: '招聘简述',
+                title: '*职位必填信息',
                 autoHeight: true,
                 style: 'margin-left:5px;',
                 items:[{ 
@@ -127,7 +169,6 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                     height: 70,
                     xtype: 'textarea',
                     fieldLabel: '应聘要求', id: 'requirement'
-            
                }
             ]
       });
@@ -141,6 +182,9 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 text: '招聘ing(0)', leaf: true, 
                 listeners: { click: function() { } }
             },{
+                text: '全部职位(0)', leaf: true, 
+                listeners: { click: function() { } } 
+            },{ 
                 text: '已招满(0)', leaf: true, 
                 listeners: { click: function() { } } 
             },{ 
@@ -182,10 +226,18 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
         });
         store.load();
 
+        var addOperator = function(value, mataData, record, rowIndex, colIndex, store){ 
+           // alert(record.data.id);
+            var link = String.format('<a href="#" onclick="Manage.positionManage.editJob({0})">修改</a>', record.data.id) + '&nbsp;';
+            link += String.format('<a href="#" onclick="Manage.positionManage.deleteJob({0})">删除</a>', record.data.id) + '&nbsp;';
+            link += String.format('<a href="#" onclick="Manage.positionManage.addPaper({0})">添加问卷</a>', record.data.id);
+            return link;
+        };
+
         var sm = new Ext.grid.CheckboxSelectionModel();
         var cm = new Ext.grid.ColumnModel([
             sm,
-            { header: '序号'        , sortable: true, dataIndex: 'id'},
+            { header: '序号'        , sortable: true, dataIndex: 'id', width:50},
             { header: '职位名称'    , sortable: true, dataIndex: 'jname'},
             { header: '职位类型'    , sortable: true, dataIndex: 'position_type'},
             { header: '招聘人数'    , sortable: true, dataIndex: 'job_number'},
@@ -194,7 +246,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             { header: '职位要求'    , sortable: true, dataIndex: 'requirement'},
             { header: '职位描述'    , sortable: true, dataIndex: 'jdesc'},
             { header: '状态'        , sortable: true, dataIndex: 'state' },
-            { header: '操作'        , dataIndex: '#' }
+            { header: '操作'        , dataIndex: '#', renderer: addOperator, width: 150 }
         ]);
         tbar = [ 
             { text: '添加职位', handler: function(){ _this.createAddjob() }}, '-',
@@ -209,6 +261,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             region: 'center',
             anchor: "100% 100%",
             store: store,
+            loadMask: {msg:"读取中..."},
             tbar: tbar, 
             cm: cm,
             sm: sm
