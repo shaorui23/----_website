@@ -7373,3 +7373,154 @@ Migrating to ChangeColumnInResume (20101109082132)
   [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `users`[0m
   [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-09 16:36:02) [GET]
+Rendering manage/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#edit_resume to json (for 127.0.0.1 at 2010-11-09 16:36:04) [GET]
+  Parameters: {"_dc"=>"1289291764600"}
+  [4;36;1mResume Load (0.1ms)[0m   [0;1mSELECT * FROM `resumes` [0m
+  [4;35;1mResume Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resumes`[0m
+Completed in 56ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/manage/edit_resume.json?_dc=1289291764600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-09 16:36:14) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#edit_resume to json (for 127.0.0.1 at 2010-11-09 16:36:16) [GET]
+  Parameters: {"_dc"=>"1289291776468"}
+  [4;36;1mResume Load (0.1ms)[0m   [0;1mSELECT * FROM `resumes` [0m
+  [4;35;1mResume Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `resumes`[0m
+Completed in 15ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/manage/edit_resume.json?_dc=1289291776468]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-09 16:36:38) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#edit_resume to json (for 127.0.0.1 at 2010-11-09 16:36:39) [GET]
+  Parameters: {"_dc"=>"1289291799980"}
+  [4;36;1mResume Load (0.1ms)[0m   [0;1mSELECT * FROM `resumes` [0m
+  [4;35;1mResume Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resumes`[0m
+Completed in 15ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/manage/edit_resume.json?_dc=1289291799980]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-09 16:36:50) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#edit_resume to json (for 127.0.0.1 at 2010-11-09 16:36:52) [GET]
+  Parameters: {"_dc"=>"1289291812526"}
+  [4;36;1mResume Load (0.1ms)[0m   [0;1mSELECT * FROM `resumes` [0m
+  [4;35;1mResume Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resumes`[0m
+Completed in 16ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/manage/edit_resume.json?_dc=1289291812526]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-09 16:40:27) [GET]
+Rendering manage/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#edit_resume to json (for 127.0.0.1 at 2010-11-09 16:40:28) [GET]
+  Parameters: {"_dc"=>"1289292028899"}
+  [4;36;1mResume Load (0.1ms)[0m   [0;1mSELECT * FROM `resumes` [0m
+  [4;35;1mResume Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resumes`[0m
+Completed in 15ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/manage/edit_resume.json?_dc=1289292028899]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-09 16:41:19) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-09 16:43:07) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#edit_resume to json (for 127.0.0.1 at 2010-11-09 16:43:11) [GET]
+  Parameters: {"_dc"=>"1289292191546"}
+  [4;36;1mResume Load (0.1ms)[0m   [0;1mSELECT * FROM `resumes` [0m
+  [4;35;1mResume Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `resumes`[0m
+Completed in 15ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/manage/edit_resume.json?_dc=1289292191546]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#edit_resume to json (for 127.0.0.1 at 2010-11-09 16:43:11) [GET]
+  Parameters: {"_dc"=>"1289292191782"}
+  [4;36;1mResume Load (0.1ms)[0m   [0;1mSELECT * FROM `resumes` [0m
+  [4;35;1mResume Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resumes`[0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/manage/edit_resume.json?_dc=1289292191782]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-09 16:45:14) [GET]
+Rendering manage/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#edit_resume to json (for 127.0.0.1 at 2010-11-09 16:45:15) [GET]
+  Parameters: {"_dc"=>"1289292315910"}
+  [4;36;1mResume Load (0.1ms)[0m   [0;1mSELECT * FROM `resumes` [0m
+  [4;35;1mResume Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resumes`[0m
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/manage/edit_resume.json?_dc=1289292315910]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-09 16:46:13) [GET]
+Rendering manage/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-09 16:46:38) [GET]
+Rendering manage/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#edit_resume to json (for 127.0.0.1 at 2010-11-09 16:46:39) [GET]
+  Parameters: {"_dc"=>"1289292399492"}
+  [4;36;1mResume Load (0.1ms)[0m   [0;1mSELECT * FROM `resumes` [0m
+  [4;35;1mResume Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resumes`[0m
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/manage/edit_resume.json?_dc=1289292399492]

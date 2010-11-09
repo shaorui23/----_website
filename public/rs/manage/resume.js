@@ -1,6 +1,7 @@
 Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
     id: 'resumeCenter',
     init: function(){
+        this.rearchData();
         this.launcher = {
             text: '简历中心',
             iconCls: 'bogus',
@@ -27,17 +28,20 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
             });
         }
         win.show();
+        Manage.resumeCenter.readData();
     },
 
-    createPanel: function(){ 
-         rStore = new Ext.data.JsonStore({ 
+    rearchData : function(){ 
+             rStore = new Ext.data.JsonStore({ 
               url:"/manage/edit_resume.json",
               root:"content",
               fields:['rname','rsex','rbirth','rmari_sta','rrace','rblood','rhei','rwei','rpoli',
                     'riden','rpho','rmail','raddr','rprof','rexp','redu','rskill','reva']
         });
         rStore.load({callback:function(record){store = record;}});
+    },
 
+    createPanel: function(){ 
         return new Ext.form.FormPanel({
             labelAlign: 'right',
             frame:true,
@@ -133,35 +137,29 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
                    }]
                 }]
             }],
-            buttons: [{
-                text: '提交',
-                handler: function() {
-                    Manage.resumeCenter.save();
-                }
-            }, {
-                text: '读取',
-                handler: function() {
-                    Ext.getCmp("rname").setValue(store[0].data.rname);
-                    Ext.getCmp("rsex").setValue(store[0].data.rsex);
-                    Ext.getCmp("rbirth").setValue(store[0].data.rbirth);
-                    Ext.getCmp("rmari_sta").setValue(store[0].data.rmari_sta);
-                    Ext.getCmp("rrace").setValue(store[0].data.rrace);
-                    Ext.getCmp("rblood").setValue(store[0].data.rblood);
-                    Ext.getCmp("rhei").setValue(store[0].data.rhei);
-                    Ext.getCmp("rwei").setValue(store[0].data.rwei);
-                    Ext.getCmp("rpoli").setValue(store[0].data.rpoli);
-                    Ext.getCmp("riden").setValue(store[0].data.riden);
-                    Ext.getCmp("rpho").setValue(store[0].data.rpho);
-                    Ext.getCmp("rmail").setValue(store[0].data.rmail);
-                    Ext.getCmp("raddr").setValue(store[0].data.raddr);
-                    Ext.getCmp("rprof").setValue(store[0].data.rprof);
-                    Ext.getCmp("rexp").setValue(store[0].data.rexp);
-                    Ext.getCmp("redu").setValue(store[0].data.redu);
-                    Ext.getCmp("rskill").setValue(store[0].data.rskill);
-                    Ext.getCmp("reva").setValue(store[0].data.reva);
-                }
-            }]
+            buttons: [{ text: '修改提交', handler: function() { Manage.resumeCenter.save(); }}]
         });
+    },
+
+    readData : function(){ 
+        Ext.getCmp("rname").setValue(store[0].data.rname);
+        Ext.getCmp("rsex").setValue(store[0].data.rsex);
+        Ext.getCmp("rbirth").setValue(store[0].data.rbirth);
+        Ext.getCmp("rmari_sta").setValue(store[0].data.rmari_sta);
+        Ext.getCmp("rrace").setValue(store[0].data.rrace);
+        Ext.getCmp("rblood").setValue(store[0].data.rblood);
+        Ext.getCmp("rhei").setValue(store[0].data.rhei);
+        Ext.getCmp("rwei").setValue(store[0].data.rwei);
+        Ext.getCmp("rpoli").setValue(store[0].data.rpoli);
+        Ext.getCmp("riden").setValue(store[0].data.riden);
+        Ext.getCmp("rpho").setValue(store[0].data.rpho);
+        Ext.getCmp("rmail").setValue(store[0].data.rmail);
+        Ext.getCmp("raddr").setValue(store[0].data.raddr);
+        Ext.getCmp("rprof").setValue(store[0].data.rprof);
+        Ext.getCmp("rexp").setValue(store[0].data.rexp);
+        Ext.getCmp("redu").setValue(store[0].data.redu);
+        Ext.getCmp("rskill").setValue(store[0].data.rskill);
+        Ext.getCmp("reva").setValue(store[0].data.reva);
     },
 
     editData : function(){ 
@@ -203,7 +201,7 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
                         success : function(){ location.href = "/manage"; },
                     });
                 }
-            });
+          });
     },
 
 });
