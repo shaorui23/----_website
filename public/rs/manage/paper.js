@@ -122,7 +122,9 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
         });
         var jobStore = new Ext.data.JsonStore({ 
             url: '/jobs.json',
+            root: 'content',
             fields: [
+                'id',
                 'jname'
             ]
         });
@@ -136,13 +138,27 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             displayField: 'jname'
         });
 
+        var _this = this;
         return new Ext.grid.GridPanel({ 
             id: 'npGrid',
             frame: true,
             viewConfig: { forceFit: true },
             store: npStore,
             anchor: '100%, 50%',
-            tbar: ['选择职位：',jobCombo],
+            tbar: [
+                '选择职位：',
+                jobCombo, 
+                '->',
+                { 
+                    text: '删除',
+                    handler: function(){ 
+                        var npGrid = Ext.getCmp('npGrid');
+                        _this.gsDeleter(npGrid);
+                    }
+                }, { 
+                    text: '保存'
+                }
+            ],
             cm: new Ext.grid.ColumnModel([
                 new Ext.grid.RowNumberer(),
                 { header: 'ID', dataIndex: 'id', width: 5 },
@@ -157,6 +173,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
         var qbStore = new Ext.data.JsonStore({ 
             url: '/questions.json',
             fields: [
+                'van',
                 'id',
                 'qcon'
             ]
@@ -178,11 +195,10 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                 text: '加入问卷',
                 handler: function() { 
                     var qbGrid = Ext.getCmp('qbGrid');
-                    var datas = qbGrid.getSelectionModel().getSelections();
-                    datas = _this.recordHandler(datas);
+                    //var records = qbGrid.getSelectionModel().getSelections();
+                    var npGrid = Ext.getCmp('npGrid');
 
-                    var npStore = Ext.getCmp('npGrid').getStore();
-                    npStore.loadData(data);
+                    _this.recordsMoveHandler(qbGrid, npGrid, 'add-delete', [], 0);
                 }
             }],
             cm: new Ext.grid.ColumnModel([
@@ -194,23 +210,108 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
     },
 
     //hanlders**********************************
-    //用于将从grid取到的数据构造为json数组数据
-    recordHandler: function(records) { 
+    /*用于将一个grid中的被选中的数据转移到另一个grid中
+     *sourceGrid: Ext.data.Store   要移出数据的store
+     *aimGrid:    Ext.data.Store   要加入数据的store
+     *action:     'add' || 'add-delete' || 'insert' || 'insert-delete' || 'loadData' || 'loadData-delete'; defaults: 'add'
+     *indexs:     []              想要导入的数据域
+     *insertPos:  插入的位置
+    */
+    recordsMoveHandler: function() { 
+        /*argument list***///todo:应该考虑用hash对象实现; 函数体太过于庞大了,缩减
+        var sourceGrid  = arguments[0];
+        var aimGrid     = arguments[1];
+        var action      = arguments[2] ? arguments[2] : 'add';
+        var indexs      = arguments[3] ? arguments[3] : sourceGrid.getStore().fields.keys;  //默认两个store的fields一样
+        var insertPos   = arguments[4] ? arguments[4] : 0;  //插入位置以0为grid的第一行
+        /*****************/
+
+        //获取两个grid的store
+        var sourceStore = sourceGrid.getStore();
+        var aimStore = aimGrid.getStore();
+
+        //取出sourceStore的数据
+        var records = sourceGrid.getSelectionModel().getSelections();
+
+        //初始化indexs，在传入insert命令时允许传入[]
+        if(indexs.length == 0) { 
+            indexs = sourceStore.fields.keys;
+        }
+
+        //将records中的数据构造为[{}, {}]形式
         var datas = [];
-        var data = {};
-        var indexs = ['id', 'qcon'];
         for(var i = 0; i < records.length; i++) { 
-            data = {};
+            var data = {};
             for(var j = 0; j < indexs.length; j++) { 
                 data[indexs[j]] = records[i].get(indexs[j]);
             }
             datas.push(data);
         }
-        return datas;
+
+        //解析action
+        var isDelete = false;
+        if(action.indexOf('-') != -1) { 
+            isDelete = true;
+            action = action.substring(0, action.indexOf('-'));
+        }
+
+        //执行action
+        if(action == 'add') { 
+            //加入数据
+            for(var i = 0; i < datas.length; i++) { 
+                var record = new aimStore.recordType(datas[i]);
+                aimStore.add(record);
+            }
+        }else if(action == 'insert') { 
+            //当插入的数据量大于1时拒绝执行函数
+            if(datas.length != 1) return false;  
+
+            //判断插入位置是否合理
+            if(aimStore.getCount() <= insertPos || insertPos < 0) insertPos = 0;
+
+            //插入
+            var record = new aimStore.recordType(datas[0]);
+            aimStore.insert(insertPos,record);
+        }else if(action == 'loadData') { 
+            //装载
+            aimStore.loadData(datas);
+        }else { 
+            //操作违法
+            return false;
+        }
+
+        //删除sourceStore中的选中数据
+        var _this = this;
+        if(isDelete == true) { 
+            /*
+            for(var i = 0; i < records.length; i++){ 
+                var index = sourceStore.indexOf(records[i]);
+                sourceStore.removeAt(index);
+            }
+            */
+            _this.gsDeleter(sourceGrid);
+        }
+
+        return true;
     },
-    //处理进入创建问卷tab
-    newPaperHandler: function(){ 
+
+    /*删除grid中选中的数据 **********
+     *aimGrid: 需要操作的grid
+    */
+    //gs: grid selected
+    gsDeleter: function(aimGrid){ 
+        var records = aimGrid.getSelectionModel().getSelections();
+        var store = aimGrid.getStore();
+        for(var i = 0; i < records.length; i++){ 
+            var index = store.indexOf(records[i]);
+            store.removeAt(index);
+        }
+    },
+
+    /*处理进入创建问卷tab*/
+    newPaperHandler: function() { 
         //加载jobcombobox的数据
+        Ext.getCmp('jobCombo').getStore().reload();
         //加载gbgrid的数据
         Ext.getCmp('qbGrid').getStore().reload();
     }

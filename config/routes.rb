@@ -4,6 +4,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :manage,:collection => { :edit_resume => :get,
                                          :update_resume => :put,
                                        }
+  map.resources :manage
+  map.resources :papers
   map.resources :questions, 
                 :collection => { :deletes => :delete }
   # The priority is based upon order of creation: first created -> highest priority.
