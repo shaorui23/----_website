@@ -35,7 +35,6 @@ class AccountController < ApplicationController
     redirect_to :action => "index"
   rescue ActiveRecord::RecordInvalid => e
     flash[:error] = e.message 
-    debugger
     redirect_to :action => "signup" 
   end
   
