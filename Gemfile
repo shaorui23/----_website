@@ -7,5 +7,4 @@ gem "randexp", "0.1.5"
 gem "faker"
 gem "sqlite3-ruby",   "1.2.5"
 gem "ruby-gmail",     "0.0.8"
-
-
+gem "ruby-debug"

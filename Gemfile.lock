@@ -17,7 +17,9 @@ GEM
     activeresource (2.3.5)
       activesupport (= 2.3.5)
     activesupport (2.3.5)
+    columnize (0.3.2)
     faker (0.3.1)
+    linecache (0.43)
     mysql (2.8.1)
     rack (1.0.1)
     rails (2.3.5)
@@ -30,6 +32,11 @@ GEM
     rake (0.8.7)
     randexp (0.1.5)
       ParseTree
+    ruby-debug (0.10.4)
+      columnize (>= 0.1)
+      ruby-debug-base (~> 0.10.4.0)
+    ruby-debug-base (0.10.4)
+      linecache (>= 0.3)
     ruby-gmail (0.0.8)
       shared-mime-info
     sexp_processor (3.0.5)
@@ -44,5 +51,6 @@ DEPENDENCIES
   mysql (= 2.8.1)
   rails (= 2.3.5)
   randexp (= 0.1.5)
+  ruby-debug
   ruby-gmail (= 0.0.8)
   sqlite3-ruby (= 1.2.5)

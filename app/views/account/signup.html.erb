@@ -3,18 +3,19 @@
 							<tbody><tr>
 								<td align="center" bgcolor="#ffffff" height="18">
 									<table border="0" cellpadding="0" cellspacing="0" width="100%">
-										<tbody><tr>
-											<td width="5%"><img src="../images/icon_service.gif" height="21" width="24"></td>
-											<td  height="30" width="100%">
-												<table border="0" cellpadding="0" cellspacing="0" width="100%">
-													<tbody>
-                            <tr>
-														  <td width="20%">请填写您的注册资料</td>
-													  </tr>
-												  </tbody>
-                        </table>
-											</td>
-										</tr>
+										<tbody>
+                      <tr>
+											  <td width="5%"><img src="../images/icon_service.gif" height="21" width="24"></td>
+											  <td  height="30" width="100%">
+												  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+													  <tbody>
+                              <tr>
+														    <td width="20%">请填写您的注册资料</td>
+													    </tr>
+												    </tbody>
+                          </table>
+											  </td>
+										  </tr>
 										<tr bgcolor="#585858">
 											<td bgcolor="#585858" height="3"></td>
 											<td bgcolor="#585858" height="3"></td>
@@ -43,8 +44,13 @@
 																<tbody><tr>
                                   <% form_for :user do |f| -%>
 																	<td align="center" width="20%"><img src="../images/bul_or_tri1.gif" height="7" width="4"></td>
+                                  <div align="center" font-color="red">
+                                    <% if flash[:error] %>
+                                      <font color="red"><%= flash[:error] %></font>
+                                    <% end %>
+                                  </div>
                                     <td width="26%"><label for="login">登录名</label></td>
-                                    <td width="45%"><%= f.text_field :login %></td>
+                                    <td ><%= f.text_field :login %></td>
 																</tr>
 																<tr>
 																	<td align="center"><img src="../images/bul_or_tri1.gif" height="7" width="4"></td>

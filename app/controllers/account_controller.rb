@@ -1,10 +1,8 @@
 class AccountController < ApplicationController
-  # Be sure to include AuthenticationSystem in Application Controller instead
+
   include AuthenticatedSystem
-  # If you want "remember me" functionality, add this before_filter to Application Controller
   before_filter :login_from_cookie
 
-  # say something nice, you goof!  something sweet.
   def index
     redirect_to(:action => 'signup') unless logged_in? || User.count > 0
   end
@@ -32,10 +30,13 @@ class AccountController < ApplicationController
     return unless request.post?
     @user.save!
     #self.current_user = @user
-    redirect_back_or_default(:controller => '/account', :action => 'index')
-    flash[:notice] = "注册信息已经发送到您的邮箱中,请确认!"
-  rescue ActiveRecord::RecordInvalid
-    render :action => 'signup'
+    flash[:notice] = "注册信息已经发送到您的邮箱中,请确认后返回主页登录!"
+    #redirect_back_or_default(:controller => '/account', :action => 'index')
+    redirect_to :action => "index"
+  rescue ActiveRecord::RecordInvalid => e
+    flash[:error] = e.message 
+    debugger
+    redirect_to :action => "signup" 
   end
   
   def logout
