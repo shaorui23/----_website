@@ -1,5 +1,5 @@
 #nav {
-	BACKGROUND: url(images/loadsmall.gif) #000 no-repeat 330px 100px;
+	BACKGROUND:  #000 no-repeat 330px 100px;
 	OVERFLOW: hidden;
 	POSITION: absolute;
 	WIDTH: 685px;
@@ -96,10 +96,38 @@
 	FILTER: Gray()
 }
 
-#user{ margin-left:40px; margin-top:0px; height:25px;}
-#password{margin-left:40px; margin-top:0px; height:25px;}
+#user{ 
+  margin-left:40px;
+  margin-top:0px; 
+  height:25px;
+}
+#user input{
+  height:20px;
+}
+
+#password{
+  margin-left:40px;
+  margin-top:5px;
+  height:25px;
+}
+#password input{ 
+  margin-left:0px; 
+  margin-top:-20px;
+  height:20px;
+}
+
 /*输入框的封装css*/
-input{width:50; height:18px; border:solid 1px #aca7a7; font-size:9pt;}
+/*input{width:50; height:18px; border:solid 1px #aca7a7; font-size:9pt;}*/
+
+
 /*button登录封装css*/
 #btn{margin-left:30px; margin-top:20px;height:5px; margin-right:28px; text-align:center;}
 #btn a{display:block; line-height:20px; background: url(../images/bt_bg.gif); border: solid 1px #b6b6b6; width:50px; float:left; margin-left:15px; text-decoration:none; color:#000;}
+#btn input{ 
+    background:url(../images/bt_bg.gif);
+    display:block; line-height:20px;
+    text-decoration:none; 
+    width:50px;
+    border: solid 1px #b6b6b6;
+    float:left; margin-left:15px; 
+}

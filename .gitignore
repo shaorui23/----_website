@@ -16,5 +16,5 @@ db/schema.rb
 *.js~
 *.rb~
 vendor/bundler_gems
-log/development.log
 *.swp
+log/*.log
