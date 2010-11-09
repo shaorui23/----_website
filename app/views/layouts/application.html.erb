@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Wando 团队招聘服务网</title>
-<link rel="shortcut icon" href="images/head.ico"></link>
+<link rel="shortcut icon" href="../images/head.ico"></link>
 <%= stylesheet_link_tag 'css.css' %>
 <%= stylesheet_link_tag 'css2.css' %>
 </head>
@@ -13,7 +13,13 @@
 <body>
 <div class="juzhong">
   <div class="top">
-    <div class="top_top"><span style="float:left; margin-left:14px;">欢迎访问<b>Wando</b>团队招聘网站</span><span id ='clock'style="float:right; margin-right:6px;"> 
+    <div class="top_top"><span style="float:left; margin-left:14px;">欢迎
+    <%if current_user != :false%>
+      <%= current_user[:login] %>
+    <%else%>
+      <font color="red">未登录</font>
+    <%end%>
+    访问<b>Wando</b>团队招聘网站</span><span id ='clock'style="float:right; margin-right:6px;"> 
     <SCRIPT type=text/javascript>
         var clock = new Clock();
         clock.display(document.getElementById("clock"));
@@ -21,46 +27,54 @@
 
     <div class="clear"></div>
     </div>
-    <div class="logo_bg"><img src="images/logo.jpg" style="float:left; margin:18px 0 0 25px;"><img src="images/logo_bg2.gif" width="502" height="100"  style=" float:right;">
+    <div class="logo_bg"><img src="../images/logo.jpg" style="float:left; margin:18px 0 0 25px;"><img src="../images/logo_bg2.gif" width="502" height="100"  style=" float:right;">
       <div class="clear"></div>
     </div>
     <div class="muen">
       <div class="subnav">
         <ul id="nuw">
-          <li class="one"><a href="homes">&nbsp;&nbsp;&nbsp;&nbsp;首页</a></li>
-          <li  class="one"><a href="#">关于我们</a>
+          <li class="one"><a href="/homes/">&nbsp;&nbsp;&nbsp;首页</a></li>
+          <li  class="one"><a href="#">&nbsp;关于我们</a>
             <ul>
-              <li><a href="#">团队简介</a></li>
-              <li><a href="#">成员介绍</a></li>
+              <li><a href="#">&nbsp;团队简介</a></li>
+              <li><a href="#">&nbsp;成员介绍</a></li>
             </ul>
           </li>
-          <li class="one"><a href="#">最新咨询</a>
+          <li class="one"><a href="#">&nbsp;最新咨询</a>
             <ul>
               <li><a href="#">职位发布</a></li>
               <li><a href="#">成绩公布</a></li>
               <li><a href="#">录用公示</a></li>
             </ul>
           </li>
-          <li class="one"><a href="xingfa.html">网站动态</a>
+          <li class="one"><a href="xingfa.html">&nbsp;网站动态</a>
           </li>
-          <li  class="one"><a href="anlie.html">用户信息</a>
-            <ul>
-              <li><a href="#">我的资料</a></li>
-              <li><a href="#">我的简历</a></li>
-              <li><a href="#">我的职位</a></li>
-            </ul>
-          </li>
-          <li class="one"><a href="manage" target=_blank style="background-image: none;">后台管理</a></li>
+
+          <% if logged_in? %>
+            <li  class="one"><a href="anlie.html">&nbsp;用户信息</a>
+              <ul>
+                <li><a href="#">我的资料</a></li>
+                <li><a href="#">我的简历</a></li>
+                <li><a href="#">我的职位</a></li>
+              </ul>
+            </li>
+          <% end %>
+
+          <li class="one"><a href="manage" target=_blank style="background-image: none;">&nbsp;后台管理</a></li>
+
         </ul>
       </div>
       <div class="sousuo">
         <input name="" type="text"  class="input" value="站内搜索">
-        <input name="Submit" type="image" id="Submit" value="提交" src="images/fangda.gif" style="float:left; margin:0 8px;">
+        <input name="Submit" type="image" id="Submit" value="提交" src="../images/fangda.gif" style="float:left; margin:0 8px;">
       </div>
       <div class="clear"></div>
-    </div>
-  </div>
+     </div>
+   </div>
+
   <div><%= yield %></div>
+
+   <div "left">
    <div class="clear"></div>
  </div>
  <div class="bottom">

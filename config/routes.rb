@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :homes
+  map.resources :accounts
   map.resources :jobs
   map.resources :manage,:collection => { :edit_resume => :get,
                                          :update_resume => :put,

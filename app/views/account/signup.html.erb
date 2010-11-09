@@ -1,0 +1,88 @@
+					<td align="center" valign="top">
+            <table bgcolor="#cccccc" border="0" cellpadding="0" cellspacing="1" width="100%">
+							<tbody><tr>
+								<td align="center" bgcolor="#ffffff" height="18">
+									<table border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tbody><tr>
+											<td width="5%"><img src="../images/icon_service.gif" height="21" width="24"></td>
+											<td  height="30" width="100%">
+												<table border="0" cellpadding="0" cellspacing="0" width="100%">
+													<tbody>
+                            <tr>
+														  <td width="20%">请填写您的注册资料</td>
+													  </tr>
+												  </tbody>
+                        </table>
+											</td>
+										</tr>
+										<tr bgcolor="#585858">
+											<td bgcolor="#585858" height="3"></td>
+											<td bgcolor="#585858" height="3"></td>
+										</tr>
+										<tr>
+											<td>&nbsp;</td>
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<td>&nbsp;</td>
+											<td>
+												<table align="center" border="0" cellpadding="0" cellspacing="8" width="60%">
+													<tbody><tr>
+														<td colspan="4" align="center">
+															<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																<tbody><tr bgcolor="#ffffff">
+																	<td background="../images/dot_line_1.gif" height="10" valign="top"></td>
+																</tr>
+															</tbody></table>
+														</td>
+													</tr>
+													<tr>
+														<td colspan="4">
+															<!--SignOn-->
+															<table border="0" cellpadding="0" cellspacing="10" width="100%">
+																<tbody><tr>
+                                  <% form_for :user do |f| -%>
+																	<td align="center" width="20%"><img src="../images/bul_or_tri1.gif" height="7" width="4"></td>
+                                    <td width="26%"><label for="login">登录名</label></td>
+                                    <td width="45%"><%= f.text_field :login %></td>
+																</tr>
+																<tr>
+																	<td align="center"><img src="../images/bul_or_tri1.gif" height="7" width="4"></td>
+                                  <td width="26%"><label for="email">电子邮箱</label></td>
+                                  <td ><%= f.text_field :email %></td>
+																</tr>
+																<tr>
+																	<td align="center"><img src="../images/bul_or_tri1.gif" height="7" width="4"></td>
+                                  <td><label for="password">密码</label></td>
+                                  <td><%= f.password_field :password %></td>
+																</tr>
+																<tr>
+																	<td align="center"><img src="../images/bul_or_tri1.gif" height="7" width="4"></td>
+                                  <td><label for="password_confirmation">重复密码</label></td>
+                                  <td><%= f.password_field :password_confirmation %></td>
+																</tr>
+                                <tr>
+                                  <td></td>
+                                  <td><div id="btn"><%= button_to"注册"  %></td>
+                                </tr>
+                                <%end%>
+															</tbody></table>
+														</td>
+													</tr>
+													<tr>
+														<td colspan="4" align="center">
+															<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																<tbody><tr bgcolor="#ffffff">
+																	<td background="../images/dot_line_1.gif" height="10" valign="top"></td>
+																</tr>
+															</tbody></table>
+														</td>
+													</tr>
+												</tbody></table>
+											</td>
+										</tr>
+									</tbody></table>
+								</td>
+							</tr>
+						</tbody></table>
+					</td>
