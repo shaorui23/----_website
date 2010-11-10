@@ -55,111 +55,54 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
                 id: 'resumeAnswer',
                 title: '简历收集',
                 layout: 'anchor',
-                items: [this.createGrid1(),this.createGrid2()]
-            }]
-       });
+                items: [this.createGrid1(),this.createGrid2(),this.creatForm()],
+            }],
+        });
     },
 
 //简历内容formpanel
     formPanel : function(){ 
         return new Ext.form.FormPanel({
-        labelAlign: 'right',
-        frame:true,
-        id:'formPanel',
-        url: '/manage/edit_resume.json',
-        autoWidth: true,
-        height: 490,
-        reader: rStore,
-        items:[{ 
-            layout:'column',
+            labelAlign: 'right',
+            frame:true,
+            id:'formPanel',
+            url: '/manage/edit_resume.json',
+            autoWidth: true,
+            height: 490,
+            reader: rStore,
             items:[{ 
-                columnWidth:.3,
-                layout:'form',
+                layout:'column',
                 items:[{ 
-                    xtype: 'textfield',
-                    fieldLabel: 'name',
-                    id: 'rname',
-                },{
-                    xtype: 'textfield',
-                    fieldLabel: 'marital status',
-                    id: 'rmari_sta',
-               },{
-                    xtype: 'textfield',
-                    fieldLabel: 'height',
-                    id: 'rhei',
-               },{
-                    xtype: 'textfield',
-                    fieldLabel: 'identity',
-                    id: 'riden',
-               },{
-                    xtype: 'textfield',
-                    fieldLabel: 'address',
-                    id: 'raddr',
-               },{
-                    xtype: 'textfield',
-                    fieldLabel: 'education',
-                    id: 'redu',
-               }]
-            },{ 
-                columnWidth:.3,
-                layout:'form',
-                items:[{ 
-                    xtype: 'textfield',
-                    fieldLabel: 'sex',
-                    id: 'rsex'
-                },{
-                    xtype: 'textfield',
-                    fieldLabel: 'race',
-                    id: 'rrace'
-               },{
-                    xtype: 'textfield',
-                    fieldLabel: 'weight',
-                    id: 'rwei'
-               },{
-                    xtype: 'textfield',
-                    fieldLabel: 'phone',
-                    id: 'rpho',
-               },{
-                    xtype: 'textfield',
-                    fieldLabel: 'profession',
-                    id: 'rprof',
-               },{
-                    xtype: 'textfield',
-                    fieldLabel: 'skill',
-                    id: 'rskill',
-               }]
-            },{ 
-                columnWidth:.3,
-                layout:'form',
-                items:[{ 
-                    xtype: 'textfield',
-                    fieldLabel: 'birth',
-                    id: 'rbirth'
-                },{
-                    xtype: 'textfield',
-                    fieldLabel: 'blood',
-                    id: 'rblood'
-               },{
-                    xtype: 'textfield',
-                    fieldLabel: 'politics',
-                    id: 'rpoli'
-               },{
-                    xtype: 'textfield',
-                    fieldLabel: 'E-mail',
-                    id: 'rmail',
-               },{
-                    xtype: 'textfield',
-                    fieldLabel: 'experience',
-                    id: 'rexp',
-               },{
-                    xtype: 'textfield',
-                    fieldLabel: 'evaluation',
-                    id: 'reva',
-               }]
-            }]
-        }],
-        buttons: [{ text: '修改提交', handler: function() { Manage.resumeCenter.save(); }}]
-    });
+                    columnWidth:.3,
+                    layout:'form',
+                    items:[{xtype: 'textfield',fieldLabel: 'name',id: 'rname',},
+                           {xtype: 'textfield',fieldLabel: 'marital status',id: 'rmari_sta',},
+                           {xtype: 'textfield',fieldLabel: 'height',id: 'rhei',},
+                           {xtype: 'textfield',fieldLabel: 'identity',id: 'riden',},
+                           {xtype: 'textfield',fieldLabel: 'address',id: 'raddr',},
+                           {xtype: 'textfield',fieldLabel: 'education',id: 'redu'}]
+                },{ 
+                    columnWidth:.3,
+                    layout:'form',
+                    items:[{xtype: 'textfield',fieldLabel: 'sex',id: 'rsex'},
+                           {xtype: 'textfield',fieldLabel: 'race',id: 'rrace'},
+                           {xtype: 'textfield',fieldLabel: 'weight',id: 'rwei'},
+                           {xtype: 'textfield',fieldLabel: 'phone',id: 'rpho',},
+                           {xtype: 'textfield',fieldLabel: 'profession',id: 'rprof',},
+                           {xtype: 'textfield',fieldLabel: 'skill',id: 'rskill'}]
+                },{ 
+                    columnWidth:.3,
+                    layout:'form',
+                    items:[{xtype: 'textfield',fieldLabel: 'birth',id: 'rbirth'},
+                          {xtype: 'textfield',fieldLabel: 'blood',id: 'rblood'},
+                          {xtype: 'textfield',fieldLabel: 'politics',id: 'rpoli'},
+                          {xtype: 'textfield',fieldLabel: 'E-mail',id: 'rmail'},
+                          {xtype: 'textfield',fieldLabel: 'experience',id: 'rexp'},
+                          {xtype: 'textfield',fieldLabel: 'evaluation',id: 'reva'}]
+                }]
+            }],
+            buttons: [{ text: '修改提交', handler: function() { Manage.resumeCenter.save(); }}]
+        });
     },
 
 //读取简历内容数据
@@ -237,6 +180,7 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
           });
     },
 
+//简历收集上面grid显示
     createGrid1 : function(){ 
         var fStore = new Ext.data.JsonStore({ 
             url:"/manage/resume_an.json",
@@ -250,10 +194,9 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
             store:fStore,
             border:true,
             id:'grid1',
+            anchor: '100% 50%',
             frame:true,
             stripeRows:true,
-            width:985,
-            height:200,
             viewConfig:{ forceFit:true },
             cm:new Ext.grid.ColumnModel([
                 {header:'姓名'      ,dataIndex:'rname_a' },
@@ -271,25 +214,30 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
 
             tStore.removeAll();
             tStore.proxy=new Ext.data.HttpProxy({url:newUrl});
-            tStore.load();
+            tStore.load({callback:function(record){
+                Ext.getCmp("raddr_a").setValue(record[0].data.raddr_a);
+                Ext.getCmp("rexp_a").setValue(record[0].data.rexp_a);
+                Ext.getCmp("reva_a").setValue(record[0].data.reva_a);
+            }});
         });
        return grid1;
     },
 
+//简历收集下面grid显示
     createGrid2 : function(){ 
         var tStore = new Ext.data.JsonStore({ 
             url:"/",
             remoteSort:true,
             root: "content",
-            fields:['rhei_a','rwei_a','rmari_sta_a','rrace_a','rblood_a','rpoli_a','rskill_a']
+            fields:['rhei_a','rwei_a','rmari_sta_a','rrace_a','rblood_a','rpoli_a','rskill_a','riden_a','raddr_a','rexp_a','reva_a']
         });
 
         return new Ext.grid.GridPanel({ 
             store:tStore,
             border:false,
             id:'grid2',
+            anchor: '100% ',
             stripeRows:true,
-            width:985,
             height:45,
             viewConfig:{ forceFit:true },
             cm: new Ext.grid.ColumnModel([
@@ -300,8 +248,41 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
                 {header:'民族'      ,dataIndex:'rrace_a'    },
                 {header:'政治面貌'  ,dataIndex:'rpoli_a'    },
                 {header:'技能'      ,dataIndex:'rskill_a'   },
+                {header:'身份证号'  ,dataIndex:'riden_a'    },
             ])
         });
+    },
+
+//简历收集中显示form
+    creatForm : function(){ 
+        return new Ext.form.FormPanel({
+            labelAlign: 'right',
+            frame:true,
+            id:'resumeForm',
+            anchor: '100%, 40%',
+            layout:'form',
+            reader: Ext.getCmp('grid2').getStore(),
+            items:[{ 
+                xtype: 'textarea',
+                readOnly:true,
+                fieldLabel: '家庭住址',
+                id: 'raddr_a',
+                anchor:"100% 20%"
+            },{ 
+                xtype:  'textarea',
+                readOnly:true,
+                fieldLabel: '经历',
+                id: 'rexp_a',
+                anchor:"100% 20%"
+            },{ 
+                xtype:  'textarea',
+                readOnly:true,
+                fieldLabel: '评价',
+                id: 'reva_a',
+                height:180,
+                anchor:"100% 60%"
+            }]
+      });
     },
 
 });
