@@ -50,7 +50,7 @@ class User < ActiveRecord::Base
 
   def forget_me
     self.remember_token_expires_at = nil
-    self.remember_token            = nil
+    #self.remember_token            = nil 因为要占用这个字段，所以不能让它为空
     save(false)
   end
 
@@ -80,6 +80,6 @@ class User < ActiveRecord::Base
 
     #邮件管理产生序列号,当是管理员时候，不需要产生序列号
     def make_activation_code
-      self.type.nil?? self.activation_code = Digest::SHA1.hexdigest(Time.now.to_s.split(//).sort_by{ rand }.join) : self.activated_at = Time.now.utc
+      self.remember_token.nil?? self.activation_code = Digest::SHA1.hexdigest(Time.now.to_s.split(//).sort_by{ rand }.join) : self.activated_at = Time.now.utc
     end
 end

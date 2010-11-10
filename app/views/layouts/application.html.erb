@@ -57,9 +57,10 @@
                 <li><a href="#">我的职位</a></li>
               </ul>
             </li>
+            <% unless current_user.remember_token.nil? %>
+              <li class="one"><a href="/manage" target=_blank style="background-image: none;">&nbsp;后台管理</a></li>
+            <% end %>
           <% end %>
-
-          <li class="one"><a href="manage" target=_blank style="background-image: none;">&nbsp;后台管理</a></li>
 
         </ul>
       </div>
