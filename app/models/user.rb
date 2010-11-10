@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
     #u = find_by_login(login) # need to get the salt
     # !只有当activated_at 不为空的时候才能证明用户是否已经验证了，具体参考activate方法
     u = find :first,
-        :conditions => ['login = ? ando activated_at IS NOT NULL', login]
+        :conditions => ['login = ? and activated_at IS NOT NULL', login]
     u && u.authenticated?(password) ? u : nil
   end
 

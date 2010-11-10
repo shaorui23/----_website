@@ -16,14 +16,20 @@ class AccountController < ApplicationController
       #  self.current_user.remember_me
       #  cookies[:auth_token] = { :value => self.current_user.remember_token , :expires => self.current_user.remember_token_expires_at }
       #end
-      redirect_back_or_default(:controller => '/homes', :action => 'index')
-      flash[:notice] = "Logged in successfully"
-      render(:text => false[:notice])
+      redirect_back_or_default(:controller => 'homes', :action => 'index')
+      flash[:notice] = "#{ current_user.login },登录成功!"
     else
-      redirect_back_or_default(:controller => '/account', :account => 'login_error')
+      flash[:notice] =  "登录失败,没有该帐号或帐号未验证" 
+      redirect_back_or_default(:controller => "homes", :action => "index")
     end
 
   end
+
+  #Comment: Mouse
+  #现在总共有两个显示flash的地方，一个是在 account/index 另一个是在 home/index
+  #account/index => { 注册成功提示、用户成功退出提示 }
+  #home/index => { 异常的提示、登录失败、登录成功、没有登录的退出 }
+  #TODO 汇总所有提示于一起
 
   def signup
     @user = User.new(params[:user])
@@ -42,8 +48,13 @@ class AccountController < ApplicationController
     self.current_user.forget_me if logged_in?
     cookies.delete :auth_token
     reset_session
-    flash[:notice] = "You have been logged out."
-    redirect_back_or_default(:controller => '/account', :action => 'index')
+    if logged_in?
+      flash[:notice] = "#{ current_user.login }，您已经退出"
+      redirect_back_or_default(:controller => '/account', :action => 'index')
+    else
+      flash[:notice] = "您好，您还没有登录"
+      redirect_back_or_default(:controller => "homes", :action => "index")
+    end
   end
 
   # !验证码确证
@@ -51,7 +62,7 @@ class AccountController < ApplicationController
     @user = User.find_by_activation_code(params[:id])
     if @user and @user.activate
       self.current_user = @user
-      flash[:notice] = "Your account has been activated"
+      flash[:notice] = "验证成功！您现在可以登录了"
     end
       redirect_back_or_default(:controller => '/homes', :action => "index")
   end

@@ -122,7 +122,17 @@
 
 /*button登录封装css*/
 #btn{margin-left:30px; margin-top:20px;height:5px; margin-right:28px; text-align:center;}
-#btn a{display:block; line-height:20px; background: url(../images/bt_bg.gif); border: solid 1px #b6b6b6; width:50px; float:left; margin-left:15px; text-decoration:none; color:#000;}
+#btn a{
+  display:block; 
+  line-height:20px; 
+  background: url(../images/bt_bg.gif); 
+  border: solid 1px #b6b6b6; width:50px; 
+  float:left;
+  margin-left:15px; 
+  text-decoration:none; 
+  color:#000;
+}
+
 #btn input{ 
     background:url(../images/bt_bg.gif);
     display:block; line-height:20px;
@@ -130,4 +140,12 @@
     width:50px;
     border: solid 1px #b6b6b6;
     float:left; margin-left:15px; 
+}
+
+#notice{ 
+  margin-left:60px
+}
+#notice font{ 
+  color:red;
+  background:#b6b6b4;
 }

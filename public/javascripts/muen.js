@@ -30,14 +30,12 @@ function select_change_to(){
     var url = "";
     var select_url = document.getElementById('selectd_fo').value;
     if(select_url != "auction"){  
-        if(select_url == "shop")
-            url = "http://localhost:3000";
-        else if(select_url == "nick")
-            url = "http://localhost:3000";
-        else if(select_url == "info")
-            url = "http://localhost:3000";
-        else if(select_url == "web")
-            url = "http://localhost:3000";
+        if(select_url == "wando")
+            url = "http://wando.heroku.com";
+        else if(select_url == "mouse-home")
+            url = "http://mouse.heroku.com/homes";
+        else if(select_url == "google")
+            url = "http://google.com";
         window.open(url);
     }
 }
