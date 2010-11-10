@@ -120,6 +120,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                 'qcon'
             ]
         });
+
         var jobStore = new Ext.data.JsonStore({ 
             url: '/jobs.json',
             root: 'content',
@@ -128,6 +129,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                 'jname'
             ]
         });
+
         var jobCombo = new Ext.form.ComboBox({ 
             id: 'jobCombo',
             typeAhead: true,
@@ -161,13 +163,13 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                     handler: function() { 
                         //获取数据
                         var npGrid = Ext.getCmp('npGrid');
-                        var qbIds = _this.gdGetor(npGrid, ['id'], 'all');
+                        var qbIds = _this.gdGetor(npGrid, ['id'], 'all', ['question_id']);
                         var jobId = jobCombo.getValue();
                         //todo: 继续构造前台数据，如何保存两个表的记录
                         //提交数据
                         Ext.Ajax.request({ 
-                            url: '/group',
-                            jsonData: { pDatas: { qbIds: qbDatas, jobId: jobDatas } },
+                            url: '/papers',
+                            jsonData: { pDatas: { qbIds: qbIds, job_id: jobId } },
                             success: function() { 
                                 Ext.Msg.alert("Wando", 'success');
                             },
@@ -239,12 +241,15 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
     */
     recordsMoveHandler: function() { 
         /*argument list***///todo:应该考虑用hash对象实现; 函数体太过于庞大了,分解
-        var sourceGrid  = arguments[0];
-        var aimGrid     = arguments[1];
+        var sourceGrid  = arguments[0] ? arguments[0] : '';
+        var aimGrid     = arguments[1] ? arguments[1] : '';
         var action      = arguments[2] ? arguments[2] : 'add';
-        var indexs      = arguments[3] ? arguments[3] : sourceGrid.getStore().fields.keys;  //默认两个store的fields一样
+        var indexs      = arguments[3] ? arguments[3] : [];  //默认两个store的fields一样
         var insertPos   = arguments[4] ? arguments[4] : 0;  //插入位置以0为grid的第一行
         /*****************/
+
+        //判断参数是否合法
+        if(sourceGrid == '' || aimGrid == '') return false;
 
         var _this = this;
 
@@ -334,11 +339,28 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
 
     /*由于将gird中的数据取出并构造为[{}, {}]的形式
      *sourceGrid: Ext.grid
-     *indexs:     []  想要导出数据域
-     *action:     'all' || 'selections', defaults: 'add'
+     *indexs:     []  想要导出的sourceGrid数据域, defaults: sourceGrid.fields.keys
+     *action:     'all' || 'selections', defaults: 'all'
+     *outIndexs:  []  想要出的特定数据域, defaults: []
+     *
+     *说明：如果传入了outIndexs，函数返回的哈希数据key会以以它为主,但要求是同时必须传入indexs，函数会一一对应
+     *例子：indexs = ['id', 'name'], outIndexs = ['order_id', 'order_name'], 则返回的数据为[{ order_id: ++ , order_name: ++ }]
+     *      若outIndexs为空或者不传入，则以indexs出入的参数导出，若indexs也为空，则按grid的fields中的keys返回
     */
     //gd: grid, data
-    gdGetor: function(sourceGrid, indexs, action) { 
+    gdGetor: function() { 
+        /*arguments list ***********/
+        var sourceGrid = arguments[0] ? arguments[0] : '';
+        var indexs     = arguments[1] ? arguments[1] : [];
+        var action     = arguments[2] ? arguments[2] : 'all';
+        var outIndexs  = arguments[3] ? arguments[3] : [];
+        /**************/
+
+        //判断参数是否合法
+        if(sourceGrid == '') return false;
+        if(outIndexs.length != 0 && outIndexs.length != indexs.length) return false;
+
+        //获取store
         var sourceStore = sourceGrid.getStore();
 
         //判断indexs是否为空
@@ -360,7 +382,12 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
         for(var i = 0; i < records.length; i++) { 
             var data = {};
             for(var j = 0; j < indexs.length; j++) { 
-                data[indexs[j]] = records[i].get(indexs[j]);
+                //根据outIndexs生成数据
+                if(outIndexs.length != 0) { 
+                    data[outIndexs[j]] = records[i].get(indexs[j]);
+                }else { 
+                    data[indexs[j]] = records[i].get(indexs[j]);
+                }
             }
             datas.push(data);
         }
