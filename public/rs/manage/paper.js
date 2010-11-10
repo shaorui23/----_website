@@ -66,6 +66,11 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
         });
     },
 
+    //改变paper的状态
+    paperStateer: function() { 
+        alert(123);
+    },
+
     //OP: old paper
     createOPGrid: function() { 
         var opStore = new Ext.data.JsonStore({ 
@@ -76,6 +81,11 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                 'job_name'
             ]
         });
+
+        function stateRender() { 
+            //todo: 问卷状态,与审批
+            return "<a href='#' onclick='Manage.paperCenter.paperStateer()'>禁用</a>"
+        }
 
         return new Ext.grid.GridPanel({ 
             id: 'opGrid',
@@ -91,7 +101,8 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             cm: new Ext.grid.ColumnModel([
                 new Ext.grid.RowNumberer(),
                 { header: 'ID', dataIndex: 'id' },
-                { header: '职位', dataIndex: 'job_name' }
+                { header: '职位', dataIndex: 'job_name' },
+                { header: '状态', dataIndex: '#', renderer: stateRender }
             ]),
             listeners: { 
                 cellclick: function(grid, rowIndex, columnIndex, e) { 
