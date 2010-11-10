@@ -120,12 +120,13 @@
         </div>
         <div class="zaixian_nr">
           <ul>
-            <li><span>问</span>：浅议网络侵权责任之归属</li>
-            <li>答：不动产登记与不动产物权变动的关系</li>
-            <li><span>问</span>：对完善我国表见代理制度的思考 </li>
-            <li>答：产品侵权责任归责原则略论 </li>
-            <li><span>问</span>：浅谈离婚纠纷中按揭财产的分割 </li>
-            <li style="border:none;">答：离婚诉讼中如何认定夫妻分居 </li>
+            <%if @jobs.blank?%>
+              <li><%= flash[:jobs]%></li>
+            <%else%>
+              <% @jobs.each do|j| %>
+                <li><span>职位:</span><%= j.jname%>，职位类型：<%= j.position_type %>，招聘人数：<%= j.job_number%></li>
+              <% end %>
+            <%end%>
           </ul>
         </div>
       </div>
@@ -136,14 +137,16 @@
           <div class="clear"></div>
         </div>
         <div class="jianjie_nr">
-          <div class="xuxian_bottom" style="padding:16px 0;"><span>欲修其身者，先正其心，欲正其心者，先
-            诚其意。意诚而后心正。“健全的法律制度是
-            现代社会的基石”。</span>
+          <div class="xuxian_bottom" style="padding:16px 0;">
+            <span><b>建队理念:</b>
+              Wando建队的目的是补足学生在校四年比较难以接触到的项目计划、需求分析、实施部署等软件工程环节，使学生在完成学业之前对现实社会有所了解... 
+            </span>
             <div class="clear"></div>
           </div>
-          <div style=" margin-top:6px;"> 作为一个普通的律师，以为人提供高质、高效的法律服务
-            为自己的事业。我渴望看到当事人感谢的眼神，感谢的声
-            音，都是对自己辛勤劳动的肯定和对自己存在价值的认可。 </div>
+          <div style=" margin-top:6px;"> 
+            <b>团队精神:</b>
+              我们相互分享，相互促进。有合作，有竞争，团结一致，开拓创新...
+          </div>
         </div>
       </div>
       <div class="clear"></div>
@@ -189,9 +192,9 @@
           <div class="dongtai_top_left">网站动态</div>
          <div class="dongtai_top_right"><a href="#"><img src="../images/more2.gif" border="0"></a></div>
          <div class="clear"></div>
-         <div class="dongtai_nr"> <a href="">京都律师事务所2007年大事记回顾</a><br>
-           <a href="">我所田文昌律师赴澳门科技大学讲学…</a><br>
-           <a href="">陈登富涉嫌贪污行贿、挪用公款一案开庭… </a>
+         <div class="dongtai_nr"> <a href="">我们的最新产品..</a><br>
+           <a href="">团队获得的最近成绩..</a><br>
+           <a href="">团队新一轮的招新资讯..</a>
          </div>
         </div>
       </div>
