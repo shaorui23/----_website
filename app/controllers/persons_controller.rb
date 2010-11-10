@@ -1,4 +1,5 @@
 class PersonsController < ApplicationController
+  before_filter :login_required
   #Persons controller 主要是用来针对个人资料／简历的操作的
   #显示个人资料主页
   def index

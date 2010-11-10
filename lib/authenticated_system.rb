@@ -65,7 +65,8 @@ module AuthenticatedSystem
       respond_to do |accepts|
         accepts.html do
           store_location
-          redirect_to :controller => '/account', :action => 'login'
+          flash[:notice] = "您好，您还未登录，请登录!"
+          redirect_to :controller => '/homes', :action => 'index'
         end
         accepts.xml do
           headers["Status"]           = "Unauthorized"

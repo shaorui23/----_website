@@ -1,6 +1,15 @@
 class ManageController < ApplicationController
+  
+    #第一验证
+    before_filter :login_required
     layout "applicaton", :except => [:index]
+
     def index
+      #第二验证
+      if current_user.remember_token != "hr"
+        flash[:notice] = "#{ current_user.login } 您好，您没有权限进行此项操作"
+        redirect_to :controller => "/homes", :action => "index"  
+      end
     end
 
 #GET /manage/edit_resume.json

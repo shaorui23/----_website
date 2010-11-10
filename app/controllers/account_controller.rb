@@ -60,8 +60,11 @@ class AccountController < ApplicationController
     if @user and @user.activate
       self.current_user = @user
       flash[:notice] = "验证成功！#{ current_user.login },您现在可以填写个人资料了,完整简历才可以让你选取职位"
-    end
       redirect_back_or_default(:controller => '/persons', :action => "index")
+    else
+      flash[:notice] = "验证码验证失败"
+      redirect_back_or_default(:controller => '/account', :action => "signup")
+    end
   end
 
 end
