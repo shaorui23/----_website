@@ -16,7 +16,7 @@ class AccountController < ApplicationController
       #  self.current_user.remember_me
       #  cookies[:auth_token] = { :value => self.current_user.remember_token , :expires => self.current_user.remember_token_expires_at }
       #end
-      redirect_back_or_default(:controller => 'homes', :action => 'index')
+      redirect_back_or_default(:controller => 'persons', :action => 'index')
       flash[:notice] = "#{ current_user.login },登录成功!"
     else
       flash[:notice] =  "登录失败,没有该帐号或帐号未验证" 
@@ -37,8 +37,7 @@ class AccountController < ApplicationController
     @user.save!
     #self.current_user = @user
     flash[:notice] = "注册信息已经发送到您的邮箱中,请确认后返回主页登录!"
-    #redirect_back_or_default(:controller => '/account', :action => 'index')
-    redirect_to :action => "index"
+    redirect_back_or_default(:controller => '/account', :action => 'index')
   rescue ActiveRecord::RecordInvalid => e
     flash[:error] = e.message 
     redirect_to :action => "signup" 

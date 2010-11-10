@@ -78,9 +78,8 @@ class User < ActiveRecord::Base
       crypted_password.blank? || !password.blank?
     end
 
-    #邮件管理产生序列号
+    #邮件管理产生序列号,当是管理员时候，不需要产生序列号
     def make_activation_code
-      self.activation_code = Digest::SHA1.hexdigest(Time.now.to_s.split(//).sort_by{ rand }.join)
+      self.type.nil?? self.activation_code = Digest::SHA1.hexdigest(Time.now.to_s.split(//).sort_by{ rand }.join) : self.activated_at = Time.now.utc
     end
-
 end

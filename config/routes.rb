@@ -12,6 +12,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :papers
   map.resources :questions, 
                 :collection => { :deletes => :delete }
+  map.resources :persons
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
