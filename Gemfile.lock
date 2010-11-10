@@ -21,6 +21,7 @@ GEM
     faker (0.3.1)
     linecache (0.43)
     machinist (1.0.6)
+    machinist (1.0.6)
     mysql (2.8.1)
     populator (0.2.5)
     rack (1.0.1)
