@@ -9,7 +9,10 @@ ActionController::Routing::Routes.draw do |map|
                                          :find_resume_an => :get,
                                        }
   map.resources :manage
-  map.resources :papers
+  map.resources :papers, 
+                :collection => { 
+                  :show_questions => :get
+                }
   map.resources :questions, 
                 :collection => { :deletes => :delete }
   map.resources :persons

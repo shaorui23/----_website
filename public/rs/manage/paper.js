@@ -32,7 +32,6 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
     },
 
     createPanel: function() { 
-        var _this = this;
         return new Ext.TabPanel({ 
             frame: true,
             activeTab: 0,
@@ -54,7 +53,13 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             listeners: { 
                 beforetabchange: function(panel, newTab, currentTab) { 
                     if(newTab.id == 'newPaper') { 
-                        _this.newPaperHandler();
+                        //加载jobcombobox的数据
+                        Ext.getCmp('jobCombo').getStore().reload();
+                        //加载gbgrid的数据
+                        Ext.getCmp('qbGrid').getStore().reload();
+                    }else if(newTab.id == 'oldPaper') { 
+                        //加载old paper
+                        Ext.getCmp('opGrid').getStore().reload();
                     }
                 } 
             }
@@ -64,13 +69,16 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
     //OP: old paper
     createOPGrid: function() { 
         var opStore = new Ext.data.JsonStore({ 
+            url: '/papers.json',
             fields: [
                 'id',
-                'qcon'
+                'job_id',
+                'job_name'
             ]
         });
 
         return new Ext.grid.GridPanel({ 
+            id: 'opGrid',
             frame: true,
             viewConfig: { forceFit: true },
             store: opStore,
@@ -83,8 +91,17 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             cm: new Ext.grid.ColumnModel([
                 new Ext.grid.RowNumberer(),
                 { header: 'ID', dataIndex: 'id' },
-                { header: '问题', dataIndex: 'qcon' }
-            ])
+                { header: '职位', dataIndex: 'job_name' }
+            ]),
+            listeners: { 
+                cellclick: function(grid, rowIndex, columnIndex, e) { 
+                    var record = grid.getStore().getAt(rowIndex);
+                    var opId = record.get('id');
+                    var pqStore = Ext.getCmp('pqGrid').store;
+                    pqStore.proxy = new Ext.data.HttpProxy({ method: 'GET', url: '/papers/show_questions?id=' + opId });
+                    pqStore.reload(); 
+                }
+            }
         })
  
     },
@@ -92,6 +109,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
     //PQ: paper question
     createPQGrid: function() { 
         var pqStore = new Ext.data.JsonStore({ 
+            url: '/papers/show_questions',
             fields: [
                 'id',
                 'qcon'
@@ -99,6 +117,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
         });
 
         return new Ext.grid.GridPanel({ 
+            id: 'pqGrid',
             frame: true,
             viewConfig: { forceFit: true },
             store: pqStore,
@@ -165,13 +184,24 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                         var npGrid = Ext.getCmp('npGrid');
                         var qbIds = _this.gdGetor(npGrid, ['id'], 'all', ['question_id']);
                         var jobId = jobCombo.getValue();
-                        //todo: 继续构造前台数据，如何保存两个表的记录
+                        //检验数据
+                        if(qbIds.length == 0) { 
+                            Ext.Msg.alert('Wando', '未选题！');
+                            return false;
+                        }
+                        else if(jobId == '') { 
+                            Ext.Msg.alert('Wando', '职位不能为空!');
+                            return false;
+                        }
                         //提交数据
                         Ext.Ajax.request({ 
                             url: '/papers',
-                            jsonData: { pDatas: { qbIds: qbIds, job_id: jobId } },
+                            jsonData: { pDatas: { qbIds: qbIds, jobId: { job_id: jobId } } },
                             success: function() { 
                                 Ext.Msg.alert("Wando", 'success');
+                                npGrid.store.removeAll();
+                                Ext.getCmp('qbGrid').store.reload();
+                                jobStore.reload();
                             },
                             failure: function() { 
                                 Ext.Msg.alert('Wando', 'failure');
@@ -230,6 +260,17 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             ])
         });
     },
+
+
+
+
+
+
+
+
+
+
+
 
     //hanlders**********************************
     /*用于将一个grid中的被选中的数据转移到另一个grid中
@@ -396,9 +437,5 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
 
     /*处理进入创建问卷tab*/
     newPaperHandler: function() { 
-        //加载jobcombobox的数据
-        Ext.getCmp('jobCombo').getStore().reload();
-        //加载gbgrid的数据
-        Ext.getCmp('qbGrid').getStore().reload();
     }
 });
