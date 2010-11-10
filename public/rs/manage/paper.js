@@ -53,7 +53,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             }],
             listeners: { 
                 beforetabchange: function(panel, newTab, currentTab) { 
-                    if(newTab.id == 'newPaper'){ 
+                    if(newTab.id == 'newPaper') { 
                         _this.newPaperHandler();
                     }
                 } 
@@ -134,11 +134,12 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             triggerAction: 'all',
             mode: 'local',
             store: jobStore,
-            valueField: 'jname',
+            valueField: 'id',
             displayField: 'jname'
         });
 
         var _this = this;
+        var sm = new Ext.grid.CheckboxSelectionModel();
         return new Ext.grid.GridPanel({ 
             id: 'npGrid',
             frame: true,
@@ -151,16 +152,35 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                 '->',
                 { 
                     text: '删除',
-                    handler: function(){ 
+                    handler: function() { 
                         var npGrid = Ext.getCmp('npGrid');
                         _this.gsDeleter(npGrid);
                     }
                 }, { 
-                    text: '保存'
+                    text: '保存',
+                    handler: function() { 
+                        //获取数据
+                        var npGrid = Ext.getCmp('npGrid');
+                        var qbIds = _this.gdGetor(npGrid, ['id'], 'all');
+                        var jobId = jobCombo.getValue();
+                        //todo: 继续构造前台数据，如何保存两个表的记录
+                        //提交数据
+                        Ext.Ajax.request({ 
+                            url: '/group',
+                            jsonData: { pDatas: { qbIds: qbDatas, jobId: jobDatas } },
+                            success: function() { 
+                                Ext.Msg.alert("Wando", 'success');
+                            },
+                            failure: function() { 
+                                Ext.Msg.alert('Wando', 'failure');
+                            }
+                        });
+                    }
                 }
             ],
+            sm: sm,
             cm: new Ext.grid.ColumnModel([
-                new Ext.grid.RowNumberer(),
+                sm,
                 { header: 'ID', dataIndex: 'id', width: 5 },
                 { header: '问题', dataIndex: 'qcon' }
             ])
@@ -218,13 +238,15 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
      *insertPos:  插入的位置
     */
     recordsMoveHandler: function() { 
-        /*argument list***///todo:应该考虑用hash对象实现; 函数体太过于庞大了,缩减
+        /*argument list***///todo:应该考虑用hash对象实现; 函数体太过于庞大了,分解
         var sourceGrid  = arguments[0];
         var aimGrid     = arguments[1];
         var action      = arguments[2] ? arguments[2] : 'add';
         var indexs      = arguments[3] ? arguments[3] : sourceGrid.getStore().fields.keys;  //默认两个store的fields一样
         var insertPos   = arguments[4] ? arguments[4] : 0;  //插入位置以0为grid的第一行
         /*****************/
+
+        var _this = this;
 
         //获取两个grid的store
         var sourceStore = sourceGrid.getStore();
@@ -240,6 +262,8 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
 
         //将records中的数据构造为[{}, {}]形式
         var datas = [];
+        datas = _this.gdGetor(sourceGrid, indexs, 'selections');
+        /*
         for(var i = 0; i < records.length; i++) { 
             var data = {};
             for(var j = 0; j < indexs.length; j++) { 
@@ -247,6 +271,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             }
             datas.push(data);
         }
+        */
 
         //解析action
         var isDelete = false;
@@ -281,10 +306,9 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
         }
 
         //删除sourceStore中的选中数据
-        var _this = this;
         if(isDelete == true) { 
             /*
-            for(var i = 0; i < records.length; i++){ 
+            for(var i = 0; i < records.length; i++) { 
                 var index = sourceStore.indexOf(records[i]);
                 sourceStore.removeAt(index);
             }
@@ -298,14 +322,49 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
     /*删除grid中选中的数据 **********
      *aimGrid: 需要操作的grid
     */
-    //gs: grid selected
-    gsDeleter: function(aimGrid){ 
+    //gs: grid, selected
+    gsDeleter: function(aimGrid) { 
         var records = aimGrid.getSelectionModel().getSelections();
         var store = aimGrid.getStore();
-        for(var i = 0; i < records.length; i++){ 
+        for(var i = 0; i < records.length; i++) { 
             var index = store.indexOf(records[i]);
             store.removeAt(index);
         }
+    },
+
+    /*由于将gird中的数据取出并构造为[{}, {}]的形式
+     *sourceGrid: Ext.grid
+     *indexs:     []  想要导出数据域
+     *action:     'all' || 'selections', defaults: 'add'
+    */
+    //gd: grid, data
+    gdGetor: function(sourceGrid, indexs, action) { 
+        var sourceStore = sourceGrid.getStore();
+
+        //判断indexs是否为空
+        if(indexs.length == 0) { 
+            indexs = sourceStore.fields.keys;
+        }
+
+        //判断action
+        var records = [];
+        if(action == 'all' || action == 'selections') { 
+            if(action == 'all') sourceGrid.getSelectionModel().selectAll();
+            records = sourceGrid.getSelectionModel().getSelections();
+        }else { 
+            return false;
+        }
+
+        //获取数据
+        var datas = [];
+        for(var i = 0; i < records.length; i++) { 
+            var data = {};
+            for(var j = 0; j < indexs.length; j++) { 
+                data[indexs[j]] = records[i].get(indexs[j]);
+            }
+            datas.push(data);
+        }
+        return datas;
     },
 
     /*处理进入创建问卷tab*/

@@ -16,6 +16,7 @@
 #
 
 class Job < ActiveRecord::Base
+  has_many :groups
 
   validates_presence_of :jname            , :message => "职位名称不能为空" 
   validates_presence_of :job_number       , :message => "招聘人数不能为空"

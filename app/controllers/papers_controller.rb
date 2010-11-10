@@ -1,8 +1,10 @@
 class PapersController < ApplicationController
   #Post: /papers
   def create
-    paper = params[:paper]
-    Paper.create!(paper)
+    pDatas = params[:pDatas]
+    debugger
+    gbIds = pDatas
+    Group.create!(paper)
     render :json => { :message => 'success' }
   end
 end
