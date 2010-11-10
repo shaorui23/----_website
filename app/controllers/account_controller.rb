@@ -16,13 +16,11 @@ class AccountController < ApplicationController
       #  self.current_user.remember_me
       #  cookies[:auth_token] = { :value => self.current_user.remember_token , :expires => self.current_user.remember_token_expires_at }
       #end
-      redirect_back_or_default(:controller => 'persons', :action => 'index')
       flash[:notice] = "#{ current_user.login },登录成功!"
     else
       flash[:notice] =  "登录失败,没有该帐号或帐号未验证" 
-      redirect_back_or_default(:controller => "homes", :action => "index")
     end
-
+      redirect_back_or_default(:controller => "homes", :action => "index")
   end
 
   #Comment: Mouse
@@ -48,8 +46,8 @@ class AccountController < ApplicationController
     cookies.delete :auth_token
     reset_session
     if logged_in?
-      flash[:notice] = "#{ current_user.login }，您已经退出"
-      redirect_back_or_default(:controller => '/account', :action => 'index')
+      flash[:notice] = "#{ current_user.login }，您已经成功退出登录"
+      redirect_back_or_default(:controller => 'homes', :action => 'index')
     else
       flash[:notice] = "您好，您还没有登录"
       redirect_back_or_default(:controller => "homes", :action => "index")
@@ -61,10 +59,9 @@ class AccountController < ApplicationController
     @user = User.find_by_activation_code(params[:id])
     if @user and @user.activate
       self.current_user = @user
-      flash[:notice] = "验证成功！您现在可以登录了"
+      flash[:notice] = "验证成功！#{ current_user.login },您现在可以填写个人资料了!"
     end
-      redirect_back_or_default(:controller => '/homes', :action => "index")
+      redirect_back_or_default(:controller => '/persons', :action => "index")
   end
-
 
 end
