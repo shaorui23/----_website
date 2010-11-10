@@ -4,6 +4,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :jobs
   map.resources :manage,:collection => { :edit_resume => :get,
                                          :update_resume => :put,
+                                         :create_resume => :post,
+                                         :resume_an =>:get,
+                                         :find_resume_an => :get,
                                        }
   map.resources :manage
   map.resources :papers

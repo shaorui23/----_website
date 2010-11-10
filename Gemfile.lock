@@ -20,7 +20,9 @@ GEM
     columnize (0.3.2)
     faker (0.3.1)
     linecache (0.43)
+    machinist (1.0.6)
     mysql (2.8.1)
+    populator (0.2.5)
     rack (1.0.1)
     rails (2.3.5)
       actionmailer (= 2.3.5)
@@ -48,7 +50,9 @@ PLATFORMS
 
 DEPENDENCIES
   faker
+  machinist
   mysql (= 2.8.1)
+  populator
   rails (= 2.3.5)
   randexp (= 0.1.5)
   ruby-debug
