@@ -27,4 +27,9 @@
 
 class ResumeAns < ActiveRecord::Base
   belongs_to  :user
+
+  validates_presence_of     :rname_a, :rpho_a,  :riden_a
+  validates_uniqueness_of   :riden_a
+  
+  
 end
