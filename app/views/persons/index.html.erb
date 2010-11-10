@@ -44,34 +44,61 @@
 															<!--SignOn-->
 															<table border="0" cellpadding="0" cellspacing="10" width="100%">
 																<tbody><tr>
-                                  <% form_for :user do |f| -%>
+                                  <% form_for :resume_ans, @resume_ans, :controller => "persons", :action => "create" do |f| -%>
 																	<td align="center" width="20%"><img src="../images/bul_or_tri1.gif" height="7" width="4"></td>
                                   <div align="center" font-color="red">
                                     <% if flash[:error] %>
                                       <font color="red"><%= flash[:error] %></font>
                                     <% end %>
                                   </div>
-                                    <td width="26%"><label for="login">登录名</label></td>
-                                    <td ><%= f.text_field :login %></td>
+                                    <td width="26%"><label for="login"><%= @resume.rname%></label></td>
+                                    <td ><%= f.text_field :rname_a %></td>
 																</tr>
 																<tr>
 																	<td align="center"><img src="../images/bul_or_tri1.gif" height="7" width="4"></td>
-                                  <td width="26%"><label for="email">电子邮箱</label></td>
-                                  <td ><%= f.text_field :email %></td>
+                                  <td width="26%"><label for="email"><%= @resume.riden %></label></td>
+                                  <td ><%= f.text_field :riden_a %></td>
 																</tr>
 																<tr>
 																	<td align="center"><img src="../images/bul_or_tri1.gif" height="7" width="4"></td>
-                                  <td><label for="password">密码</label></td>
-                                  <td><%= f.password_field :password %></td>
+                                  <td><label for="password"><%= @resume.rpho %></label></td>
+                                  <td><%= f.text_field :rpho_a %></td>
 																</tr>
 																<tr>
-																	<td align="center"><img src="../images/bul_or_tri1.gif" height="7" width="4"></td>
-                                  <td><label for="password_confirmation">重复密码</label></td>
-                                  <td><%= f.password_field :password_confirmation %></td>
+																	<td align="center"></td>
+                                  <td><label for="password_confirmation"><%= @resume.rsex %></label></td>
+                                  <td><%= f.select :rsex_a, %w{ 男 女 } %></td>
+																</tr>
+																	<td align="center"></td>
+                                <tr>
+																	<td align="center"></td>
+                                  <td><label for="password_confirmation"><%= @resume.redu %></label></td>
+                                  <td><%= f.text_field :redu_a %></td>
 																</tr>
                                 <tr>
+																	<td align="center"></td>
+                                  <td><label for="password_confirmation"><%= @resume.rprof %></label></td>
+                                  <td><%= f.text_field :rprof_a %></td>
+																</tr>
+                                <tr>
+																	<td align="center"></td>
+                                  <td><label for="password_confirmation"><%= @resume.rbirth %></label></td>
+                                  <td><%= f.date_select :rbirth_a, :start_year => 1960,:end_year => 2000  %></td>
+																</tr>
+                                <tr>
+																	<td align="center"></td>
+                                  <td><label for="password_confirmation"><%= @resume.raddr %></label></td>
+                                  <td><%= f.text_field :raddr_a %></td>
+																</tr>
+                                <tr>
+																	<td align="center"></td>
+                                  <td><label for="password_confirmation"><%= @resume.reva %></label></td>
+                                  <td><%= f.text_area :reva_a %></td>
+																</tr>
+                                
+                                <tr>
                                   <td></td>
-                                  <td><div id="btn"><%= button_to"注册"  %></td>
+                                  <td><div id="btn"><%= button_to"提交"  %></td>
                                 </tr>
                                 <%end%>
 															</tbody></table>

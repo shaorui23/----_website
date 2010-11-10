@@ -59,7 +59,7 @@ class AccountController < ApplicationController
     @user = User.find_by_activation_code(params[:id])
     if @user and @user.activate
       self.current_user = @user
-      flash[:notice] = "验证成功！#{ current_user.login },您现在可以填写个人资料了!"
+      flash[:notice] = "验证成功！#{ current_user.login },您现在可以填写个人资料了,完整简历才可以让你选取职位"
     end
       redirect_back_or_default(:controller => '/persons', :action => "index")
   end
