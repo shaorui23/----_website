@@ -39,7 +39,7 @@ class Job < ActiveRecord::Base
 
 end
 
-=begin
+
 Job.blueprint do  
   jname               { Faker::Lorem.words.first }
   jdesc               { Faker::Lorem.sentence }
@@ -50,4 +50,3 @@ Job.blueprint do
   requirement         { Faker::Lorem.sentence }
   state               { /'ing'|'closing'|'over'/.gen }
 end
-=end

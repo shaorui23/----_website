@@ -30,6 +30,12 @@ class JobsController < ApplicationController
      render_error e.to_s
   end
 
+#GET /jobs/:id/get_job
+  def get_job
+    @job = Job.find params[:id]
+    render_json @job
+  end
+
 #DELETE
   def destroy
     @job = Job.find(params[:id])

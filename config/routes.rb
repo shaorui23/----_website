@@ -1,13 +1,18 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :homes
   map.resources :accounts
-  map.resources :jobs
-  map.resources :manage,:collection => { :edit_resume => :get,
-                                         :update_resume => :put,
-                                         :create_resume => :post,
-                                         :resume_an =>:get,
-                                         :find_resume_an => :get,
-                                       }
+  map.resources :jobs,
+    :member => { 
+      :get_job => :get
+    }
+  map.resources :manage,
+    :collection => {
+      :edit_resume => :get,
+      :resume_an =>:get,
+      :find_resume_an => :get,
+      :create_resume => :post,
+      :update_resume => :put,
+  }
   map.resources :manage
   map.resources :papers, 
                 :collection => { 

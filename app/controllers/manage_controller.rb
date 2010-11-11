@@ -18,7 +18,12 @@ class ManageController < ApplicationController
       render_json @resumes
     end
 
-#PUT /manage/update_resume.json
+#GET /manage/:id/get_job.json
+    def get_job
+      @job = Job.find(params[:id])
+      render_json @job
+    end
+
     def update_resume
       @resumes = Resume.first
       if @resumes.update_attributes(params[:resume][0])
