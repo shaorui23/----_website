@@ -9,6 +9,7 @@ class PapersController < ApplicationController
 
     render :json => papers
   end
+
 #Post: /papers
   def create
     pDatas = params[:pDatas]
@@ -23,10 +24,28 @@ class PapersController < ApplicationController
 
     render :json => { :message => 'success' }
   end
+
 #GET: /papers/show_questions:id
-    def show_questions
-      oldPaper = Group.find(params[:id])
+  def show_questions
+    oldPaper = Group.find(params[:id])
       questions = oldPaper.questions
-      render :json => questions
-    end
+    render :json => questions
+  end
+
+#Post: /papers/be_active
+#将试卷的状态改为使用中
+  def be_active
+    beActiver = Group.find(params[:id])
+    actives = Group.job_unactivelize(params[:job_id])
+    beActiver.update_attributes({ :active => true })
+    render :json => beActiver
+  end
+
+#Post: /papers/be_unactive
+#将试卷的状态改为禁用
+  def be_unactive
+    paper = Group.find(params[:id])
+    paper.update_attributes({ :active => false })
+    render :json => paper
+  end
 end

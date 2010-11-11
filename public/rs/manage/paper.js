@@ -1,7 +1,6 @@
 Manage.PaperCenter = Ext.extend(Ext.app.Module, {
     id: 'paperCenter',
     init: function() {
-        van = this;
         this.launcher = {
             text: '问卷中心',
             iconCls: 'bogus',
@@ -67,8 +66,31 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
     },
 
     //改变paper的状态
-    paperStateer: function() { 
-        alert(123);
+    paperStateer: function(id, job_id, action) { 
+        var url = '';
+        var datas = {};
+        //判断当前试卷是要启用还是要禁用，true为启用，false为禁用
+        if(action == true) { 
+            url = '/papers/be_active';
+            datas = { id: id, job_id: job_id };
+        }
+        else { 
+            url = '/papers/be_unactive';
+            datas = { id: id };
+        }
+
+        Ext.Ajax.request({ 
+            url: url,
+            method: 'post',
+            jsonData: datas,
+            success: function() { 
+                Ext.Msg.alert('Wando', 'success');
+            },
+            failure: function() { 
+                Ext.Msg.alert('Wando', 'failure');
+            }
+        });
+        Ext.getCmp('opGrid').getStore().reload();
     },
 
     //OP: old paper
@@ -78,13 +100,27 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             fields: [
                 'id',
                 'job_id',
-                'job_name'
+                'job_name',
+                'active'
             ]
         });
 
         function stateRender() { 
-            //todo: 问卷状态,与审批
-            return "<a href='#' onclick='Manage.paperCenter.paperStateer()'>禁用</a>"
+            var record = arguments[2];
+            if(record.get('active') == false) {
+                return "<a href='#' onclick='Manage.paperCenter.paperStateer(" + record.get('id') + ', ' + record.get('job_id')  + ", true)'>启用</a>";
+            }else { 
+                return "<a href='#' onclick='Manage.paperCenter.paperStateer(" + record.get('id') +  ', ' + record.get('job_id') + ", false)'>禁用</a>";
+            }
+        }
+
+        function activeRender() { 
+            var record = arguments[2];
+            if(record.get('active') == false) { 
+                return "禁用";
+            }else { 
+                return "使用中";
+            }
         }
 
         return new Ext.grid.GridPanel({ 
@@ -100,9 +136,10 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             }],
             cm: new Ext.grid.ColumnModel([
                 new Ext.grid.RowNumberer(),
-                { header: 'ID', dataIndex: 'id' },
-                { header: '职位', dataIndex: 'job_name' },
-                { header: '状态', dataIndex: '#', renderer: stateRender }
+                { header: 'ID',    dataIndex: 'id' },
+                { header: '职位',  dataIndex: 'job_name' },
+                { header: '状态',  dataIndex: 'active', renderer: activeRender },
+                { header: '操作',  dataIndex: '#',      renderer: stateRender }
             ]),
             listeners: { 
                 cellclick: function(grid, rowIndex, columnIndex, e) { 
@@ -236,7 +273,6 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
         var qbStore = new Ext.data.JsonStore({ 
             url: '/questions.json',
             fields: [
-                'van',
                 'id',
                 'qcon'
             ]

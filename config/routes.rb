@@ -16,7 +16,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :manage
   map.resources :papers, 
                 :collection => { 
-                  :show_questions => :get
+                  :show_questions  => :get,
+                  :be_active       => :post,
+                  :be_unactive     => :post
                 }
   map.resources :questions, 
                 :collection => { :deletes => :delete }
