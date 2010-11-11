@@ -11681,3 +11681,400 @@ Rendering template within layouts/application
 Rendering homes/index
   [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
 Completed in 22ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (14.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateResumes (20101107021111)
+Migrating to CreateResumeAns (20101107021443)
+Migrating to CreateGroups (20101107021725)
+Migrating to CreateQuestions (20101107022550)
+Migrating to CreateGroupQuestions (20101107022814)
+Migrating to CreateGroupAns (20101107023010)
+Migrating to CreateJobs (20101107023520)
+Migrating to AddMoreFieldsToJob (20101107114223)
+Migrating to AddDetailToResume (20101107122626)
+Migrating to AddDetailTo (20101107125754)
+Migrating to ChangeColumnInResume (20101109082132)
+Migrating to CreateUsers (20101109111353)
+Migrating to AddResumeData (20101110035952)
+Migrating to AddAdminData (20101110055249)
+Migrating to AddResumeUserId (20101110084430)
+Migrating to AddStateColumnInGroup (20101110113106)
+Migrating to AddResumeAnsUserId (20101110144713)
+  [4;36;1mSQL (236.9ms)[0m   [0;1mALTER TABLE `resume_ans` ADD `user_id` int(11)[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101110144713')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `group_ans`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `group_ans`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `group_ans`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `groups`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `groups`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `groups_questions`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `groups_questions`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `groups_questions`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `jobs`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `jobs`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resume_ans`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `resume_ans`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `resume_ans`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `resumes`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `resumes`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `resumes`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mResumeAns Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resume_ans`[0m
+  [4;36;1mResumeAns Load (0.3ms)[0m   [0;1mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;36;1mResumeAns Load (0.1ms)[0m   [0;1mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mResumeAns Load (0.4ms)[0m   [0;1mSELECT `resume_ans`.id FROM `resume_ans` WHERE (`resume_ans`.`riden_a` = BINARY '44***************' AND `resume_ans`.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mResumeAns Load (0.1ms)[0m   [0;1mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT `resume_ans`.id FROM `resume_ans` WHERE (`resume_ans`.`riden_a` = BINARY '44***************' AND `resume_ans`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT `resume_ans`.id FROM `resume_ans` WHERE (`resume_ans`.`riden_a` = BINARY '44***************' AND `resume_ans`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT `resume_ans`.id FROM `resume_ans` WHERE (`resume_ans`.`riden_a` = BINARY '44***************' AND `resume_ans`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT `resume_ans`.id FROM `resume_ans` WHERE (`resume_ans`.`riden_a` = BINARY '44***************' AND `resume_ans`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;36;1mResumeAns Load (0.1ms)[0m   [0;1mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;36;1mResumeAns Load (0.1ms)[0m   [0;1mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;35;1mResumeAns Load (0.2ms)[0m   [0mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT `resume_ans`.id FROM `resume_ans` WHERE (`resume_ans`.`riden_a` = BINARY '44***************' AND `resume_ans`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;36;1mResumeAns Load (0.1ms)[0m   [0;1mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mResumeAns Load (0.1ms)[0m   [0;1mSELECT `resume_ans`.id FROM `resume_ans` WHERE (`resume_ans`.`riden_a` = BINARY '44***************' AND `resume_ans`.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mResumeAns Load (0.1ms)[0m   [0;1mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;36;1mResumeAns Load (0.1ms)[0m   [0;1mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mResumeAns Load (0.1ms)[0m   [0;1mSELECT `resume_ans`.id FROM `resume_ans` WHERE (`resume_ans`.`riden_a` = BINARY '44***************' AND `resume_ans`.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 1[0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mJob Update (0.4ms)[0m   [0;1mUPDATE `jobs` SET `updated_at` = '2010-11-11 03:54:58', `jdesc` = '123' WHERE `id` = 1[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mResumeAns Load (0.4ms)[0m   [0mSELECT * FROM `resume_ans` [0m
+  [4;36;1mResumeAns Load (0.1ms)[0m   [0;1mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;36;1mResumeAns Load (0.1ms)[0m   [0;1mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;36;1mResumeAns Load (0.1ms)[0m   [0;1mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;36;1mResumeAns Load (0.1ms)[0m   [0;1mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT `resume_ans`.id FROM `resume_ans` WHERE (`resume_ans`.`riden_a` = BINARY '44***************' AND `resume_ans`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT `resume_ans`.id FROM `resume_ans` WHERE (`resume_ans`.`riden_a` = BINARY '44***************' AND `resume_ans`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mJob Load (0.3ms)[0m   [0mSELECT * FROM `jobs` LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mJob Update (0.3ms)[0m   [0mUPDATE `jobs` SET `updated_at` = '2010-11-11 03:57:32', `jdesc` = '213123' WHERE `id` = 1[0m
+  [4;36;1mSQL (36.3ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateResumes (20101107021111)
+Migrating to CreateResumeAns (20101107021443)
+Migrating to CreateGroups (20101107021725)
+Migrating to CreateQuestions (20101107022550)
+Migrating to CreateGroupQuestions (20101107022814)
+Migrating to CreateGroupAns (20101107023010)
+Migrating to CreateJobs (20101107023520)
+Migrating to AddMoreFieldsToJob (20101107114223)
+Migrating to AddDetailToResume (20101107122626)
+Migrating to AddDetailTo (20101107125754)
+Migrating to ChangeColumnInResume (20101109082132)
+Migrating to CreateUsers (20101109111353)
+Migrating to AddResumeData (20101110035952)
+Migrating to AddAdminData (20101110055249)
+Migrating to AddResumeUserId (20101110084430)
+Migrating to AddStateColumnInGroup (20101110113106)
+Migrating to AddResumeAnsUserId (20101110144713)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `group_ans`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `group_ans`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `group_ans`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `groups`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `groups`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `groups_questions`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `groups_questions`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `groups_questions`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `jobs`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `jobs`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resume_ans`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `resume_ans`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `resume_ans`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `resumes`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `resumes`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `resumes`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (105.0ms)[0m   [0mCREATE TABLE `group_ans` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `gque_one` varchar(255), `gque_two` varchar(255), `gque_three` varchar(255), `gque_four` varchar(255), `gque_five` varchar(255), `gque_six` varchar(255), `gmark` int(11), `group_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (71.2ms)[0m   [0mCREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `gque` varchar(255), `job_id` int(11), `created_at` datetime, `updated_at` datetime, `active` tinyint(1) DEFAULT 0) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (101.0ms)[0m   [0mCREATE TABLE `groups_questions` (`group_id` int(11), `question_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (82.9ms)[0m   [0mCREATE TABLE `jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `jname` varchar(255), `jdesc` varchar(255), `created_at` datetime, `updated_at` datetime, `created_date` date, `closed_date` date, `position_type` varchar(255), `job_number` int(11), `requirement` varchar(255), `state` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (91.6ms)[0m   [0mCREATE TABLE `questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `qcon` varchar(255), `qjug` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (90.6ms)[0m   [0mCREATE TABLE `resume_ans` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `rexp_a` varchar(255), `redu_a` varchar(255), `rskill_a` varchar(255), `reva_a` varchar(255), `created_at` datetime, `updated_at` datetime, `rname_a` varchar(255), `rsex_a` varchar(255), `rbirth_a` date, `rmari_sta_a` varchar(255), `rrace_a` varchar(255), `rblood_a` varchar(255), `rhei_a` varchar(255), `rwei_a` varchar(255), `rpoli_a` varchar(255), `riden_a` varchar(255), `rpho_a` varchar(255), `rmail_a` varchar(255), `raddr_a` varchar(255), `rprof_a` varchar(255), `user_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (90.4ms)[0m   [0mCREATE TABLE `resumes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `rexp` varchar(255), `redu` varchar(255), `rskill` varchar(255), `reva` varchar(255), `created_at` datetime, `updated_at` datetime, `rname` varchar(255), `rsex` varchar(255), `rbirth` varchar(255), `rmari_sta` varchar(255), `rrace` varchar(255), `rblood` varchar(255), `rhei` varchar(255), `rwei` varchar(255), `rpoli` varchar(255), `riden` varchar(255), `rpho` varchar(255), `rmail` varchar(255), `raddr` varchar(255), `rprof` varchar(255), `user_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.2ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255), `email` varchar(255), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(255), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.8ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (159.7ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (23.4ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101110144713')[0m
+  [4;36;1mSQL (41.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101107021443')[0m
+  [4;35;1mSQL (25.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101107021725')[0m
+  [4;36;1mSQL (25.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101107022814')[0m
+  [4;35;1mSQL (33.3ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101107021111')[0m
+  [4;36;1mSQL (25.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101109082132')[0m
+  [4;35;1mSQL (25.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101110113106')[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101107125754')[0m
+  [4;35;1mSQL (34.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101110035952')[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101107022550')[0m
+  [4;35;1mSQL (33.4ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101110084430')[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101107122626')[0m
+  [4;35;1mSQL (33.3ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101107023010')[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101110055249')[0m
+  [4;35;1mSQL (33.3ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101109111353')[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101107023520')[0m
+  [4;35;1mSQL (33.3ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101107114223')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mResumeAns Load (0.6ms)[0m   [0;1mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;36;1mResumeAns Load (0.1ms)[0m   [0;1mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Delete all (0.4ms)[0m   [0;1mDELETE FROM `jobs` [0m
+  [4;35;1mResumeAns Delete all (0.2ms)[0m   [0mDELETE FROM `resume_ans` [0m
+  [4;36;1mJob Last ID (0.3ms)[0m   [0;1mSELECT id FROM `jobs` ORDER BY id DESC[0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Populate (53.1ms)[0m   [0;1mINSERT INTO `jobs` (`id`, `jname`, `jdesc`, `created_at`, `updated_at`, `created_date`, `closed_date`, `position_type`, `job_number`, `requirement`, `state`) VALUES (1, 'eligendi', 'Quia libero iure perspiciatis.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', '2010-11-11', '2009-01-12 21:39:10', 'qui', 1, 'Tempora accusamus eaque unde maiores quis quisquam.', 'Ransom Stokes'), (2, 'reiciendis', 'Porro eius sunt enim dolorem sunt libero.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', '2010-11-11', '2009-11-04 15:39:59', 'aut', 1, 'Vel fuga consequatur sit error vel aut officia.', 'August Hauck'), (3, 'facere', 'Et laudantium mollitia alias quisquam aut ut fugiat.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', '2010-11-11', '2010-07-12 12:12:55', 'unde', 24, 'Deleniti facilis sit eaque quod.', 'Golden Durgan'), (4, 'ratione', 'Non voluptates et iure natus aut aut corrupti dignissimos.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', '2010-11-11', '2010-10-26 07:46:02', 'eos', 24, 'Qui unde non dolores.', 'Alessandra Kuphal'), (5, 'necessitatibus', 'Dolor aut dolorem aspernatur ipsam hic debitis praesentium.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', '2010-11-11', '2009-11-03 19:41:05', 'possimus', 1, 'Doloremque qui ab incidunt vel dignissimos deleniti.', 'Aurelia Kuvalis'), (6, 'ad', 'Molestiae sunt quas est vel voluptate.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', '2010-11-11', '2009-01-22 10:23:20', 'aut', 1, 'Ut vel minima rem ex tenetur optio quia et.', 'Savannah Parker'), (7, 'officia', 'Ipsa ad quibusdam ipsam quas velit qui in.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', '2010-11-11', '2010-09-05 13:20:00', 'vel', 24, 'Voluptatem corporis vitae dolorem aut quia.', 'Catharine Daugherty'), (8, 'odit', 'Ex qui exercitationem fugit impedit deserunt.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', '2010-11-11', '2008-11-16 01:07:56', 'voluptatem', 24, 'Magnam odit recusandae suscipit veniam iusto sint.', 'Melisa Treutel'), (9, 'dolor', 'In illum nemo est omnis.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', '2010-11-11', '2010-02-19 20:27:09', 'quibusdam', 24, 'Non iste sit odio voluptatum.', 'Yadira Bahringer'), (10, 'quis', 'Ut qui tenetur molestias consequuntur magni.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', '2010-11-11', '2010-10-01 17:04:10', 'libero', 24, 'Neque facilis officiis debitis assumenda autem.', 'Tyreek Friesen')[0m
+  [4;35;1mResumeAns Last ID (0.2ms)[0m   [0mSELECT id FROM `resume_ans` ORDER BY id DESC[0m
+  [4;36;1mResumeAns Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resume_ans`[0m
+  [4;35;1mResumeAns Populate (40.4ms)[0m   [0mINSERT INTO `resume_ans` (`id`, `rexp_a`, `redu_a`, `rskill_a`, `reva_a`, `created_at`, `updated_at`, `rname_a`, `rsex_a`, `rbirth_a`, `rmari_sta_a`, `rrace_a`, `rblood_a`, `rhei_a`, `rwei_a`, `rpoli_a`, `riden_a`, `rpho_a`, `rmail_a`, `raddr_a`, `rprof_a`, `user_id`) VALUES (1, 'Sint assumenda consequatur molestiae nihil nobis et.', 'et', 'dolorem', 'Ut nemo aliquam aut quibusdam.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', 'est', 'g', '2010-11-11', 'no', 'et', 'AB', '1.80', '60', 'non', '44***************', 119, 'mail', 'facere', 'illo', NULL), (2, 'Exercitationem autem perspiciatis dolor.', 'expedita', 'velit', 'Ratione autem aut quis sint assumenda magnam nobis.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', 'incidunt', 'm', '2010-11-11', 'yes', 'sint', 'AB', '1.70', '50', 'ut', '44***************', 110, 'no', 'cum', 'provident', NULL), (3, 'Quia et quaerat earum a.', 'rerum', 'sapiente', 'Sit voluptatem in consequatur.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', 'sit', 'g', '2010-11-11', 'no', 'voluptatem', 'B', '1.50', '60', 'error', '44***************', 120, 'mail', 'aut', 'esse', NULL), (4, 'Delectus animi vero sequi.', 'consequatur', 'illo', 'Corrupti porro sit iusto et.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', 'earum', 'm', '2010-11-11', 'no', 'amet', 'AB', '1.80', '90', 'et', '44***************', 110, 'mail', 'est', 'assumenda', NULL), (5, 'Autem vel repellendus ut ratione eius.', 'magnam', 'aperiam', 'Ex facere ducimus est expedita impedit.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', 'est', 'm', '2010-11-11', 'yes', 'voluptatem', 'A', '1.70', '90', 'accusantium', '44***************', 110, 'mail', 'neque', 'sequi', NULL), (6, 'Aspernatur aut ut dolorum.', 'assumenda', 'ipsa', 'Voluptas debitis asperiores ipsam.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', 'adipisci', 'g', '2010-11-11', 'yes', 'id', 'A', '1.50', '90', 'temporibus', '44***************', 120, 'no', 'veniam', 'neque', NULL), (7, 'Aut quisquam repellendus fugit.', 'voluptate', 'expedita', 'Quibusdam omnis vitae eaque voluptatem ducimus vel sunt.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', 'eos', 'g', '2010-11-11', 'no', 'dicta', 'O', '1.60', '80', 'nesciunt', '44***************', 119, 'mail', 'voluptatem', 'maxime', NULL), (8, 'Harum quis culpa sint numquam enim aliquam.', 'voluptatibus', 'minus', 'Tempore natus sunt sint at hic qui voluptates ut.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', 'et', 'g', '2010-11-11', 'yes', 'possimus', 'O', '1.60', '50', 'aperiam', '44***************', 110, 'mail', 'numquam', 'exercitationem', NULL), (9, 'Ut qui veritatis repellat beatae animi.', 'eos', 'id', 'Mollitia consectetur adipisci aut non eum.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', 'quasi', 'm', '2010-11-11', 'yes', 'atque', 'AB', '1.60', '90', 'quia', '44***************', 110, 'mail', 'nam', 'est', NULL), (10, 'Neque sint dolores eos voluptatem suscipit placeat qui necessitatibus.', 'illum', 'suscipit', 'Fuga dolorem eveniet et beatae ea sit.', '2010-11-11 11:58:38', '2010-11-11 11:58:38', 'delectus', 'g', '2010-11-11', 'yes', 'rerum', 'A', '1.50', '100', 'iste', '44***************', 120, 'no', 'error', 'quia', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mResumeAns Load (0.4ms)[0m   [0;1mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;35;1mResumeAns Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resume_ans`[0m
+  [4;36;1mResumeAns Load (0.2ms)[0m   [0;1mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mResumeAns Load (0.4ms)[0m   [0;1mSELECT `resume_ans`.id FROM `resume_ans` WHERE (`resume_ans`.`riden_a` = BINARY '44***************' AND `resume_ans`.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mResumeAns Load (0.1ms)[0m   [0;1mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT * FROM `resume_ans` LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResumeAns Load (0.1ms)[0m   [0mSELECT `resume_ans`.id FROM `resume_ans` WHERE (`resume_ans`.`riden_a` = BINARY '44***************' AND `resume_ans`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Delete all (55.9ms)[0m   [0;1mDELETE FROM `jobs` [0m
+  [4;35;1mResumeAns Delete all (41.4ms)[0m   [0mDELETE FROM `resume_ans` [0m
+  [4;36;1mJob Last ID (0.3ms)[0m   [0;1mSELECT id FROM `jobs` ORDER BY id DESC[0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Populate (47.3ms)[0m   [0;1mINSERT INTO `jobs` (`id`, `jname`, `jdesc`, `created_at`, `updated_at`, `created_date`, `closed_date`, `position_type`, `job_number`, `requirement`, `state`) VALUES (1, 'impedit', 'Voluptatem velit sapiente adipisci nostrum qui doloribus culpa modi.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', '2010-11-11', '2009-05-23 22:14:29', 'voluptate', 1, 'Voluptates aut ea odio velit rerum dolorem.', 'Lavinia Stroman'), (2, 'aliquid', 'Consequatur laudantium velit doloremque aut sunt.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', '2010-11-11', '2009-08-27 03:51:43', 'itaque', 1, 'Eos et accusantium atque.', 'Jerald Lesch III'), (3, 'libero', 'Omnis voluptas earum corporis aperiam nesciunt magni.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', '2010-11-11', '2010-01-31 04:23:14', 'alias', 24, 'Distinctio architecto minus et.', 'Josiah O\'Kon PhD'), (4, 'dolorum', 'Sint illum consequatur fugit ut perferendis eum corporis.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', '2010-11-11', '2009-09-02 18:54:36', 'cupiditate', 1, 'Enim adipisci sapiente numquam veritatis perspiciatis assumenda totam qui.', 'Ronaldo Olson'), (5, 'enim', 'Reprehenderit dolor ea rerum sed.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', '2010-11-11', '2010-08-04 15:22:00', 'laboriosam', 24, 'Eum cum veniam dolor in eum et recusandae.', 'Albert Stiedemann'), (6, 'asperiores', 'Sunt ratione omnis dignissimos.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', '2010-11-11', '2009-07-05 23:12:31', 'quia', 1, 'Veritatis earum iste facere corporis quis.', 'Ressie Tremblay'), (7, 'necessitatibus', 'Ut libero optio placeat velit qui.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', '2010-11-11', '2009-05-28 02:42:18', 'magni', 52, 'Iste suscipit consequatur sint est sed.', 'Celestine Deckow'), (8, 'voluptatum', 'Ut magni est velit nostrum delectus eum facere.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', '2010-11-11', '2008-11-19 17:03:42', 'aspernatur', 24, 'Dignissimos voluptatem nihil quas dolorum sint sit laboriosam magni.', 'Magali Lueilwitz'), (9, 'aut', 'Eum qui dolorem laboriosam voluptas.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', '2010-11-11', '2010-11-05 01:14:58', 'ut', 24, 'Quos eum exercitationem quia ab iusto excepturi.', 'Dallin Kerluke'), (10, 'qui', 'Aperiam animi et ipsum ea dolores.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', '2010-11-11', '2009-06-15 14:00:25', 'et', 24, 'Voluptatibus eveniet exercitationem odio corporis fugit.', 'Jack Halvorson')[0m
+  [4;35;1mResumeAns Last ID (0.3ms)[0m   [0mSELECT id FROM `resume_ans` ORDER BY id DESC[0m
+  [4;36;1mResumeAns Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resume_ans`[0m
+  [4;35;1mResumeAns Populate (38.5ms)[0m   [0mINSERT INTO `resume_ans` (`id`, `rexp_a`, `redu_a`, `rskill_a`, `reva_a`, `created_at`, `updated_at`, `rname_a`, `rsex_a`, `rbirth_a`, `rmari_sta_a`, `rrace_a`, `rblood_a`, `rhei_a`, `rwei_a`, `rpoli_a`, `riden_a`, `rpho_a`, `rmail_a`, `raddr_a`, `rprof_a`, `user_id`) VALUES (1, 'Porro enim fugit sint assumenda voluptate sed suscipit.', 'voluptatem', 'animi', 'Qui repellendus sit accusamus.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', 'minima', 'g', '2010-11-11', 'no', 'aperiam', 'O', '1.50', '100', 'recusandae', '44***************', 110, 'no', 'ea', 'non', NULL), (2, 'Perspiciatis sed magnam fugiat quam recusandae.', 'sit', 'atque', 'Aliquam reprehenderit aspernatur omnis sit sed.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', 'unde', 'g', '2010-11-11', 'yes', 'doloribus', 'B', '1.70', '80', 'rerum', '44***************', 120, 'mail', 'laboriosam', 'est', NULL), (3, 'Quo velit omnis voluptatum minima fugiat eum dolorem.', 'at', 'rerum', 'Quia at et tempore nostrum dolorum labore.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', 'repellendus', 'g', '2010-11-11', 'yes', 'at', 'B', '1.50', '90', 'assumenda', '44***************', 120, 'no', 'ipsum', 'vel', NULL), (4, 'Repellat magni recusandae quia ipsa fugiat nisi.', 'et', 'corporis', 'Adipisci tempora amet error aut consequatur id aliquam impedit.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', 'consequatur', 'm', '2010-11-11', 'yes', 'et', 'O', '1.80', '80', 'aliquam', '44***************', 120, 'mail', 'exercitationem', 'illum', NULL), (5, 'Qui quisquam debitis rerum.', 'commodi', 'nihil', 'Necessitatibus officiis repudiandae labore error sit eius ullam.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', 'quas', 'g', '2010-11-11', 'yes', 'molestias', 'AB', '1.50', '60', 'est', '44***************', 120, 'no', 'consequatur', 'aut', NULL), (6, 'Impedit et iste ad voluptas ea sint quae saepe.', 'corrupti', 'in', 'Deleniti aut omnis accusamus quas expedita harum.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', 'commodi', 'm', '2010-11-11', 'yes', 'et', 'AB', '1.70', '60', 'facilis', '44***************', 110, 'mail', 'harum', 'quia', NULL), (7, 'Temporibus et quod dolor similique repellat non nam.', 'fugit', 'quae', 'Non consequatur optio vel et.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', 'autem', 'g', '2010-11-11', 'no', 'in', 'B', '1.60', '60', 'dolore', '44***************', 110, 'mail', 'voluptas', 'ad', NULL), (8, 'Asperiores esse voluptatem molestiae fuga natus voluptas dolor ea.', 'ut', 'sint', 'Quo sit dolores voluptatibus vero voluptas est magnam sint.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', 'nostrum', 'm', '2010-11-11', 'yes', 'rerum', 'A', '1.70', '90', 'et', '44***************', 110, 'mail', 'rerum', 'sit', NULL), (9, 'Asperiores nulla harum cumque aliquam qui voluptas.', 'incidunt', 'dolor', 'Cum voluptatibus vero qui fuga rem.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', 'cum', 'm', '2010-11-11', 'yes', 'et', 'AB', '1.50', '60', 'dignissimos', '44***************', 120, 'no', 'suscipit', 'ut', NULL), (10, 'Quia in eos sit.', 'ducimus', 'voluptates', 'Atque modi optio amet soluta autem vero consequatur deleniti.', '2010-11-11 12:03:52', '2010-11-11 12:03:52', 'possimus', 'g', '2010-11-11', 'no', 'accusantium', 'AB', '1.50', '50', 'id', '44***************', 120, 'no', 'et', 'distinctio', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` IS NULL) LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (78.8ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (184.6ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateResumes (20101107021111)
+  [4;35;1mSQL (126.4ms)[0m   [0mCREATE TABLE `resumes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `rexp` varchar(255), `redu` varchar(255), `rskill` varchar(255), `reva` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (41.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101107021111')[0m
+Migrating to CreateResumeAns (20101107021443)
+  [4;35;1mSQL (165.6ms)[0m   [0mCREATE TABLE `resume_ans` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `rexp_a` varchar(255), `redu_a` varchar(255), `rskill_a` varchar(255), `reva_a` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (41.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101107021443')[0m
+Migrating to CreateGroups (20101107021725)
+  [4;35;1mSQL (137.4ms)[0m   [0mCREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `gque` varchar(255), `job_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (41.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101107021725')[0m
+Migrating to CreateQuestions (20101107022550)
+  [4;35;1mSQL (105.2ms)[0m   [0mCREATE TABLE `questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `qcon` varchar(255), `qjug` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (41.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101107022550')[0m
+Migrating to CreateGroupQuestions (20101107022814)
+  [4;35;1mSQL (120.9ms)[0m   [0mCREATE TABLE `groups_questions` (`group_id` int(11), `question_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101107022814')[0m
+Migrating to CreateGroupAns (20101107023010)
+  [4;35;1mSQL (122.1ms)[0m   [0mCREATE TABLE `group_ans` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `gque_one` varchar(255), `gque_two` varchar(255), `gque_three` varchar(255), `gque_four` varchar(255), `gque_five` varchar(255), `gque_six` varchar(255), `gmark` int(11), `group_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101107023010')[0m
+Migrating to CreateJobs (20101107023520)
+  [4;35;1mSQL (97.0ms)[0m   [0mCREATE TABLE `jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `jname` varchar(255), `jdesc` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101107023520')[0m
+Migrating to AddMoreFieldsToJob (20101107114223)
+  [4;35;1mSQL (198.4ms)[0m   [0mALTER TABLE `jobs` ADD `created_date` date[0m
+  [4;36;1mSQL (192.8ms)[0m   [0;1mALTER TABLE `jobs` ADD `closed_date` date[0m
+  [4;35;1mSQL (167.8ms)[0m   [0mALTER TABLE `jobs` ADD `position_type` varchar(255)[0m
+  [4;36;1mSQL (177.3ms)[0m   [0;1mALTER TABLE `jobs` ADD `job_number` int(11)[0m
+  [4;35;1mSQL (192.8ms)[0m   [0mALTER TABLE `jobs` ADD `requirement` varchar(255)[0m
+  [4;36;1mSQL (192.8ms)[0m   [0;1mALTER TABLE `jobs` ADD `state` varchar(255)[0m
+  [4;35;1mSQL (33.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101107114223')[0m
+Migrating to AddDetailToResume (20101107122626)
+  [4;36;1mSQL (215.9ms)[0m   [0;1mALTER TABLE `resumes` ADD `rname` varchar(255)[0m
+  [4;35;1mSQL (167.9ms)[0m   [0mALTER TABLE `resumes` ADD `rsex` varchar(255)[0m
+  [4;36;1mSQL (202.2ms)[0m   [0;1mALTER TABLE `resumes` ADD `rbirth` date[0m
+  [4;35;1mSQL (192.9ms)[0m   [0mALTER TABLE `resumes` ADD `rmari_sta` varchar(255)[0m
+  [4;36;1mSQL (201.2ms)[0m   [0;1mALTER TABLE `resumes` ADD `rrace` varchar(255)[0m
+  [4;35;1mSQL (176.3ms)[0m   [0mALTER TABLE `resumes` ADD `rblood` varchar(255)[0m
+  [4;36;1mSQL (184.5ms)[0m   [0;1mALTER TABLE `resumes` ADD `rhei` varchar(255)[0m
+  [4;35;1mSQL (192.9ms)[0m   [0mALTER TABLE `resumes` ADD `rwei` varchar(255)[0m
+  [4;36;1mSQL (202.4ms)[0m   [0;1mALTER TABLE `resumes` ADD `rpoli` varchar(255)[0m
+  [4;35;1mSQL (201.2ms)[0m   [0mALTER TABLE `resumes` ADD `riden` varchar(255)[0m
+  [4;36;1mSQL (167.9ms)[0m   [0;1mALTER TABLE `resumes` ADD `rpho` varchar(255)[0m
+  [4;35;1mSQL (176.3ms)[0m   [0mALTER TABLE `resumes` ADD `rmail` varchar(255)[0m
+  [4;36;1mSQL (192.8ms)[0m   [0;1mALTER TABLE `resumes` ADD `raddr` varchar(255)[0m
+  [4;35;1mSQL (219.1ms)[0m   [0mALTER TABLE `resumes` ADD `rprof` varchar(255)[0m
+  [4;36;1mSQL (33.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101107122626')[0m
+Migrating to AddDetailTo (20101107125754)
+  [4;35;1mSQL (212.8ms)[0m   [0mALTER TABLE `resume_ans` ADD `rname_a` varchar(255)[0m
+  [4;36;1mSQL (167.9ms)[0m   [0;1mALTER TABLE `resume_ans` ADD `rsex_a` varchar(255)[0m
+  [4;35;1mSQL (184.6ms)[0m   [0mALTER TABLE `resume_ans` ADD `rbirth_a` date[0m
+  [4;36;1mSQL (201.2ms)[0m   [0;1mALTER TABLE `resume_ans` ADD `rmari_sta_a` varchar(255)[0m
+  [4;35;1mSQL (210.7ms)[0m   [0mALTER TABLE `resume_ans` ADD `rrace_a` varchar(255)[0m
+  [4;36;1mSQL (184.5ms)[0m   [0;1mALTER TABLE `resume_ans` ADD `rblood_a` varchar(255)[0m
+  [4;35;1mSQL (159.6ms)[0m   [0mALTER TABLE `resume_ans` ADD `rhei_a` varchar(255)[0m
+  [4;36;1mSQL (184.6ms)[0m   [0;1mALTER TABLE `resume_ans` ADD `rwei_a` varchar(255)[0m
+  [4;35;1mSQL (201.3ms)[0m   [0mALTER TABLE `resume_ans` ADD `rpoli_a` varchar(255)[0m
+  [4;36;1mSQL (202.3ms)[0m   [0;1mALTER TABLE `resume_ans` ADD `riden_a` varchar(255)[0m
+  [4;35;1mSQL (217.8ms)[0m   [0mALTER TABLE `resume_ans` ADD `rpho_a` varchar(255)[0m
+  [4;36;1mSQL (168.0ms)[0m   [0;1mALTER TABLE `resume_ans` ADD `rmail_a` varchar(255)[0m
+  [4;35;1mSQL (193.0ms)[0m   [0mALTER TABLE `resume_ans` ADD `raddr_a` varchar(255)[0m
+  [4;36;1mSQL (201.2ms)[0m   [0;1mALTER TABLE `resume_ans` ADD `rprof_a` varchar(255)[0m
+  [4;35;1mSQL (33.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101107125754')[0m
+Migrating to ChangeColumnInResume (20101109082132)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `resumes`[0m
+  [4;35;1mSQL (160.2ms)[0m   [0mALTER TABLE `resumes` CHANGE `rbirth` `rbirth` varchar(255) DEFAULT NULL[0m
+  [4;36;1mSQL (24.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101109082132')[0m
+Migrating to CreateUsers (20101109111353)
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (72.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255), `email` varchar(255), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(255), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (24.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101109111353')[0m
+Migrating to AddResumeData (20101110035952)
+  [4;36;1mResume Delete all (0.3ms)[0m   [0;1mDELETE FROM `resumes` [0m
+  [4;35;1mResume Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resumes`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResume Create (0.2ms)[0m   [0mINSERT INTO `resumes` (`rmail`, `reva`, `created_at`, `rmari_sta`, `rsex`, `rbirth`, `rwei`, `riden`, `updated_at`, `rrace`, `raddr`, `rexp`, `rprof`, `rpoli`, `redu`, `rhei`, `rskill`, `rname`, `rpho`, `rblood`) VALUES('E-mail', '自我评价', '2010-11-11 04:05:20', '婚姻状况', '性别', '出生年月', '体重', '身份证号', '2010-11-11 04:05:20', '民族', '家庭住址', '经历', '专业', '政治面貌', '学历', '身高', '技能', '姓名', '联系电话', '血型')[0m
+  [4;36;1mSQL (42.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (33.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101110035952')[0m
+Migrating to AddAdminData (20101110055249)
+  [4;36;1mUser Delete all (0.8ms)[0m   [0;1mDELETE FROM `users` [0m
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'wando') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'wandoformouse@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`salt`, `created_at`, `activated_at`, `crypted_password`, `remember_token_expires_at`, `updated_at`, `activation_code`, `remember_token`, `login`, `email`) VALUES('eef41e14edf80e8d5bd5a22da44540367c9c32e0', '2010-11-11 04:05:20', '2010-11-11 04:05:20', 'c88d2a9b7c91d5493ef3cc2511c7a9efa5a013cf', NULL, '2010-11-11 04:05:20', NULL, 'hr', 'wando', 'wandoformouse@gmail.com')[0m
+  [4;36;1mSQL (41.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (33.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101110055249')[0m
+Migrating to AddResumeUserId (20101110084430)
+  [4;36;1mSQL (240.0ms)[0m   [0;1mALTER TABLE `resumes` ADD `user_id` int(11)[0m
+  [4;35;1mSQL (33.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101110084430')[0m
+Migrating to AddStateColumnInGroup (20101110113106)
+  [4;36;1mSQL (198.1ms)[0m   [0;1mALTER TABLE `groups` ADD `active` tinyint(1) DEFAULT 0[0m
+  [4;35;1mSQL (33.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101110113106')[0m
+Migrating to AddResumeAnsUserId (20101110144713)
+  [4;36;1mSQL (191.1ms)[0m   [0;1mALTER TABLE `resume_ans` ADD `user_id` int(11)[0m
+  [4;35;1mSQL (124.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101110144713')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `group_ans`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `group_ans`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `group_ans`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `groups`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `groups`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `groups_questions`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `groups_questions`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `groups_questions`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `jobs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `jobs`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resume_ans`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `resume_ans`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `resume_ans`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `resumes`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `resumes`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `resumes`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Delete all (0.3ms)[0m   [0;1mDELETE FROM `jobs` [0m
+  [4;35;1mResumeAns Delete all (0.2ms)[0m   [0mDELETE FROM `resume_ans` [0m
+  [4;36;1mJob Last ID (0.3ms)[0m   [0;1mSELECT id FROM `jobs` ORDER BY id DESC[0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Populate (62.6ms)[0m   [0;1mINSERT INTO `jobs` (`id`, `jname`, `jdesc`, `created_at`, `updated_at`, `created_date`, `closed_date`, `position_type`, `job_number`, `requirement`, `state`) VALUES (1, 'repellendus', 'Ipsa reprehenderit qui ut nostrum.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', '2010-11-11', '2009-03-29 08:04:21', 'et', 24, 'Alias nulla omnis suscipit ratione consectetur.', 'Foster Goyette'), (2, 'iusto', 'Et possimus vel nihil in et velit voluptatibus fugiat.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', '2010-11-11', '2010-02-24 18:00:50', 'magni', 1, 'Voluptatem ut et vero ullam voluptas.', 'Missouri Konopelski'), (3, 'dolor', 'Amet quis repudiandae voluptatem perferendis tempore quo.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', '2010-11-11', '2009-07-26 01:15:17', 'voluptas', 1, 'Mollitia beatae voluptatem commodi autem voluptatem.', 'Arely Hartmann'), (4, 'aut', 'Aut iste maiores impedit.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', '2010-11-11', '2009-07-02 11:54:50', 'impedit', 52, 'Voluptas perferendis et sit placeat.', 'Enrico Adams'), (5, 'totam', 'Ipsam ut ab molestiae.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', '2010-11-11', '2010-10-31 06:12:48', 'magnam', 52, 'Unde qui minus delectus quia id id labore.', 'Susan Pfannerstill'), (6, 'ad', 'Illum accusamus unde ipsum ipsam dicta minus.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', '2010-11-11', '2010-04-27 23:41:31', 'sunt', 52, 'Praesentium ut cupiditate reiciendis.', 'Ines Ernser'), (7, 'quasi', 'Libero cum voluptatem ex laborum.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', '2010-11-11', '2009-05-03 16:40:21', 'accusantium', 1, 'Veritatis expedita soluta voluptas et nostrum debitis.', 'Heaven Rolfson'), (8, 'eum', 'Magnam totam dolorem magni consequuntur id.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', '2010-11-11', '2009-04-25 08:01:43', 'est', 52, 'Nisi quisquam et quia minima illo.', 'Zora Kiehn'), (9, 'nisi', 'Fugit ex et excepturi consequatur rerum ut numquam.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', '2010-11-11', '2009-10-02 12:06:14', 'nostrum', 24, 'Dolor ea necessitatibus voluptatem sit.', 'Braden Walker'), (10, 'saepe', 'Distinctio harum ad aut porro saepe.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', '2010-11-11', '2010-03-24 04:33:16', 'aut', 24, 'Cum quia quaerat ea non eaque quis.', 'Brannon Sipes')[0m
+  [4;35;1mResumeAns Last ID (0.3ms)[0m   [0mSELECT id FROM `resume_ans` ORDER BY id DESC[0m
+  [4;36;1mResumeAns Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resume_ans`[0m
+  [4;35;1mResumeAns Populate (30.6ms)[0m   [0mINSERT INTO `resume_ans` (`id`, `rexp_a`, `redu_a`, `rskill_a`, `reva_a`, `created_at`, `updated_at`, `rname_a`, `rsex_a`, `rbirth_a`, `rmari_sta_a`, `rrace_a`, `rblood_a`, `rhei_a`, `rwei_a`, `rpoli_a`, `riden_a`, `rpho_a`, `rmail_a`, `raddr_a`, `rprof_a`, `user_id`) VALUES (1, 'Rerum rem laudantium dignissimos facere vero adipisci.', 'est', 'dolorem', 'Cum et consequatur hic officia ut quis.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', 'et', 'm', '2010-11-11', 'no', 'sit', 'A', '1.50', '100', 'tenetur', '44***************', 110, 'mail', 'quasi', 'voluptatum', NULL), (2, 'Qui dolor optio nihil amet.', 'similique', 'quia', 'Consequuntur inventore sunt soluta alias facilis dolorum.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', 'sit', 'm', '2010-11-11', 'yes', 'delectus', 'AB', '1.70', '50', 'ex', '44***************', 110, 'no', 'ad', 'perferendis', NULL), (3, 'Debitis ea et omnis qui cupiditate enim.', 'ducimus', 'placeat', 'Eaque ut harum amet occaecati expedita at architecto.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', 'aut', 'g', '2010-11-11', 'yes', 'quisquam', 'B', '1.70', '80', 'necessitatibus', '44***************', 110, 'no', 'nam', 'est', NULL), (4, 'Ut assumenda tenetur est ut exercitationem et illum voluptas.', 'est', 'dolores', 'Doloribus qui laborum non quisquam quis.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', 'consequatur', 'g', '2010-11-11', 'yes', 'voluptatibus', 'O', '1.80', '80', 'optio', '44***************', 119, 'mail', 'tenetur', 'quam', NULL), (5, 'Repudiandae sint quos libero praesentium facilis veniam.', 'libero', 'odit', 'Ipsa corporis dolores quod expedita.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', 'ducimus', 'm', '2010-11-11', 'no', 'molestias', 'AB', '1.60', '70', 'labore', '44***************', 110, 'mail', 'earum', 'autem', NULL), (6, 'Est hic consequatur libero eligendi est sed vero dignissimos.', 'fugit', 'a', 'Eaque ut omnis soluta rerum aut reprehenderit.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', 'reiciendis', 'g', '2010-11-11', 'yes', 'amet', 'A', '1.80', '100', 'ducimus', '44***************', 119, 'no', 'fuga', 'rem', NULL), (7, 'Deleniti dolor rerum sint error.', 'ea', 'molestiae', 'Ex et sunt voluptas esse.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', 'et', 'g', '2010-11-11', 'yes', 'soluta', 'A', '1.60', '80', 'ad', '44***************', 110, 'no', 'assumenda', 'id', NULL), (8, 'Odio facilis quibusdam aut ut dolor illum.', 'aut', 'tempore', 'Est hic doloremque aliquam eum.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', 'quis', 'g', '2010-11-11', 'no', 'enim', 'A', '1.60', '100', 'ut', '44***************', 119, 'no', 'rerum', 'sed', NULL), (9, 'Autem sequi omnis consequatur dignissimos commodi dolor inventore.', 'omnis', 'omnis', 'Non aliquid quas quaerat enim maxime eos quod.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', 'qui', 'g', '2010-11-11', 'yes', 'perspiciatis', 'O', '1.60', '100', 'sint', '44***************', 110, 'no', 'maxime', 'qui', NULL), (10, 'Eos voluptatem aliquid animi.', 'rem', 'inventore', 'Exercitationem amet excepturi provident vel quia fugit.', '2010-11-11 12:05:31', '2010-11-11 12:05:31', 'sequi', 'g', '2010-11-11', 'no', 'asperiores', 'A', '1.60', '50', 'vel', '44***************', 110, 'no', 'natus', 'velit', NULL)[0m
