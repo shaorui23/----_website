@@ -10,6 +10,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
         this.grid = this.createGrid();
         this.form = this.createForm();
         this.tree = this.createTree();
+        isEditing = true;
     },
 
     createWindow: function(){
@@ -19,6 +20,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             win = manage.createWindow({
                 id: 'positionManage',
                 title: '职位管理',
+                closeAction: 'hide',
                 width: 940,
                 height: 530,
                 iconCls: 'bogus',
@@ -37,11 +39,13 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
         win.show();
     },
 
-    createAddjob: function(){ 
+    getJobWin: function() { 
         var manage = this.app.getDesktop();
-        var win = manage.getWindow('positionManage');
+        var win = manage.getWindow('JobWin');
+        if(!win) { 
             win = manage.createWindow({
-                title: '发布职位',
+                title: '修改职位信息',
+                id: 'JobWin',
                 closeAction: 'hide',
                 width: 640,
                 height: 350,
@@ -49,29 +53,32 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 frame: true,
                 items: this.form
             });
-        win.show();
+         }
+         return win;
     },
 
-    editJob: function(id) { 
+    createAddjob: function(action){ 
+        action == "add" ? isEditing = false : isEditing = true
+        alert(isEditing);
         var manage = this.app.getDesktop();
-        var win = manage.getWindow('positionManage');
-            win = manage.createWindow({
-                title: '发布职位',
-                width: 640,
-                height: 350,
-                closeAction: 'hide',
-                layout: 'fit',
-                frame: true,
-                items: this.form
-            });
-            Ext.Ajax.request({ 
-                url: String.format('/jobs/{0}/get_job.json', id),
-                method: 'GET',
-                success: function(response, option){ 
-                    var respText = Ext.util.JSON.decode(response.responseText);
-                }
-            });
-            win.show();
+        this.form.getForm().reset();
+        this.getJobWin().show();
+    },
+
+    editJob: function(id, action) { 
+        action == "edit" ? isEditing = true : isEditing = false
+        var manage = this.app.getDesktop();
+        var win = this.getJobWin();
+
+        Ext.Ajax.request({ 
+            url: String.format('/jobs/{0}/get_job.json', id),
+            method: 'GET',
+            success: function(response, option){ 
+                var content = Ext.util.JSON.decode(response.responseText).content;
+                Manage.positionManage.form.getForm().setValues(content);
+            }
+        });
+        win.show();
     },
 
     deleteJob: function(id) { 
@@ -99,9 +106,13 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
 
     createPosition: function(action){ 
         var _this = this;
-        Ext.Msg.confirm('提示', "是否执行该操?", function(button){ 
-            if(button == 'no') return false;
+        Manage.positionManage.getJobWin().hide();
+        Ext.Msg.confirm('提示', "是否执行该操作?", function(button){ 
+            if(button == 'no') { 
+                Manage.positionManage.getJobWin().show();
+            } else {  
             var job = { 
+                id           :  isEditing == true ? row_id : undefined,
                 jname        :  Ext.getCmp('jname').getValue(),
                 job_number   :  Ext.getCmp('job_number').getValue(),
                 position_type:  Ext.getCmp('position_type').getValue(),
@@ -112,17 +123,20 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             };
             
             Ext.Ajax.request({ 
-                url: '/jobs.json',
-                method: "POST",
+                url: isEditing == true ? '/jobs/'+ row_id + '.json' : '/jobs.json',
+                method: isEditing == true ? "PUT":"POST",
                 jsonData: { job: job },
                 success: function(){
+                    //Manage.positionManage.form.getForm().reset();
+                    //Manage.positionManage.getJobWin().hide()
                     Manage.positionManage.grid.store.load();
-                    Ext.Msg.alert("提示", "添加成功!");
+                    Ext.Msg.alert("提示", "操作成功!");
                 },
                 failure: function(response, onpts) {
-                    Ext.Msg.alert("提示", "添加失败！");
+                    Ext.Msg.alert("提示", "操作失败！");
                 } 
             });
+           }
         });
     },
 
@@ -235,8 +249,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
 
         var addOperator = function(value, mataData, record, rowIndex, colIndex, store){ 
            // alert(record.data.id);
-            var link = String.format('<a href="#" onclick="Manage.positionManage.editJob({0})">修改</a>', record.data.id) + '&nbsp;';
-            link += String.format('<a href="#" onclick="Manage.positionManage.deleteJob({0})">查看</a>', record.data.id) + '&nbsp;';
+            var link = String.format('<a href="#" onclick="Manage.positionManage.editJob( {0}, \'edit\' )">查看修改</a>', record.data.id) + '&nbsp;';
             link += String.format('<a href="#" onclick="Manage.positionManage.deleteJob({0})">删除</a>', record.data.id) + '&nbsp;';
             //link += String.format('<a href="#" onclick="Manage.positionManage.addPaper({0})">添加问卷</a>', record.data.id);
             return link;
@@ -257,11 +270,11 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             { header: '操作'        , dataIndex: '#', renderer: addOperator, width: 120 }
         ]);
         tbar = [ 
-            { text: '添加职位', handler: function(){ _this.createAddjob() }}, '-',
+            { text: '添加职位', handler: function(){ _this.createAddjob("add") }}, '-',
             { text: '查询', handler: function(){  }}
         ];
 
-        return new Ext.grid.GridPanel({ 
+        return new Ext.grid.EditorGridPanel({ 
             viewConfig: { forceFit: true },
             title: "职位列表",
             stripeRows: true,
@@ -272,7 +285,14 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             tbar: tbar, 
             bbar: pageToolbar,
             cm: cm,
-            sm: sm
+            sm: sm,
+            listeners: { 
+                cellclick: function(grid, rowIndex, columnIndex) { 
+                    var store = Manage.positionManage.grid.getStore();
+                    var record = store.getAt(rowIndex);
+                    row_id = record.get("id");
+                }
+            }
         });
     }
 });

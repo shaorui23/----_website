@@ -40,7 +40,7 @@ Ext.Desktop = function(app){
     }
 
     function removeWin(win){
-    	taskbar.removeTaskButton(win.taskButton);
+    	  taskbar.removeTaskButton(win.taskButton);
         layout();
     }
 

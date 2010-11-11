@@ -429,10 +429,6 @@ Ext.extend(Ext.ux.TaskBar.TaskButton, Ext.Button, {
                 text: 'Maximize',
                 handler: this.win.maximize,
                 scope: this.win
-            }, '-', {
-                text: 'Close',
-                handler: this.closeWin.createDelegate(this, this.win, true),
-                scope: this.win
             }]
         });
 
