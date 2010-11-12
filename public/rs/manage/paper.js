@@ -16,8 +16,8 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             win = manage.createWindow({
                 id: 'paperCenter',
                 title: '问卷中心',
-                width: 640,
-                height: 480,
+                width: 840,
+                height: 580,
                 iconCls: 'bogus',
                 shim: false,
                 animCollapse: false,
@@ -31,11 +31,20 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
     },
 
     createPanel: function() { 
+        //创建jobcombo
+        var jobCombo = this.createJobCombo('jobCombo');
+        var jobCombo2 = this.createJobCombo('jobCombo2');
+
         return new Ext.TabPanel({ 
             frame: true,
             activeTab: 0,
 
             items: [{ 
+                id: 'readPaper',
+                title: '问卷审核',
+                layout: 'border',
+                items: [this.createPAsGrid(jobCombo2), this.createPAForm()]
+            }, { 
                 id: 'oldPaper',
                 title: '历史问卷',
                 layout: 'anchor',
@@ -44,10 +53,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                 id: 'newPaper',
                 title: '创建问卷',
                 layout: 'anchor',
-                items: [this.createNPGrid(), this.createQBGrid()]
-            }, { 
-                id: 'readPaper',
-                title: '问卷审核'
+                items: [this.createNPGrid(jobCombo), this.createQBGrid()]
             }],
             listeners: { 
                 beforetabchange: function(panel, newTab, currentTab) { 
@@ -59,6 +65,9 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                     }else if(newTab.id == 'oldPaper') { 
                         //加载old paper
                         Ext.getCmp('opGrid').getStore().reload();
+                    }else if(newTab.id == 'readPaper') { 
+                        //加载jobcombobox的数据
+                        Ext.getCmp('jobCombo2').getStore().reload();
                     }
                 } 
             }
@@ -179,15 +188,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
  
     },
 
-    //NP: new paper
-    createNPGrid: function() { 
-        var npStore = new Ext.data.JsonStore({ 
-            fields: [
-                'id',
-                'qcon'
-            ]
-        });
-
+    createJobCombo: function(idName) { 
         var jobStore = new Ext.data.JsonStore({ 
             url: '/jobs.json',
             root: 'content',
@@ -197,8 +198,8 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             ]
         });
 
-        var jobCombo = new Ext.form.ComboBox({ 
-            id: 'jobCombo',
+        return new Ext.form.ComboBox({ 
+            id: idName,
             typeAhead: true,
             triggerAction: 'all',
             mode: 'local',
@@ -206,8 +207,17 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             valueField: 'id',
             displayField: 'jname'
         });
+    },
 
-        var _this = this;
+    //NP: new paper
+    createNPGrid: function(jobCombo) { 
+        var npStore = new Ext.data.JsonStore({ 
+            fields: [
+                'id',
+                'qcon'
+            ]
+        });
+
         var sm = new Ext.grid.CheckboxSelectionModel();
         return new Ext.grid.GridPanel({ 
             id: 'npGrid',
@@ -305,6 +315,134 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                 { header: 'ID', dataIndex: 'id', width: 5 },
                 { header: '问题', dataIndex: 'qcon' }
             ])
+        });
+    },
+
+    //PAs: paper-answers
+    createPAsGrid: function(jobCombo) { 
+        var store = new Ext.data.JsonStore({ 
+            url: '/paper_answers.json',
+            fields: [
+                'user_name',
+                'job_name',
+                'create_at'
+            ]
+        });
+
+        return new Ext.grid.GridPanel({ 
+            id: 'pasGrid',
+            title: '查找问卷',
+            region: 'west',
+            width: 300,
+            frame: true,
+            viewConfig: { forceFit: true },
+            tbar: [jobCombo],
+            store: store,
+            colModel: new Ext.grid.ColumnModel({ 
+                defaults: { sortable: true },
+                columns: [
+                    new Ext.grid.RowNumberer,
+                    { header: '名字',     dataIndex: 'user_name' },
+                    { header: '职位',     dataIndex: 'job_name' },
+                    { header: '提交时间', dataIndex: 'create_at' }
+                ]
+            })
+        });
+    },
+
+    //PA: paper answers
+    createPAForm: function() { 
+        var markStore = new Ext.data.JsonStore({ 
+            fields: ['mark', 'mark_cn'],
+            data: [
+                { mark: 1, mark_cn: '优秀' },
+                { mark: 2, mark_cn: '良好' },
+                { mark: 3, mark_cn: '及格' },
+                { mark: 4, mark_cn: '淘汰' }
+            ]
+        });
+
+        var markCombo = new Ext.form.ComboBox({ 
+            id: 'markCombo',
+            typeAhead: true,
+            width: 70,
+            triggerAction: 'all',
+            mode: 'local',
+            valueField: 'mark',
+            displayField: 'mark_cn',
+            store: markStore
+        });
+
+        return new Ext.form.FormPanel({ 
+            id: 'paForm',
+            title: '问卷回复',
+            region: 'center',
+            layout: 'form',
+            autoScroll: true,
+            tbar: ['评分:', markCombo, { 
+                text: '提交'
+            }],
+            defaults: { 
+                width: 450,
+                hideLabel: true,
+                disabled: true
+            },
+            labelWidth: 75,
+            bodyStyle: 'padding: 5px 5px 0',
+            items: [{ 
+                xtype: 'textfield',
+                name: 'queston1',
+                frame: true
+            }, { 
+                xtype: 'textarea',
+                name: 'answer1',
+                frame: true
+            }, { 
+                xtype: 'textfield',
+                name: 'queston2',
+                frame: true
+            }, { 
+                xtype: 'textarea',
+                fieldLabel: 'Name',
+                name: 'answer2',
+                frame: true
+            }, { 
+                xtype: 'textfield',
+                name: 'queston3',
+                frame: true
+            }, { 
+                xtype: 'textarea',
+                fieldLabel: 'Name',
+                name: 'answer3',
+                frame: true
+            }, { 
+                xtype: 'textfield',
+                name: 'queston4',
+                frame: true
+            }, { 
+                xtype: 'textarea',
+                fieldLabel: 'Name',
+                name: 'answer4',
+                frame: true
+            }, { 
+                xtype: 'textfield',
+                name: 'queston5',
+                frame: true
+            }, { 
+                xtype: 'textarea',
+                fieldLabel: 'Name',
+                name: 'answer5',
+                frame: true
+            }, { 
+                xtype: 'textfield',
+                name: 'queston6',
+                frame: true
+            }, { 
+                xtype: 'textarea',
+                fieldLabel: 'Name',
+                name: 'answer6',
+                frame: true
+            }]
         });
     },
 
@@ -481,8 +619,4 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
         }
         return datas;
     },
-
-    /*处理进入创建问卷tab*/
-    newPaperHandler: function() { 
-    }
 });
