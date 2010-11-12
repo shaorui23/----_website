@@ -223,7 +223,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                     width: 500,
                     height: 50,
                     xtype: 'textarea',
-                    fieldLabel: '职位描述<br />(最多可输入200字<b>计算字数</b>)', maxLength: 200, id: 'jdesc'
+                    fieldLabel: '<b>职位描述</b><br />(最多可输入200字)', maxLength: 200, id: 'jdesc'
                },{ 
                     width: 500,
                     height: 70,
@@ -243,7 +243,10 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 text: '招聘ing(0)', leaf: true, 
                 listeners: { click: function() { } }
             },{
-                text: '全部职位(0)', leaf: true, 
+                text: '未发布(0)', leaf: true, 
+                listeners: { click: function() { } } 
+            },{ 
+                text: '全部(0)', leaf: true, 
                 listeners: { click: function() { } } 
             },{ 
                 text: '已招满(0)', leaf: true, 
@@ -313,6 +316,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
         ]);
         tbar = [ 
             { text: '添加职位', handler: function(){ _this.createAddjob("add") }}, '-',
+            { text: '发布选中职位', handler: function(){ }},'-',
             { text: '查询', handler: function(){ }},'->',
             { text: '添加职位类型', handler: function(){ } }
         ];

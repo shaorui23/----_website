@@ -15,6 +15,12 @@
 #  created_at :datetime
 #  updated_at :datetime
 #
+# Associations:
+#  group      :belongs_to      Group
+#              by              group_id 
+#  user       :belongs_to      User
+#              by              user_id 
+#
 
 class GroupAn < ActiveRecord::Base
   belongs_to :user

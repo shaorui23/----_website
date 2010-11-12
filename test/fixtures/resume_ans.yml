@@ -23,6 +23,11 @@
 #  rmail_a     :string(255)
 #  raddr_a     :string(255)
 #  rprof_a     :string(255)
+#  user_id     :integer(4)
+#
+# Associations:
+#  user        :belongs_to      User
+#               by              user_id 
 #
 
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
