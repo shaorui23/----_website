@@ -59,7 +59,6 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
 
     createAddjob: function(action){ 
         action == "add" ? isEditing = false : isEditing = true
-        alert(isEditing);
         var manage = this.app.getDesktop();
         this.form.getForm().reset();
         this.getJobWin().show();
@@ -142,6 +141,32 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
 
     createForm: function(){ 
         var _this = this;
+        var store = new Ext.data.JsonStore({ 
+            fields: [
+                'id',
+                'jname'
+            ],
+            root: "content",
+            url:'/jobs.json',
+            method: 'GET'
+        });
+        var combo = new Ext.form.ComboBox({ 
+            triggerAction : "all",
+            editable: "false",
+            store : new Ext.data.JsonStore({ 
+                root : 'content',
+                proxy: new Ext.data.HttpProxy({ url: '/jobs/get_type.json', method: 'get' }),
+                field: ['id', 'type']
+            }),
+            displayField: 'number',
+            valueField: 'number',
+            listeners: { 
+                select : function(combo, record, index){ 
+                
+                }
+            }
+        });
+
         return new Ext.form.FormPanel({ 
             frame: true,
             autoHeight: true,
@@ -271,7 +296,8 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
         ]);
         tbar = [ 
             { text: '添加职位', handler: function(){ _this.createAddjob("add") }}, '-',
-            { text: '查询', handler: function(){  }}
+            { text: '查询', handler: function(){ }},'->',
+            { text: '添加职位类型', handler: function(){ } }
         ];
 
         return new Ext.grid.EditorGridPanel({ 
