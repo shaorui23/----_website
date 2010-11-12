@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
   #
   has_one :resume
   has_one :resume_ans
+  has_many :group_ans
 
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   def self.authenticate(login, password)

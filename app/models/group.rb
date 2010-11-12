@@ -13,6 +13,7 @@
 #
 
 class Group < ActiveRecord::Base
+  has_one :group_an
   has_and_belongs_to_many :questions
   belongs_to :job
   
@@ -31,5 +32,17 @@ class Group < ActiveRecord::Base
     papers.each do |paper|
       paper.update_attributes({ :active => false })
     end
+  end
+
+  #返回{:que_one => "", :que_two => ""}形式的question数据
+  def jsonQuestions
+    namei = 0
+    jq = {}
+    questions.each do |question|
+      namei += 1
+      nextName = 'que_' + namei.to_s
+      jq.merge!({ nextName => question.qcon })
+    end
+    return jq
   end
 end

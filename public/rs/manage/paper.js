@@ -68,6 +68,8 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                     }else if(newTab.id == 'readPaper') { 
                         //加载jobcombobox的数据
                         Ext.getCmp('jobCombo2').getStore().reload();
+                        //加载pasGrid的数据
+                        Ext.getCmp('pasGrid').getStore().reload();
                     }
                 } 
             }
@@ -201,6 +203,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
         return new Ext.form.ComboBox({ 
             id: idName,
             typeAhead: true,
+            width: 100,
             triggerAction: 'all',
             mode: 'local',
             store: jobStore,
@@ -323,10 +326,31 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
         var store = new Ext.data.JsonStore({ 
             url: '/paper_answers.json',
             fields: [
+                'id',
                 'user_name',
                 'job_name',
                 'create_at'
             ]
+        });
+
+        var searchStore = new Ext.data.JsonStore({ 
+            fields: ['mark', 'mark_cn'],
+            data: [
+                { mark: 1, mark_cn: '未批阅' },
+                { mark: 2, mark_cn: '已批阅' },
+                { mark: 3, mark_cn: '全部' }
+            ]
+        });
+
+        var searchCombo = new Ext.form.ComboBox({ 
+            id: 'searchCombo',
+            typeAhead: true,
+            width: 70,
+            triggerAction: 'all',
+            mode: 'local',
+            valueField: 'mark',
+            displayField: 'mark_cn',
+            store: searchStore
         });
 
         return new Ext.grid.GridPanel({ 
@@ -336,7 +360,17 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             width: 300,
             frame: true,
             viewConfig: { forceFit: true },
-            tbar: [jobCombo],
+            tbar: [jobCombo, searchCombo, 
+                { 
+                    text: '查询'  //todo: 未实现
+                }, { 
+                    text: '清空查询',
+                    handler: function() { 
+                        //重新加载pasGrid的数据
+                        Ext.getCmp('pasGrid').getStore().reload();
+                    }
+            }],
+            sm: new Ext.grid.RowSelectionModel({ singleSelect: true }),
             store: store,
             colModel: new Ext.grid.ColumnModel({ 
                 defaults: { sortable: true },
@@ -346,7 +380,44 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                     { header: '职位',     dataIndex: 'job_name' },
                     { header: '提交时间', dataIndex: 'create_at' }
                 ]
-            })
+            }),
+            listeners: { 
+                cellclick: function(grid, rowIndex, columnIndex) { 
+                    var paId = grid.store.getAt(rowIndex).get('id');
+                    var paperQuestion = {};
+                    var paperAnswer = {};
+                    var questionCount = 0;
+                    Ext.Ajax.request({ 
+                        url: '/paper_answers/show_p_and_a?id=' + paId,
+                        success: function(response) { 
+                            var datas = Ext.decode(response.responseText);
+                            paperAnswer = datas.paper_answers;
+                            paperQuestion = datas.paper_questions;
+                            questionCount = datas.question_count;
+                            //仅限制6个问题
+                            var nameIndexs = ['gque_one', 'gque_two', 'gque_three', 'gque_four', 'gque_five', 'gque_six'];
+                            var paForm = Ext.getCmp('paForm');
+                            var j = 0;
+                            for(var i = 0; i < questionCount; i++) { 
+                                paForm.getComponent(j).setVisible(true);
+                                paForm.getComponent(j).setValue(paperQuestion["que_" + (i + 1)]);
+                                j++;
+                                paForm.getComponent(j).setVisible(true);
+                                paForm.getComponent(j).setValue(paperAnswer[nameIndexs[i]]);
+                                j++;
+                            }                                                                                               
+                            if(j < 11) { 
+                                for(var i = j; i < 12; i++) { 
+                                    paForm.getComponent(i).setVisible(false);
+                                }
+                            }
+                        },
+                        failure: function() { 
+                            Ext.Msg.alert("Wando", 'Failure');
+                        }
+                    });
+                }
+            }
         });
     },
 
@@ -380,7 +451,21 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             layout: 'form',
             autoScroll: true,
             tbar: ['评分:', markCombo, { 
-                text: '提交'
+                text: '提交',
+                handler: function() { 
+                    var paId = Ext.getCmp('pasGrid').getSelectionModel().getSelected().get('id');
+                    var mark = markCombo.getValue();
+                    Ext.Ajax.request({ 
+                        url: '/paper_answers/give_mark',
+                        jsonData: { paId: paId, mark: mark },
+                        success: function() { 
+                            Ext.Msg.alert('Wando', 'Success');
+                        },
+                        failure: function() { 
+                            Ext.Msg.alert('Wando', 'Failure');
+                        }
+                    });
+                }
             }],
             defaults: { 
                 width: 450,
@@ -391,7 +476,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             bodyStyle: 'padding: 5px 5px 0',
             items: [{ 
                 xtype: 'textfield',
-                name: 'queston1',
+                name: 'question1',
                 frame: true
             }, { 
                 xtype: 'textarea',
@@ -399,7 +484,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                 frame: true
             }, { 
                 xtype: 'textfield',
-                name: 'queston2',
+                name: 'question2',
                 frame: true
             }, { 
                 xtype: 'textarea',
@@ -408,7 +493,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                 frame: true
             }, { 
                 xtype: 'textfield',
-                name: 'queston3',
+                name: 'question3',
                 frame: true
             }, { 
                 xtype: 'textarea',
@@ -417,7 +502,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                 frame: true
             }, { 
                 xtype: 'textfield',
-                name: 'queston4',
+                name: 'question4',
                 frame: true
             }, { 
                 xtype: 'textarea',
@@ -426,7 +511,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                 frame: true
             }, { 
                 xtype: 'textfield',
-                name: 'queston5',
+                name: 'question5',
                 frame: true
             }, { 
                 xtype: 'textarea',
@@ -435,7 +520,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                 frame: true
             }, { 
                 xtype: 'textfield',
-                name: 'queston6',
+                name: 'question6',
                 frame: true
             }, { 
                 xtype: 'textarea',
