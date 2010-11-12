@@ -15,7 +15,7 @@ namespace :db do
       job.jdesc            =   Faker::Lorem.sentence 
       job.created_date     =   Date.today 
       job.closed_date      =   2.years.ago..Time.now
-      job.position_type    =   Faker::Lorem.words.first
+      job.jobtype_id       =   1
       job.job_number       =   [1,24,52]
       job.requirement      =   Faker::Lorem.sentence 
       job.state            =   Faker::Name.name

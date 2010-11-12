@@ -2,7 +2,7 @@ class JobsController < ApplicationController
 
 #GET /jobs
   def index
-     @job = Job.all
+     @job = Job.all.collect { |j| j.attributes.merge "position_type" => j.jobtype.job_type }
       respond_to do |format|
         format.html  
         format.json  { render_json @job }

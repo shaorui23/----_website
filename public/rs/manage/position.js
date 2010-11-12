@@ -114,7 +114,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 id           :  isEditing == true ? row_id : undefined,
                 jname        :  Ext.getCmp('jname').getValue(),
                 job_number   :  Ext.getCmp('job_number').getValue(),
-                position_type:  Ext.getCmp('position_type').getValue(),
+                jobtype_id   :  Ext.getCmp('position_type').getValue(),
                 requirement  :  Ext.getCmp('requirement').getValue(),
                 created_date :  Ext.getCmp('created_date').getValue(),
                 closed_date  :  Ext.getCmp('closed_date').getValue(),
@@ -151,21 +151,33 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             method: 'GET'
         });
         var combo = new Ext.form.ComboBox({ 
+            fieldLabel : "*职位类型",
             triggerAction : "all",
+            emptyText: '请选择',
+            width: 170,
             editable: "false",
             store : new Ext.data.JsonStore({ 
                 root : 'content',
-                proxy: new Ext.data.HttpProxy({ url: '/jobs/get_type.json', method: 'get' }),
-                field: ['id', 'type']
+                proxy: new Ext.data.HttpProxy({ url: '/jobtypes/for_select.json', method: 'get' }),
+                fields: ['id', 'job_type']
             }),
-            displayField: 'number',
-            valueField: 'number',
+            id: 'position_type',
+            displayField: 'job_type',
+            valueField: 'id',
             listeners: { 
                 select : function(combo, record, index){ 
-                
+                    Ext.getCmp("position_type").setValue(record.get('id'));
+                    combo.fireEvent('blur'); //选择后失去焦点 
                 }
             }
         });
+        var job_number = new Ext.form.NumberField({  
+            fieldLabel:'*招聘人数',  
+            allowDecimals : false,//不允许输入小数  
+            allowNegative : false,//不允许输入负数  
+            nanText :'请输入有效的整数',  
+            id: 'job_number'
+        });  
 
         return new Ext.form.FormPanel({ 
             frame: true,
@@ -182,7 +194,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             items: [{ 
                 layout: 'column',
                 xtype: 'fieldset',
-                title: '*职位必填信息',
+                title: '带*号为必填信息',
                 autoHeight: true,
                 style: 'margin-left:5px;',
                 items:[{ 
@@ -190,24 +202,28 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                     layout:'form',
                     defaultType:'textfield',
                     items:[
-                        { fieldLabel: '职位名称', id: 'jname' },
-                        { fieldLabel: '招聘人数', id: 'job_number' },
-                        { fieldLabel: '职位类型', id: 'position_type' }
+                        { fieldLabel: '*职位名称', id: 'jname' },
+                        job_number,
+                        combo,
+                        { fieldLabel: '学历要求', id: 'education' },
+
                     ]
                 },{ 
                     columnWidth: .5,
                     layout:'form',
                     defaultType:'datefield',
                     items:[
-                        { fieldLabel: '发布日期', id: 'created_date', value: new Date(), format:'Y-m-d'},
-                        { fieldLabel: '截止日期', id: 'closed_date', format:'Y-m-d'},
+                        { fieldLabel: '*发布日期', id: 'created_date', value: new Date(), format:'Y-m-d'},
+                        { fieldLabel: '*截止日期', id: 'closed_date', format:'Y-m-d'},
+                        { fieldLabel: '*月薪范围', id: 'salary', xtype: 'textfield'},
+                        { fieldLabel: '最低工作经验', id: 'experience', xtype: 'textfield' }
                     ]
                 }]
                },{ 
                     width: 500,
                     height: 50,
                     xtype: 'textarea',
-                    fieldLabel: '职位描述', id: 'jdesc'
+                    fieldLabel: '职位描述<br />(最多可输入200字<b>计算字数</b>)', maxLength: 200, id: 'jdesc'
                },{ 
                     width: 500,
                     height: 70,
@@ -217,6 +233,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             ]
       });
     },
+
     createTree: function() { 
         var _this = this;
         var root = new Ext.tree.AsyncTreeNode({ 

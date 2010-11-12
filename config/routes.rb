@@ -1,4 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :jobtypes,
+    :collection => { 
+      :for_select => :get
+    }
+
   map.resources :homes
   map.resources :accounts
   map.resources :jobs,

@@ -17,6 +17,7 @@
 
 class Job < ActiveRecord::Base
   has_many :groups
+  belongs_to :jobtype
 
   #Comment: Mouse
   #TODO 整理完前台代码后，需要最验证错误信息统一处理
@@ -29,6 +30,10 @@ class Job < ActiveRecord::Base
 
   #主页搜索显示前五记录职位
   named_scope :first_five_records, :conditions => "state = 'ing' and job_number > 0", :limit => 5
+
+  def position_type
+    self.jobtype.job_type
+  end
 
 
   private
