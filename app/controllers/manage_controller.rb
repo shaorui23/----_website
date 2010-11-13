@@ -41,7 +41,11 @@ class ManageController < ApplicationController
 
 #GET  /manage/resume_an.json
     def resume_an
-      @resume_ans = ResumeAns.all
+      @resume_ans=[]
+      ResumeAns.all.each do |res_an|
+        data = res_an.attributes.merge(:user_login => res_an.user.login)
+        @resume_ans.push(data)
+      end
       render_json @resume_ans
     end
 
@@ -49,5 +53,16 @@ class ManageController < ApplicationController
     def find_resume_an
       @resume_ans_n = ResumeAns.find(params[:id])
       render_json @resume_ans_n.to_a
+    end
+
+#GET  /manage/query.json?conditions
+    def query
+      @resume_ans=[]
+      res_an = ResumeAns.find(:all,:include=>[:user],:conditions=>params[:conditions])
+      res_an.each do |res_an|
+        data = res_an.attributes.merge(:user_login => res_an.user.login)
+        @resume_ans.push(data)
+      end
+      render_json @resume_ans.to_a
     end
 end

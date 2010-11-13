@@ -17,6 +17,7 @@ ActionController::Routing::Routes.draw do |map|
       :find_resume_an => :get,
       :create_resume => :post,
       :update_resume => :put,
+      :query =>:get,
   }
   map.resources :manage
   map.resources :papers, 

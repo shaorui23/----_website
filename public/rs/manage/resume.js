@@ -2,6 +2,7 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
     id: 'resumeCenter',
     init: function(){
         this.rearchData();
+        this.query = this.query();
         this.launcher = {
             text: '简历中心',
             iconCls: 'bogus',
@@ -55,9 +56,73 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
                 id: 'resumeAnswer',
                 title: '简历收集',
                 layout: 'anchor',
+                tbar:[{ xtype:'button',text:'查询',handler:function(){ Ext.getCmp("queryWin").show() } },
+                      { xtype:'button',text:'清空查询',handler:function(){ 
+                            url = "/manage/resume_an.json";
+                            Manage.resumeCenter.queryConfig(url); 
+                      } }],
                 items: [this.createGrid1(),this.createGrid2(),this.creatForm()],
             }],
         });
+    },
+
+//查询模块
+    query : function(){ 
+        var form = new Ext.form.FormPanel({ 
+        defaultType: 'textfield',
+        labelAlign: 'right',
+        labelWidth: 40,
+        frame: true,
+        autoWidth:true,
+        items:[{xtype: 'textfield',fieldLabel:'帐号',id:'login'},
+               {xtype: 'textfield',fieldLabel:'姓名',id:'name'},
+               {xtype: 'textfield',fieldLabel:'性别',id:'sex'},
+               {xtype: 'textfield',fieldLabel:'学历',id:'edu'},
+               {xtype: 'textfield',fieldLabel:'专业',id:'prof'}],
+        buttons:[{ text:'查询',handler:function(){ 
+                  var login = Ext.getCmp("login").getValue();
+                  var sex   = Ext.getCmp("sex").getValue();
+                  var name  = Ext.getCmp("name").getValue();
+                  var edu   = Ext.getCmp("edu").getValue();
+                  var prof  = Ext.getCmp("prof").getValue();
+                  var condition = "";
+                  if(login != ""){ condition += "users.login=\'"+ login + "\'" }
+                  if(sex!= "" && condition =="" ){
+                      condition += "rsex_a=\'"+ sex + "\'"}
+                  else if(sex!=""){ 
+                      condition += "and rsex_a=\'"+ sex + "\'" }
+                  if(name != "" && condition =="" ){ 
+                      condition += "rname_a=\'"+ name + "\'" }
+                  else if(name!=""){ 
+                      condition += "and rname_a=\'"+ name + "\'" }
+                  if(edu != "" && condition =="" ){ 
+                      condition += "redu_a=\'"+ edu + "\'" }
+                  else if(edu!=""){ 
+                      condition += "and redu_a=\'"+ edu + "\'" }
+                  if(prof != "" && condition =="" ){ 
+                      condition += "rprof_a=\'"+ prof + "\'" }
+                  else if(prof!=""){ 
+                      condition += "rprof_a=\'"+ prof + "\'" }
+                  url = "/manage/query.json?conditions="+condition;
+                  Manage.resumeCenter.queryConfig(url);
+               }}]
+       });
+       var win = new Ext.Window({ 
+               id:"queryWin",
+               autoHeight:true,
+               autoWidth:true,
+               closeAction:'hide',
+               items:[form]
+           });
+       },
+
+//查询模块配置
+    queryConfig : function(url){ 
+         var store = Ext.getCmp("grid1").getStore();
+         store.removeAll();
+         store.proxy=new Ext.data.HttpProxy({url:url});
+         store.load();
+         Ext.getCmp("queryWin").hide();
     },
 
 //简历内容formpanel
@@ -186,7 +251,8 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
             url:"/manage/resume_an.json",
             remoteSore:true,
             root:"content",
-            fields:['id','rname_a','rsex_a','rbirth_a','rpho_a','rmail_a','rprof_a','redu_a']
+            params:{ conditions : "" },
+            fields:['id','rname_a','rsex_a','rbirth_a','rpho_a','rmail_a','rprof_a','redu_a','user_login']
         });
         fStore.load();
 
@@ -199,13 +265,14 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
             stripeRows:true,
             viewConfig:{ forceFit:true },
             cm:new Ext.grid.ColumnModel([
-                {header:'姓名'      ,dataIndex:'rname_a' },
-                {header:'性别'      ,dataIndex:'rsex_a'  },
-                {header:'出生年月'  ,dataIndex:'rbirth_a'},
-                {header:'学历'      ,dataIndex:'redu_a'  },
-                {header:'专业'      ,dataIndex:'rprof_a' },
-                {header:'E-mail'    ,dataIndex:'rmail_a' },
-                {header:'联系电话'  ,dataIndex:'rpho_a' },
+                {header:'帐号'      ,dataIndex:'user_login' },
+                {header:'姓名'      ,dataIndex:'rname_a'     },
+                {header:'性别'      ,dataIndex:'rsex_a'      },
+                {header:'出生年月'  ,dataIndex:'rbirth_a'    },
+                {header:'学历'      ,dataIndex:'redu_a'      },
+                {header:'专业'      ,dataIndex:'rprof_a'     },
+                {header:'E-mail'    ,dataIndex:'rmail_a'     },
+                {header:'联系电话'  ,dataIndex:'rpho_a'      },
             ]),
         });
         grid1.on('cellclick',function(grid, rowIndex) {
