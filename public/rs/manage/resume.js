@@ -1,7 +1,6 @@
 Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
     id: 'resumeCenter',
     init: function(){
-        this.rearchData();
         this.query = this.query();
         this.launcher = {
             text: '简历中心',
@@ -29,18 +28,6 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
             });
         }
         win.show();
-        Manage.resumeCenter.readData();
-    },
-
-//加载简历数据
-    rearchData : function(){ 
-        rStore = new Ext.data.JsonStore({ 
-              url:"/manage/edit_resume.json",
-              root:"content",
-              fields:['rname','rsex','rbirth','rmari_sta','rrace','rblood','rhei','rwei','rpoli',
-                    'riden','rpho','rmail','raddr','rprof','rexp','redu','rskill','reva']
-        });
-        rStore.load({callback:function(record){store = record;}});
     },
 
     createPanel: function(){ 
@@ -127,6 +114,43 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
 
 //简历内容formpanel
     formPanel : function(){ 
+        var rStore = new Ext.data.JsonStore({ 
+                  url:"/manage/edit_resume.json",
+                  root:"content",
+                  fields:['rname','rsex','rbirth','rmari_sta','rrace','rblood','rhei','rwei','rpoli',
+                        'riden','rpho','rmail','raddr','rprof','rexp','redu','rskill','reva']
+            });
+        rStore.load({callback:function(record){
+            if(record.length != 0){        //如果没记录，则新建 
+                url="/manage/update_resume.json";
+                method = 'PUT';
+                Ext.getCmp("rname").setValue(record[0].data.rname);
+                Ext.getCmp("rsex").setValue(record[0].data.rsex);
+                Ext.getCmp("rbirth").setValue(record[0].data.rbirth);
+                Ext.getCmp("rmari_sta").setValue(record[0].data.rmari_sta);
+                Ext.getCmp("rrace").setValue(record[0].data.rrace);
+                Ext.getCmp("rblood").setValue(record[0].data.rblood);
+                Ext.getCmp("rhei").setValue(record[0].data.rhei);
+                Ext.getCmp("rwei").setValue(record[0].data.rwei);
+                Ext.getCmp("rpoli").setValue(record[0].data.rpoli);
+                Ext.getCmp("riden").setValue(record[0].data.riden);
+                Ext.getCmp("rpho").setValue(record[0].data.rpho);
+                Ext.getCmp("rmail").setValue(record[0].data.rmail);
+                Ext.getCmp("raddr").setValue(record[0].data.raddr);
+                Ext.getCmp("rprof").setValue(record[0].data.rprof);
+                Ext.getCmp("rexp").setValue(record[0].data.rexp);
+                Ext.getCmp("redu").setValue(record[0].data.redu);
+                Ext.getCmp("rskill").setValue(record[0].data.rskill);
+                Ext.getCmp("reva").setValue(record[0].data.reva);
+            }
+            else
+            {//如果没记录，则修改
+                url="/manage/create_resume.json";
+                method = 'POST';
+            }
+          
+        }});
+
         return new Ext.form.FormPanel({
             labelAlign: 'right',
             frame:true,
@@ -170,37 +194,6 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
         });
     },
 
-//读取简历内容数据
-    readData : function(){ 
-        if(store.length != 0){        //如果没记录，则新建 
-            url="/manage/update_resume.json";
-            method = 'PUT';
-            Ext.getCmp("rname").setValue(store[0].data.rname);
-            Ext.getCmp("rsex").setValue(store[0].data.rsex);
-            Ext.getCmp("rbirth").setValue(store[0].data.rbirth);
-            Ext.getCmp("rmari_sta").setValue(store[0].data.rmari_sta);
-            Ext.getCmp("rrace").setValue(store[0].data.rrace);
-            Ext.getCmp("rblood").setValue(store[0].data.rblood);
-            Ext.getCmp("rhei").setValue(store[0].data.rhei);
-            Ext.getCmp("rwei").setValue(store[0].data.rwei);
-            Ext.getCmp("rpoli").setValue(store[0].data.rpoli);
-            Ext.getCmp("riden").setValue(store[0].data.riden);
-            Ext.getCmp("rpho").setValue(store[0].data.rpho);
-            Ext.getCmp("rmail").setValue(store[0].data.rmail);
-            Ext.getCmp("raddr").setValue(store[0].data.raddr);
-            Ext.getCmp("rprof").setValue(store[0].data.rprof);
-            Ext.getCmp("rexp").setValue(store[0].data.rexp);
-            Ext.getCmp("redu").setValue(store[0].data.redu);
-            Ext.getCmp("rskill").setValue(store[0].data.rskill);
-            Ext.getCmp("reva").setValue(store[0].data.reva);
-        }
-        else
-        {//如果没记录，则修改
-            url="/manage/create_resume.json";
-            method = 'POST';
-        }
-    },
-
 //编辑简历内容数据
     editData : function(){ 
         var data = {};
@@ -230,7 +223,7 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
 
 //保存简历内容
     save : function(){ 
-        data = Manage.resumeCenter.editData(); 
+        var data = Manage.resumeCenter.editData(); 
         Ext.MessageBox.confirm("确认","确认保存",
             function(button,text){ 
                 if(button == "yes"){ 
@@ -249,12 +242,12 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
     createGrid1 : function(){ 
         var fStore = new Ext.data.JsonStore({ 
             url:"/manage/resume_an.json",
+            totalProperty:'total',
             remoteSore:true,
             root:"content",
-            params:{ conditions : "" },
             fields:['id','rname_a','rsex_a','rbirth_a','rpho_a','rmail_a','rprof_a','redu_a','user_login']
         });
-        fStore.load();
+        fStore.load({ params:{ offset:0,limit:Wando.pageSize } });
 
         var grid1 = new Ext.grid.GridPanel({ 
             store:fStore,
@@ -274,6 +267,7 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
                 {header:'E-mail'    ,dataIndex:'rmail_a'     },
                 {header:'联系电话'  ,dataIndex:'rpho_a'      },
             ]),
+            bbar:Wando.createPagingToolbar(fStore)
         });
         grid1.on('cellclick',function(grid, rowIndex) {
             var tStore = Ext.getCmp('grid2').getStore();

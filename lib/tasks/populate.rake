@@ -21,7 +21,7 @@ namespace :db do
       job.state            =   Faker::Name.name
     end
 
-      ResumeAns.populate 10 do |resume_ans|
+      ResumeAns.populate 50 do |resume_ans|
         resume_ans.user_id          = 1
         resume_ans.rexp_a           = Faker::Lorem.sentence
         resume_ans.redu_a           = Faker::Lorem.words.first

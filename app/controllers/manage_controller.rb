@@ -40,13 +40,17 @@ class ManageController < ApplicationController
     end
 
 #GET  /manage/resume_an.json
-    def resume_an
-      @resume_ans=[]
-      ResumeAns.all.each do |res_an|
+    def resume_an(options={ })
+      steady_options = { :order => params[:order], :offset => params[:offset], :limit => params[:limit] }
+      options        = steady_options.merge(options)
+      count          = ResumeAns.count
+      records        = ResumeAns.scoped(options)
+      @resume_ans    = []
+      records.all.each do |res_an|
         data = res_an.attributes.merge(:user_login => res_an.user.login)
         @resume_ans.push(data)
       end
-      render_json @resume_ans
+      render_json @resume_ans,count
     end
 
 #GET  /manage/find_resume.json?id
