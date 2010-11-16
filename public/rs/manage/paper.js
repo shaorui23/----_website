@@ -22,7 +22,6 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                 shim: false,
                 animCollapse: false,
                 constrainHeader: true,
-
                 layout: 'fit',
                 items: this.createPanel()
             });
@@ -38,7 +37,6 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
         return new Ext.TabPanel({ 
             frame: true,
             activeTab: 0,
-
             items: [{ 
                 id: 'readPaper',
                 title: '问卷审核',
@@ -222,6 +220,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             ]
         });
 
+        var _this = this;
         var sm = new Ext.grid.CheckboxSelectionModel();
         return new Ext.grid.GridPanel({ 
             id: 'npGrid',
@@ -237,7 +236,9 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                     text: '删除',
                     handler: function() { 
                         var npGrid = Ext.getCmp('npGrid');
-                        _this.gsDeleter(npGrid);
+                        var qbGrid = Ext.getCmp('qbGrid');
+                        //_this.gsDeleter(npGrid);
+                        _this.recordsMoveHandler(npGrid, qbGrid, 'add-delete', [], 0);
                     }
                 }, { 
                     text: '保存',
