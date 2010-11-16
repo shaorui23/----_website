@@ -22,5 +22,5 @@ Ext.apply(Wando, {
         return bar;
     },
 
-    pageSize : 10
+    pageSize : 5
 })

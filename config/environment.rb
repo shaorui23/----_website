@@ -9,6 +9,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 require "machinist/active_record"
 require "populator"
 require "faker"
+require "will_paginate"
 require "randexp"
 
 Rails::Initializer.run do |config|

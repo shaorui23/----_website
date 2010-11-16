@@ -147,7 +147,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 'jname'
             ],
             root: "content",
-            url:'/jobs.json',
+            url:'/jobs/all_jobs.json',
             method: 'GET'
         });
         var combo = new Ext.form.ComboBox({ 
@@ -285,7 +285,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 'state'
             ],
             root: "content",
-            url:'/jobs.json',
+            url:'/jobs/all_jobs.json',
             method: 'GET'
         });
         store.load();

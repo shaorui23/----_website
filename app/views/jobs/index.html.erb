@@ -7,16 +7,16 @@
     <%= f.label :jobtype_id_equals, "职位类型:" %>
     <%= f.collection_select :jobtype_id_equals, Jobtype.all, :id, :job_type,:include_blank => true%>
     <%= f.label :job_number_gte, "招聘人数(多于):" %>
-    <%= f.text_field :job_number_gte, :size => 3%>
+    <%= f.text_field :job_number_gte%>
   </p>
   <p>
-    <%= f.submit "Submit" %>
+    <%= f.submit "提交查询" %>
   </p>
 <% end %>
 <p>
   按选择排序结果:
-  <%= order @search, :by => :jname %> |
-  <%= order @search, :by => :job_number %> 
+  <%= order @search, :by => :jname, :as => "职位" %> |
+  <%= order @search, :by => :job_number, :as => "招聘人数"%> 
 </p>
 
 <table border=1>
@@ -27,19 +27,32 @@
   <th>截止日期</th>
   <th>职业类型</th>
   <th>招聘人数</th>
-  <th>要求</th>
 </tr>
 <% @jobs.each do |job| %>
   <tr>
-    <td><%= h job.jname %></td>
+    <td width=70><%= h job.jname %></td>
     <td><%= h job.jdesc %></td>
     <td><%= h job.created_date %></td>
     <td><%= h job.closed_date %></td>
-    <td><%= h job.position_type %></td>
-    <td><%= h job.job_number %></td>
-    <td><%= h job.requirement %></td>
+    <td width=70><%= h job.position_type %></td>
+    <td width=70><%= h job.job_number %></td>
   </tr>
+    <% if @jobs.length < 5%>
+      <% (5-@jobs.length).times do |job|%>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      <% end %>
+    <% end %>
 <% end %>
 </table>
+<p>
+<%= will_paginate @jobs, :prev_label => "上一页", :next_label => "下一页" %>
+</p>
 
 <p><%= link_to 'New Job', new_job_path %></p>
