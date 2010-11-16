@@ -2,11 +2,12 @@ class JobsController < ApplicationController
 
 #GET /jobs
   def index
-     @job = Job.all.collect { |j| j.attributes.merge "position_type" => j.jobtype.job_type }
+     @search = Job.search(params[:search])
+     @jobs = @search.all#.collect { |j| j.attributes.merge "position_type" => j.jobtype.job_type  }
       respond_to do |format|
         format.html  
-        format.json  { render_json @job }
-    end
+        format.json  { render_json @jobs }
+      end
   end
 
 #POST /jobs

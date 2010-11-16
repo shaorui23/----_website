@@ -1,0 +1,45 @@
+<h1>职位列表</h1>
+
+<% form_for @search do |f| %>
+  <p>
+    <%= f.label :jname_like, "职位:" %>
+    <%= f.text_field :jname_like %>
+    <%= f.label :jobtype_id_equals, "职位类型:" %>
+    <%= f.collection_select :jobtype_id_equals, Jobtype.all, :id, :job_type,:include_blank => true%>
+    <%= f.label :job_number_gte, "招聘人数(多于):" %>
+    <%= f.text_field :job_number_gte, :size => 3%>
+  </p>
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>
+<p>
+  按选择排序结果:
+  <%= order @search, :by => :jname %> |
+  <%= order @search, :by => :job_number %> 
+</p>
+
+<table border=1>
+<tr>
+  <th>职位名称</th>
+  <th>简介</th>
+  <th>开始日期</th>
+  <th>截止日期</th>
+  <th>职业类型</th>
+  <th>招聘人数</th>
+  <th>要求</th>
+</tr>
+<% @jobs.each do |job| %>
+  <tr>
+    <td><%= h job.jname %></td>
+    <td><%= h job.jdesc %></td>
+    <td><%= h job.created_date %></td>
+    <td><%= h job.closed_date %></td>
+    <td><%= h job.position_type %></td>
+    <td><%= h job.job_number %></td>
+    <td><%= h job.requirement %></td>
+  </tr>
+<% end %>
+</table>
+
+<p><%= link_to 'New Job', new_job_path %></p>

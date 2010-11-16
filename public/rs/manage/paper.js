@@ -191,7 +191,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
     },
 
     createJobCombo: function(idName) { 
-        var jobStore = new Ext.data.JsonStore({ 
+        jobStore = new Ext.data.JsonStore({ 
             url: '/jobs.json',
             root: 'content',
             fields: [
@@ -214,6 +214,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
 
     //NP: new paper
     createNPGrid: function(jobCombo) { 
+        var _this = this;
         var npStore = new Ext.data.JsonStore({ 
             fields: [
                 'id',

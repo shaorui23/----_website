@@ -10,12 +10,14 @@ Manage = new Ext.app.App({
         Manage.paperCenter    = new Manage.PaperCenter();
         Manage.resumeCenter   = new Manage.ResumeCenter();
         Manage.decesionCenter = new Manage.DecesionCenter();
+        Manage.setting        = new Manage.Setting();
 		return [
             Manage.questionBase,
             Manage.positionManage,
             Manage.paperCenter,
             Manage.resumeCenter,
-            Manage.decesionCenter
+            Manage.decesionCenter,
+            Manage.setting
 		];
 	},
 
@@ -27,6 +29,7 @@ Manage = new Ext.app.App({
             toolItems: [{
                 text:'设置',
                 iconCls:'settings',
+                handler: function() { alert("你点了设置"); },
                 scope:this
             },'-',{
                 text:'注销',
