@@ -26,30 +26,42 @@ class GroupAn < ActiveRecord::Base
   belongs_to :user
   belongs_to :group
   
-  #返回全部的试卷的关联信息
-  #conditions包含了查询要求和查询所需数据，为conditions = ['conditions', data]
-  def self.paperInfo conditions = ['all']
+  # 返回全部的试卷的关联信息
+  # conditions包含了查询要求和查询所需数据，为conditions = ['conditions', data]
+  def self.paperInfo conditions = 'all'
     paperAns = GroupAn.find(:all, :order => 'id desc')
-    paperAns = self.show_handler paperAns,conditions
+    paperAns = self.show_handler paperAns, conditions
     paInfo = []
     paperAns.each do |paperAn|
       paInfo.push({ 
         :id        => paperAn.id,
         :user_name => paperAn.user.login,
         :job_name  => paperAn.group.job.jname,
-        :create_at => paperAn.created_at
+        :create_at => paperAn.created_at,
+        :mark      => paperAn.gmark
       })
     end
     return paInfo
   end
 
-  #根据条件返回合适的paper_answer
-  #TODO: 未完成，目的是使其支持复合查询,需要查询的条件在问卷中心问卷审核中有
-  def self.show_handler paperAns,conditions
-    if conditions[0] == 'all'
-        return paperAns
-    elsif conditions == 'job'
-        #puts 1
+  # 根据条件返回合适的paper_answer
+  def self.show_handler paperAns, conditions
+    if conditions == 'all'
+      return paperAns
+    else
+      # 判断job_id
+      if conditions[:job_id] != 'No Limit'
+        paperAns.delete_if { |paperAn| paperAn.group.job_id != conditions[:job_id] }
+      end
+
+      # 判断read_id
+      if conditions[:read_id] == 1
+        paperAns.delete_if { |paperAn| paperAn.gmark != nil }
+      elsif conditions[:read_id] == 2
+        paperAns.delete_if { |paperAn| paperAn.gmark == nil }
+      end
+
+      return paperAns
     end
   end
 end

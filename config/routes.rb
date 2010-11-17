@@ -14,28 +14,33 @@ ActionController::Routing::Routes.draw do |map|
       :all_jobs => :get
     }
   map.resources :manage,
-    :collection => {
-      :edit_resume => :get,
-      :resume_an =>:get,
-      :find_resume_an => :get,
-      :create_resume => :post,
-      :update_resume => :put,
-      :query =>:get,
-  }
+                :collection => {
+                  :edit_resume => :get,
+                  :resume_an =>:get,
+                  :find_resume_an => :get,
+                  :create_resume => :post,
+                  :update_resume => :put,
+                  :query =>:get,
+                }
   map.resources :manage
   map.resources :papers, 
                 :collection => { 
                   :show_questions  => :get,
                   :be_active       => :post,
-                  :be_unactive     => :post
+                  :be_unactive     => :post,
+                  :search_by_job   => :get
                 }
   map.resources :questions, 
-                :collection => { :deletes => :delete }
+                :collection => { 
+                  :deletes        => :delete,
+                  :search_by_qcon => :get,
+                }
   map.resources :persons
   map.resources :paper_answers,
                 :collection => { 
-                  :show_p_and_a => :get,
-                  :give_mark    => :post
+                  :show_p_and_a      => :get,
+                  :give_mark         => :post,
+                  :search_limit => :get
                 }
   # The priority is based upon order of creation: first created -> highest priority.
 

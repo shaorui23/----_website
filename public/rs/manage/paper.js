@@ -139,9 +139,29 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             store: opStore,
             anchor: '100%, 50%',
             tbar: [{ 
-                xtype: 'textfield'
+                xtype: 'textfield',
+                id: 'opGridText'   //mouse
             },{ 
-                text: '查找'
+                text: '查找',  //mouse
+                handler: function() { 
+                    var jobName = Ext.getCmp('opGridText').getValue();
+                    Ext.Ajax.request({ 
+                        url: "/papers/search_by_job",
+                        jsonData: { jobName: jobName },
+                        success: function(response) { 
+                            var datas = Ext.decode(response.responseText);
+                            opStore.loadData(datas);
+                        },
+                        failure: function() {
+                            Ext.Msg.alert('Wando', 'Failure');
+                        }
+                    });
+                }
+            }, { 
+                text: '清空查询',  //mouse
+                handler: function() { 
+                    opStore.reload();
+                }
             }],
             cm: new Ext.grid.ColumnModel([
                 new Ext.grid.RowNumberer(),
@@ -302,9 +322,31 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             store: qbStore,
             sm: sm,
             tbar: [{ 
-                xtype: 'textfield'
+                xtype: 'textfield',
+                id: 'qbGridText',  //mouse
             },{ 
-                text: '查找'
+                text: '查找',  //mouse
+                handler: function() { 
+                    var value = Ext.getCmp('qbGridText').getValue();
+                    var store = Ext.getCmp('qbGrid').store;
+                    Ext.Ajax.request({ 
+                        url: '/questions/search_by_qcon',
+                        jsonData: { qcon: value },
+                        success: function(response) { 
+                            var questions = Ext.decode(response.responseText);
+                            store.loadData(questions);
+                        }, 
+                        failure: function() { 
+                            Ext.Msg.alert('Wando', 'failure');
+                        }
+                    });
+                }
+            }, { 
+                text: '清空查询',  //mouse
+                handler: function() { 
+                    var store = Ext.getCmp('qbGrid').store;
+                    store.reload();
+                }
             }, { 
                 text: '加入问卷',
                 handler: function() { 
@@ -331,7 +373,8 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                 'id',
                 'user_name',
                 'job_name',
-                'create_at'
+                'create_at',
+                'mark'
             ]
         });
 
@@ -355,6 +398,20 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             store: searchStore
         });
 
+        //mouse
+        function readRender(value, metadata, record) { 
+            if(record.get('mark') == null) { 
+                return '未批阅';
+            }else { 
+                switch(record.get('mark')) { 
+                    case 1: return '优秀';
+                    case 2: return '良好';
+                    case 3: return '及格';
+                    default: return '淘汰';
+                }
+            }
+        }
+
         return new Ext.grid.GridPanel({ 
             id: 'pasGrid',
             title: '查找问卷',
@@ -364,7 +421,24 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             viewConfig: { forceFit: true },
             tbar: [jobCombo, searchCombo, 
                 { 
-                    text: '查询'  //todo: 未实现
+                    text: '查询',  //mouse
+                    handler : function() { 
+                        var job_id = jobCombo.getValue();
+                        var read_id = searchCombo.getValue();
+                        var searchParams = {};
+                        if(job_id != '') searchParams['job_id'] = job_id;
+                        else searchParams['job_id'] = 'No Limit';
+                        if(read_id != '') searchParams['read_id'] = read_id;
+                        else searchParams['read_id'] = 3;
+                        Ext.Ajax.request({ 
+                            url: '/paper_answers/search_limit',
+                            jsonData: { params: searchParams },
+                            success: function(response) { 
+                                var datas = Ext.decode(response.responseText);
+                                store.loadData(datas);
+                            }
+                        })
+                    }
                 }, { 
                     text: '清空查询',
                     handler: function() { 
@@ -380,7 +454,8 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                     new Ext.grid.RowNumberer,
                     { header: '名字',     dataIndex: 'user_name' },
                     { header: '职位',     dataIndex: 'job_name' },
-                    { header: '提交时间', dataIndex: 'create_at' }
+                    { header: '提交时间', dataIndex: 'create_at' },
+                    { header: '分数',     dataIndex: '#', renderer: readRender }
                 ]
             }),
             listeners: { 
@@ -396,7 +471,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                             paperAnswer = datas.paper_answers;
                             paperQuestion = datas.paper_questions;
                             questionCount = datas.question_count;
-                            //仅限制6个问题
+                            //限制6个问题
                             var nameIndexs = ['gque_one', 'gque_two', 'gque_three', 'gque_four', 'gque_five', 'gque_six'];
                             var paForm = Ext.getCmp('paForm');
                             var j = 0;
@@ -461,6 +536,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                         url: '/paper_answers/give_mark',
                         jsonData: { paId: paId, mark: mark },
                         success: function() { 
+                            Ext.getCmp('pasGrid').store.reload();  //mouse
                             Ext.Msg.alert('Wando', 'Success');
                         },
                         failure: function() { 
@@ -472,7 +548,8 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             defaults: { 
                 width: 450,
                 hideLabel: true,
-                disabled: true
+                disabled: true,
+                style: "color:black"
             },
             labelWidth: 75,
             bodyStyle: 'padding: 5px 5px 0',

@@ -122,10 +122,6 @@
           <ul>
             <%if @jobs.blank?%>
               <li><%= flash[:jobs]%></li>
-            <%else%>
-              <% @jobs.each do|j| %>
-                <li><span>职位:</span><%= j.jname%>，职位类型：<%= j.position_type %>，招聘人数：<%= j.job_number%></li>
-              <% end %>
             <%end%>
           </ul>
         </div>

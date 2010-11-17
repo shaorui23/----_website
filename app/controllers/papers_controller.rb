@@ -1,5 +1,6 @@
 class PapersController < ApplicationController
-#GET: /papers
+
+  # GET: /papers
   def index
     papers = Group.find(:all)
 
@@ -10,7 +11,7 @@ class PapersController < ApplicationController
     render :json => papers
   end
 
-#Post: /papers
+  # Post: /papers
   def create
     pDatas = params[:pDatas]
     gbIds = pDatas[:qbIds]
@@ -25,15 +26,15 @@ class PapersController < ApplicationController
     render :json => { :message => 'success' }
   end
 
-#GET: /papers/show_questions:id
+  # GET: /papers/show_questions:id
   def show_questions
     oldPaper = Group.find(params[:id])
       questions = oldPaper.questions
     render :json => questions
   end
 
-#Post: /papers/be_active
-#将试卷的状态改为使用中
+  # Post: /papers/be_active
+  # 将试卷的状态改为使用中
   def be_active
     beActiver = Group.find(params[:id])
     actives = Group.job_unactivelize(params[:job_id])
@@ -41,11 +42,24 @@ class PapersController < ApplicationController
     render :json => beActiver
   end
 
-#Post: /papers/be_unactive
-#将试卷的状态改为禁用
+  # Post: /papers/be_unactive
+  # 将试卷的状态改为禁用
   def be_unactive
     paper = Group.find(params[:id])
     paper.update_attributes({ :active => false })
     render :json => paper
+  end
+
+  # Get: /papers/search_by_job.job_id
+  # mouse
+  def search_by_job
+    job_name = params[:jobName]
+    papers = Job.find_by_jname(job_name).groups
+
+    papers.collect! do |paper|
+      paper.attributes.merge!({ :job_name => job_name })
+    end
+
+    render :json => papers
   end
 end

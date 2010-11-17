@@ -17,7 +17,7 @@
 #
 
 class Group < ActiveRecord::Base
-  has_one :group_an
+  has_many :group_ans
   has_and_belongs_to_many :questions
   belongs_to :job
   

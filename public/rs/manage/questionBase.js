@@ -90,9 +90,29 @@ Manage.QuestionBase = Ext.extend(Ext.app.Module, {
             region: 'center',
             store: store,
             tbar: [{ 
-                xtype: 'textfield'
+                xtype: 'textfield', 
+                id: 'questionBaseText'  //mouse
             },{ 
-                text: '查找'
+                text: '查找',  //mouse
+                handler: function() { 
+                    var value = Ext.getCmp('questionBaseText').getValue();
+                    Ext.Ajax.request({ 
+                        url: '/questions/search_by_qcon',
+                        jsonData: { qcon: value },
+                        success: function(response) { 
+                            var questions = Ext.decode(response.responseText);
+                            store.loadData(questions);
+                        }, 
+                        failure: function() { 
+                            Ext.Msg.alert('Wando', 'failure');
+                        }
+                    });
+                }
+            }, { 
+                text: '清空查询',  //mouse
+                handler: function() { 
+                    store.reload();
+                }
             }, '-',{ 
                 text: '删除',
                 handler: function(){ 

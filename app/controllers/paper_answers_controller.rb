@@ -1,13 +1,13 @@
 class PaperAnswersController < ApplicationController
 
-  # GET:/paper_answers.json
+  # GET: /paper_answers.json
   # paInfo: paper answer information
   def index
     paInfo = GroupAn.paperInfo
     render :json => paInfo
   end
 
-  # GET:/paper_answers/show_p_and_a.json
+  # GET: /paper_answers/show_p_and_a.json
   # p_and_a: paper and answers
   # pas: paper answers
   # pq:  paper questions
@@ -17,14 +17,18 @@ class PaperAnswersController < ApplicationController
     render :json => { :paper_answers => pas, :paper_questions => pq, :question_count => pas.group.questions.count }
   end
 
-  # GET:/paper_answers/show_in_job_or_mark
-  # TODO:用于实现问卷中心的复合查询的action
-  #def show_in_job_or_mark
-  #  job_id = params[:job_id]
-  #  mark = params[:markOrNot]
-  #end
+  # GET: /paper_answers/show_in_job_or_mark
+  # pas: paper answers
+  # mouse
+  def search_limit
+    myparams = {}
+    myparams = params[:params]
+    pas = []
+    pas = GroupAn.paperInfo myparams
+    render :json => pas
+  end
 
-  # POST:/paper_answers/give_mark
+  # POST: /paper_answers/give_mark
   def give_mark
     GroupAn.find(params[:paId]).update_attributes({ :gmark => params[:mark] })
     render :json => { :message => 'success' }
