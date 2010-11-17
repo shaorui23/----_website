@@ -49596,3 +49596,489 @@ Rendering homes/index
   [4;36;1mUser Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
   [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
 Completed in 22ms (View: 13, DB: 2) | 200 OK [http://0.0.0.0/homes/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-17 11:30:43) [GET]
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (state = 'ing' and job_number > 0) LIMIT 5[0m
+Rendering template within layouts/application
+Rendering homes/index
+  [4;35;1mJob Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.1ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 2) [0m
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 3) [0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 61ms (View: 49, DB: 3) | 200 OK [http://0.0.0.0/homes/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-11-17 11:30:46) [GET]
+  [4;35;1mJob Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 0, 5[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `jobs` [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` [0m
+  [4;35;1mJobtype Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:58)
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 53ms (View: 39, DB: 2) | 200 OK [http://0.0.0.0/jobs]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-17 11:30:50) [GET]
+  [4;35;1mUser Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering manage/index
+Completed in 20ms (View: 10, DB: 2) | 200 OK [http://0.0.0.0/manage]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 11:30:51) [POST]
+  Parameters: {"limit"=>"5", "offset"=>"0"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJobtype Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 2) [0m
+  [4;35;1mJobtype Load (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 51ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobtypesController#index to json (for 127.0.0.1 at 2010-11-17 11:30:52) [GET]
+  Parameters: {"_dc"=>"1289964651953"}
+  [4;35;1mJobtype Load (0.1ms)[0m   [0mSELECT * FROM `jobtypes` [0m
+  [4;36;1mJobtype Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+Completed in 77ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/jobtypes.json?_dc=1289964651953]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 11:30:56) [POST]
+  Parameters: {"limit"=>"5", "offset"=>"5"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJobtype Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+  [4;36;1mJobtype Load (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 2) [0m
+  [4;35;1mJobtype Load (0.1ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 38ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 11:30:57) [POST]
+  Parameters: {"limit"=>"5", "offset"=>"10"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJobtype Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+  [4;36;1mJobtype Load (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 2) [0m
+  [4;35;1mJobtype Load (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 34ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 11:30:59) [POST]
+  Parameters: {"limit"=>"5", "offset"=>"0"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJobtype Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+  [4;36;1mJobtype Load (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 2) [0m
+  [4;35;1mJobtype Load (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 35ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 11:31:08) [POST]
+  Parameters: {"limit"=>"5", "offset"=>"0"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJobtype Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 2) [0m
+  [4;35;1mJobtype Load (0.1ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 44ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 11:31:22) [POST]
+  Parameters: {"limit"=>"5", "offset"=>"5"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJobtype Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+  [4;36;1mJobtype Load (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 2) [0m
+  [4;35;1mJobtype Load (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 33ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 11:31:23) [POST]
+  Parameters: {"limit"=>"5", "offset"=>"10"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJobtype Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+  [4;36;1mJobtype Load (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 2) [0m
+  [4;35;1mJobtype Load (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 40ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 11:31:25) [POST]
+  Parameters: {"limit"=>"5", "offset"=>"5"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJobtype Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+  [4;36;1mJobtype Load (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 2) [0m
+  [4;35;1mJobtype Load (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 39ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 11:31:26) [POST]
+  Parameters: {"limit"=>"5", "offset"=>"0"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJobtype Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 2) [0m
+  [4;35;1mJobtype Load (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 37ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 11:31:28) [POST]
+  Parameters: {"limit"=>"5", "offset"=>"0"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJobtype Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+  [4;36;1mJobtype Load (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 2) [0m
+  [4;35;1mJobtype Load (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 33ms (View: 0, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#get_job to json (for 127.0.0.1 at 2010-11-17 11:31:31) [GET]
+  Parameters: {"id"=>"1", "_dc"=>"1289964691091"}
+  [4;35;1mJob Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (`jobs`.`id` = 1) [0m
+Completed in 19ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs/1/get_job.json?_dc=1289964691091]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobtypesController#for_select to json (for 127.0.0.1 at 2010-11-17 11:31:35) [GET]
+  [4;35;1mJobtype Load (0.1ms)[0m   [0mSELECT * FROM `jobtypes` [0m
+  [4;36;1mJobtype Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobtypes/for_select.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#update to json (for 127.0.0.1 at 2010-11-17 11:31:38) [PUT]
+  Parameters: {"id"=>"1", "job"=>{"closed_date"=>"2009-08-23T00:00:00", "jname"=>"corporis", "job_number"=>52, "jdesc"=>"Id libero ut eligendi.", "jobtype_id"=>"1", "salary"=>2000, "id"=>1, "created_date"=>"2010-11-17T00:00:00", "requirement"=>"Odio rerum voluptatem error.", "education"=>"大\344\270\223", "experience"=>"两\345\271\264"}}
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (`jobs`.`id` = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mJobtype Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.1ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Completed in 21ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/1.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 11:31:38) [GET]
+  Parameters: {"_dc"=>"1289964698845"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJobtype Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+  [4;36;1mJobtype Load (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 2) [0m
+  [4;35;1mJobtype Load (0.1ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 37ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json?_dc=1289964698845]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#get_job to json (for 127.0.0.1 at 2010-11-17 11:31:41) [GET]
+  Parameters: {"id"=>"13", "_dc"=>"1289964701020"}
+  [4;35;1mJob Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (`jobs`.`id` = 13) [0m
+Completed in 19ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs/13/get_job.json?_dc=1289964701020]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#get_job to json (for 127.0.0.1 at 2010-11-17 11:31:49) [GET]
+  Parameters: {"id"=>"12", "_dc"=>"1289964709539"}
+  [4;35;1mJob Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (`jobs`.`id` = 12) [0m
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs/12/get_job.json?_dc=1289964709539]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#get_job to json (for 127.0.0.1 at 2010-11-17 11:32:00) [GET]
+  Parameters: {"id"=>"13", "_dc"=>"1289964719976"}
+  [4;35;1mJob Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (`jobs`.`id` = 13) [0m
+Completed in 65ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs/13/get_job.json?_dc=1289964719976]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-11-17 11:32:09) [GET]
+  Parameters: {"commit"=>"提交查\350\257\242", "search"=>{"experience_like"=>"", "salary_gte"=>"", "jname_like"=>"", "order"=>"", "job_number_gte"=>"", "education_like"=>"", "jobtype_id_equals"=>""}}
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 0, 5[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `jobs` [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` [0m
+  [4;35;1mJobtype Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:58)
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 49ms (View: 38, DB: 2) | 200 OK [http://0.0.0.0/jobs?search%5Border%5D=&search%5Bjname_like%5D=&search%5Bjobtype_id_equals%5D=&search%5Bjob_number_gte%5D=&search%5Bsalary_gte%5D=&search%5Beducation_like%5D=&search%5Bexperience_like%5D=&commit=%E6%8F%90%E4%BA%A4%E6%9F%A5%E8%AF%A2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-11-17 11:32:11) [GET]
+  Parameters: {"commit"=>"提交查\350\257\242", "page"=>"2", "search"=>{"salary_gte"=>"", "experience_like"=>"", "order"=>"", "jname_like"=>"", "job_number_gte"=>"", "jobtype_id_equals"=>"", "education_like"=>""}}
+  [4;35;1mJob Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 5, 5[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `jobs` [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` [0m
+  [4;35;1mJobtype Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:58)
+  [4;35;1mUser Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 60ms (View: 43, DB: 2) | 200 OK [http://0.0.0.0/jobs?commit=%E6%8F%90%E4%BA%A4%E6%9F%A5%E8%AF%A2&page=2&search%5Beducation_like%5D=&search%5Bexperience_like%5D=&search%5Bjname_like%5D=&search%5Bjob_number_gte%5D=&search%5Bjobtype_id_equals%5D=&search%5Border%5D=&search%5Bsalary_gte%5D=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-11-17 11:32:13) [GET]
+  Parameters: {"commit"=>"提交查\350\257\242", "page"=>"3", "search"=>{"salary_gte"=>"", "experience_like"=>"", "order"=>"", "jname_like"=>"", "job_number_gte"=>"", "jobtype_id_equals"=>"", "education_like"=>""}}
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 10, 5[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mJobtype Load (0.1ms)[0m   [0mSELECT * FROM `jobtypes` [0m
+  [4;36;1mJobtype Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;35;1mJobtype Load (0.1ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 2) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;36;1mJobtype Load (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 3) [0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:58)
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 56ms (View: 43, DB: 2) | 200 OK [http://0.0.0.0/jobs?commit=%E6%8F%90%E4%BA%A4%E6%9F%A5%E8%AF%A2&page=3&search%5Beducation_like%5D=&search%5Bexperience_like%5D=&search%5Bjname_like%5D=&search%5Bjob_number_gte%5D=&search%5Bjobtype_id_equals%5D=&search%5Border%5D=&search%5Bsalary_gte%5D=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-11-17 11:32:15) [GET]
+  Parameters: {"commit"=>"提交查\350\257\242", "page"=>"1", "search"=>{"salary_gte"=>"", "experience_like"=>"", "order"=>"", "jname_like"=>"", "job_number_gte"=>"", "jobtype_id_equals"=>"", "education_like"=>""}}
+  [4;35;1mJob Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 0, 5[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `jobs` [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` [0m
+  [4;35;1mJobtype Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:45)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47jobs47index46html46erb at /home/shao/webSite1/app/views/jobs/index.html.erb:58)
+  [4;35;1mUser Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 67ms (View: 53, DB: 2) | 200 OK [http://0.0.0.0/jobs?commit=%E6%8F%90%E4%BA%A4%E6%9F%A5%E8%AF%A2&page=1&search%5Beducation_like%5D=&search%5Bexperience_like%5D=&search%5Bjname_like%5D=&search%5Bjob_number_gte%5D=&search%5Bjobtype_id_equals%5D=&search%5Border%5D=&search%5Bsalary_gte%5D=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-17 11:50:09) [GET]
+  [4;35;1mJob Load (0.2ms)[0m   [0mSELECT * FROM `jobs` WHERE (state = 'ing' and job_number > 0) LIMIT 5[0m
+Rendering template within layouts/application
+Rendering homes/index
+  [4;36;1mJob Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJobtype Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 2) [0m
+  [4;35;1mJobtype Load (0.1ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 3) [0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 40ms (View: 24, DB: 3) | 200 OK [http://0.0.0.0/homes/]
