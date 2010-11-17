@@ -62,11 +62,13 @@ class ManageController < ApplicationController
 #GET  /manage/query.json?conditions
     def query
       @resume_ans=[]
-      res_an = ResumeAns.find(:all,:include=>[:user],:conditions=>params[:conditions])
+      steady_options = { :order => params[:order], :offset => params[:offset], :limit => params[:limit],:include=>[:user],:conditions=>params[:conditions]}
+      count = ResumeAns.all({ :conditions=>params[:conditions] }).count
+      res_an = ResumeAns.all(steady_options)
       res_an.each do |res_an|
         data = res_an.attributes.merge(:user_login => res_an.user.login)
         @resume_ans.push(data)
       end
-      render_json @resume_ans.to_a
+      render_json @resume_ans.to_a,count
     end
 end

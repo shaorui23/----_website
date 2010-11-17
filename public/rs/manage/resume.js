@@ -108,7 +108,7 @@ Manage.ResumeCenter = Ext.extend(Ext.app.Module, {
          var store = Ext.getCmp("grid1").getStore();
          store.removeAll();
          store.proxy=new Ext.data.HttpProxy({url:url});
-         store.load();
+         store.load({ params:{ offset:0,limit:Wando.pageSize } });
          Ext.getCmp("queryWin").hide();
     },
 
