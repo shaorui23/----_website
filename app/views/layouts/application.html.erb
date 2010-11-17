@@ -1,86 +1,57 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Wando 团队招聘服务网</title>
-<link rel="shortcut icon" href="../images/head.ico"></link>
-<%= stylesheet_link_tag 'css.css' %>
-<%= stylesheet_link_tag 'css2.css' %>
+<title>wando团队招聘网</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<%= stylesheet_link_tag 'style.css' %>
+
+
 </head>
-<%= javascript_include_tag 'jquery-1[1].2.1.pack.js' %>
-<%= javascript_include_tag 'muen.js' %>
-
 <body>
-<div class="juzhong">
-  <div class="top">
-    <div class="top_top"><span style="float:left; margin-left:14px;">欢迎
-    <%if current_user != :false%>
-      <%= current_user[:login] %>
-    <%else%>
-      <font color="red">未登录</font>
-    <%end%>
-    访问<b>Wando</b>团队招聘网站</span><span id ='clock'style="float:right; margin-right:6px;"> 
-    <SCRIPT type=text/javascript>
-        var clock = new Clock();
-        clock.display(document.getElementById("clock"));
-    </SCRIPT></span>
-
-    <div class="clear"></div>
+<div id="wrap">
+  <div id="header">
+    <div id="logo">
+      <h2 id="sitename">wando招聘网</span></h2>
+      <h3 class="description">没有做不到，只有想不到</h3>
     </div>
-    <div class="logo_bg"><img src="../images/logo.jpg" style="float:left; margin:18px 0 0 25px;"><img src="../images/logo_bg2.gif" width="502" height="100"  style=" float:right;">
-      <div class="clear"></div>
+    <div id="headercontent">
+      <h2>专注于招聘服务</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique, felis ut vehicula laoreet, nunc dolor bibendum tortor, a faucibus eros tortor sed nunc. Aliquam eget arcu. Nam sem justo, vulputate eget, cursus id, volutpat ullamcorper, felis. In eget velit ut diam ultrices ultrices. <img src="../images/bullet.png" alt="" width="10" height="10" /> <a href="http://www.865171.cn/">Read More</a></p>
+      <p>&nbsp;</p>
     </div>
-    <div class="muen">
-      <div class="subnav">
-        <ul id="nuw">
-          <li class="one"><a href="/homes/">&nbsp;&nbsp;&nbsp;首页</a></li>
-          <li  class="one"><a href="#">&nbsp;关于我们</a>
-            <ul>
-              <li><a href="#">&nbsp;团队简介</a></li>
-              <li><a href="#">&nbsp;成员介绍</a></li>
-            </ul>
-          </li>
-          <li class="one"><a href="#">&nbsp;最新咨询</a>
-            <ul>
-              <li><a href="/jobs">职位发布</a></li>
-              <li><a href="#">成绩公布</a></li>
-              <li><a href="#">录用公示</a></li>
-            </ul>
-          </li>
-          <li class="one"><a href="xingfa.html">&nbsp;网站动态</a>
-          </li>
-
+    <div id="sitecption"> 我们的宗旨是为您找到 <span class="bigger">中意的人才</span> 来吧! </div>
+  </div>
+  <div id="main">
+    <div id="menus">
+      <div id="mainmenu">
+        <ul>
+          <li class="first" id="active"><a href="/homes/">首页</a></li>
+          <li><a href="/myteam/">关于我们</a></li>
+          <li><a href=#>最新资讯</a></li>
+          <li><a href=#>网站动态</a></li>
           <% if logged_in? %>
-            <li  class="one"><a href="/persons">&nbsp;用户信息</a>
-              <ul>
-                <li><a href="/persons">我的资料/简历</a></li>
-                <li><a href="#">我的职位</a></li>
-              </ul>
-            </li>
-            <% unless current_user.remember_token.nil? %>
-              <li class="one"><a href="/manage" target=_blank style="background-image: none;">&nbsp;后台管理</a></li>
-            <% end %>
+          <li><a href="/persons">用户信息</a></li>
+          <li><a href=#>联系我们</a></li>
+          <% unless current_user.remember_token.nil? %>
+          <li><a href="/manage" target=_blank>后台管理</a></li>
           <% end %>
-
+          <% end %>
         </ul>
       </div>
-      <div class="sousuo">
-        <input name="" type="text"  class="input" value="站内搜索">
-        <input name="Submit" type="image" id="Submit" value="提交" src="../images/fangda.gif" style="float:left; margin:0 8px;">
+      <div id="submenu">
+        <ul>
+          <li><a href="/jobs">职位发布</a></li>
+          <li><a href="http://www.865171.cn/">成绩公示</a> </li>
+          <li><a href="http://www.865171.cn/">录用公示</a></li>
+        </ul>
       </div>
-      <div class="clear"></div>
-     </div>
-   </div>
+    </div>
 
-  <div><%= yield %></div>
+    <div><%= yield %></div>
 
-   <div "left">
-   <div class="clear"></div>
- </div>
- <div class="bottom">
-   <div class="bottom_left"> <a href="#">联系我们</a> | <a href="#">在线咨询</a> | <a href="#">网站地图</a> | <a href="#">官方博客</a> | <a href="#">隐私声明</a> </div>
-    <div class="bottom_right"> 地址：<b>HZU</b> &nbsp;&nbsp; 邮政编码：516007 　</div>
-  </div>
+  <div id="footer"> www.865171.cn &copy; All Rights Reserved <br />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique, felis ut vehicula laoreet, nunc dolor bibendum tortor <br />
+    design by <a href="http://www.865171.cn">www.865171.cn</a></div>
 </div>
 </body>
 </html>

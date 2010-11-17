@@ -1,197 +1,34 @@
-  <div class="main">
-    <div class="left">
-      <div class="banner">
-        <div align="center">
-          <DIV id=nav>
-            <UL>
-              <LI><IMG src="../images/01.jpg" text="良好的沟通是人才必备的基础素质|Wando团队" pic="1">
-                <DIV>Wando团队</DIV>
-              </LI>
-              <LI><IMG src="../images/02.jpg" text="优秀人才是团队必不可少的|Wando团队" pic="2">
-                <DIV>Wando团队</DIV>
-              </LI>
-              <LI><IMG src="../images/03.jpg" text="Wando工作环境|Wando团队" pic="3">
-                <DIV>Wando团队</DIV>
-              </LI>
-              <LI><IMG src="../images/04.jpg" text="Wando实验室|Wando团队" pic="4">
-                <DIV>Wando团队</DIV>
-              </LI>
-              <LI><IMG src="../images/05.jpg" text="Wando产品|Wando团队" pic="5">
-                <DIV>Wando团队</DIV>
-              </LI>
-            </UL>
-            <DIV id=BG></DIV>
-            <DIV id=mask></DIV>
-            <DIV id=back><IMG height=255 src="" width=685></DIV>
-          </DIV>
-          <p>
-            <SCRIPT type=text/javascript>
- <!--
- var num = 0;
- $("#nav").hide();
-	$("li img").load(function(){
-		num++;
-		if (num==4)
-		{
-			$("#nav").show();
-		}
-	})
-		.click(function(){
-		
-		//如果已经处于active状态，return
-		if (this.className.indexOf("active")!=-1) return;
-		
-		//正文文字渐隐
-		$("#frontText").fadeOut();
-		$("#frontTextBack").fadeOut();
-		$("#frontTextSub").fadeOut();
+<div id="content">
+      <div id="homeleft">
+        <h2>把握 <span class="green">跳槽</span></h2>
+        <p>秋去冬来，职场上又一年的“金9银10”招聘高峰季渐趋渐于平静。在这一年一度的人才流动旺季过后，你是继续坚守原有的岗位上，还是已经另投他主了呢？日前的一项有6000余人参与在线调查显示，有8成的参与者都表示自己当季有跳槽的意愿！
 
-		//active状态的图片恢复原样
-		$("li img.active").fadeTo(200,0.6)
-		.removeClass("active")
-		.animate({top:5,width:70,left:1},300)
-		.parent().css({"color":"#aaa"});  //
-		
-		//获取数据
-		var i = $(this).attr("pic");
-		var t = $(this).attr("text").split("|");
-		
-		//当前
-		$(this).animate({top:-5,width:70,height:40,left:1},100)
-		.addClass("active")
-		.fadeTo(200,1)
-		.parent().css({"color":"white"});
-
-		$("#back").children().addClass("gray").end()
-					.fadeTo(500,0.1,function(){
-										//var IMG = new Image();
-										//IMG.s
-										$(this).children("img").attr("src","../images/"+i+".jpg").removeClass("gray");	  //更改图片
-										$(this).fadeTo(500,1,function(){
-																$("#frontText").html(t[0]).fadeIn(200);	//更改正文文字
-																$("#frontTextBack").html(t[0]).fadeIn(200);	//阴影文字
-																$("#frontTextSub").html(t[1]).fadeIn(200)}	//副标题
-																);
-										})
-		})
-
-	//初始第一张图片
-	
-	var i =3;
-
-	show();
-
-	function show(){
-		if (i==$("li img").size()) i = 0
-		$("li img").eq(i).click();
-		i++;
-		//setTimeout(show(),1000);
-	}
-
-	document.oncontextmenu   =  function(e){return false}
-	
-	if (self.location.search!=""){
-		var V = self.location.search;
-		V = V.substr(1,V.length);
-		eval(V);
-		var json ="{";
-		if (option.skin==0)
-			$("#mask").hide();
-		if (option.animate == 0){
-		$("#nav ul").hide();
-		}
-		$("#nav").width(option.width?option.width:685);
-		$("#nav").height(option.height?option.height:255);
-		$("#back img").width($("#nav").width());
-		$("#back img").height($("#nav").height());
-		$(self.parent.document.getElementById("splash")).children().height($("#nav").height()).width($("#nav").width());
-	}
-		
- //-->
-  </SCRIPT>
-            <!-- 焦点图切换结束-->
-        </div>
+    当有大把的跳槽机会出现在眼前，一些本就围绕着职场人的负面因素又被放大了：求职意向本就不明晰、薪资福利不甚理想、职业发展陷入瓶颈、和同事上司的关系不和……这一切都促使着职场人加入跳槽大军。但俗话说“决定容易行动难”。你现下的状态真的适合跳槽吗？跳槽时，该怎么预估可能的风险？万一“跳空”后，又该怎么办呢？<img src="../images/bullet.png" alt="" width="10" height="10" /> <a href="http://arts.51job.com/arts/05/380805.html">Read More </a></p>
+        <h2>专业不对口<span class="green">大学生</span>怎么办</h2>
+        <p> 近日，中国职业规划师协会联合向阳生涯职业咨询机构，对京、沪两地2011届应届毕业生进行了一次“你知道自己毕业后要干什么吗”的职前调查。在参加调查的176位大学生中，高达79%的大学生选择“不知道/没想过”，有16%的大学生表示“有一些想法，但不清晰”，仅有5%的大学生明确表示“自己清楚地知道毕业后要干什么”。 <img src="../images/bullet.png" alt="" width="10" height="10" /> <a href="http://arts.51job.com/arts/05/380349.html">Read More </a></p>
+        <p>&nbsp;</p>
       </div>
-      <div class="zaixian" style="margin-top:269px;">
-        <div class="title_top">
-          <div class="title">近期公布职位</div>
-          <a href="#"><img src="../images/more2.gif" border="0"></a>
-          <div class="clear"></div>
+      <div id="homeright">
+        <h2> 最近公示 <span class="green">职位</span></h2>
+        <div class="column1"> <img src="../images/img1.gif" alt="" />
+          <h3>职业经理人</h3>
+          <p> Aliquam congue, elit vitae feugiat pretium, elit diam hendrerit justo, ac dapibus diam risus.</p>
+          <img src="../images/bullet.png" alt="" width="10" height="10" /> <a href="http://www.865171.cn/">Read More </a>
+          <p>&nbsp;</p>
         </div>
-        <div class="zaixian_nr">
-          <ul>
-            <%if @jobs.blank?%>
-              <li><%= flash[:jobs]%></li>
-            <%end%>
-          </ul>
+        <div class="column2"> <img src="../images/img2.gif" alt="" width="129" height="84" />
+          <h3>财务分析师</h3>
+          <p>Curabitur auctor dictum augue. Quisque id ante vel odio luctus mollis. Vivamus risus ligula Fusce eget ipsum</p>
+          <img src="../images/bullet.png" alt="" width="10" height="10" /> <a href="http://www.865171.cn/">Read More </a>
+          <p>&nbsp;</p>
         </div>
-      </div>
-      <div class="jianjie" style="margin-top:269px;">
-        <div class="title_top">
-          <div class="title">Wando团队简介</div>
-          <a href=""><img src="../images/more2.gif" border="0"></a>
-          <div class="clear"></div>
-        </div>
-        <div class="jianjie_nr">
-          <div class="xuxian_bottom" style="padding:16px 0;">
-            <span><b>建队理念:</b>
-              Wando建队的目的是补足学生在校四年比较难以接触到的项目计划、需求分析、实施部署等软件工程环节，使学生在完成学业之前对现实社会有所了解... 
-            </span>
-            <div class="clear"></div>
-          </div>
-          <div style=" margin-top:6px;"> 
-            <b>团队精神:</b>
-              我们相互分享，相互促进。有合作，有竞争，团结一致，开拓创新...
-          </div>
+        <div class="column3"> <img src="../images/img3.gif" alt="" />
+          <h3>统计所会计</h3>
+          <p>Praesent augue. Quisque mi quam, lacinia quis, sagittis at, molestie vitae, tortor. Mauris.</p>
+          <img src="../images/bullet.png" alt="" width="10" height="10" /> <a href="http://www.865171.cn/">Read More </a>
+          <p>&nbsp;</p>
         </div>
       </div>
       <div class="clear"></div>
     </div>
-
-    <div class="right">
-      <% form_tag :controller => "account", :action => "login" do -%>
-        <div class="yewulingyu"><span style="float:left;">用户登录</span></div>
-         <% if flash[:notice] %>
-           <span id = "notice">
-             <font><%= flash[:notice] %></font>
-           </span>
-         <% end %>
-        <div class="lingyu_nr">
-          <div id="user">用 户
-            <%= text_field_tag 'login' %>
-          </div>
-			    <div id="password">密   码
-            <%= password_field_tag 'password' %>
-			    </div>
-			    <div id="btn">
-            <%= submit_tag '登录' %>
-      <% end %>
-            <%= link_to '退出', :controller => "account", :action => "logout" %>
-            <%= link_to '注册', :controller => "account", :action => "signup" %>
-         </div>
-    </div>
-
-        <div class="tu_1"><img src="../images/tu_1.gif" border="0"> </div>
-        <div class="youqing">
-         <div class="youqinglianjie">友情链接</div>
-         <div class="youqinglianjie_2">
-           <select name="select" class="search" id="selectd_fo" onchange="select_change_to()">
-             <option value="auction" selected="selected">-------------友情链接------------</option>
-             <option value="wando">Wando网站主页</option>
-             <option value="mouse-home">Mouse-Home</option>
-             <option value="google">Google</option>
-           </select>
-          </div>
-        </div>
-        <div class="tu_1"><img src="../images/tu_2.gif" width="295" height="51" border="0"></div>
-        <div class="dongtai">
-          <div class="dongtai_top_left">网站动态</div>
-         <div class="dongtai_top_right"><a href="#"><img src="../images/more2.gif" border="0"></a></div>
-         <div class="clear"></div>
-         <div class="dongtai_nr"> <a href="">我们的最新产品..</a><br>
-           <a href="">团队获得的最近成绩..</a><br>
-           <a href="">团队新一轮的招新资讯..</a>
-         </div>
-        </div>
-      </div>
-
+  </div>
