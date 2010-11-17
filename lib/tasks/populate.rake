@@ -8,18 +8,21 @@ namespace :db do
     
    # [Category, Product, Person].each(&:delete_all)
     
-    [Job, ResumeAns].each(&:delete_all)
+    [Job, ResumeAns,Jobtype].each(&:delete_all)
     
-    Job.populate 10 do |job|
-      job.jname            =   Faker::Lorem.words.first 
-      job.jdesc            =   Faker::Lorem.sentence 
-      job.created_date     =   Date.today 
-      job.closed_date      =   2.years.ago..Time.now
-      job.jobtype_id       =   1
-      job.job_number       =   [1,24,52]
-      job.requirement      =   Faker::Lorem.sentence 
-      job.state            =   Faker::Name.name
-    end
+      Jobtype.populate 5 do |job_type|
+        job_type.job_type      =  ["管理","员工"]
+        Job.populate 10 do |job|
+          job.jname            =   Faker::Lorem.words.first 
+          job.jdesc            =   Faker::Lorem.sentence 
+          job.created_date     =   Date.today 
+          job.closed_date      =   2.years.ago..Time.now
+          job.jobtype_id       =   job_type.id
+          job.job_number       =   [1,24,52]
+          job.requirement      =   Faker::Lorem.sentence 
+          job.state            =   ["招聘ing","未发布","已招满","已截止","已删除"]
+        end
+      end
 
       ResumeAns.populate 50 do |resume_ans|
         resume_ans.user_id          = 1

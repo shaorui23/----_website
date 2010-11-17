@@ -20,7 +20,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             win = manage.createWindow({
                 id: 'positionManage',
                 title: '职位管理',
-                closeAction: 'hide',
+//                closeAction: 'hide',          liwen修改:解决win不能关闭问题
                 width: 940,
                 height: 530,
                 iconCls: 'bogus',
@@ -241,22 +241,45 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             expanded: true,
             children: [{ 
                 text: '招聘ing(0)', leaf: true, 
-                listeners: { click: function() { } }
+                listeners: { click: function() {                                      //liwen修改：查询功能 
+                    var condition="state=\'" + "招聘ing" +"\'"
+                    var url="/jobs/all_jobs.json?conditions="+condition;
+                    Manage.positionManage.queryConfig(url);
+                } }
             },{
                 text: '未发布(0)', leaf: true, 
-                listeners: { click: function() { } } 
+                listeners: { click: function() {                                      //liwen修改：查询功能 
+                    var condition="state=\'" + "未发布" +"\'"
+                    var url="/jobs/all_jobs.json?conditions="+condition;
+                    Manage.positionManage.queryConfig(url);
+                } } 
             },{ 
                 text: '全部(0)', leaf: true, 
-                listeners: { click: function() { } } 
+                listeners: { click: function() {                                      //liwen修改：查询功能 
+                    var url="/jobs/all_jobs.json";
+                    Manage.positionManage.queryConfig(url);
+                } } 
             },{ 
                 text: '已招满(0)', leaf: true, 
-                listeners: { click: function() { } } 
+                listeners: { click: function() {                                      //liwen修改：查询功能 
+                    var condition="state=\'" + "已招满" +"\'"
+                    var url="/jobs/all_jobs.json?conditions="+condition;
+                    Manage.positionManage.queryConfig(url);
+                } } 
             },{ 
                 text: '已截止(0)', leaf: true, 
-                listeners: { click: function() { } } 
+                listeners: { click: function() {                                      //liwen修改：查询功能 
+                    var condition="state=\'" + "已截止" +"\'"
+                    var url="/jobs/all_jobs.json?conditions="+condition;
+                    Manage.positionManage.queryConfig(url);
+                } } 
             },{
                 text: '已删除(0)', leaf: true, 
-                listeners: { click: function() { } } 
+                listeners: { click: function() {                                      //liwen修改：查询功能 
+                    var condition="state=\'" + "已删除" +"\'"
+                    var url="/jobs/all_jobs.json?conditions="+condition;
+                    Manage.positionManage.queryConfig(url);
+                } } 
             }]
         });
 
@@ -285,10 +308,11 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 'state'
             ],
             root: "content",
+            totalProperty:'total',          //liwen修改:支持分页
             url:'/jobs/all_jobs.json',
             method: 'GET'
         });
-        store.load();
+        store.load({ params:{ offset:0,limit:Wando.pageSize } });     //liwen修改:支持分页
 
         var pageToolbar = Wando.createPagingToolbar(store);
 
@@ -329,6 +353,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             stripeRows: true,
             region: 'center',
             anchor: "100% 100%",
+            id:'jobGrid',                 //liwen修改:添加id
             store: store,
             loadMask: {msg:"读取中..."},
             tbar: tbar, 
@@ -343,6 +368,14 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 }
             }
         });
+    },
+
+//liwen修改:查询模块
+    queryConfig : function(url){ 
+         var store = Ext.getCmp("jobGrid").getStore();
+         store.removeAll();
+         store.proxy=new Ext.data.HttpProxy({url:url});
+         store.load({ params:{ offset:0,limit:Wando.pageSize } });
     }
 });
 
