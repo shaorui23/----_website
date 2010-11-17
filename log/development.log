@@ -50082,3 +50082,1260 @@ Rendering homes/index
   [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
   [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
 Completed in 40ms (View: 24, DB: 3) | 200 OK [http://0.0.0.0/homes/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Delete all (54.2ms)[0m   [0;1mDELETE FROM `jobs` [0m
+  [4;35;1mResumeAns Delete all (41.4ms)[0m   [0mDELETE FROM `resume_ans` [0m
+  [4;36;1mJobtype Delete all (33.0ms)[0m   [0;1mDELETE FROM `jobtypes` [0m
+  [4;35;1mJobtype Last ID (0.2ms)[0m   [0mSELECT id FROM `jobtypes` ORDER BY id DESC[0m
+  [4;36;1mJobtype Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJob Last ID (0.3ms)[0m   [0mSELECT id FROM `jobs` ORDER BY id DESC[0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateResumes (20101107021111)
+Migrating to CreateResumeAns (20101107021443)
+Migrating to CreateGroups (20101107021725)
+Migrating to CreateQuestions (20101107022550)
+Migrating to CreateGroupQuestions (20101107022814)
+Migrating to CreateGroupAns (20101107023010)
+Migrating to CreateJobs (20101107023520)
+Migrating to AddMoreFieldsToJob (20101107114223)
+Migrating to AddDetailToResume (20101107122626)
+Migrating to AddDetailTo (20101107125754)
+Migrating to ChangeColumnInResume (20101109082132)
+Migrating to CreateUsers (20101109111353)
+Migrating to AddResumeData (20101110035952)
+Migrating to AddAdminData (20101110055249)
+Migrating to AddResumeUserId (20101110084430)
+Migrating to AddStateColumnInGroup (20101110113106)
+Migrating to AddResumeAnsUserId (20101110144713)
+Migrating to CreateJobtypes (20101112130934)
+Migrating to AddFieldsToJob (20101117020353)
+  [4;36;1mSQL (211.7ms)[0m   [0;1mALTER TABLE `jobs` ADD `salary` int(11)[0m
+  [4;35;1mSQL (201.2ms)[0m   [0mALTER TABLE `jobs` ADD `experience` varchar(255)[0m
+  [4;36;1mSQL (176.3ms)[0m   [0;1mALTER TABLE `jobs` ADD `education` varchar(255)[0m
+  [4;35;1mSQL (41.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101117020353')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `group_ans`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `group_ans`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `group_ans`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `groups`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `groups`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `groups_questions`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `groups_questions`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `groups_questions`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `jobs`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `jobs`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `jobtypes`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `jobtypes`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `questions`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `questions`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `resume_ans`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `resume_ans`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `resume_ans`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resumes`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `resumes`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `resumes`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Delete all (0.2ms)[0m   [0;1mDELETE FROM `jobs` [0m
+  [4;35;1mResumeAns Delete all (0.2ms)[0m   [0mDELETE FROM `resume_ans` [0m
+  [4;36;1mJobtype Delete all (0.2ms)[0m   [0;1mDELETE FROM `jobtypes` [0m
+  [4;35;1mJobtype Last ID (0.1ms)[0m   [0mSELECT id FROM `jobtypes` ORDER BY id DESC[0m
+  [4;36;1mJobtype Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJob Last ID (0.3ms)[0m   [0mSELECT id FROM `jobs` ORDER BY id DESC[0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJob Populate (69.2ms)[0m   [0mINSERT INTO `jobs` (`id`, `jname`, `jdesc`, `created_at`, `updated_at`, `created_date`, `closed_date`, `jobtype_id`, `job_number`, `requirement`, `state`, `salary`, `experience`, `education`) VALUES (1, 'quas', 'Adipisci rerum vitae voluptates earum repudiandae qui unde.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-10-21 21:22:52', 1, 24, 'Qui quaerat et cumque voluptatibus voluptatem odit est.', '已截止', 6000, '两年', '高中'), (2, 'distinctio', 'Autem cupiditate illum aliquam recusandae quisquam molestiae.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-02-28 16:00:31', 1, 31, 'Ea ullam facilis numquam aut.', '已招满', 1000, '无要求', '高中'), (3, 'et', 'Debitis et beatae temporibus iusto doloribus.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2010-01-25 22:21:10', 1, 24, 'Est consectetur amet quod atque dolores nihil est molestiae.', '已删除', 1000, '两年', '大专'), (4, 'dolor', 'Fuga vel expedita inventore in earum nisi quaerat.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2010-10-02 06:59:46', 1, 52, 'Quis optio ea maiores.', '已招满', 1000, '两年', '本科'), (5, 'aliquid', 'Iste praesentium eos eos voluptatem.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-01-29 17:33:52', 1, 24, 'Sint cupiditate quis dolores eos dolorum.', '已截止', 3000, '无要求', '高中'), (6, 'accusantium', 'Quis quo autem tenetur.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-04-04 23:53:33', 1, 10, 'Dolor aut placeat vel.', '招聘ing', 2000, '两年', '本科'), (7, 'repellendus', 'Possimus est ea eum rerum aliquid autem aut.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2010-09-29 09:15:57', 1, 24, 'Mollitia itaque aliquid totam ab minus.', '未发布', 3000, '无要求', '高中'), (8, 'quas', 'Dolores occaecati velit aut.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-11-04 17:38:41', 1, 52, 'Dolores aut ex aut voluptatem similique.', '招聘ing', 6000, '培训上岗', '本科'), (9, 'aspernatur', 'Occaecati aut sunt non molestiae.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2008-12-24 05:28:18', 1, 24, 'Ducimus est aut voluptas perferendis quos voluptatibus molestiae sed.', '招聘ing', 1000, '无要求', '本科'), (10, 'fugit', 'Dolores et sed eum unde nemo ratione ut.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2010-10-11 20:01:09', 1, 52, 'Quia nisi pariatur vero.', '已招满', 2000, '两年', '高中'), (11, 'quis', 'Repellendus facilis vero exercitationem ea.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-05-04 03:08:30', 1, 24, 'Est sit suscipit quia porro repudiandae tempora esse sapiente.', '未发布', 6000, '无要求', '高中'), (12, 'ipsam', 'Qui quis rerum debitis non repellendus natus.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-08-21 13:05:12', 1, 24, 'Molestias non dolores corrupti tempore.', '已招满', 2000, '两年', '大专'), (13, 'illum', 'Laudantium occaecati eos earum architecto error excepturi.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-09-02 12:49:37', 1, 10, 'Sunt commodi libero ab.', '已截止', 1000, '五年以上', '本科'), (14, 'in', 'Veritatis maiores est consequatur sit et perspiciatis et.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2010-01-25 04:02:14', 1, 24, 'Culpa delectus deserunt ea nemo quos eveniet qui vel.', '已截止', 2000, '五年以上', '本科'), (15, 'veniam', 'Rem praesentium eos natus incidunt adipisci cum sed saepe.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-02-22 13:14:01', 1, 52, 'Repudiandae sit qui mollitia quia.', '已截止', 3000, '五年以上', '高中'), (16, 'assumenda', 'Provident voluptatibus facilis laborum qui blanditiis.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-10-28 22:50:23', 1, 52, 'Quia et laudantium distinctio.', '已删除', 6000, '两年', '大专'), (17, 'cupiditate', 'Ut nam quos distinctio rem.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2010-02-18 14:06:04', 1, 31, 'Corrupti doloribus quaerat deserunt veniam ut aut quia minima.', '未发布', 3000, '五年以上', '高中'), (18, 'vel', 'Doloremque quas id exercitationem voluptatem.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-08-25 17:19:45', 1, 31, 'Vitae aut sint quis architecto corrupti.', '招聘ing', 3000, '两年', '本科'), (19, 'ipsum', 'Id quaerat nesciunt incidunt aut.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-08-06 22:18:53', 1, 52, 'Ratione suscipit rem molestiae nobis voluptates.', '已招满', 1000, '五年以上', '高中'), (20, 'tempora', 'Eveniet et cupiditate laudantium veniam dicta beatae.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-06-26 07:06:37', 1, 24, 'Reiciendis beatae eum reprehenderit.', '未发布', 2000, '无要求', '大专'), (21, 'sunt', 'Qui nemo assumenda vel incidunt id.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2010-09-13 00:53:09', 1, 10, 'Nisi enim ipsum quae non sit.', '已招满', 3000, '两年', '高中'), (22, 'qui', 'Tempora consequatur non accusantium ut eum et cupiditate.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2010-02-12 07:07:27', 1, 52, 'Accusantium rem illo sit.', '招聘ing', 2000, '两年', '本科'), (23, 'consequuntur', 'Deserunt maiores architecto non pariatur consectetur minima aut.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-10-26 16:44:43', 1, 52, 'Ut nulla qui rerum ut illo deserunt alias molestiae.', '已招满', 3000, '无要求', '本科'), (24, 'ipsam', 'Deserunt quis ab qui aperiam qui consectetur et alias.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2008-12-05 18:30:21', 1, 10, 'Mollitia eos nihil aspernatur omnis velit.', '已招满', 3000, '无要求', '大专'), (25, 'quos', 'Doloribus magnam laborum optio nisi itaque.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-02-28 01:59:50', 1, 24, 'Est debitis quia maiores.', '未发布', 1000, '五年以上', '大专'), (26, 'non', 'Quasi id repudiandae magni explicabo quisquam non atque.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-09-29 09:47:19', 1, 24, 'Minus velit dolor quos sunt praesentium.', '招聘ing', 2000, '五年以上', '大专'), (27, 'nemo', 'Nihil eaque mollitia impedit nulla ex occaecati exercitationem.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2010-09-11 02:15:56', 1, 31, 'Vel sint quia modi.', '未发布', 2000, '两年', '高中'), (28, 'distinctio', 'Quos soluta amet consectetur ut expedita aut et sed.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-06-26 23:37:22', 1, 24, 'Provident repellendus suscipit repellat tempore.', '已截止', 3000, '两年', '本科'), (29, 'eum', 'Assumenda eligendi est et in.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-10-13 08:31:48', 1, 31, 'Ut voluptatem quo ducimus quod dolorum dolores.', '已截止', 2000, '两年', '本科'), (30, 'itaque', 'Laborum cumque nemo quos quaerat.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-01-03 15:14:25', 1, 10, 'Amet reprehenderit dolores voluptas dolores ex voluptatem.', '已截止', 6000, '两年', '本科'), (31, 'id', 'Atque excepturi maxime dolore id occaecati.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2010-07-23 00:27:26', 1, 24, 'Dolorum et rerum doloremque provident omnis.', '已删除', 6000, '培训上岗', '本科'), (32, 'reprehenderit', 'Minus omnis ipsum veritatis.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-07-23 13:40:08', 1, 52, 'Velit itaque pariatur maxime.', '招聘ing', 2000, '无要求', '本科'), (33, 'ullam', 'Omnis nostrum aut qui saepe dignissimos quia.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-07-12 22:08:50', 1, 24, 'Reiciendis officia dignissimos quaerat eum aut sit maxime dolor.', '未发布', 3000, '五年以上', '大专'), (34, 'dolorem', 'Ullam voluptatum expedita aut exercitationem est voluptatem.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2010-05-20 16:42:34', 1, 10, 'Eos natus itaque ex.', '招聘ing', 3000, '无要求', '大专'), (35, 'necessitatibus', 'Sed fugit et tenetur blanditiis doloremque non dolores.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-06-15 09:37:48', 1, 52, 'Quisquam quia earum qui nihil repellat aut rem sint.', '已招满', 2000, '无要求', '大专'), (36, 'facilis', 'Rem expedita sunt dolor.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-01-24 12:23:14', 1, 31, 'Laborum itaque quis impedit vel magnam.', '招聘ing', 1000, '培训上岗', '高中'), (37, 'accusamus', 'Sed eveniet perferendis debitis laboriosam praesentium aliquam.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2010-05-13 11:48:23', 1, 52, 'Quis dolorem hic rem et.', '已截止', 2000, '培训上岗', '大专'), (38, 'et', 'Quas ipsam voluptatem eligendi assumenda molestiae libero.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2010-02-25 07:44:11', 1, 31, 'Qui et natus tempora.', '已截止', 6000, '培训上岗', '大专'), (39, 'soluta', 'Eos necessitatibus id earum iure dicta.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-06-10 15:50:23', 1, 24, 'Unde officia aspernatur neque asperiores odio.', '已招满', 2000, '培训上岗', '高中'), (40, 'omnis', 'Explicabo incidunt veritatis accusantium.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-07-25 11:39:10', 1, 52, 'Enim architecto aliquam magni asperiores consequuntur.', '招聘ing', 3000, '无要求', '高中'), (41, 'culpa', 'Magnam a sit sapiente in tempora necessitatibus fugit dolore.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2010-08-21 04:02:47', 1, 10, 'Quidem est magni enim.', '已招满', 6000, '无要求', '本科'), (42, 'et', 'Aut quo et inventore possimus tenetur in enim.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-05-31 09:42:13', 1, 10, 'Deleniti maxime dicta omnis assumenda.', '已截止', 2000, '五年以上', '本科'), (43, 'nam', 'Necessitatibus qui exercitationem soluta maiores.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-02-22 16:33:46', 1, 52, 'Quibusdam repellat accusantium laboriosam.', '已招满', 1000, '无要求', '大专'), (44, 'exercitationem', 'Aut fugit molestiae rem impedit.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2010-04-04 21:33:15', 1, 24, 'Ut sunt culpa soluta corporis ratione nemo ad voluptatem.', '未发布', 6000, '无要求', '高中'), (45, 'voluptates', 'Vel sunt reprehenderit et voluptatum.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2010-03-05 21:29:23', 1, 31, 'Neque est excepturi quae necessitatibus non repudiandae consequatur maxime.', '已删除', 1000, '两年', '大专'), (46, 'quaerat', 'Et harum error est.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-06-11 10:17:56', 1, 31, 'Fugit dolores sed qui natus enim et totam enim.', '已招满', 6000, '两年', '大专'), (47, 'sequi', 'Velit deserunt molestiae assumenda.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-04-28 15:43:42', 1, 31, 'Qui dolor non provident dignissimos.', '已删除', 6000, '两年', '本科'), (48, 'est', 'Et assumenda porro soluta.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2010-09-07 22:21:51', 1, 10, 'Saepe odio excepturi aut beatae aut.', '招聘ing', 1000, '两年', '大专'), (49, 'earum', 'Laborum temporibus possimus ducimus quia vel.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2009-03-07 04:45:04', 1, 24, 'Voluptatibus ut quia velit voluptas aut exercitationem.', '未发布', 1000, '两年', '大专'), (50, 'aut', 'Vel non commodi est.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', '2010-11-17', '2010-02-09 06:06:22', 1, 10, 'Et corrupti rem fuga voluptatem excepturi iure.', '已删除', 2000, '培训上岗', '本科')[0m
+  [4;36;1mJobtype Populate (32.7ms)[0m   [0;1mINSERT INTO `jobtypes` (`id`, `job_type`, `created_at`, `updated_at`) VALUES (1, '员工', '2010-11-17 11:55:47', '2010-11-17 11:55:47'), (2, '管理', '2010-11-17 11:55:47', '2010-11-17 11:55:47'), (3, '员工', '2010-11-17 11:55:47', '2010-11-17 11:55:47'), (4, '管理', '2010-11-17 11:55:47', '2010-11-17 11:55:47'), (5, '管理', '2010-11-17 11:55:47', '2010-11-17 11:55:47')[0m
+  [4;35;1mResumeAns Last ID (0.3ms)[0m   [0mSELECT id FROM `resume_ans` ORDER BY id DESC[0m
+  [4;36;1mResumeAns Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resume_ans`[0m
+  [4;35;1mResumeAns Populate (36.4ms)[0m   [0mINSERT INTO `resume_ans` (`id`, `rexp_a`, `redu_a`, `rskill_a`, `reva_a`, `created_at`, `updated_at`, `rname_a`, `rsex_a`, `rbirth_a`, `rmari_sta_a`, `rrace_a`, `rblood_a`, `rhei_a`, `rwei_a`, `rpoli_a`, `riden_a`, `rpho_a`, `rmail_a`, `raddr_a`, `rprof_a`, `user_id`) VALUES (1, 'Cupiditate facere quae occaecati officiis ut molestias.', 'optio', 'adipisci', 'Repudiandae qui cupiditate debitis nisi.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'animi', 'm', '2010-11-17', 'no', 'repellat', 'AB', '1.60', '80', 'laboriosam', '44***************', 119, 'mail', 'veniam', 'sit', 1), (2, 'Quisquam qui architecto quasi voluptas excepturi.', 'illo', 'impedit', 'Tempora suscipit beatae cupiditate culpa dolorem.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'nostrum', 'm', '2010-11-17', 'no', 'enim', 'AB', '1.70', '50', 'qui', '44***************', 110, 'mail', 'rem', 'autem', 1), (3, 'Qui tempore aut beatae maxime.', 'rerum', 'ex', 'Laudantium similique consequatur animi molestiae.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'ab', 'g', '2010-11-17', 'yes', 'et', 'O', '1.50', '60', 'ea', '44***************', 119, 'no', 'aut', 'repellat', 1), (4, 'Corporis consequatur voluptas eum harum explicabo.', 'voluptas', 'ipsam', 'Non libero voluptatem sint fugit ut nostrum.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'in', 'm', '2010-11-17', 'yes', 'aut', 'O', '1.80', '50', 'voluptatem', '44***************', 119, 'no', 'quia', 'ut', 1), (5, 'Quia et aut est.', 'dolores', 'incidunt', 'Consequatur laudantium est excepturi in necessitatibus id praesentium.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'autem', 'g', '2010-11-17', 'yes', 'vitae', 'AB', '1.60', '60', 'eaque', '44***************', 119, 'mail', 'aliquid', 'et', 1), (6, 'Sed cum est maiores eaque non temporibus qui.', 'dolore', 'aut', 'Doloremque cupiditate animi sit magni unde et esse.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'tenetur', 'm', '2010-11-17', 'yes', 'quis', 'A', '1.70', '70', 'maiores', '44***************', 110, 'no', 'qui', 'cupiditate', 1), (7, 'Molestiae nulla dolorem quis.', 'fugit', 'occaecati', 'Tempora ut velit sint magnam illo et ab.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'sit', 'g', '2010-11-17', 'yes', 'sit', 'AB', '1.70', '60', 'qui', '44***************', 120, 'no', 'vero', 'id', 1), (8, 'Ut atque enim magnam sit occaecati.', 'et', 'rerum', 'Reprehenderit voluptatibus magni sed id sunt illum culpa hic.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'id', 'g', '2010-11-17', 'yes', 'qui', 'AB', '1.60', '60', 'nihil', '44***************', 120, 'no', 'omnis', 'et', 1), (9, 'Repellat et error dolorum.', 'natus', 'impedit', 'Voluptatum molestiae ut et soluta quas est molestias.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'voluptatibus', 'g', '2010-11-17', 'no', 'repudiandae', 'AB', '1.80', '50', 'dolorum', '44***************', 120, 'mail', 'consequatur', 'facere', 1), (10, 'Veniam est necessitatibus adipisci unde fuga.', 'omnis', 'et', 'Ipsa sed dolor neque aspernatur voluptas.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'sunt', 'm', '2010-11-17', 'yes', 'numquam', 'A', '1.70', '50', 'sint', '44***************', 120, 'no', 'possimus', 'velit', 1), (11, 'Debitis alias ad aliquam et mollitia cum itaque aperiam.', 'consequatur', 'recusandae', 'Harum iusto optio animi.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'soluta', 'm', '2010-11-17', 'yes', 'quibusdam', 'O', '1.80', '90', 'veniam', '44***************', 110, 'no', 'maxime', 'et', 1), (12, 'Harum non neque sunt fugiat vitae.', 'provident', 'aut', 'Tempora vero autem sint dignissimos.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'eius', 'g', '2010-11-17', 'yes', 'ea', 'O', '1.60', '100', 'tenetur', '44***************', 119, 'no', 'ipsum', 'sunt', 1), (13, 'Labore numquam qui eligendi.', 'aut', 'sit', 'Rem quidem debitis odio sed.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'qui', 'm', '2010-11-17', 'yes', 'ut', 'B', '1.70', '50', 'qui', '44***************', 110, 'mail', 'et', 'nulla', 1), (14, 'Perspiciatis sed non voluptatem architecto vitae qui est debitis.', 'eius', 'ducimus', 'Temporibus qui aliquid molestias veniam beatae.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'fugiat', 'm', '2010-11-17', 'no', 'pariatur', 'A', '1.80', '100', 'adipisci', '44***************', 120, 'no', 'harum', 'eos', 1), (15, 'Est dolorem ipsum iusto delectus at et quia.', 'quam', 'earum', 'Fugit dolor dicta et cupiditate aut aut distinctio quis.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'tempore', 'm', '2010-11-17', 'yes', 'itaque', 'O', '1.70', '60', 'quod', '44***************', 119, 'mail', 'ut', 'accusamus', 1), (16, 'Quisquam atque quibusdam soluta quis in.', 'ex', 'ut', 'Voluptatem delectus minima soluta rerum molestiae accusamus in voluptate.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'ad', 'g', '2010-11-17', 'yes', 'suscipit', 'A', '1.70', '50', 'est', '44***************', 119, 'mail', 'tempore', 'dolores', 1), (17, 'Et quaerat occaecati ut nulla eaque fugit.', 'fuga', 'magnam', 'Dolor et quia atque ut ut aperiam.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'quia', 'm', '2010-11-17', 'no', 'cumque', 'A', '1.60', '90', 'quia', '44***************', 110, 'no', 'impedit', 'itaque', 1), (18, 'Fugit esse tempore quia dolores.', 'doloremque', 'voluptate', 'Et voluptates aspernatur nulla distinctio aut qui et blanditiis.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'sequi', 'm', '2010-11-17', 'yes', 'quia', 'O', '1.60', '70', 'explicabo', '44***************', 119, 'no', 'repudiandae', 'officiis', 1), (19, 'Aut minus qui deserunt voluptatem hic mollitia.', 'et', 'explicabo', 'Aut soluta ut amet unde voluptatem.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'iure', 'm', '2010-11-17', 'no', 'quo', 'AB', '1.50', '80', 'velit', '44***************', 119, 'mail', 'nemo', 'ipsam', 1), (20, 'Repellendus odit aut est non ducimus harum ea in.', 'praesentium', 'debitis', 'Aut non quo itaque inventore alias ab.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'fugit', 'm', '2010-11-17', 'yes', 'sit', 'A', '1.60', '50', 'quis', '44***************', 119, 'no', 'omnis', 'et', 1), (21, 'Est laudantium blanditiis et atque impedit praesentium facere.', 'ullam', 'sint', 'Magni asperiores recusandae et.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'rem', 'm', '2010-11-17', 'no', 'minima', 'A', '1.80', '70', 'labore', '44***************', 119, 'mail', 'eos', 'dignissimos', 1), (22, 'Molestias iste aut excepturi natus.', 'numquam', 'ex', 'Dicta rem praesentium enim.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'unde', 'm', '2010-11-17', 'no', 'voluptates', 'A', '1.60', '70', 'quis', '44***************', 120, 'no', 'aliquid', 'placeat', 1), (23, 'Voluptatum nam praesentium adipisci qui earum et.', 'harum', 'quis', 'Repellat veniam fugit autem praesentium delectus et.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'perferendis', 'm', '2010-11-17', 'yes', 'id', 'A', '1.50', '80', 'quaerat', '44***************', 110, 'no', 'debitis', 'qui', 1), (24, 'Architecto veritatis quo dicta exercitationem et id excepturi eveniet.', 'omnis', 'neque', 'Ea reiciendis delectus eligendi quia nihil officiis.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'sed', 'g', '2010-11-17', 'no', 'explicabo', 'B', '1.70', '80', 'eligendi', '44***************', 120, 'mail', 'consequatur', 'voluptas', 1), (25, 'Unde quas minus voluptatem optio possimus atque cumque.', 'repellat', 'earum', 'Nobis sed in fugiat a odit recusandae.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'nam', 'm', '2010-11-17', 'no', 'excepturi', 'B', '1.80', '50', 'id', '44***************', 120, 'mail', 'eos', 'et', 1), (26, 'Dolore cumque tempore nam qui natus odio.', 'corporis', 'facere', 'Sit autem similique soluta error praesentium.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'fuga', 'g', '2010-11-17', 'yes', 'et', 'AB', '1.80', '90', 'molestiae', '44***************', 119, 'mail', 'maxime', 'expedita', 1), (27, 'Maiores autem in nihil quos.', 'voluptate', 'quisquam', 'Voluptatem sit est corporis.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'explicabo', 'g', '2010-11-17', 'yes', 'numquam', 'B', '1.70', '80', 'ipsa', '44***************', 120, 'no', 'perspiciatis', 'exercitationem', 1), (28, 'Vel sapiente molestias ab.', 'sunt', 'itaque', 'Hic saepe asperiores consequatur dolore vel.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'reiciendis', 'm', '2010-11-17', 'yes', 'eos', 'B', '1.80', '70', 'reprehenderit', '44***************', 120, 'no', 'ipsa', 'dolores', 1), (29, 'Minima quia rerum in alias.', 'aliquid', 'inventore', 'Minus et sed sunt nostrum.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'unde', 'g', '2010-11-17', 'no', 'quia', 'AB', '1.60', '60', 'voluptates', '44***************', 119, 'no', 'enim', 'qui', 1), (30, 'Amet animi aliquid provident eos eos mollitia dolores.', 'quae', 'dolore', 'Eos cumque deserunt dolores.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'delectus', 'm', '2010-11-17', 'yes', 'tempora', 'B', '1.60', '60', 'quis', '44***************', 110, 'no', 'sit', 'ab', 1), (31, 'Debitis qui non placeat sint voluptatem.', 'eos', 'dolor', 'Molestiae voluptate non et aut.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'minus', 'g', '2010-11-17', 'no', 'alias', 'O', '1.70', '50', 'nam', '44***************', 110, 'mail', 'dolores', 'et', 1), (32, 'Et eum nemo voluptatem saepe quod pariatur.', 'soluta', 'doloremque', 'Qui qui accusamus inventore dolore nulla est.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'quos', 'm', '2010-11-17', 'no', 'rem', 'B', '1.80', '70', 'iste', '44***************', 120, 'mail', 'est', 'rem', 1), (33, 'Et perspiciatis quidem ut dolorem.', 'dolorum', 'sint', 'Voluptas at placeat aut nam voluptatibus non inventore.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'ullam', 'g', '2010-11-17', 'yes', 'deleniti', 'B', '1.50', '60', 'dolorem', '44***************', 110, 'no', 'quo', 'illum', 1), (34, 'Inventore doloribus est ad excepturi omnis beatae odio autem.', 'qui', 'velit', 'Blanditiis aut et repellat voluptatem.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'est', 'm', '2010-11-17', 'yes', 'consequuntur', 'AB', '1.80', '70', 'illum', '44***************', 110, 'no', 'et', 'nulla', 1), (35, 'Voluptatem quibusdam sit soluta.', 'sapiente', 'iste', 'In et nihil et sequi architecto expedita esse quam.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'maiores', 'g', '2010-11-17', 'no', 'et', 'O', '1.70', '90', 'totam', '44***************', 110, 'no', 'ea', 'itaque', 1), (36, 'Praesentium nihil ipsum voluptatem.', 'quia', 'quod', 'Voluptatem aliquam maiores a.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'sed', 'm', '2010-11-17', 'no', 'voluptatem', 'B', '1.60', '50', 'rerum', '44***************', 110, 'mail', 'non', 'saepe', 1), (37, 'Voluptas deleniti autem suscipit deserunt eaque ratione eveniet.', 'et', 'vel', 'Inventore quis minus ut temporibus atque error tempora.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'ut', 'g', '2010-11-17', 'yes', 'cumque', 'B', '1.50', '60', 'excepturi', '44***************', 110, 'no', 'nemo', 'aut', 1), (38, 'Eveniet magni perspiciatis impedit at ipsa nisi.', 'consectetur', 'vitae', 'Sequi officiis nam enim.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'cupiditate', 'g', '2010-11-17', 'yes', 'eius', 'A', '1.80', '100', 'similique', '44***************', 110, 'no', 'nihil', 'sit', 1), (39, 'Non doloribus aut possimus.', 'tempora', 'quas', 'Qui provident dolorem expedita nemo vero ullam.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'perferendis', 'g', '2010-11-17', 'yes', 'rem', 'A', '1.50', '50', 'officia', '44***************', 119, 'no', 'amet', 'voluptatem', 1), (40, 'Molestias quia fugiat magni voluptate ea amet.', 'tenetur', 'quam', 'Deleniti rem nostrum cupiditate ducimus sit sint voluptatem aliquam.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'et', 'g', '2010-11-17', 'yes', 'et', 'B', '1.80', '60', 'totam', '44***************', 119, 'mail', 'quis', 'aut', 1), (41, 'Facere dolorem aliquam delectus nihil mollitia consequatur.', 'sed', 'error', 'Vel sit veniam officia aut.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'dolores', 'g', '2010-11-17', 'no', 'aut', 'B', '1.60', '100', 'consequatur', '44***************', 110, 'mail', 'ducimus', 'maiores', 1), (42, 'Dolorum et eos in mollitia.', 'rerum', 'velit', 'Laboriosam natus aut molestiae quisquam libero.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'ut', 'g', '2010-11-17', 'no', 'consequuntur', 'O', '1.80', '90', 'iste', '44***************', 119, 'no', 'consequuntur', 'dolores', 1), (43, 'Non distinctio et aut blanditiis ducimus.', 'et', 'blanditiis', 'Rem in perferendis nobis blanditiis eum.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'ea', 'g', '2010-11-17', 'yes', 'soluta', 'O', '1.80', '80', 'voluptatum', '44***************', 120, 'mail', 'aut', 'adipisci', 1), (44, 'Vero quae vel aliquam quo et nulla debitis dolorem.', 'aliquid', 'inventore', 'Fuga labore nihil amet dolore.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'culpa', 'g', '2010-11-17', 'no', 'quia', 'O', '1.50', '50', 'at', '44***************', 120, 'mail', 'distinctio', 'eligendi', 1), (45, 'Cum ea voluptatem blanditiis libero.', 'unde', 'veniam', 'Modi consequatur alias et qui qui nostrum aut.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'nihil', 'm', '2010-11-17', 'no', 'sunt', 'A', '1.60', '100', 'ut', '44***************', 110, 'no', 'voluptatem', 'earum', 1), (46, 'Repudiandae esse vero reiciendis dolorem omnis.', 'dolorum', 'et', 'Libero qui ex odit ut laboriosam sit ullam voluptatibus.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'esse', 'g', '2010-11-17', 'yes', 'sit', 'B', '1.60', '80', 'sed', '44***************', 120, 'no', 'velit', 'aut', 1), (47, 'Totam aut eaque deserunt optio.', 'doloremque', 'ullam', 'Voluptatem odit accusantium quos.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'veritatis', 'm', '2010-11-17', 'no', 'impedit', 'AB', '1.60', '100', 'delectus', '44***************', 110, 'no', 'possimus', 'ipsa', 1), (48, 'Doloribus in autem omnis et.', 'doloremque', 'eos', 'Qui dignissimos quia vel.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'odit', 'm', '2010-11-17', 'no', 'minus', 'AB', '1.50', '90', 'ipsam', '44***************', 110, 'no', 'tempore', 'ratione', 1), (49, 'Assumenda commodi et et quia quo fugit eaque.', 'et', 'omnis', 'Nisi nemo commodi perferendis.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'provident', 'm', '2010-11-17', 'yes', 'molestiae', 'AB', '1.70', '50', 'iste', '44***************', 119, 'no', 'sed', 'dolorum', 1), (50, 'Occaecati ea vel sed.', 'maxime', 'quod', 'Minus suscipit velit ullam hic quia veniam ipsa.', '2010-11-17 11:55:47', '2010-11-17 11:55:47', 'quia', 'g', '2010-11-17', 'no', 'error', 'AB', '1.80', '50', 'rerum', '44***************', 120, 'no', 'reprehenderit', 'voluptate', 1)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-17 21:38:01) [GET]
+  [4;36;1mJob Load (11.6ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (state = 'ing' and job_number > 0) LIMIT 5[0m
+Rendering template within layouts/application
+Rendering homes/index
+Completed in 122ms (View: 76, DB: 12) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-11-17 21:38:06) [POST]
+  Parameters: {"commit"=>"登\345\275\225", "authenticity_token"=>"la+0O6UXoNPjukcptu6bfOfmrcpw2/W0GYO4iC7bBQI=", "select"=>"auction", "login"=>"wando", "password"=>"hzuhzu"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'wando' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://0.0.0.0:3000/homes
+Completed in 9ms (DB: 1) | 302 Found [http://0.0.0.0/account/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomesController#index (for 127.0.0.1 at 2010-11-17 21:38:07) [GET]
+  [4;35;1mJob Load (0.2ms)[0m   [0mSELECT * FROM `jobs` WHERE (state = 'ing' and job_number > 0) LIMIT 5[0m
+Rendering template within layouts/application
+Rendering homes/index
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/homes]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-17 21:38:08) [GET]
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering manage/index
+Completed in 27ms (View: 19, DB: 2) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 21:38:09) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"0"}
+  [4;36;1mJob Load (0.5ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.2ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 91ms (View: 2, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobtypesController#index to json (for 127.0.0.1 at 2010-11-17 21:38:09) [GET]
+  Parameters: {"_dc"=>"1290001089433"}
+  [4;36;1mJobtype Load (0.3ms)[0m   [0;1mSELECT * FROM `jobtypes` [0m
+  [4;35;1mJobtype Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+Completed in 117ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/jobtypes.json?_dc=1290001089433]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#search_job_number to json (for 127.0.0.1 at 2010-11-17 21:38:11) [POST]
+  Parameters: {"node"=>"ynode-26"}
+  [4;36;1mJob Load (0.5ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (state = '招聘ing') [0m
+  [4;35;1mJob Load (0.3ms)[0m   [0mSELECT * FROM `jobs` WHERE (state = '未发布') [0m
+  [4;36;1mJob Load (0.6ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (state = '已招满') [0m
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM `jobs` WHERE (state = '已截止') [0m
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (state = '已删除') [0m
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+Completed in 70ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/search_job_number.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 21:38:14) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"0"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 78ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 21:38:15) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"10"}
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 76ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 21:38:18) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"20"}
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 78ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 21:38:19) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"30"}
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 77ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-17 21:38:23) [GET]
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering manage/index
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 21:38:25) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"0"}
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.1ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 85ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobtypesController#index to json (for 127.0.0.1 at 2010-11-17 21:38:25) [GET]
+  Parameters: {"_dc"=>"1290001105121"}
+  [4;36;1mJobtype Load (0.2ms)[0m   [0;1mSELECT * FROM `jobtypes` [0m
+  [4;35;1mJobtype Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobtypes.json?_dc=1290001105121]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#search_job_number to json (for 127.0.0.1 at 2010-11-17 21:38:26) [POST]
+  Parameters: {"node"=>"ynode-26"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (state = '招聘ing') [0m
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` WHERE (state = '未发布') [0m
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (state = '已招满') [0m
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` WHERE (state = '已截止') [0m
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (state = '已删除') [0m
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+Completed in 25ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs/search_job_number.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 21:38:28) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"10"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 133ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 21:38:30) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"20"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 81ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 21:38:31) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"30"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 142ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 21:38:38) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"40"}
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 81ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-17 21:40:16) [GET]
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering manage/index
+Completed in 7ms (View: 0, DB: 1) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 21:40:17) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"0"}
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.1ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 84ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobtypesController#index to json (for 127.0.0.1 at 2010-11-17 21:40:17) [GET]
+  Parameters: {"_dc"=>"1290001217476"}
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` [0m
+  [4;35;1mJobtype Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobtypes.json?_dc=1290001217476]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#search_job_number to json (for 127.0.0.1 at 2010-11-17 21:40:18) [POST]
+  Parameters: {"node"=>"ynode-26"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (state = '招聘ing') [0m
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` WHERE (state = '未发布') [0m
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (state = '已招满') [0m
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` WHERE (state = '已截止') [0m
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (state = '已删除') [0m
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+Completed in 25ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs/search_job_number.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 21:40:21) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"40"}
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.1ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 80ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 21:47:38) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"0"}
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.2ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 83ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 21:47:41) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"10"}
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.1ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `jobs` [0m
+Completed in 76ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+  [4;35;1mJob Load (0.3ms)[0m   [0mSELECT * FROM `jobs` WHERE (id=1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-17 22:00:07) [GET]
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering manage/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 22:00:08) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"0"}
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 0, 10[0m
+  [4;35;1mJob Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.1ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+
+NoMethodError (undefined method `all' for #<Array:0xb6d60fcc>):
+  app/controllers/jobs_controller.rb:23:in `all_jobs'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130
+  will_paginate/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+  will_paginate/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+  will_paginate/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  will_paginate/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+  will_paginate/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+  will_paginate/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+  will_paginate/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+  will_paginate/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+  will_paginate/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+  will_paginate/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+
+Rendered rescues/_trace (30.7ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobtypesController#index to json (for 127.0.0.1 at 2010-11-17 22:00:08) [GET]
+  Parameters: {"_dc"=>"1290002408308"}
+  [4;36;1mJobtype Load (0.2ms)[0m   [0;1mSELECT * FROM `jobtypes` [0m
+  [4;35;1mJobtype Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+Completed in 15ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobtypes.json?_dc=1290002408308]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#search_job_number to json (for 127.0.0.1 at 2010-11-17 22:00:10) [POST]
+  Parameters: {"node"=>"ynode-26"}
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (state = '招聘ing') [0m
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` WHERE (state = '未发布') [0m
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (state = '已招满') [0m
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` WHERE (state = '已截止') [0m
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (state = '已删除') [0m
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+Completed in 18ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs/search_job_number.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ManageController#index (for 127.0.0.1 at 2010-11-17 22:00:31) [GET]
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering manage/index
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/manage]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 22:00:32) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"0"}
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 0, 10[0m
+  [4;35;1mJob Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.1ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+Completed in 30ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobtypesController#index to json (for 127.0.0.1 at 2010-11-17 22:00:32) [GET]
+  Parameters: {"_dc"=>"1290002432441"}
+  [4;35;1mJobtype Load (0.1ms)[0m   [0mSELECT * FROM `jobtypes` [0m
+  [4;36;1mJobtype Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobtypes.json?_dc=1290002432441]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#search_job_number to json (for 127.0.0.1 at 2010-11-17 22:00:34) [POST]
+  Parameters: {"node"=>"ynode-26"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` WHERE (state = '招聘ing') [0m
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (state = '未发布') [0m
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` WHERE (state = '已招满') [0m
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` WHERE (state = '已截止') [0m
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` WHERE (state = '已删除') [0m
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+Completed in 20ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/jobs/search_job_number.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 22:00:37) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"10"}
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM `jobs` LIMIT 10, 10[0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJobtype Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+  [4;36;1mJobtype Load (0.2ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM `jobs` [0m
+Completed in 29ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 22:00:38) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"20"}
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 20, 10[0m
+  [4;35;1mJob Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.0ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+Completed in 77ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 22:00:40) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"0"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` LIMIT 0, 10[0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJobtype Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+Completed in 27ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 22:00:41) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"10"}
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM `jobs` LIMIT 10, 10[0m
+  [4;35;1mJob Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mJobtype Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobtypes`[0m
+  [4;35;1mJobtype Load (0.1ms)[0m   [0mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;36;1mJob Load (0.1ms)[0m   [0;1mSELECT * FROM `jobs` [0m
+Completed in 28ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobsController#all_jobs to json (for 127.0.0.1 at 2010-11-17 22:00:42) [POST]
+  Parameters: {"limit"=>"10", "offset"=>"20"}
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` LIMIT 20, 10[0m
+  [4;36;1mJob Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mJobtype Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `jobtypes`[0m
+  [4;36;1mJobtype Load (0.1ms)[0m   [0;1mSELECT * FROM `jobtypes` WHERE (`jobtypes`.`id` = 1) [0m
+  [4;35;1mJob Load (0.1ms)[0m   [0mSELECT * FROM `jobs` [0m
+Completed in 84ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/jobs/all_jobs.json]

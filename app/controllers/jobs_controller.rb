@@ -17,9 +17,16 @@ class JobsController < ApplicationController
     default_params = { :offset => params[:offset], :limit => params[:limit],
       :include => :jobtype ,:conditions=>params[:conditions]}
 
-    @jobs = Job.all.collect { |j| j.attributes.merge "position_type" => j.jobtype.job_type }
+#    @jobs = Job.all.collect { |j| j.attributes.merge "position_type" => j.jobtype.job_type }
+    records = Job.all(default_params)
+    @jobs    = []
+    records.each do |job|
+      data = job.attributes.merge(:position_type => job.jobtype.job_type)
+      @jobs.push(data)
+    end
+
     #@jobs = Job.all(default_params)
-    @count = Job.count
+    @count = Job.all(:conditions=>params[:conditions]).count
   #  @jobs = @jobs.collect { |r| r.provide(params[:fields]) }
       respond_to do |format|
         format.html  
