@@ -11,7 +11,8 @@ ActionController::Routing::Routes.draw do |map|
       :get_job => :get
     },
     :collection => { 
-      :all_jobs => :get
+      :all_jobs => :get,
+      :search_job_number => :get
     }
   map.resources :manage,
                 :collection => {

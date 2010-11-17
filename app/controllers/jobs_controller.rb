@@ -26,6 +26,22 @@ class JobsController < ApplicationController
         format.json  { render_json @jobs, @count}
       end
   end
+
+#GET /jobs/search_job_number.json             liwen修改:加载tree
+  def search_job_number
+    children_of_job = []
+    state = ["招聘ing","未发布","已招满","已截止","已删除"]
+    state.each do |job_state|
+      number = Job.all(:conditions=>["state = ?",job_state]).count
+      children_of_job << { "text" => job_state +"\("+number.to_s+"\)","leaf"=>true,"id"=>job_state }
+    end
+      number = Job.all.count
+      children_of_job << { "text" => "全部" +"\("+number.to_s+"\)","leaf"=>true,"id"=>"全部" }
+
+    parent_node = [{ "text"=>"状态","children"=>children_of_job,"leaf"=>false,"expanded"=>true }]
+    render  :json =>parent_node.to_json
+  end
+
 #POST /jobs
   def create
     job = Job.new(params[:job])

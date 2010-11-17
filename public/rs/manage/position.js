@@ -47,7 +47,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 title: '修改职位信息',
                 id: 'JobWin',
                 closeAction: 'hide',
-                width: 640,
+                width: 740,
                 height: 350,
                 layout: 'fit',
                 frame: true,
@@ -248,59 +248,27 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
     createTree: function() { 
         var _this = this;
         var root = new Ext.tree.AsyncTreeNode({ 
-            text: '状态',
+            text: 'job状态',
             expanded: true,
-            children: [{ 
-                text: '招聘ing(0)', leaf: true, 
-                listeners: { click: function() {                                      //liwen修改：查询功能 
-                    var condition="state=\'" + "招聘ing" +"\'"
-                    var url="/jobs/all_jobs.json?conditions="+condition;
-                    Manage.positionManage.queryConfig(url);
-                } }
-            },{
-                text: '未发布(0)', leaf: true, 
-                listeners: { click: function() {                                      //liwen修改：查询功能 
-                    var condition="state=\'" + "未发布" +"\'"
-                    var url="/jobs/all_jobs.json?conditions="+condition;
-                    Manage.positionManage.queryConfig(url);
-                } } 
-            },{ 
-                text: '全部(0)', leaf: true, 
-                listeners: { click: function() {                                      //liwen修改：查询功能 
-                    var url="/jobs/all_jobs.json";
-                    Manage.positionManage.queryConfig(url);
-                } } 
-            },{ 
-                text: '已招满(0)', leaf: true, 
-                listeners: { click: function() {                                      //liwen修改：查询功能 
-                    var condition="state=\'" + "已招满" +"\'"
-                    var url="/jobs/all_jobs.json?conditions="+condition;
-                    Manage.positionManage.queryConfig(url);
-                } } 
-            },{ 
-                text: '已截止(0)', leaf: true, 
-                listeners: { click: function() {                                      //liwen修改：查询功能 
-                    var condition="state=\'" + "已截止" +"\'"
-                    var url="/jobs/all_jobs.json?conditions="+condition;
-                    Manage.positionManage.queryConfig(url);
-                } } 
-            },{
-                text: '已删除(0)', leaf: true, 
-                listeners: { click: function() {                                      //liwen修改：查询功能 
-                    var condition="state=\'" + "已删除" +"\'"
-                    var url="/jobs/all_jobs.json?conditions="+condition;
-                    Manage.positionManage.queryConfig(url);
-                } } 
-            }]
         });
 
         return new Ext.tree.TreePanel({ 
             root   : root,
+            loader : new Ext.tree.TreeLoader({ dataUrl: '/jobs/search_job_number.json' }),      //liwen修改:tree数据加载
             split  : true,
-            width  : 120,
+            width  : 140,
+            id     : 'tree',
             title  : '状态列表',
             region : 'west',
-            collapsible: true
+            collapsible: true,
+            listeners:{ click:function(n){ 
+                var state = n.attributes.id;
+                var condition="state=\'" + state +"\'"
+                if(state == "全部"){ var url="/jobs/all_jobs.json"; }
+                else{ var url="/jobs/all_jobs.json?conditions="+condition;}
+                Manage.positionManage.queryConfig(url);
+
+            } }
         });
     },
 
