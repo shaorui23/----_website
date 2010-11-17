@@ -40,6 +40,12 @@ class Job < ActiveRecord::Base
     self.jobtype.job_type
   end
 
+# def self.search(search, page)  
+#   paginate :per_page => 5, :page => page,  
+#            :conditions => ['jname like ?', "%#{search}%"],  
+#            :order => 'jname'  
+# end  
+
 
   private
 

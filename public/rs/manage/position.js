@@ -147,7 +147,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 'jname'
             ],
             root: "content",
-            url:'/jobs.json',
+            url:'/jobs/all_jobs.json',
             method: 'GET'
         });
         var combo = new Ext.form.ComboBox({ 
@@ -285,7 +285,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 'state'
             ],
             root: "content",
-            url:'/jobs.json',
+            url:'/jobs/all_jobs.json',
             method: 'GET'
         });
         store.load();
@@ -311,6 +311,8 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             { header: '截止日期'    , sortable: true, dataIndex: 'closed_date'},
             { header: '职位要求'    , sortable: true, dataIndex: 'requirement'},
             { header: '职位描述'    , sortable: true, dataIndex: 'jdesc'},
+            { header: '学历要求'    , sortable: true, dataIndex: 'jdesc'},
+            { header: '经验要求'    , sortable: true, dataIndex: 'jdesc'},
             { header: '状态'        , sortable: true, dataIndex: 'state' },
             { header: '操作'        , dataIndex: '#', renderer: addOperator, width: 120 }
         ]);

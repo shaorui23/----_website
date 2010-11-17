@@ -9,6 +9,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :jobs,
     :member => { 
       :get_job => :get
+    },
+    :collection => { 
+      :all_jobs => :get
     }
   map.resources :manage,
     :collection => {
