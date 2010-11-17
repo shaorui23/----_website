@@ -5,6 +5,7 @@ ActionController::Routing::Routes.draw do |map|
     }
 
   map.resources :homes
+  map.resources :myteams
   map.resources :accounts
   map.resources :jobs,
     :member => { 
