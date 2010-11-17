@@ -7,7 +7,13 @@
     <%= f.label :jobtype_id_equals, "职位类型:" %>
     <%= f.collection_select :jobtype_id_equals, Jobtype.all, :id, :job_type,:include_blank => true%>
     <%= f.label :job_number_gte, "招聘人数(多于):" %>
-    <%= f.text_field :job_number_gte%>
+    <%= f.text_field :job_number_gte%><br />
+    <%= f.label :salary_gte, "月薪:" %>
+    <%= f.text_field :salary_gte%>
+    <%= f.label :education_like, "学历要求:" %>
+    <%= f.text_field :education_like %>
+    <%= f.label :experience_like, "经验要求:" %>
+    <%= f.text_field :experience_like%>
   </p>
   <p>
     <%= f.submit "提交查询" %>
@@ -15,11 +21,12 @@
 <% end %>
 <p>
   按选择排序结果:
-  <%= order @search, :by => :jname, :as => "职位" %> |
-  <%= order @search, :by => :job_number, :as => "招聘人数"%> 
+  <%= order @search, :by => :jname, :as => "名称" %> |
+  <%= order @search, :by => :job_number, :as => "招聘人数"%> |
+  <%= order @search, :by => :salary, :as => "月薪"%> 
 </p>
 
-<table border=1>
+<table>
 <tr>
   <th>职位名称</th>
   <th>简介</th>
@@ -27,28 +34,24 @@
   <th>截止日期</th>
   <th>职业类型</th>
   <th>招聘人数</th>
+  <th>最低月薪</th>
+  <th>学历要求</th>
+  <th>经验要求</th>
+  <th></th>
 </tr>
 <% @jobs.each do |job| %>
   <tr>
     <td width=70><%= h job.jname %></td>
-    <td><%= h job.jdesc %></td>
+    <td width=150><%= h (truncate(job.jdesc, 30)) %></td>
     <td><%= h job.created_date %></td>
     <td><%= h job.closed_date %></td>
     <td width=70><%= h job.position_type %></td>
     <td width=70><%= h job.job_number %></td>
-  </tr>
-    <% if @jobs.length < 5%>
-      <% (5-@jobs.length).times do |job|%>
-        <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-      <% end %>
-    <% end %>
+    <td width=70><%= h job.salary %>元</td>
+    <td width=70><%= h job.education %></td>
+    <td width=70><%= h job.experience %></td>
+    <td><%= button_to "查看详细", :action => :get_job, :id => job.id %></td>
+  </tr> 
 <% end %>
 </table>
 <p>

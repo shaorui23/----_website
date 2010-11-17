@@ -10,6 +10,7 @@ namespace :db do
     
     [Job, ResumeAns,Jobtype].each(&:delete_all)
     
+<<<<<<< HEAD
       Jobtype.populate 5 do |job_type|
         job_type.job_type      =  ["管理","员工"]
         Job.populate 10 do |job|
@@ -23,6 +24,21 @@ namespace :db do
           job.state            =   ["招聘ing","未发布","已招满","已截止","已删除"]
         end
       end
+=======
+    Job.populate 10 do |job|
+      job.jname            =   Faker::Lorem.words.first 
+      job.jdesc            =   Faker::Lorem.sentence 
+      job.created_date     =   Date.today 
+      job.closed_date      =   2.years.ago..Time.now
+      job.jobtype_id       =   1
+      job.salary           =   [1000,2000,3000,6000]
+      job.education        =   ['本科','大专','高中']
+      job.experience       =   ['两年','无要求','培训上岗','五年以上']
+      job.job_number       =   [10,31,24,52]
+      job.requirement      =   Faker::Lorem.sentence 
+      job.state            =   Faker::Name.name
+    end
+>>>>>>> 添加月薪等字段
 
       ResumeAns.populate 50 do |resume_ans|
         resume_ans.user_id          = 1

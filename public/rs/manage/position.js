@@ -20,8 +20,8 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             win = manage.createWindow({
                 id: 'positionManage',
                 title: '职位管理',
-//                closeAction: 'hide',          liwen修改:解决win不能关闭问题
-                width: 940,
+                closeAction: 'hide',
+                width: 980,
                 height: 530,
                 iconCls: 'bogus',
                 layout: 'border',
@@ -115,6 +115,9 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 jname        :  Ext.getCmp('jname').getValue(),
                 job_number   :  Ext.getCmp('job_number').getValue(),
                 jobtype_id   :  Ext.getCmp('position_type').getValue(),
+                salary       :  Ext.getCmp('salary').getValue(),
+                experience   :  Ext.getCmp('experience').getValue(),
+                education    :  Ext.getCmp('education').getValue(),
                 requirement  :  Ext.getCmp('requirement').getValue(),
                 created_date :  Ext.getCmp('created_date').getValue(),
                 closed_date  :  Ext.getCmp('closed_date').getValue(),
@@ -179,6 +182,14 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             id: 'job_number'
         });  
 
+        var salary = new Ext.form.NumberField({  
+            fieldLabel:'*最低月薪',  
+            allowDecimals : false,//不允许输入小数  
+            allowNegative : false,//不允许输入负数  
+            nanText :'请输入有效的整数',  
+            id: 'salary'
+        });  
+
         return new Ext.form.FormPanel({ 
             frame: true,
             autoHeight: true,
@@ -215,7 +226,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                     items:[
                         { fieldLabel: '*发布日期', id: 'created_date', value: new Date(), format:'Y-m-d'},
                         { fieldLabel: '*截止日期', id: 'closed_date', format:'Y-m-d'},
-                        { fieldLabel: '*月薪范围', id: 'salary', xtype: 'textfield'},
+                        salary,
                         { fieldLabel: '最低工作经验', id: 'experience', xtype: 'textfield' }
                     ]
                 }]
@@ -301,6 +312,9 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 'jname',
                 'position_type',
                 'job_number',
+                'education',
+                'salary',
+                'experience',
                 'created_date',
                 'closed_date',
                 'requirement',
@@ -331,20 +345,20 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             { header: '职位名称'    , sortable: true, dataIndex: 'jname'},
             { header: '职位类型'    , sortable: true, dataIndex: 'position_type'},
             { header: '招聘人数'    , sortable: true, dataIndex: 'job_number'},
+            { header: '最低月薪'    , sortable: true, dataIndex: 'salary'},
             { header: '发布日期'    , sortable: true, dataIndex: 'created_date' },
             { header: '截止日期'    , sortable: true, dataIndex: 'closed_date'},
             { header: '职位要求'    , sortable: true, dataIndex: 'requirement'},
             { header: '职位描述'    , sortable: true, dataIndex: 'jdesc'},
-            { header: '学历要求'    , sortable: true, dataIndex: 'jdesc'},
-            { header: '经验要求'    , sortable: true, dataIndex: 'jdesc'},
+            { header: '学历要求'    , sortable: true, dataIndex: 'education'},
+            { header: '经验要求'    , sortable: true, dataIndex: 'experience'},
             { header: '状态'        , sortable: true, dataIndex: 'state' },
             { header: '操作'        , dataIndex: '#', renderer: addOperator, width: 120 }
         ]);
         tbar = [ 
             { text: '添加职位', handler: function(){ _this.createAddjob("add") }}, '-',
             { text: '发布选中职位', handler: function(){ }},'-',
-            { text: '查询', handler: function(){ }},'->',
-            { text: '添加职位类型', handler: function(){ } }
+            { text: '查询', handler: function(){ }}
         ];
 
         return new Ext.grid.EditorGridPanel({ 
