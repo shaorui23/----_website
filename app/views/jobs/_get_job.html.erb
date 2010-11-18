@@ -1,0 +1,19 @@
+<div id="content">
+  <ul id="productlist">
+     <li>
+       职位名称:<%= @job == nil ? '空': @job.jdesc%>
+     </li>
+     <li>
+       职位简介:<%= @job == nil ? '空': @job.jdesc%>
+     </li>
+     <li>
+       职位要求:<%= @job == nil ? '空': @job.requirement%>
+     </li>
+     <li>
+       职位工资:<%= @job == nil ? '空': @job.salary%>
+     </li>
+     <li>
+       学历要求:<%= @job == nil ? '空': @job.education%>
+     </li>
+  </ul>
+</div>

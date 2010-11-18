@@ -4,6 +4,7 @@ class JobsController < ApplicationController
   def index
     
      @search = Job.search(params[:search])
+     @job = Job.first
      @jobs = @search.paginate(:page => params[:page], :per_page =>5)#.collect { |j| j.attributes.merge "position_typ" => j.jobtype.job_type  }
       respond_to do |format|
         format.html  
@@ -74,6 +75,7 @@ class JobsController < ApplicationController
   def get_job
     @job = Job.find params[:id]
     render_json @job
+    #render (:file => "/home/shao/webSite1/app/views/jobs/_get_job.html.erb")
   end
 
 #DELETE

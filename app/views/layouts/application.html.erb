@@ -16,7 +16,14 @@
     </div>
     <div id="headercontent">
       <h2>专注于招聘服务</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique, felis ut vehicula laoreet, nunc dolor bibendum tortor, a faucibus eros tortor sed nunc. Aliquam eget arcu. Nam sem justo, vulputate eget, cursus id, volutpat ullamcorper, felis. In eget velit ut diam ultrices ultrices. <img src="../images/bullet.png" alt="" width="10" height="10" /> <a href="http://www.865171.cn/">Read More</a></p>
+      <p>
+       <b>欢迎您!</b> <%if current_user != :false%>
+        <b><span class="green"><%= current_user[:login] %></span></b><br />
+        <%else%>
+        <font color="red">未登录</font><br />
+      <%end%>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut vehicula laoreet, nunc dolor bibendum tortor, a faucibus eros tortor sed nunc. Aliquam eget arcu. Nam sem justo, vulputate eget, cursus id, volutpat ullamcorper, felis. In ege
+    <img src="../images/bullet.png" alt="" width="10" height="10" /> <a href="http://www.865171.cn/">Read More</a></p>
       <p>&nbsp;</p>
     </div>
     <div id="sitecption"> 我们的宗旨是为您找到 <span class="bigger">中意的人才</span> 来吧! </div>
@@ -26,14 +33,14 @@
       <div id="mainmenu">
         <ul>
           <li class="first" id="active"><a href="/homes/">首页</a></li>
-          <li><a href="/myteam/">关于我们</a></li>
-          <li><a href=#>最新资讯</a></li>
+          <li><a href="/myteams/">关于我们</a></li>
+          <li><a href=#>成绩公示</a></li>
           <li><a href=#>网站动态</a></li>
           <% if logged_in? %>
           <li><a href="/persons">用户信息</a></li>
           <li><a href=#>联系我们</a></li>
           <% unless current_user.remember_token.nil? %>
-          <li><a href="/manage" target=_blank>后台管理</a></li>
+          <li><a href="/manage/" target=_blank>后台管理</a></li>
           <% end %>
           <% end %>
         </ul>
@@ -41,13 +48,13 @@
       <div id="submenu">
         <ul>
           <li><a href="/jobs">职位发布</a></li>
-          <li><a href="http://www.865171.cn/">成绩公示</a> </li>
+          <li><a href="/logins">用户登录</a> </li>
           <li><a href="http://www.865171.cn/">录用公示</a></li>
         </ul>
       </div>
     </div>
 
-    <div><%= yield %></div>
+    <div id="main_content"><%= yield %></div>
 
   <div id="footer"> www.865171.cn &copy; All Rights Reserved <br />
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique, felis ut vehicula laoreet, nunc dolor bibendum tortor <br />

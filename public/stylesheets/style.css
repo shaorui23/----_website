@@ -110,6 +110,10 @@ body {background:#fff url(../images/bg.jpg) repeat-x; font: 11px Verdana, Arial,
 }
 #mainmenu a:hover {color:#fff;}
 #homeleft {width:480px; float:left;}
+#homeleft1 { margin-left:20px; width:300px; float:left; }
+#homeright1 { margin-left:320px; }
+#fenye { margin-left:820px; }
+#paixu { margin-left:10px; }
 #homeright { margin-left:500px; }
 h1, h2, h3, h4 { font-family:"Trebuchet MS", halvetica, Verdana, sans-serif;}
 h1 {font-size:22px;}
@@ -117,6 +121,7 @@ h2 {font-size:18px;}
 h3 {font-size:16px;}
 h4 {font-size:14px;}
 #main h2 {color:#333; display:block; padding:3px 0 8px 0;}
+#main_content { height:700px; }
 .green {
 	color: #5B920A;
 }

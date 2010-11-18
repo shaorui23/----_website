@@ -1,31 +1,31 @@
-<h1>职位列表</h1>
 
+<ul id="productlist">
+<h1><span class="green">职位</span>列表</h1>
+<div id="content">
+<li><img src="images/product1.gif" alt="" width="101" height="97" class="productimage" />
 <% form_for @search do |f| %>
   <p>
     <%= f.label :jname_like, "职位:" %>
-    <%= f.text_field :jname_like %>
-    <%= f.label :jobtype_id_equals, "职位类型:" %>
-    <%= f.collection_select :jobtype_id_equals, Jobtype.all, :id, :job_type,:include_blank => true%>
-    <%= f.label :job_number_gte, "招聘人数(多于):" %>
+    <%= f.text_field :jname_like %><br />
+    <%= f.label :jobtype_id_equals, "类型:" %>
+    <%= f.collection_select :jobtype_id_equals, Jobtype.all, :id, :job_type,:include_blank => true%><br />
+    <%= f.label :job_number_gte, "人数:" %>
     <%= f.text_field :job_number_gte%><br />
     <%= f.label :salary_gte, "月薪:" %>
-    <%= f.text_field :salary_gte%>
-    <%= f.label :education_like, "学历要求:" %>
+    <%= f.text_field :salary_gte%><br />
+    <%= f.label :education_like, "要求:" %>
     <%= f.text_field :education_like %>
+    <%= f.submit "提交查询" %>
     <!%= f.label :experience_like, "经验要求:" %>
     <!%= f.text_field :experience_like%>
   </p>
   <p>
-    <%= f.submit "提交查询" %>
   </p>
 <% end %>
-<p>
-  按选择排序结果:
-  <%= order @search, :by => :jname, :as => "名称" %> |
-  <%= order @search, :by => :job_number, :as => "招聘人数"%> |
-  <%= order @search, :by => :salary, :as => "月薪"%> 
-</p>
-
+</div>
+</li>
+<li>
+<div id="content">
 <table>
 <tr>
   <th>职位名称</th>
@@ -54,8 +54,22 @@
   </tr> 
 <% end %>
 </table>
-<p>
-<%= will_paginate @jobs, :prev_label => "上一页", :next_label => "下一页" %>
-</p>
-
-<p><%= link_to 'New Job', new_job_path %></p>
+<br />
+</div>
+<div id="paixu">
+  按选择排序结果:
+  <%= order @search, :by => :jname, :as => "名称" %> |
+  <%= order @search, :by => :job_number, :as => "招聘人数"%> |
+  <%= order @search, :by => :salary, :as => "月薪"%> 
+</div>
+<div id="fenye"><%= will_paginate @jobs, :prev_label => "上一页", :next_label => "下一页" %></div>
+</li>
+<p><!%= link_to 'New Job', new_job_path %></p>
+<h1><span class="green">职位</span>详细</h1>
+ <li><img src="images/product2.gif" alt="" width="101" height="97" class="productimage" />
+            <h3>职业经理人</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique, felis ut vehicula laoreet, nunc dolor bibendum tortor, a faucibus eros tortor sed nunc. Aliquam eget arcu. Nam sem justo, vulputate eget, cursus id, volutpat ullamcorper, felis. <br />
+              <img src="images/bullet.png" alt="" width="10" height="10" /> <a href="http://www.865171.cn/">Read More</a></p>
+              <%= render "jobs/get_job"%>
+ </li>
+</ul>

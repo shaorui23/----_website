@@ -1,0 +1,44 @@
+   <div id="homeleft">
+      <% form_tag :controller => "account", :action => "login" do -%>
+        <div><h1>用户登录</h1></div>
+                       <% if flash[:notice] %>
+                         <span id = "notice">
+                           <font><%= flash[:notice] %></font>
+                         </span>
+                       <% end %>
+        <div class="lingyu_nr">
+                    <div id="homeleft1">用 户
+                      <%= text_field_tag 'login' %>
+                    </div>
+                    <div id="homeleft1">密   码
+                      <%= password_field_tag 'password' %>
+                    </div>
+			    <div id="homeleft1">
+            <%= submit_tag '登录' %>
+      <% end %>
+            <%= link_to '退出', :controller => "account", :action => "logout" %>
+            <%= link_to '注册', :controller => "account", :action => "signup" %>
+         </div>
+    </div> 
+    </div>
+    
+       <div id="homeright">
+        <h2> reach <span class="green">us </span></h2>
+        <div id="sidebar1">
+          <h3>postal address </h3>
+          <p>Lorem Ipsum 1234,<br />
+            Bldg. Ipsum Dolor,<br />
+            FLoorida, <br />
+            USA<br />
+          </p>
+        </div>
+        <div id="sidebar2">
+          <h3>telephone numbers </h3>
+          <p> +001 0012345678 890<br />
+            +001 0012345678 890<br />
+            +001 0012345678 890<br />
+            +001 0012345678 890<br />
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
