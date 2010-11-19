@@ -18,7 +18,6 @@ class JobsController < ApplicationController
     default_params = { :offset => params[:offset], :limit => params[:limit],
       :include => :jobtype ,:conditions=>params[:conditions]}
 
-<<<<<<< HEAD
 #    @jobs = Job.all.collect { |j| j.attributes.merge "position_type" => j.jobtype.job_type }
     records = Job.all(default_params)
     @jobs    = []
@@ -26,15 +25,6 @@ class JobsController < ApplicationController
       data = job.attributes.merge(:position_type => job.jobtype.job_type)
       @jobs.push(data)
     end
-
-=======
-    records = Job.scoped(default_params)
-    @jobs=[]
-    records.each do |record|
-      data = record.attributes.merge(:position_type => record.jobtype.job_type)
-      @jobs.push(data)
-    end
->>>>>>> 更新
     #@jobs = Job.all(default_params)
     @count = Job.all(:conditions=>params[:conditions]).count
   #  @jobs = @jobs.collect { |r| r.provide(params[:fields]) }
@@ -80,6 +70,19 @@ class JobsController < ApplicationController
      render_error e.to_s
   end
 
+#POST /jobs/:id/submit_answer
+  def submit_answer
+    @paperAnswer = GroupAn.new(params[:paperAnswer])
+    if @paperAnswer.save
+      #redirect_to_index("Thank you for your order") 
+      #render :action => "jobs/index"
+      redirect_to :action => "index", :alert => "问卷填写成功！请等待结果！"
+
+    else
+      render_error "failure"
+    end
+  end
+
 #GET /jobs/:id/get_job
   def get_job
     @job = Job.find params[:id]
@@ -89,6 +92,18 @@ class JobsController < ApplicationController
         format.json  { render_json @job}
       end
    # render (:template => "jobs/get_job")
+  end
+
+#GET /jobs/:id/show_group
+  def show_group
+    @job = Job.find params[:id]
+    @group = Job.find(params[:id]).groups.find_by_active true
+    @questions = @group.questions
+
+    respond_to do |format|
+        format.html  { render 'jobs/show_group' }
+        format.json  { render_json @questions}
+      end
   end
 
 #DELETE

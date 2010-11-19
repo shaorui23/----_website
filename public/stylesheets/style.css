@@ -46,6 +46,7 @@ body {background:#fff url(../images/bg.jpg) repeat-x; font: 11px Verdana, Arial,
 	color: #C0EC15;
 }
 
+#job_right { float:right; margin-right:400px; }
 
 #wrap #header #logo {
 	width: 260px;
@@ -280,7 +281,7 @@ a:hover {
 
 /*FBG*/
 .FBG { border-top:1px solid #d4d4d4;/* background:#e5e5e5;*/ margin:0; padding:0;}
-.FBG_resize { width:950px; margin:0 auto; padding:0;}
+.FBG_resize { width:950px; margin:120px auto; padding:0;}
 .FBG_resize h2 { font:bold 14px Arial, Helvetica, sans-serif; color:#2c2c2c; border-bottom:1px solid #cccccc; padding:1px 5px; margin:0 0 10px 0;}
 .FBG_resize p { font:normal 11px Arial, Helvetica, sans-serif; color:#6f6f6f; line-height:1.8em; padding:5px 5px; margin:0;}
 .FBG_resize p span { color:#26b1b2;}
@@ -299,3 +300,89 @@ a:hover {
 
 p.clr, .clr { clear:both; padding:0; margin:0; background:none;}
 li.bg, .bg { clear:both; border-top:1px solid #dad9d9; padding:0; margin:20px 0; background:none; line-height:0;}
+
+
+
+table.helpT
+{ text-align: center;
+font-family: Verdana;
+font-weight: normal;
+font-size: 11px;
+color: #404040;
+width: 500px;
+background-color: #fafafa;
+border: 1px #6699CC solid;
+border-collapse: collapse;
+border-spacing: 0px; }
+
+td.helpHed
+{ border-bottom: 2px solid #6699CC;
+border-left: 1px solid #6699CC;
+background-color: #BEC8D1;
+text-align: left;
+text-indent: 5px;
+font-family: Verdana;
+font-weight: bold;
+font-size: 11px;
+color: #404040; }
+
+td.helpBod
+{ border-bottom: 1px solid #9CF;
+border-top: 0px;
+border-left: 1px solid #9CF;
+border-right: 0px;
+text-align: left;
+text-indent: 10px;
+font-family: Verdana, sans-serif, Arial;
+font-weight: normal;
+font-size: 11px;
+color: #404040;
+background-color: #fafafa; }
+
+table.sofT
+{ text-align: center;
+font-family: Verdana;
+font-weight: normal;
+font-size: 11px;
+color: #404040;
+width: 880px;
+background-color: #fafafa;
+border: 1px #6699CC solid;
+border-collapse: collapse;
+border-spacing: 0px; } 
+
+
+table.servicesT
+{ font-family: Verdana;
+font-weight: normal;
+font-size: 11px;
+color: #404040;
+width: 900px;
+background-color: #fafafa;
+border: 1px #F5F5DC solid;
+border-collapse: collapse;
+border-spacing: 0px;
+margin-top: 0px;}
+
+
+table.servicesT td.servHd
+{ border-bottom: 2px solid #6699CC;
+background-color: #F5F5F5;
+text-align: center;
+font-family: Verdana;
+font-weight: bold;
+font-size: 11px;
+color: #404040;}
+
+
+table.servicesT td
+{ border-bottom: 1px dotted #6699CC;
+font-family: Verdana, sans-serif, Arial;
+font-weight: normal;
+font-size: 11px;
+color: #404040;
+background-color: white;
+text-align: center;
+padding-left: 3px;}
+
+.servBodL { border-left: 1px dotted #F5F5F5; } 

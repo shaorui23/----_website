@@ -6,15 +6,15 @@
 <% form_for @search do |f| %>
   <p>
     <%= f.label :jname_like, "职位:" %>
-    <%= f.text_field :jname_like %><br />
+    <%= f.text_field :jname_like, :size => 10 %><br />
     <%= f.label :jobtype_id_equals, "类型:" %>
     <%= f.collection_select :jobtype_id_equals, Jobtype.all, :id, :job_type,:include_blank => true%><br />
     <%= f.label :job_number_gte, "人数:" %>
-    <%= f.text_field :job_number_gte%><br />
+    <%= f.text_field :job_number_gte, :size => 10%><br />
     <%= f.label :salary_gte, "月薪:" %>
-    <%= f.text_field :salary_gte%><br />
+    <%= f.text_field :salary_gte, :size => 10%><br />
     <%= f.label :education_like, "要求:" %>
-    <%= f.text_field :education_like %>
+    <%= f.text_field :education_like, :size => 10%>
     <%= f.submit "提交查询" %>
     <!%= f.label :experience_like, "经验要求:" %>
     <!%= f.text_field :experience_like%>
@@ -26,7 +26,8 @@
 </li>
 <li>
 <div id="content">
-<table>
+<table class="servicesT" cellspacing="0">
+
 <tr>
   <th>职位名称</th>
   <th>简介</th>
@@ -34,6 +35,7 @@
   <th>截止日期</th>
   <th>职业类型</th>
   <th>招聘人数</th>
+  <th>已招人数</th>
   <th>最低月薪</th>
   <th>学历要求</th>
   <th>经验要求</th>
@@ -47,6 +49,7 @@
     <td><%= h job.closed_date %></td>
     <td width=70><%= h job.position_type %></td>
     <td width=70><%= h job.job_number %></td>
+    <td></td>
     <td width=70><%= h job.salary %>元</td>
     <td width=70><%= h job.education %></td>
     <td width=70><%= h job.experience %></td>

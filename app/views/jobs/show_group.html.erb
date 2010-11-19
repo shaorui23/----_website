@@ -1,0 +1,79 @@
+
+<h1><span class="green">职位</span>详细</h1><br />
+<div id="job_content">
+  <ul id="productlist">
+     <li>
+       职位名称:<%= @job.jname%>
+     </li>
+     <li>
+       职位简介:<%= @job.jdesc%>
+     </li>
+     <li>
+       招聘时间:<%= @job.created_date%>
+     </li>
+     <li>
+       截止时间:<%= @job.closed_date%>
+     </li>
+     <li>
+       职位类型:<%= @job.position_type%>
+     </li>
+     <li>
+       岗位要求:<%= @job.education%>
+     </li>
+     <li>
+       最低月薪:<%= @job.education%>
+     </li>
+     <li>
+       学历要求:<%= @job.education%>
+     </li>
+  </ul>
+</div>
+<br />
+
+<h1><span class="green">职位</span>问卷</h1><br />
+<div id="job_content">
+        <% form_for :paperAnswer, :url => { :action => :submit_answer },:method => 'post' do |form| -%>
+  <ul id="productlist">
+     <li>
+       问题<span class="green">1</span>&nbsp;:&nbsp;<%= @questions.slice(0).qcon%>
+     </li>
+     <input type='hidden' name='paperAnswer[user_id]' value="#{@group.id}" />
+     <input type='hidden' name='paperAnswer[group_id]' value="1" />
+     <li>
+       您的答案&nbsp;:&nbsp;<%= form.text_field :gque_one, :size=> 50 %></p>
+     </li>
+     <li>
+       问题<span class="green">2</span>&nbsp;:&nbsp;<%= @questions.slice(1).qcon%>
+     </li>
+     <li>
+       您的答案&nbsp;:&nbsp;<%= form.text_field :gque_two, :size=> 50 %></p>
+     </li>
+     <li>
+       问题<span class="green">3</span>&nbsp;:&nbsp;<%= @questions.slice(2).qcon%>
+     </li>
+     <li>
+       您的答案&nbsp;:&nbsp;<%= form.text_field :gque_three, :size=> 50 %></p>
+     </li>
+     <li>
+       问题<span class="green">4</span>&nbsp;:&nbsp;<%= @questions.slice(3).qcon%>
+     </li>
+     <li>
+       您的答案&nbsp;:&nbsp;<%= form.text_field :gque_four, :size=> 50 %></p>
+     </li>
+     <li>
+       问题<span class="green">5</span>&nbsp;:&nbsp;<%= @questions.slice(4).qcon%>
+     </li>
+     <li>
+       您的答案&nbsp;:&nbsp;<%= form.text_field :gque_five, :size=> 50 %></p>
+     </li>
+     <li>
+       问题<span class="green">6</span>&nbsp;:&nbsp;<%= @questions.slice(5).qcon%>
+     </li>
+     <li>
+       您的答案&nbsp;:&nbsp;<%= form.text_field :gque_six, :size=> 50 %></p>
+        <%= submit_tag "提交", :class => "sumbmit", :confirm => "确定提交吗？" %>
+     </li>
+  </ul>
+      <% end %>
+</div>
+
