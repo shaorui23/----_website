@@ -5,7 +5,7 @@ class JobsController < ApplicationController
     
      @search = Job.search(params[:search])
      @job = Job.first
-     @jobs = @search.paginate(:page => params[:page], :per_page =>5)#.collect { |j| j.attributes.merge "position_typ" => j.jobtype.job_type  }
+     @jobs = @search.paginate(:page => params[:page], :per_page =>8)#.collect { |j| j.attributes.merge "position_typ" => j.jobtype.job_type  }
       respond_to do |format|
         format.html  
         format.json  { render_json @jobs }
@@ -18,6 +18,7 @@ class JobsController < ApplicationController
     default_params = { :offset => params[:offset], :limit => params[:limit],
       :include => :jobtype ,:conditions=>params[:conditions]}
 
+<<<<<<< HEAD
 #    @jobs = Job.all.collect { |j| j.attributes.merge "position_type" => j.jobtype.job_type }
     records = Job.all(default_params)
     @jobs    = []
@@ -26,6 +27,14 @@ class JobsController < ApplicationController
       @jobs.push(data)
     end
 
+=======
+    records = Job.scoped(default_params)
+    @jobs=[]
+    records.each do |record|
+      data = record.attributes.merge(:position_type => record.jobtype.job_type)
+      @jobs.push(data)
+    end
+>>>>>>> 更新
     #@jobs = Job.all(default_params)
     @count = Job.all(:conditions=>params[:conditions]).count
   #  @jobs = @jobs.collect { |r| r.provide(params[:fields]) }
@@ -54,7 +63,7 @@ class JobsController < ApplicationController
   def create
     job = Job.new(params[:job])
     if job.save
-      render_json 'sucess'
+      render_json 'success'
     else
       render_error "failure"
     end
@@ -74,8 +83,12 @@ class JobsController < ApplicationController
 #GET /jobs/:id/get_job
   def get_job
     @job = Job.find params[:id]
-    render_json @job
-    #render (:file => "/home/shao/webSite1/app/views/jobs/_get_job.html.erb")
+    #render_to (:file => "/home/shao/webSite1/app/views/jobs/_get_job.html.erb")
+    respond_to do |format|
+        format.html  { render 'jobs/get_job' }
+        format.json  { render_json @job}
+      end
+   # render (:template => "jobs/get_job")
   end
 
 #DELETE

@@ -50,7 +50,7 @@
     <td width=70><%= h job.salary %>元</td>
     <td width=70><%= h job.education %></td>
     <td width=70><%= h job.experience %></td>
-    <td><%= button_to "查看详细", :action => :get_job, :id => job.id %></td>
+    <td><%= link_to "查看详细", :action => "get_job", :id => job.id %></td>
   </tr> 
 <% end %>
 </table>
@@ -64,12 +64,11 @@
 </div>
 <div id="fenye"><%= will_paginate @jobs, :prev_label => "上一页", :next_label => "下一页" %></div>
 </li>
-<p><!%= link_to 'New Job', new_job_path %></p>
 <h1><span class="green">职位</span>详细</h1>
  <li><img src="images/product2.gif" alt="" width="101" height="97" class="productimage" />
             <h3>职业经理人</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique, felis ut vehicula laoreet, nunc dolor bibendum tortor, a faucibus eros tortor sed nunc. Aliquam eget arcu. Nam sem justo, vulputate eget, cursus id, volutpat ullamcorper, felis. <br />
               <img src="images/bullet.png" alt="" width="10" height="10" /> <a href="http://www.865171.cn/">Read More</a></p>
-              <%= render "jobs/get_job"%>
+              <!%= render "jobs/get_job"%>
  </li>
 </ul>

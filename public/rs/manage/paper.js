@@ -210,7 +210,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
 
     createJobCombo: function(idName) { 
         jobStore = new Ext.data.JsonStore({ 
-            url: '/jobs.json',
+            url: '/jobs/all_jobs.json',
             root: 'content',
             fields: [
                 'id',

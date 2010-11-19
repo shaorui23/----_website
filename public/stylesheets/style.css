@@ -17,6 +17,10 @@ body {background:#fff url(../images/bg.jpg) repeat-x; font: 11px Verdana, Arial,
 	padding-bottom: 5px;
 	border-bottom: 1px solid #C6C6C6;
 }
+#job_content {
+  font-size: 16px; 
+  margin-left: 30px;
+}
 #headercontent h2 {
 	font-size: 18px;
 	color: #5B920A;
@@ -122,6 +126,7 @@ h3 {font-size:16px;}
 h4 {font-size:14px;}
 #main h2 {color:#333; display:block; padding:3px 0 8px 0;}
 #main_content { height:700px; }
+h1 { margin-left:20px; }
 .green {
 	color: #5B920A;
 }
@@ -271,3 +276,26 @@ a:hover {
 	padding:5px 10px 5px 10px;
 	margin:10px 0px 10px 0px;
 }
+
+
+/*FBG*/
+.FBG { border-top:1px solid #d4d4d4;/* background:#e5e5e5;*/ margin:0; padding:0;}
+.FBG_resize { width:950px; margin:0 auto; padding:0;}
+.FBG_resize h2 { font:bold 14px Arial, Helvetica, sans-serif; color:#2c2c2c; border-bottom:1px solid #cccccc; padding:1px 5px; margin:0 0 10px 0;}
+.FBG_resize p { font:normal 11px Arial, Helvetica, sans-serif; color:#6f6f6f; line-height:1.8em; padding:5px 5px; margin:0;}
+.FBG_resize p span { color:#26b1b2;}
+.FBG_resize img { float:left; margin:10px 20px 10px 10px; padding:0;}
+.FBG_resize .blooga { width:300px; float:left; margin:10px 5px; padding:10px 2px;}
+.FBG_resize .clients { width:292px; height:132px; margin:10px auto; padding:0; background: url(../images/say_bg.gif) top no-repeat;}
+
+/*************footer**********/
+.footer {padding:0; margin:0; border-top:1px solid #fff; background:#353535;}
+.footer_resize {width:900px; margin:0 auto; padding:0; }
+.footer p { font:normal 11px  Arial, Helvetica, sans-serif; color:#909090; padding:10px 0 0 0;}
+.footer a { font:bold 11px Arial, Helvetica, sans-serif; color:#909090; text-decoration:underline; padding:5px 5px; margin:0;}
+.footer img {margin:0px 5px; padding:0; float:left;}
+.footer p.leftt { text-align:right; width:30%; margin:0; padding:40px 0; float:left;} 
+.footer p.rightt { text-align:right; width:40%; margin:0; padding:40px 0; float:right;} 
+
+p.clr, .clr { clear:both; padding:0; margin:0; background:none;}
+li.bg, .bg { clear:both; border-top:1px solid #dad9d9; padding:0; margin:20px 0; background:none; line-height:0;}
