@@ -109,7 +109,7 @@ body {background:#fff url(../images/bg.jpg) repeat-x; font: 11px Verdana, Arial,
 	display: inline;
 }
 #mainmenu a:visited, #mainmenu a:active {text-decoration:none; color: #5B920A;}
-#mainmenu #active a {background:url(../images/menuactive.gif) no-repeat center top; color:#fff;}
+#mainmenu .active a {background:url(../images/menuactive.gif) no-repeat center top; color:#fff;}
 #wrap #main #content {
 	padding: 10px;
 }

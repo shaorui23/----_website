@@ -11,3 +11,5 @@ gem "sqlite3-ruby",   "1.2.5"
 gem "ruby-gmail",     "0.0.8"
 gem "will_paginate"
 gem "ruby-debug"
+gem 'wirble'
+gem 'hirb'

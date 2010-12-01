@@ -4,8 +4,17 @@
 <title>wando团队招聘网</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <%= stylesheet_link_tag 'style.css' %>
+<script type= "text/javascript">
+
+function changeActive(Num){
+var tabList = document.getElementsByTagName('li');
+var nameList = document.getElementsByTagName('a');
+//tabList[Num].setAttribute("class", "active");
+tabList[Num].className = tabList[Num].className.replace(/one/,"active");
+}
 
 
+</script>
 </head>
 <body>
 <div id="wrap">
@@ -32,10 +41,11 @@
     <div id="menus">
       <div id="mainmenu">
         <ul>
-          <li class="first" ><a href="/homes/">首页</a></li>
-          <li id="active"><a href="/myteams/">关于我们</a></li>
-          <li><a href=#>成绩公示</a></li>
-          <li><a href=#>网站动态</a></li>
+          <li id="0" <%= h("class='active'") %> onclick="changeActive(this, 0);" ><a href="/homes/">首页</a></li>
+          <li id="1" class="one" onclick="changeActive(1);"><a href="/myteams/">关于我们</a></li>
+          <li id="2" class="one" onclick="changeActive(2);"><a href="/myteams/">成绩公示</a></li>
+          <li><a href="/myteams/">面试名单</a></li>
+          <li id="3" class="one" onclick="changeActive(3);"><a href="/myteams/">网站动态</a></li>
           <% if logged_in? %>
           <li><a href="/persons">用户信息</a></li>
           <li><a href=#>联系我们</a></li>
@@ -47,9 +57,9 @@
       </div>
       <div id="submenu">
         <ul>
+          <li><a href="/logins">&nbsp;&nbsp;&nbsp;用户登录</a> </li>
           <li><a href="/jobs">职位发布</a></li>
-          <li><a href="/logins">用户登录</a> </li>
-          <li><a href="http://www.865171.cn/">录用公示</a></li>
+          <li><a href="/jobs">录用公示</a></li>
         </ul>
       </div>
     </div>
