@@ -37,7 +37,7 @@ class JobsController < ApplicationController
 #GET /jobs/search_job_number.json             liwen修改:加载tree
   def search_job_number
     children_of_job = []
-    state = ["招聘ing","未发布","已招满","已截止","已删除"]
+    state = Job.state_cn
     state.each do |job_state|
       number = Job.all(:conditions=>["state = ?",job_state]).count
       children_of_job << { "text" => job_state +"\("+number.to_s+"\)","leaf"=>true,"id"=>job_state }
@@ -76,7 +76,8 @@ class JobsController < ApplicationController
     if @paperAnswer.save
       #redirect_to_index("Thank you for your order") 
       #render :action => "jobs/index"
-      redirect_to :action => "index", :alert => "问卷填写成功！请等待结果！"
+      flash[:notice] = "问卷填写成功！请等待结果！"
+      redirect_back_or_default(:controller => '/jobs', :action => 'index')
 
     else
       render_error "failure"
@@ -92,6 +93,18 @@ class JobsController < ApplicationController
         format.json  { render_json @job}
       end
    # render (:template => "jobs/get_job")
+  end
+
+  # POST /jobs/:id/push_job
+  def push_job
+    @job = Job.find params[:id]
+    if @job.send(push_job)
+      render_json 'success' 
+    else
+      render_error 'failure'
+    end
+    rescue => e
+     render_error e.to_s
   end
 
 #GET /jobs/:id/show_group

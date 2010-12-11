@@ -41,10 +41,10 @@ tabList[Num].className = tabList[Num].className.replace(/one/,"active");
       <div id="mainmenu">
         <ul>
           <li id="0" <%= h("class='active'") %> onclick="changeActive(this, 0);" ><a href="/homes/">首页</a></li>
-          <li id="1" class="one" onclick="changeActive(1);"><a href="/myteams/">关于我们</a></li>
-          <li id="2" class="one" onclick="changeActive(2);"><a href="/myteams/">成绩公示</a></li>
-          <li><a href="/myteams/">面试名单</a></li>
-          <li id="3" class="one" onclick="changeActive(3);"><a href="/myteams/">网站动态</a></li>
+          <li id="1" class="one" ><a href="/myteams/">关于我们</a></li>
+          <li id="2" class="one"><a href="/myteams/">成绩公示</a></li>
+          <li><a href="/interviews/">面试名单</a></li>
+          <li id="3" class="one"><a href="/myteams/">网站动态</a></li>
           <% if logged_in? %>
           <li><a href="/persons">用户信息</a></li>
           <li><a href=#>联系我们</a></li>

@@ -2,14 +2,14 @@ class UserNotifier < ActionMailer::Base
 
   def signup_notification(user)
     setup_email(user)
-    @subject    += 'Please activate your new account'
-    @body[:url]  = "http://wando.heroku.com/account/activate/#{user.activation_code}"
+    @subject    += '请激活您的账户'
+    @body[:url]  = "http://shaorui.heroku.com/account/activate/#{user.activation_code}"
   end
   
   def activation(user)
     setup_email(user)
-    @subject    += 'Your account has been activated!'
-    @body[:url]  = "http://wando.heroku.com/"
+    @subject    += '您的账户已经激活！您可以访问我们的网站了'
+    @body[:url]  = "http://shaorui.heroku.com/"
   end
   
   protected

@@ -1,0 +1,14 @@
+<ul id="productlist">
+<h1><span class="green">面试</span>名单</h1>
+<div id="content">
+  <li>
+    <% @interviewers.each do |inter| %>
+      <h2>*姓名:<%= inter.user.login %></h2>
+      <h2>面试职位:<%= inter.group.job.jname%></h2>
+      <h2>成绩:<%= inter.gmark%></h2>
+    <% end %>
+  </li>
+</div>
+</ul>
+<h2 align="center"><span class='green'>恭喜以上应聘者</span>,本公司将于近日通知以上面试者来我公司进行面试,逾期不候<h2>
+

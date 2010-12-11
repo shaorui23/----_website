@@ -5,12 +5,14 @@ ActionController::Routing::Routes.draw do |map|
     }
 
   map.resources :homes
+  map.resources :interviews
   map.resources :logins
   map.resources :myteams
   map.resources :accounts
   map.resources :jobs,
     :member => { 
       :get_job => :get,
+      :push_job => :put,
       :show_group => :get
     },
     :collection => { 

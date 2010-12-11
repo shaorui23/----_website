@@ -25,6 +25,9 @@
 class GroupAn < ActiveRecord::Base
   belongs_to :user
   belongs_to :group
+
+  #查找可面试的名单，即除了淘汰的应聘者
+  named_scope :interviewers, :conditions => ["gmark in (?)", [1,2,3]]
   
   # 返回全部的试卷的关联信息
   # conditions包含了查询要求和查询所需数据，为conditions = ['conditions', data]

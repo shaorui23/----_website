@@ -64,6 +64,30 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
         this.getJobWin().show();
     },
 
+    pushJob: function() {
+        Ext.Msg.confirm("提示","是否发布该职位?", function(btn){ 
+            if (btn == "yes") { 
+               var scope = Manage.positionManage; 
+               var selection = scope.grid.getSelectionModel().getSelections();
+               var record = selection[0];
+               var id = record.get("id");
+               Ext.Ajax.request({ 
+                  url: "/jobs/" + id + "/push_job",
+                  method: "put",
+                  success:function(response, opts) { 
+                      var scope = Manage.positionManage;
+                      scope.grid.store.load();
+                      Ext.Msg.alert("提示", "发布成功");
+                  },
+                  failure: function(response, opts) { 
+                      Ext.Msg.alert("提示", "发布失败");
+                  } 
+               });
+            }
+        }
+        );  
+    },
+
     editJob: function(id, action) { 
         action == "edit" ? isEditing = true : isEditing = false
         var manage = this.app.getDesktop();
@@ -267,7 +291,6 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 if(state == "全部"){ var url="/jobs/all_jobs.json"; }
                 else{ var url="/jobs/all_jobs.json?conditions="+condition;}
                 Manage.positionManage.queryConfig(url);
-
             } }
         });
     },
@@ -325,7 +348,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
         ]);
         tbar = [ 
             { text: '添加职位', handler: function(){ _this.createAddjob("add") }}, '-',
-            { text: '发布选中职位', handler: function(){ }},'-',
+            { text: '发布选中职位', handler: function(){ _this.pushJob() }},'-',
             { text: '查询', handler: function(){ }}
         ];
 
