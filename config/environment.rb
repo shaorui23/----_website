@@ -10,6 +10,7 @@ require "populator"
 require "faker"
 require "will_paginate"
 require "randexp"
+require "state_machine"
 
 Rails::Initializer.run do |config|
   config.action_mailer.raise_delivery_errors = true

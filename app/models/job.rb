@@ -36,26 +36,26 @@ class Job < ActiveRecord::Base
   #主页搜索显示前五记录职位
   named_scope :first_five_records, :conditions => "state = 'ing' and job_number > 0", :limit => 5
 
-  acts_as_state_machine :initial => :unpush do 
+  state_machine :initial => :unpush do 
     event(:push_job) { transition [:unpush, :delelte] => :ing }
-    #event(:) { transition [:ing] => :full }
-    #event(:) { transition [:ing] => :delay }
-    #event(:) { transition [:unpush, :full, :delay] => :delete }
+ #  event(:) { transition [:ing] => :full }
+ #  event(:) { transition [:ing] => :delay }
+ #  event(:) { transition [:unpush, :full, :delay] => :delete }
   end
 
   StateCn = { 
     "ing"    => "招聘ing",
     "unpush" => "未发布",
     "full"   => "已招满",
-    "delay"  => "已截止",
-    "delete" => "已删除"
+    "delay"  => "已截止"
   }
 
   # eric
   # 添加中文状态
   def self.state_cn
     rs = []
-    StateCn.each { |k, v|  rs << v }
+    #StateCn.each { |k, v|  rs << { k => v } }
+    rs = StateCn
     rs
   end
 

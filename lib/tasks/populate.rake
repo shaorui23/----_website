@@ -25,7 +25,7 @@ namespace :db do
       job.experience       =   ['两年','无要求','培训上岗','五年以上']
       job.job_number       =   [10,31,24,52]
       job.requirement      =   Faker::Lorem.sentence 
-      job.state            =   ["招聘ing","未发布","已招满","已截止","已删除"]
+      job.state            =   ["unpush","ing","full","delay"]
     end
 
       ResumeAns.populate 50 do |resume_ans|

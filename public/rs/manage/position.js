@@ -44,7 +44,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
         var win = manage.getWindow('JobWin');
         if(!win) { 
             win = manage.createWindow({
-                title: '修改职位信息',
+                title: '职位信息',
                 id: 'JobWin',
                 closeAction: 'hide',
                 width: 740,
@@ -77,10 +77,11 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                   success:function(response, opts) { 
                       var scope = Manage.positionManage;
                       scope.grid.store.load();
+                      Manage.positionManage.grid.getView().refresh();
                       Ext.Msg.alert("提示", "发布成功");
                   },
                   failure: function(response, opts) { 
-                      Ext.Msg.alert("提示", "发布失败");
+                      Ext.Msg.alert("提示", "发布失败,该状态不能修改");
                   } 
                });
             }
@@ -104,12 +105,19 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
         win.show();
     },
 
-    deleteJob: function(id) { 
+    deleteJob: function() { 
+        var ids = [];
+        var scope = Manage.positionManage; 
+        var selection = scope.grid.getSelectionModel().getSelections();
+        for(i=0;i<selection.length;i++) { 
+            ids.push(selection[i].get("id"));
+        }
         Ext.Msg.confirm("提示", "确认删除此职位？", function(btn) {
             if (btn == 'yes') {
                 Ext.Ajax.request({ 
-                    url:    '/jobs/' + id,
-                    method: 'DELETE',
+                    url:    '/jobs/delete_all.json' ,
+                    method: 'post',
+                    jsonData: { ids:ids },
                     success: function(response, opts) { 
                         var scope = Manage.positionManage;
                         scope.grid.store.load();
@@ -123,9 +131,6 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
         });
     },
 
-    addPaper: function(id) { 
-    
-    },
 
     createPosition: function(action){ 
         var _this = this;
@@ -147,7 +152,6 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 closed_date  :  Ext.getCmp('closed_date').getValue(),
                 jdesc        :  Ext.getCmp('jdesc').getValue()
             };
-            
             Ext.Ajax.request({ 
                 url: isEditing == true ? '/jobs/'+ row_id + '.json' : '/jobs.json',
                 method: isEditing == true ? "PUT":"POST",
@@ -155,11 +159,13 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 success: function(){
                     //Manage.positionManage.form.getForm().reset();
                     //Manage.positionManage.getJobWin().hide()
+                    //Manage.positionManage.tree
                     Manage.positionManage.grid.store.load();
                     Ext.Msg.alert("提示", "操作成功!");
                 },
                 failure: function(response, onpts) {
-                    Ext.Msg.alert("提示", "操作失败！");
+                    var msg = eval(response.responseText).content.error_messages;
+                    Ext.Msg.alert("提示", msg);
                 } 
             });
            }
@@ -209,7 +215,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
         var salary = new Ext.form.NumberField({  
             fieldLabel:'*最低月薪',  
             allowDecimals : false,//不允许输入小数  
-            allowNegative : false,//不允许输入负数  
+            allowNegative : false,//不允许输入负数   
             nanText :'请输入有效的整数',  
             id: 'salary'
         });  
@@ -272,13 +278,14 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
     createTree: function() { 
         var _this = this;
         var root = new Ext.tree.AsyncTreeNode({ 
-            text: 'job状态',
+            text: '职位状态',
             expanded: true,
         });
+        var loader = new Ext.tree.TreeLoader({ dataUrl: '/jobs/search_job_number.json' });      //liwen修改:tree数据加载
 
         return new Ext.tree.TreePanel({ 
             root   : root,
-            loader : new Ext.tree.TreeLoader({ dataUrl: '/jobs/search_job_number.json' }),      //liwen修改:tree数据加载
+            loader : loader,
             split  : true,
             width  : 140,
             id     : 'tree',
@@ -302,6 +309,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
                 'id',
                 'jname',
                 'position_type',
+                'jobtype_id',
                 'job_number',
                 'education',
                 'salary',
@@ -324,14 +332,16 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
         var addOperator = function(value, mataData, record, rowIndex, colIndex, store){ 
            // alert(record.data.id);
             var link = String.format('<a href="#" onclick="Manage.positionManage.editJob( {0}, \'edit\' )">查看修改</a>', record.data.id) + '&nbsp;';
-            link += String.format('<a href="#" onclick="Manage.positionManage.deleteJob({0})">删除</a>', record.data.id) + '&nbsp;';
+            //link += String.format('<a href="#" onclick="Manage.positionManage.deleteJob({0})">删除</a>', record.data.id) + '&nbsp;';
             //link += String.format('<a href="#" onclick="Manage.positionManage.addPaper({0})">添加问卷</a>', record.data.id);
             return link;
         };
 
         var sm = new Ext.grid.CheckboxSelectionModel();
+        var mm = new Ext.grid.RowNumberer();
         var cm = new Ext.grid.ColumnModel([
             sm,
+            mm,
             { header: '序号'        , sortable: true, dataIndex: 'id', width:50},
             { header: '职位名称'    , sortable: true, dataIndex: 'jname'},
             { header: '职位类型'    , sortable: true, dataIndex: 'position_type'},
@@ -349,6 +359,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
         tbar = [ 
             { text: '添加职位', handler: function(){ _this.createAddjob("add") }}, '-',
             { text: '发布选中职位', handler: function(){ _this.pushJob() }},'-',
+            { text: '删除职位', handler: function(){ _this.deleteJob() }},'-',
             { text: '查询', handler: function(){ }}
         ];
 

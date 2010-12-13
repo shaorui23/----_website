@@ -13,7 +13,8 @@ ActionController::Routing::Routes.draw do |map|
     :member => { 
       :get_job => :get,
       :push_job => :put,
-      :show_group => :get
+      :show_group => :get,
+      :delete_all => :post
     },
     :collection => { 
       :all_jobs => :get,

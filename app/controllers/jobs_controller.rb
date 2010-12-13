@@ -18,16 +18,13 @@ class JobsController < ApplicationController
     default_params = { :offset => params[:offset], :limit => params[:limit],
       :include => :jobtype ,:conditions=>params[:conditions]}
 
-#    @jobs = Job.all.collect { |j| j.attributes.merge "position_type" => j.jobtype.job_type }
     records = Job.all(default_params)
     @jobs    = []
     records.each do |job|
       data = job.attributes.merge(:position_type => job.jobtype.job_type)
       @jobs.push(data)
     end
-    #@jobs = Job.all(default_params)
     @count = Job.all(:conditions=>params[:conditions]).count
-  #  @jobs = @jobs.collect { |r| r.provide(params[:fields]) }
       respond_to do |format|
         format.html  
         format.json  { render_json @jobs, @count}
@@ -38,12 +35,14 @@ class JobsController < ApplicationController
   def search_job_number
     children_of_job = []
     state = Job.state_cn
-    state.each do |job_state|
-      number = Job.all(:conditions=>["state = ?",job_state]).count
-      children_of_job << { "text" => job_state +"\("+number.to_s+"\)","leaf"=>true,"id"=>job_state }
+    state.each do |k, v|
+      number = Job.all(:conditions=>["state = ?",k]).count
+      #children_of_job << { "text" => v +"\("+number.to_s+"\)","leaf"=>true,"id"=>k }
+      children_of_job << { "text" => v ,"leaf"=>true,"id"=>k }
     end
       number = Job.all.count
-      children_of_job << { "text" => "全部" +"\("+number.to_s+"\)","leaf"=>true,"id"=>"全部" }
+      #children_of_job << { "text" => "全部职位" +"\("+number.to_s+"\)","leaf"=>true,"id"=>"全部" }
+      children_of_job << { "text" => "全部职位" ,"leaf"=>true,"id"=>"全部" }
 
     parent_node = [{ "text"=>"状态","children"=>children_of_job,"leaf"=>false,"expanded"=>true }]
     render  :json =>parent_node.to_json
@@ -64,7 +63,7 @@ class JobsController < ApplicationController
     if job.update_attributes(params[:job])
       render_json 'success' 
     else
-      render_error 'failure'
+      render_error '存在错误'
     end
     rescue => e
      render_error e.to_s
@@ -97,14 +96,7 @@ class JobsController < ApplicationController
 
   # POST /jobs/:id/push_job
   def push_job
-    @job = Job.find params[:id]
-    if @job.send(push_job)
-      render_json 'success' 
-    else
-      render_error 'failure'
-    end
-    rescue => e
-     render_error e.to_s
+    update_state('push_job')
   end
 
 #GET /jobs/:id/show_group
@@ -121,12 +113,37 @@ class JobsController < ApplicationController
 
 #DELETE
   def destroy
-    @job = Job.find(params[:id])
+    @job = Job.find params[:id]
     if @job.destroy
       render_json 'success'    
     else
       render_error 'failure'
     end
   end
+
+#POST /jobs/delete_all_
+  def delete_all
+    @ids =  params[:ids]
+    if !@ids.blank?
+      @ids.each do |id|
+        Job.find(id).destroy if (Job.exists? id)
+      end
+      render_json "success"
+    else
+      render_error 'failure'
+    end
+  end
+
+  private
+   
+   def update_state(action)
+     job = Job.find(params[:id])
+     if job.send(action)
+       render_json 'success' 
+     else
+       render_error 'failure'
+     end
+   end
+
 
 end
