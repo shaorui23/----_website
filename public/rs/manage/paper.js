@@ -16,7 +16,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             win = manage.createWindow({
                 id: 'paperCenter',
                 title: '问卷中心',
-                width: 840,
+                width: 940,
                 height: 580,
                 iconCls: 'bogus',
                 shim: false,
@@ -318,7 +318,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             id: 'qbGrid',
             frame: true,
             viewConfig: { forceFit: true },
-            anchor: '100%, 50%',
+            anchor: '100%, 60%',
             store: qbStore,
             sm: sm,
             tbar: [{ 
@@ -401,7 +401,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
         //mouse
         function readRender(value, metadata, record) { 
             if(record.get('mark') == null) { 
-                return '未批阅';
+                return "<font color=#ff0000>未批阅</font>";
             }else { 
                 switch(record.get('mark')) { 
                     case 1: return '优秀';
@@ -416,7 +416,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             id: 'pasGrid',
             title: '查找问卷',
             region: 'west',
-            width: 300,
+            width: 350,
             frame: true,
             viewConfig: { forceFit: true },
             tbar: [jobCombo, searchCombo, 
@@ -546,7 +546,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                 }
             }],
             defaults: { 
-                width: 450,
+                width: 470,
                 hideLabel: true,
                 disabled: true,
                 style: "color:black"

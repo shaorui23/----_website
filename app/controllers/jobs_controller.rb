@@ -63,7 +63,7 @@ class JobsController < ApplicationController
     if job.update_attributes(params[:job])
       render_json 'success' 
     else
-      render_error '存在错误'
+      render_error '存在错误,或该状态不可修改！'
     end
     rescue => e
      render_error e.to_s

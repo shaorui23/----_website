@@ -2,7 +2,7 @@ Manage.QuestionBase = Ext.extend(Ext.app.Module, {
     id: 'questionBase',
     init: function(){
         this.launcher = {
-            text: '题库',
+            text: '问卷题库',
             iconCls: 'bogus',
             handler: this.createWindow,
             scope: this
@@ -16,7 +16,7 @@ Manage.QuestionBase = Ext.extend(Ext.app.Module, {
         if(!win){
             win = manage.createWindow({
                 id: 'questionBase',
-                title: '题库',
+                title: '问卷题库',
                 width: 640,
                 height: 480,
                 iconCls: 'bogus',
@@ -63,7 +63,7 @@ Manage.QuestionBase = Ext.extend(Ext.app.Module, {
             }],
             items: [{ 
                 xtype: 'textfield',
-                fieldLabel: '问题',
+                fieldLabel: '问卷问题',
                 id: 'question'
             }]
         });
@@ -83,6 +83,7 @@ Manage.QuestionBase = Ext.extend(Ext.app.Module, {
     createGrid: function(store){ 
         var deleteRecords = [];
         var deleteIds = [];
+        var mm = new Ext.grid.RowNumberer();
         var grid = new Ext.grid.GridPanel({ 
             id: 'questionGrid',
             frame: true,
@@ -134,8 +135,7 @@ Manage.QuestionBase = Ext.extend(Ext.app.Module, {
                 }
             }],
             cm: new Ext.grid.ColumnModel([
-                //new Ext.grid.RowNumberer(),
-                { header: 'ID',   dataIndex: 'id', width: 5 },
+                mm,
                 { header: '问题', dataIndex: 'qcon' }
             ])
         });

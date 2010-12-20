@@ -60,7 +60,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
     createAddjob: function(action){ 
         action == "add" ? isEditing = false : isEditing = true
         var manage = this.app.getDesktop();
-        this.form.getForm().reset();
+        this.form.reset();
         this.getJobWin().show();
     },
 
