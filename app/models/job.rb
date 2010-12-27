@@ -36,6 +36,8 @@ class Job < ActiveRecord::Base
   #主页搜索显示前五记录职位
   named_scope :first_five_records, :conditions => "state = 'ing' and job_number > 0", :limit => 5
 
+  named_scope :all_push_jobs, :conditions => "state = 'ing' and job_number > 0"
+
   state_machine :initial => :unpush do 
     event(:push_job) { transition [:unpush, :delelte] => :ing }
  #  event(:) { transition [:ing] => :full }

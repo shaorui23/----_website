@@ -60,7 +60,7 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
     createAddjob: function(action){ 
         action == "add" ? isEditing = false : isEditing = true
         var manage = this.app.getDesktop();
-        this.form.reset();
+        action == "add" ? undefined : this.form.reset();
         this.getJobWin().show();
     },
 
@@ -357,10 +357,9 @@ Manage.PositionManage = Ext.extend(Ext.app.Module, {
             { header: '操作'        , dataIndex: '#', renderer: addOperator, width: 120 }
         ]);
         tbar = [ 
-            { text: '添加职位', handler: function(){ _this.createAddjob("add") }}, '-',
-            { text: '发布选中职位', handler: function(){ _this.pushJob() }},'-',
-            { text: '删除职位', handler: function(){ _this.deleteJob() }},'-',
-            { text: '查询', handler: function(){ }}
+            { text: '添加职位', tooltip : '添加新的职位', iconCls : '/public/rs/ext2/resources/images/default/dd/drop-add.gif', handler: function(){ _this.createAddjob("add") }}, '-',
+            { text: '发布选中职位', tooltip : '将添加的职位发布到网站上去',handler: function(){ _this.pushJob() }},'-',
+            { text: '删除职位', tooltip : '删除不要的职位', handler: function(){ _this.deleteJob() }}
         ];
 
         return new Ext.grid.EditorGridPanel({ 

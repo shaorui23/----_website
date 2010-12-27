@@ -116,6 +116,7 @@ body {background:#fff url(../images/bg.jpg) repeat-x; font: 11px Verdana, Arial,
 #mainmenu a:hover {color:#fff;}
 #homeleft {width:480px; float:left;}
 #homeleft1 { margin-left:20px; width:300px; float:left; }
+#homeleft2 { margin-left:50px; margin-top:10px;width:400px; float:left; }
 #homeright1 { margin-left:320px; }
 #fenye { margin-left:820px; }
 #paixu { margin-left:10px; }

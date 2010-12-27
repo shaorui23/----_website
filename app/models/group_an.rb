@@ -28,6 +28,9 @@ class GroupAn < ActiveRecord::Base
 
   #查找可面试的名单，即除了淘汰的应聘者
   named_scope :interviewers, :conditions => ["gmark in (?)", [1,2,3]]
+
+  #查找录用名单
+  named_scope :employers, :conditions => ["state = ?", "employeed"]
   
   # 返回全部的试卷的关联信息
   # conditions包含了查询要求和查询所需数据，为conditions = ['conditions', data]
@@ -41,7 +44,8 @@ class GroupAn < ActiveRecord::Base
         :user_name => paperAn.user.login,
         :job_name  => paperAn.group.job.jname,
         :create_at => paperAn.created_at,
-        :mark      => paperAn.gmark
+        :mark      => paperAn.gmark,
+        :evaluate  => paperAn.evaluate
       })
     end
     return paInfo

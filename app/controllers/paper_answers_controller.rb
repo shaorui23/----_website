@@ -14,7 +14,7 @@ class PaperAnswersController < ApplicationController
   def show_p_and_a
     pas = GroupAn.find(params[:id])
     pq = pas.group.jsonQuestions
-    render :json => { :paper_answers => pas, :paper_questions => pq, :question_count => pas.group.questions.count }
+    render :json => { :paper_answers => pas, :paper_questions => pq, :question_count => pas.group.questions.count,:evaluate => pas.evaluate }
   end
 
   # GET: /paper_answers/show_in_job_or_mark
@@ -32,5 +32,18 @@ class PaperAnswersController < ApplicationController
   def give_mark
     GroupAn.find(params[:paId]).update_attributes({ :gmark => params[:mark] })
     render :json => { :message => 'success' }
+  end
+
+  #POST: /paper_answers/give_evaluate
+  def give_evaluate
+    GroupAn.find(params[:paId]).update_attributes({ :evaluate => params[:evaluate] })
+    render :json => { :message => 'success' }
+  end
+
+  #POST: /paper_answers/employ
+  def employ
+    GroupAn.find(params[:paId]).update_attributes({ :state => params[:state] })
+    render :json => { :message => 'success' }
+    
   end
 end

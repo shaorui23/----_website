@@ -41,15 +41,15 @@ Manage.DecesionCenter = Ext.extend(Ext.app.Module, {
             frame: true,
             activeTab: 0,
             items: [{ 
-                id: 'readPaper',
-                title: '应聘者问卷',
-                layout: 'border',
-                items: [this.createPAsGrid(jobCombo2), this.createPAForm()]
-            }, { 
                 id: 'oldPaper',
                 title: '面试管理',
                 layout: 'fit',
                 items: [this.updateView()]
+            }, { 
+                id: 'readPaper',
+                title: '应聘者录用',
+                layout: 'border',
+                items: [this.createPAsGrid(jobCombo2), this.createPAForm()]
             }],
             listeners: { 
                 beforetabchange: function(panel, newTab, currentTab) { 
@@ -75,8 +75,8 @@ Manage.DecesionCenter = Ext.extend(Ext.app.Module, {
                 title: '添加面试结果',
                 id: 'JobWin',
                 closeAction: 'hide',
-                width: 540,
-                height: 250,
+                width: 520,
+                height: 200,
                 layout: 'fit',
                 frame: true,
                 items: this.form
@@ -94,18 +94,40 @@ Manage.DecesionCenter = Ext.extend(Ext.app.Module, {
     createForm: function(){ 
         var form = new Ext.form.FormPanel({ 
             defaultType: 'textarea',
-            title: "面试结果输入",
+            //title: "面试结果输入",
             labelWidth: 80,
             width: 150,
             frame: true,
             items: [{ 
+              id: "pingjia",
               fieldLabel: "面试评价",
-              height:90,
-              width:350
+              name:'evaluation',
+              height:100,
+              width:390
             }],
             buttons: [{ 
                 text:'提交',
-                handler: function(){  }
+                handler: function(){ 
+                    var id         = Ext.getCmp("view").getSelectionModel().getSelected().get('id');
+                    var evaluation = Ext.getCmp("pingjia").getValue();
+                    Ext.Ajax.request({ 
+                        jsonData: { paId : id, evaluate : evaluation },
+                        url:'/paper_answers/give_evaluate.json',
+                        method: 'post',
+                        success: function(response){ 
+                            Manage.decesionCenter.createForm().form.reset();
+                            Ext.getCmp("view").getStore().reload();
+                            Manage.decesionCenter.getJobWin().hide();
+                            alert("添加面试结果成功!");
+                        },
+                        failure: function(response){ 
+                            Ext.getCmp("view").getStore().reload();
+                            _this.getJobWin().hide();
+                            alert("添加面试结果失败!");
+                        }
+                    })
+
+                }
             }]
         });
         return form;
@@ -119,33 +141,55 @@ Manage.DecesionCenter = Ext.extend(Ext.app.Module, {
                 'user_name',
                 'job_name',
                 'create_at',
+                'evaluate',
                 'mark'
             ]
         });
         store.load();
 
         var addOperator = function(value, mataData, record, rowIndex, colIndex, store){ 
-            var link = String.format('<a href="#" onclick="Manage.decesionCenter.createViewMark({0})">添加成绩</a>',record.data.id);
+            var link = String.format('<a href="#" onclick="Manage.decesionCenter.createViewMark({0})">成绩录入</a>',record.data.id);
            // alert(record.data.id);
             return link;
+        };
+
+        function viewEvaluate(value, metadata, record) { 
+            if(record.get('evaluate') == null) { 
+                return "<font color=#ff0000>未添加面试结果</font>";
+            } else { 
+              return value;
+            }
+        };
+
+        function readRender(value, metadata, record) { 
+            if(record.get('mark') == null) { 
+                return "<font color=#ff0000>未批阅</font>";
+            }else { 
+                switch(record.get('mark')) { 
+                    case 1: return '优秀';
+                    case 2: return '良好';
+                    case 3: return '及格';
+                    default: return '淘汰';
+                }
+            }
         }
 
         return new Ext.grid.GridPanel({ 
             id: 'view',
             title: '面试成绩管理',
             viewConfig: { forceFit: true },
-            tbar: [],
             sm: new Ext.grid.RowSelectionModel({ singleSelect: true }),
             store: store,
             colModel: new Ext.grid.ColumnModel({ 
                 defaults: { sortable: true },
                 columns: [
                     new Ext.grid.RowNumberer,
-                    { header: '名字',     dataIndex: 'user_name' },
-                    { header: '职位',     dataIndex: 'job_name' },
-                    { header: '提交时间', dataIndex: 'create_at' },
-                    { header: '问卷分数', dataIndex: 'mark' },
-                    { header: '操作',dataIndex:"#", renderer:addOperator },
+                    { header: '名字',     dataIndex: 'user_name',width:50 },
+                    { header: '职位',     dataIndex: 'job_name',width:50 },
+                    { header: '提交时间', dataIndex: 'create_at',width:30 },
+                    { header: '问卷分数', dataIndex: 'mark',width:30, renderer:readRender },
+                    { header: '面试结果', dataIndex: 'evaluate',width:190,renderer: viewEvaluate  },
+                    { header: '操作',dataIndex:"#", renderer:addOperator,width:50 },
                    // { header: '分数',     renderer: readRender }
                 ]
             })
@@ -172,6 +216,25 @@ Manage.DecesionCenter = Ext.extend(Ext.app.Module, {
             store: jobStore,
             valueField: 'id',
             displayField: 'jname'
+        });
+    },
+
+    update: function(id){ 
+        Ext.Msg.confirm("温馨提示","确定录取该应聘者?",function(button){ 
+            if(button=="yes"){ 
+                Ext.Ajax.request({ 
+                    jsonData: { paId : id, state : "employeed" },
+                    url:'/paper_answers/employ.json',
+                    method: 'post',
+                    success: function(response){ 
+                        Manage.decesionCenter.createPAsGrid().store.reload();
+                        alert("添加面试结果成功!");
+                    },
+                    failure: function(response){ 
+                        alert("添加面试结果失败!");
+                    }
+                })
+            }
         });
     },
     
@@ -210,10 +273,11 @@ Manage.DecesionCenter = Ext.extend(Ext.app.Module, {
 
         var addOperator = function(value, mataData, record, rowIndex, colIndex, store){ 
             //var link = String.format('<a href="#" onclick="Manage.positionManage.editJob( {0}, \'edit\' )">查看修改</a>', record.data.id) + '&nbsp;';
-            var link = "<a href='www.baidu.com'>查看简历</a>"
+            var link = String.format('<a href="#" onclick="Manage.decesionCenter.update({0})">是否录用？</a>',record.data.id);
             return link;
         };
-
+        
+        var sm = new Ext.grid.CheckboxSelectionModel({  });
         //mouse
         function readRender(value, metadata, record) { 
             if(record.get('mark') == null) { 
@@ -230,7 +294,7 @@ Manage.DecesionCenter = Ext.extend(Ext.app.Module, {
 
         return new Ext.grid.GridPanel({ 
             id: 'pasGrid',
-            title: '查找问卷',
+            title: '筛选应聘者',
             region: 'west',
             width: 400,
             frame: true,
@@ -261,18 +325,17 @@ Manage.DecesionCenter = Ext.extend(Ext.app.Module, {
                         Ext.getCmp('pasGrid').getStore().reload();
                     }
             }],
-            sm: new Ext.grid.RowSelectionModel({ singleSelect: true }),
             store: store,
             colModel: new Ext.grid.ColumnModel({ 
                 defaults: { sortable: true },
                 columns: [
                     new Ext.grid.RowNumberer,
+                    sm,
                     { header: '名字',     dataIndex: 'user_name' },
                     { header: '职位',     dataIndex: 'job_name' },
                     { header: '提交时间', dataIndex: 'create_at' },
                     { header: '问卷分数', dataIndex: 'mark', renderer: readRender },
                     { header: '操作',dataIndex:"#", renderer:addOperator },
-                   // { header: '分数',     renderer: readRender }
                 ]
             }),
             listeners: { 
@@ -287,11 +350,13 @@ Manage.DecesionCenter = Ext.extend(Ext.app.Module, {
                             var datas = Ext.decode(response.responseText);
                             paperAnswer = datas.paper_answers;
                             paperQuestion = datas.paper_questions;
+                            evaluate      = datas.evaluate;
                             questionCount = datas.question_count;
                             //限制6个问题
                             var nameIndexs = ['gque_one', 'gque_two', 'gque_three', 'gque_four', 'gque_five', 'gque_six'];
                             var paForm = Ext.getCmp('paForm');
                             var j = 0;
+                            Ext.getCmp('evaluate').setValue(evaluate);
                             for(var i = 0; i < questionCount; i++) { 
                                 paForm.getComponent(j).setVisible(true);
                                 paForm.getComponent(j).setValue(paperQuestion["que_" + (i + 1)]);
@@ -307,7 +372,7 @@ Manage.DecesionCenter = Ext.extend(Ext.app.Module, {
                             }
                         },
                         failure: function() { 
-                            Ext.Msg.alert("Wando", 'Failure');
+                            Ext.Msg.alert("出现错误", '出现错误!');
                         }
                     });
                 }
@@ -320,7 +385,7 @@ Manage.DecesionCenter = Ext.extend(Ext.app.Module, {
 
         return new Ext.form.FormPanel({ 
             id: 'paForm',
-            title: '问卷回复',
+            title: '问卷回复和面试结果预览',
             region: 'center',
             layout: 'form',
             autoScroll: true,
@@ -398,6 +463,12 @@ Manage.DecesionCenter = Ext.extend(Ext.app.Module, {
                 fieldLabel: '答案',
                 height:40,
                 name: 'answer6',
+                frame: true
+            }, { 
+                xtype: 'textarea',
+                fieldLabel: '<font color=#ff0000>面试结果</font>',
+                height:50,
+                id: 'evaluate',
                 frame: true
             }]
         });

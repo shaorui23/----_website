@@ -7,6 +7,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :homes
   map.resources :interviews
   map.resources :logins
+  map.resources :employs
+  map.resources :viewmarks
   map.resources :myteams
   map.resources :accounts
   map.resources :jobs,
@@ -47,7 +49,9 @@ ActionController::Routing::Routes.draw do |map|
                 :collection => { 
                   :show_p_and_a      => :get,
                   :give_mark         => :post,
-                  :search_limit => :get
+                  :give_evaluate     => :post,
+                  :employ            => :post,
+                  :search_limit      => :get
                 }
   # The priority is based upon order of creation: first created -> highest priority.
 
