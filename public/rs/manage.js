@@ -10,21 +10,21 @@ Manage = new Ext.app.App({
         Manage.paperCenter    = new Manage.PaperCenter();
         Manage.resumeCenter   = new Manage.ResumeCenter();
         Manage.decesionCenter = new Manage.DecesionCenter();
-        Manage.setting        = new Manage.Setting();
+       // Manage.setting        = new Manage.Setting();
 		return [
             Manage.questionBase,
             Manage.positionManage,
             Manage.paperCenter,
             Manage.resumeCenter,
             Manage.decesionCenter,
-            Manage.setting
+        //    Manage.setting
 		];
 	},
 
     // config for the start menu
     getStartConfig: function(){
         return {
-            title: 'Wando团队',
+            title: '欢迎使用1.com网站设计后台管理系统',
             iconCls: 'user',
             toolItems: [{
                 text:'设置',
@@ -34,6 +34,7 @@ Manage = new Ext.app.App({
             },'-',{
                 text:'注销',
                 iconCls:'logout',
+                handler: function() { window.location.reload();alert("你已成功退出系统");},
                 scope:this
             }]
         };

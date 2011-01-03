@@ -1,11 +1,13 @@
    <div id="homeleft">
       <% form_tag :controller => "account", :action => "login" do -%>
         <div><h1>用户登录</h1></div>
+                       <div id='homeleft2'>
                        <% if flash[:notice] %>
                          <span id = "notice">
                            <font><%= flash[:notice] %></font>
                          </span>
                        <% end %>
+                       </div>
         <div class="lingyu_nr">
                     <div id="homeleft2">用 户
                       <%= text_field_tag 'login' %>
@@ -26,18 +28,21 @@
         <h2> 联系 <span class="green"> 我们 </span></h2>
         <div id="sidebar1">
           <h3>网站设计者 </h3>
-          <p>Lorem Ipsum 1234,<br />
-            Bldg. Ipsum Dolor,<br />
-            FLoorida, <br />
-            USA<br />
+          <p><h4>王少锐<br />
+            李泽森<br />
+            江益波 <br />
+            刘润泽<br />
+            邬晓玲<br />
+            </h4>
           </p>
         </div>
         <div id="sidebar2">
           <h3>电话号码 </h3>
-          <p> +001 0012345678 890<br />
+          <p> <h4>15820707426<br />
             +001 0012345678 890<br />
             +001 0012345678 890<br />
             +001 0012345678 890<br />
+            </h4>
         </div>
       </div>
       <div class="clear"></div>
