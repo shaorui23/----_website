@@ -93,10 +93,10 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
             method: 'post',
             jsonData: datas,
             success: function() { 
-                Ext.Msg.alert('Wando', 'success');
+                Ext.Msg.alert('1.com招聘', '添加成功');
             },
             failure: function() { 
-                Ext.Msg.alert('Wando', 'failure');
+                Ext.Msg.alert('1.com招聘', '添加失败');
             }
         });
         Ext.getCmp('opGrid').getStore().reload();
@@ -153,7 +153,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                             opStore.loadData(datas);
                         },
                         failure: function() {
-                            Ext.Msg.alert('Wando', 'Failure');
+                            Ext.Msg.alert('1.com招聘', '成功');
                         }
                     });
                 }
@@ -269,11 +269,11 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                         var jobId = jobCombo.getValue();
                         //检验数据
                         if(qbIds.length == 0) { 
-                            Ext.Msg.alert('Wando', '未选题！');
+                            Ext.Msg.alert('1.com招聘', '未选题！');
                             return false;
                         }
                         else if(jobId == '') { 
-                            Ext.Msg.alert('Wando', '职位不能为空!');
+                            Ext.Msg.alert('1.com招聘', '职位不能为空!');
                             return false;
                         }
                         //提交数据
@@ -281,13 +281,13 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                             url: '/papers',
                             jsonData: { pDatas: { qbIds: qbIds, jobId: { job_id: jobId } } },
                             success: function() { 
-                                Ext.Msg.alert("Wando", 'success');
+                                Ext.Msg.alert("1.com招聘", '成功');
                                 npGrid.store.removeAll();
                                 Ext.getCmp('qbGrid').store.reload();
                                 jobStore.reload();
                             },
                             failure: function() { 
-                                Ext.Msg.alert('Wando', 'failure');
+                                Ext.Msg.alert('1.com招聘', '失败');
                             }
                         });
                     }
@@ -337,7 +337,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                             store.loadData(questions);
                         }, 
                         failure: function() { 
-                            Ext.Msg.alert('Wando', 'failure');
+                            Ext.Msg.alert('1.com招聘', '失败');
                         }
                     });
                 }
@@ -490,7 +490,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                             }
                         },
                         failure: function() { 
-                            Ext.Msg.alert("Wando", 'Failure');
+                            Ext.Msg.alert("1.com招聘", '失败');
                         }
                     });
                 }
@@ -537,10 +537,10 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                         jsonData: { paId: paId, mark: mark },
                         success: function() { 
                             Ext.getCmp('pasGrid').store.reload();  //mouse
-                            Ext.Msg.alert('Wando', 'Success');
+                            Ext.Msg.alert('1.com招聘', '成功');
                         },
                         failure: function() { 
-                            Ext.Msg.alert('Wando', 'Failure');
+                            Ext.Msg.alert('1.com招聘', '失败');
                         }
                     });
                 }

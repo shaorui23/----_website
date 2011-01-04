@@ -6,9 +6,8 @@ namespace :db do
     require 'faker'
     require 'randexp'
     
-   # [Category, Product, Person].each(&:delete_all)
     
-    [Job, ResumeAns,Jobtype].each(&:delete_all)
+    [Job, ResumeAns,Jobtype,Question].each(&:delete_all)
     
     Jobtype.populate 3 do |job_type|
         job_type.job_type      =  ["管理","员工","经理","文秘","警察","法官"]
@@ -25,10 +24,20 @@ namespace :db do
       job.experience       =   ['两年','无要求','培训上岗','五年以上']
       job.job_number       =   [10,31,24,52]
       job.requirement      =   Faker::Lorem.sentence 
-      job.state            =   ["unpush","ing","full","delay"]
+      job.state            =   ["unpush","ing","full"]
+    end
+     
+    questions = ["最能概括自己的三个词","最喜欢和最不喜欢哪些大学课程","如果录用你，你将怎样开展工作","你在以前实习的公司从事什么样的工作","请你谈谈对我单位的看法","你为什么希望到我们公司工作"]
+
+    
+    index = 0
+
+    Question.populate 6 do |q|
+      q.qcon = questions[index]
+      index += 1
     end
 
-      ResumeAns.populate 50 do |resume_ans|
+      ResumeAns.populate 10 do |resume_ans|
         resume_ans.user_id          = 1
         resume_ans.rexp_a           = Faker::Lorem.sentence
         resume_ans.redu_a           = Faker::Lorem.words.first
@@ -44,7 +53,7 @@ namespace :db do
         resume_ans.rhei_a           = ['1.50','1.60','1.70','1.80']
         resume_ans.rwei_a           = ['50','60','70','80','90','100']
         resume_ans.rpoli_a          = Faker::Lorem.words.first
-        resume_ans.riden_a          = "44***************"
+        resume_ans.riden_a          = "43***************"
         resume_ans.rpho_a           = [119,110,120]
         resume_ans.rmail_a          = ['mail','no']
         resume_ans.raddr_a          = Faker::Lorem.words.first
