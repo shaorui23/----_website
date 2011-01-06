@@ -6,7 +6,7 @@
        职位名称:<%= @job.jname%><div id="job_right">招聘人数：<%= @job.job_number%> </div>
      </li>
      <li>
-       最低月薪:<%= @job.salary%><div id="job_right">已招聘人数：<font color="red"><%= @job.job_number%></font></div>
+       最低月薪:<%= @job.salary%><div id="job_right">已招聘人数：0</div>
      </li>
      <li>
        招聘时间:<%= @job.created_date%><div id="job_right">职位类型:<%= @job.position_type%></div>
@@ -23,7 +23,7 @@
   </ul>
 </div>
 <br />
-<div id="job_right"> <img src="/home/shao/webSite1/public/images/email.gif" alt="a" width="20" height="20" /><font size=5><%= link_to "我要应聘", :action => "show_group", :id => @job.id %></font></div>
+<div id="job_right"> <img src="/home/shao/webSite1/public/images/email.gif" alt="" width="20" height="20" /><font size=5><%= link_to "我要应聘", :action => "show_group", :id => @job.id %></font></div>
 
 
  <div class="FBG">
@@ -31,40 +31,37 @@
       <div class="blooga">
         <h2><span class='green'>为什么选择我们?</span></h2>
         <img src="/images/product1.gif" alt="picture" width="61" height="61" />
-        <p><strong>Many desktop publishing </strong><br />
-          packages and web page editors now use <br />
-          Lorem Ipsum [...] </p>
+        <p><strong>专用ruby开发</strong><br />
+          已经用ruby on rails开发过2个项目 </p>
         <div class="bg"></div>
         <img src="/images/product1.gif" alt="picture" width="61" height="61" />
-        <p><strong>Many desktop publishing </strong><br />
-          packages and web page editors now use <br />
-          Lorem Ipsum [...] </p>
+        <p><strong>极高的自信 </strong><br />
+          做为学生军，我们没有什么输不起 </p>
         <div class="bg"></div>
         <img src="/images/product1.gif" alt="picture" width="61" height="61" />
-        <p><strong>Many desktop publishing </strong><br />
-          packages and web page editors now use <br />
-          Lorem Ipsum [...] </p>
+        <p><strong>负责的态度 </strong><br />
+          极力负责每一件事 </p>
       </div>
       <div class="blooga">
         <h2><span class='green'>用过的客户都说..</span></h2>
         <div class="clients">
-          <p style="padding:15px 0 0 15px;">&quot;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <p style="padding:15px 0 0 15px;">&quot;产品还不错，有创新意识，可以加以改造. </p>
           <p><strong style="float:right;">-John Smith, webdesigner</strong></p>
           <p>&nbsp;</p>
         </div>
         <div class="clients">
-          <p style="padding:15px 0 0 15px;">&quot;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <p style="padding:15px 0 0 15px;">&quot;pretty good , strong indepences and high confidence. </p>
           <p><strong style="float:right;">-John Smith, webdesigner</strong></p>
         </div>
       </div>
       <div class="blooga">
         <h2><span class='green'>快速联系我们</span></h2>
-        <p>Feel free to contact me or please fill up below in the following details and I will be in touch shortly.</p>
-        <p><span><strong>Address:</strong></span> 1458 Sample Road, Greenvalley, 12<br />
-          <span> <strong>Telephone:</strong></span> +123-1234-5678<br />
+        <p>快速联系我们，我们将在最快的时间内回应你的答复.</p>
+        <p><span><strong>Address:</strong></span> 惠州学院2栋A6<br />
+          <span> <strong>Telephone:</strong></span> 15820707426<br />
           <span> <strong>FAX:</strong></span> +458-4578<br />
-          <span> <strong>Others:</strong></span> +301 - 0125 - 01258<br />
-          <span> <strong>E-mail:</strong></span> mail@yoursitename.com</p>
+          <span> <strong>Others:</strong></span> QQ:505124021<br />
+          <span> <strong>E-mail:</strong></span> shaorui23@gmail.com</p>
       </div>
     </div>
     <div class="clr"></div>

@@ -281,7 +281,7 @@ Manage.PaperCenter = Ext.extend(Ext.app.Module, {
                             url: '/papers',
                             jsonData: { pDatas: { qbIds: qbIds, jobId: { job_id: jobId } } },
                             success: function() { 
-                                Ext.Msg.alert("1.com招聘", '成功');
+                               // Ext.Msg.alert("1.com招聘", '成功');
                                 npGrid.store.removeAll();
                                 Ext.getCmp('qbGrid').store.reload();
                                 jobStore.reload();

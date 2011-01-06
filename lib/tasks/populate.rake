@@ -9,20 +9,20 @@ namespace :db do
     
     [Job, ResumeAns,Jobtype,Question].each(&:delete_all)
     
-    Jobtype.populate 3 do |job_type|
+    Jobtype.populate 5 do |job_type|
         job_type.job_type      =  ["管理","员工","经理","文秘","警察","法官"]
     end
 
     Job.populate 10 do |job|
-      job.jname            =   Faker::Lorem.words.first 
+      job.jname            =   ["后勤人员","普通员工","业务经理","文秘","保安","营销助理","清洁工","前台服务员","打字员"] 
       job.jdesc            =   Faker::Lorem.sentence 
-      job.created_date     =   Date.today 
-      job.closed_date      =   2.years.ago..Time.now
+      job.created_date     =   1.years.ago 
+      job.closed_date      =   1.month.from_now
       job.jobtype_id       =   [1,2,3]
       job.salary           =   [1000,2000,3000,6000]
       job.education        =   ['本科','大专','高中']
       job.experience       =   ['两年','无要求','培训上岗','五年以上']
-      job.job_number       =   [10,31,24,52]
+      job.job_number       =   [1,5,10,11,4,3]
       job.requirement      =   Faker::Lorem.sentence 
       job.state            =   ["unpush","ing","full"]
     end

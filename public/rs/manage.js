@@ -34,7 +34,7 @@ Manage = new Ext.app.App({
             },'-',{
                 text:'注销',
                 iconCls:'logout',
-                handler: function() { window.location.reload();alert("你已成功退出系统");},
+                handler: function() { window.location.reload();alert("你已成功刷新系统");},
                 scope:this
             }]
         };
