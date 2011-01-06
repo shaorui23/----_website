@@ -46,7 +46,7 @@ class Job < ActiveRecord::Base
   end
 
   StateCn = { 
-    "ing"    => "招聘ing",
+    "ing"    => "正在招聘",
     "unpush" => "未发布",
     "full"   => "已招满",
     "delay"  => "已截止"

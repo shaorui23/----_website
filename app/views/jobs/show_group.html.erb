@@ -31,6 +31,10 @@
 <br />
 
 <h1><span class="green">职位</span>问卷</h1><br />
+<% if !flash[:notice_jobs].nil? %>
+            <font color="red"> <%= flash[:notice_jobs] %></font>
+            <% end %>
+            <% if !@questions.blank?%>
 <div id="job_content">
         <% form_for :paperAnswer, :url => { :action => :submit_answer },:method => 'post' do |form| -%>
   <ul id="productlist">
@@ -74,6 +78,7 @@
         <%= submit_tag "提交", :class => "sumbmit", :confirm => "确定提交吗？" %>
      </li>
   </ul>
+      <% end %>
       <% end %>
 </div>
 

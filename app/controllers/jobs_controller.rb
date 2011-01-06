@@ -24,7 +24,7 @@ class JobsController < ApplicationController
       data = job.attributes.merge(:position_type => job.jobtype.job_type)
       @jobs.push(data)
     end
-    @count = Job.all(:conditions=>params[:conditions]).count
+    @count = Job.all(:conditions=>params[:conditions]).size
       respond_to do |format|
         format.html  
         format.json  { render_json @jobs, @count}
@@ -36,12 +36,10 @@ class JobsController < ApplicationController
     children_of_job = []
     state = Job.state_cn
     state.each do |k, v|
-      number = Job.all(:conditions=>["state = ?",k]).count
-      #children_of_job << { "text" => v +"\("+number.to_s+"\)","leaf"=>true,"id"=>k }
+      number = Job.all(:conditions=>["state = ?",k]).size
       children_of_job << { "text" => v ,"leaf"=>true,"id"=>k }
     end
-      number = Job.all.count
-      #children_of_job << { "text" => "全部职位" +"\("+number.to_s+"\)","leaf"=>true,"id"=>"全部" }
+      number = Job.all.size
       children_of_job << { "text" => "全部职位" ,"leaf"=>true,"id"=>"全部" }
 
     parent_node = [{ "text"=>"状态","children"=>children_of_job,"leaf"=>false,"expanded"=>true }]
@@ -103,12 +101,19 @@ class JobsController < ApplicationController
   def show_group
     @job = Job.find params[:id]
     @group = Job.find(params[:id]).groups.find_by_active true
-    @questions = @group.questions
+    if @group.blank?
+      flash[:notice_jobs] = "您好，此职位暂无问卷，无法应聘!" 
+      #redirect_to :action => "index"
+      render "jobs/show_group"
+    else 
+      flash[:notice_jobs] = "填写以下信息进行应聘" 
+      @questions = @group.questions
+    end
 
-    respond_to do |format|
-        format.html  { render 'jobs/show_group' }
-        format.json  { render_json @questions}
-      end
+    #respond_to do |format|
+    #    format.html  { render 'jobs/show_group' }
+    #    format.json  { render_json @questions}
+    #  end
   end
 
 #DELETE
