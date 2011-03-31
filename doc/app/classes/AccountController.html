@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: AccountController</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">AccountController</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/app/controllers/account_controller_rb.html">
+                app/controllers/account_controller.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                <a href="ApplicationController.html">
+                ApplicationController
+               </a>
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000012">activate</a>&nbsp;&nbsp;
+      <a href="#M000008">index</a>&nbsp;&nbsp;
+      <a href="#M000009">login</a>&nbsp;&nbsp;
+      <a href="#M000011">logout</a>&nbsp;&nbsp;
+      <a href="#M000010">signup</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+    <div id="includes">
+      <h3 class="section-bar">Included Modules</h3>
+
+      <div id="includes-list">
+        <span class="include-name"><a href="AuthenticatedSystem.html">AuthenticatedSystem</a></span>
+      </div>
+    </div>
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000012" class="method-detail">
+        <a name="M000012"></a>
+
+        <div class="method-heading">
+          <a href="#M000012" class="method-signature">
+          <span class="method-name">activate</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+!验证码确证
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000012-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000012-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/controllers/account_controller.rb, line 58</span>
+58:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">activate</span>
+59:     <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_activation_code</span>(<span class="ruby-identifier">params</span>[<span class="ruby-identifier">:id</span>])
+60:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@user</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">activate</span>
+61:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">current_user</span> = <span class="ruby-ivar">@user</span>
+62:       <span class="ruby-identifier">flash</span>[<span class="ruby-identifier">:notice</span>] = <span class="ruby-node">&quot;验证成功！#{ current_user.login },您现在可以填写个人资料了,完整简历才可以让你选取职位&quot;</span>
+63:       <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-identifier">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'/persons'</span>, <span class="ruby-identifier">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;index&quot;</span>)
+64:     <span class="ruby-keyword kw">else</span>
+65:       <span class="ruby-identifier">flash</span>[<span class="ruby-identifier">:notice</span>] = <span class="ruby-value str">&quot;验证码验证失败&quot;</span>
+66:       <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-identifier">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'/account'</span>, <span class="ruby-identifier">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;signup&quot;</span>)
+67:     <span class="ruby-keyword kw">end</span>
+68:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000008" class="method-detail">
+        <a name="M000008"></a>
+
+        <div class="method-heading">
+          <a href="#M000008" class="method-signature">
+          <span class="method-name">index</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000008-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000008-source">
+<pre>
+   <span class="ruby-comment cmt"># File app/controllers/account_controller.rb, line 6</span>
+6:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index</span>
+7:     <span class="ruby-identifier">redirect_to</span>(<span class="ruby-identifier">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'signup'</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">logged_in?</span> <span class="ruby-operator">||</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+8:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000009" class="method-detail">
+        <a name="M000009"></a>
+
+        <div class="method-heading">
+          <a href="#M000009" class="method-signature">
+          <span class="method-name">login</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000009-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000009-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/controllers/account_controller.rb, line 10</span>
+10:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">login</span>
+11:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+12:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">current_user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">authenticate</span>(<span class="ruby-identifier">params</span>[<span class="ruby-identifier">:login</span>], <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:password</span>])
+13:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">logged_in?</span>
+14:       <span class="ruby-comment cmt">#是否记住密码，暂时不用,有cookie保存</span>
+15:       <span class="ruby-comment cmt">#if params[:remember_me] == &quot;1&quot;</span>
+16:       <span class="ruby-comment cmt">#  self.current_user.remember_me</span>
+17:       <span class="ruby-comment cmt">#  cookies[:auth_token] = { :value =&gt; self.current_user.remember_token , :expires =&gt; self.current_user.remember_token_expires_at }</span>
+18:       <span class="ruby-comment cmt">#end</span>
+19:       <span class="ruby-identifier">flash</span>[<span class="ruby-identifier">:notice</span>] = <span class="ruby-node">&quot;#{ current_user.login },登录成功!&quot;</span>
+20:     <span class="ruby-keyword kw">else</span>
+21:       <span class="ruby-identifier">flash</span>[<span class="ruby-identifier">:notice</span>] =  <span class="ruby-value str">&quot;登录失败,没有该帐号或帐号未验证&quot;</span> 
+22:     <span class="ruby-keyword kw">end</span>
+23:       <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-identifier">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;homes&quot;</span>, <span class="ruby-identifier">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;index&quot;</span>)
+24:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000011" class="method-detail">
+        <a name="M000011"></a>
+
+        <div class="method-heading">
+          <a href="#M000011" class="method-signature">
+          <span class="method-name">logout</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000011-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000011-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/controllers/account_controller.rb, line 44</span>
+44:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">logout</span>
+45:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">forget_me</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">logged_in?</span>
+46:     <span class="ruby-identifier">cookies</span>.<span class="ruby-identifier">delete</span> <span class="ruby-identifier">:auth_token</span>
+47:     <span class="ruby-identifier">reset_session</span>
+48:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">logged_in?</span>
+49:       <span class="ruby-identifier">flash</span>[<span class="ruby-identifier">:notice</span>] = <span class="ruby-node">&quot;#{ current_user.login }，您已经成功退出登录&quot;</span>
+50:       <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-identifier">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'homes'</span>, <span class="ruby-identifier">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'index'</span>)
+51:     <span class="ruby-keyword kw">else</span>
+52:       <span class="ruby-identifier">flash</span>[<span class="ruby-identifier">:notice</span>] = <span class="ruby-value str">&quot;您好，您还没有登录&quot;</span>
+53:       <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-identifier">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;homes&quot;</span>, <span class="ruby-identifier">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;index&quot;</span>)
+54:     <span class="ruby-keyword kw">end</span>
+55:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000010" class="method-detail">
+        <a name="M000010"></a>
+
+        <div class="method-heading">
+          <a href="#M000010" class="method-signature">
+          <span class="method-name">signup</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Comment: Mouse 现在总共有两个显示flash的地方，一个是在
+account/index 另一个是在 home/index account/index =&gt; {
+注册成功提示、用户成功退出提示 } home/index =&gt; {
+异常的提示、登录失败、登录成功、没有登录的退出 }
+TODO 汇总所有提示于一起
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000010-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000010-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/controllers/account_controller.rb, line 32</span>
+32:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">signup</span>
+33:     <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-identifier">:user</span>])
+34:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+35:     <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">save!</span>
+36:     <span class="ruby-comment cmt">#self.current_user = @user</span>
+37:     <span class="ruby-identifier">flash</span>[<span class="ruby-identifier">:notice</span>] = <span class="ruby-value str">&quot;注册信息已经发送到您的邮箱中,请确认后返回主页登录!&quot;</span>
+38:     <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-identifier">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'/account'</span>, <span class="ruby-identifier">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'index'</span>)
+39:   <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">RecordInvalid</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+40:     <span class="ruby-identifier">flash</span>[<span class="ruby-identifier">:error</span>] = <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span> 
+41:     <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;signup&quot;</span> 
+42:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

@@ -10,7 +10,7 @@
 #  active     :boolean(1)
 #
 # Associations:
-#  group_an   :has_one         GroupAn(group_id) 
+#  group_ans  :has_many        [GroupAn(group_id)] 
 #  job        :belongs_to      Job
 #              by              job_id 
 #  questions  :has_and_belongs [Question(group_id)] 

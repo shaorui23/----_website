@@ -14,6 +14,8 @@
 #  user_id    :integer(4)
 #  created_at :datetime
 #  updated_at :datetime
+#  evaluate   :string(255)
+#  state      :string(255)
 #
 # Associations:
 #  group      :belongs_to      Group

@@ -13,6 +13,9 @@
 #  job_number   :integer(4)
 #  requirement  :string(255)
 #  state        :string(255)
+#  salary       :integer(4)
+#  experience   :string(255)
+#  education    :string(255)
 #
 # Associations:
 #  groups       :has_many        [Group(job_id)] 

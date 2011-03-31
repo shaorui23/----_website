@@ -14,7 +14,7 @@ namespace :db do
     end
 
     Job.populate 10 do |job|
-      job.jname            =   ["后勤人员","普通员工","业务经理","文秘","保安","营销助理","清洁工","前台服务员","打字员"] 
+      job.jname            =  ["后勤人员","普通员工","业务经理","文秘","保安","营销助理","清洁工","前台服务员","打字员"] 
       job.jdesc            =   Faker::Lorem.sentence 
       job.created_date     =   1.years.ago 
       job.closed_date      =   1.month.from_now
